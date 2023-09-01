@@ -1,0 +1,45 @@
+add_namespace = Vn_FRA_news
+
+
+news_event = {
+	id = Vn_FRA_news.1
+	title = Vn_FRA_news.1.t
+	desc = Vn_FRA_news.1.desc
+	picture = GFX_FRA_great_revolution
+	major = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = Vn_FRA_news.1.a
+	trigger = {
+		OR = {
+		has_government = communism
+		has_government = Ssocialism
+				}
+			}
+	}
+	option = {
+		name = Vn_FRA_news.1.b
+	trigger = {
+		NOT = { OR = {
+		has_government = communism
+		has_government = Ssocialism
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = Vn_FRA_news.2
+	title = Vn_FRA_news.2.t
+	desc = Vn_FRA_news.2.desc
+	picture = GFX_FRA_revolution_end
+	major = yes
+	is_triggered_only = yes
+
+	
+	option = {
+		name = Vn_FRA_news.2.a
+	}
+}

@@ -1,0 +1,609 @@
+add_namespace = Vn_chi
+country_event = {
+	id = Vn_chi.1
+	title = Vn_chi.1.t
+	desc = Vn_chi.1.d
+	is_triggered_only = yes
+	picture = GFX_decision_CHI_CR
+
+	option = {
+		name = Vn_chi.1.a
+			swap_ideas = {
+			remove_idea = economy_Feudal_capital_economy
+			add_idea = economy_Dominate_economy
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.2
+	title = Vn_chi.2.t
+	desc = Vn_chi.2.d
+	is_triggered_only = yes
+	picture = GFX_decision_CHI_xshyd
+
+	option = {
+		name = Vn_chi.2.a
+		add_timed_idea = { idea = CHI_new_life_movement days = 400 }
+		}
+	}
+country_event = {
+	id = Vn_chi.3
+	title = Vn_chi.3.t
+	desc = Vn_chi.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.3.a
+			hidden_effect = {
+		country_event = { days = 420 id = Vn_chi.4 }
+				}
+			swap_ideas = {
+				remove_idea = CHI_freeHP
+				add_idea = CHI_freeHP_2
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.4
+	title = Vn_chi.3.t
+	desc = Vn_chi.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.3.a
+			swap_ideas = {
+				remove_idea = CHI_freeHP_2
+				add_idea = CHI_freeHP_3
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.5
+	title = Vn_chi.5.t
+	desc = Vn_chi.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.5.a
+			set_politics = {
+				ruling_party = democratic
+	elections_allowed = yes
+			}
+	add_popularity = { ideology = democratic popularity = 0.25 }
+		}
+	option = {
+		name = Vn_chi.5.b
+			set_politics = {
+				ruling_party = democratic
+	elections_allowed = yes
+			}
+	add_popularity = { ideology = democratic popularity = 0.25 }
+			add_country_leader_role = {
+				character = CHI_chiang_kaishek
+		portraits={
+			civilian={
+				large="gfx\leaders\CHI\CHI_chiang_kai_shekold.png"
+			}
+		}
+				country_leader = {
+				expire = "1965.1.1"
+			ideology = Three_Principles_of_the_People
+			traits = {
+			generallissimo
+			CHI_chiang_kaishek_democratic
+			}
+					}
+				promote_leader = yes
+				}
+		}
+	option = {
+		name = Vn_chi.5.c
+			set_politics = {
+				ruling_party = democratic
+	elections_allowed = yes
+			}
+		hidden_effect = {
+		kill_ideology_leader = democratic
+			}
+	add_popularity = { ideology = democratic popularity = 0.25 }
+			add_country_leader_role = {
+				character = CHI_jiangjingguo
+				country_leader = {
+				expire = "1965.1.1"
+			ideology = Three_Principles_of_the_People
+			traits = {
+			CHI_fuck_nit
+			CHI_Firmly_democratic
+			}
+					}
+				promote_leader = yes
+				}
+		}
+	}
+country_event = {
+	id = Vn_chi.6
+	title = Vn_chi.6.t
+	desc = Vn_chi.6.d
+	is_triggered_only = yes
+	picture = GFX_decision_CHI_CRPD
+
+	option = {
+		name = Vn_chi.6.a
+		add_political_power = 25
+		hidden_effect = {
+		country_event = { days = 40 id = Vn_chi.8 }
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.7
+	title = Vn_chi.7.t
+	desc = Vn_chi.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.7.a
+		set_country_flag = CHI_technology_event_tt
+			swap_ideas = {
+			remove_idea = CHI_Popular_research_1
+			add_idea = CHI_Popular_research_2
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.8
+	title = Vn_chi.8.t
+	desc = Vn_chi.8.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.8.a
+		add_political_power = 25
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	set_country_flag = CHI_Anti_corruption_revolution_dision
+			swap_ideas = {
+			remove_idea = CHI_corruptgovernment
+			add_idea = CHI_corruptgovernment_2
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.9
+	title = Vn_chi.9.t
+	desc = Vn_chi.9.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.9.a
+		add_political_power = 25
+		hidden_effect = {
+		country_event = { days = 40 id = Vn_chi.10 }
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.10
+	title = Vn_chi.10.t
+	desc = Vn_chi.10.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.10.a
+		add_political_power = 25
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+			swap_ideas = {
+			remove_idea = CHI_corruptgovernment_2
+			add_idea = CHI_corruptgovernment_3
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.11
+	title = Vn_chi.11.t
+	desc = Vn_chi.11.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.11.a
+			add_ideas = CHI_antiCorruption
+		hidden_effect = {
+		country_event = { days = 1 id = Vn_chi.12 }
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.12
+	title = Vn_chi.12.t
+	desc = Vn_chi.12.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.12.a
+		}
+	}
+country_event = {
+	id = Vn_chi.13
+	title = Vn_chi.13.t
+	desc = Vn_chi.13.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.13.a
+		set_country_flag = CHI_junduidaqingxi_events
+		custom_effect_tooltip = CHI_junduidaqingxi_events
+		remove_unit_leader = CHI_BCX
+		remove_unit_leader = CHI_LY
+		remove_unit_leader = CHI_song_zhe_yuan
+		remove_unit_leader = CHI_liu_wen_hui
+		remove_unit_leader = CHI_liu_xiang
+		remove_unit_leader = CHI_li_zong_ren
+			random_list = {
+	60 = { annex_country = { target = XKS } }
+	40 = { set_autonomy = { target = XKS autonomy_state = autonomy_free } declare_war_on = { target = XKS type = civil_war } }
+				}
+			random_list = {
+	50 = { annex_country = { target = SCS } }
+	50 = { set_autonomy = { target = SCS autonomy_state = autonomy_free } declare_war_on = { target = SCS type = civil_war } }
+				}
+			random_list = {
+	55 = { annex_country = { target = HBJ } }
+	45 = {  set_autonomy = { target = HBJ autonomy_state = autonomy_free } declare_war_on = { target = HBJ type = civil_war } }
+				}
+			random_list = {
+	35 = { annex_country = { target = GXC } }
+	65 = { set_autonomy = { target = GXC autonomy_state = autonomy_free } declare_war_on = {target = GXC type = civil_war } }
+				}
+			random_list = {
+	35 = { annex_country = { target = YUN } }
+	65 = { set_autonomy = { target = YUN autonomy_state = autonomy_free } declare_war_on = { target = YUN type = civil_war  }}
+				}
+		}
+	}
+country_event = {
+	id = Vn_chi.14
+	title = Vn_chi.14.t
+	desc = Vn_chi.14.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.14.a
+		custom_effect_tooltip = CHI_apprehend_PPCS_KONG
+		custom_effect_tooltip = CHI_apprehend_PPCS_KONG_2
+		custom_effect_tooltip = CHI_apprehend_PPCS_KONG_3
+		set_country_flag = CHI_apprehend_PPCS_KONG_PPCS
+		set_country_flag = CHI_apprehend_PPCS_KONG_2_PPCS
+		set_country_flag = CHI_apprehend_PPCS_KONG_3_PPCS
+		}
+	}
+country_event = {
+	id = Vn_chi.15
+	title = Vn_chi.15.t
+	desc = Vn_chi.15.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.15.a
+		custom_effect_tooltip = CHI_apprehend_PPCS_CHEN
+		set_country_flag = CHI_apprehend_PPCS_CHEN_PPCS
+		}
+	}
+country_event = {
+	id = Vn_chi.16
+	title = Vn_chi.16.t
+	desc = Vn_chi.16.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.16.a
+		custom_effect_tooltip = CHI_apprehend_PPCS_CHEN_2
+		set_country_flag = CHI_apprehend_PPCS_CHEN_2_PPCS
+		}
+	}
+country_event = {
+	id = Vn_chi.17
+	title = Vn_chi.17.t
+	desc = Vn_chi.17.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.17.a
+		remove_ideas = CHI_nine_power_treaty
+		custom_effect_tooltip = CHI_kill_PPCS
+		set_country_flag = CHI_kill_PPCS
+	if = {
+		limit = { has_idea = CHI_Power_struggle }
+		swap_ideas = {
+			remove_idea = CHI_Power_struggle
+			add_idea = CHI_Power_struggle_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Power_struggle_2 }
+			remove_ideas = CHI_Power_struggle_2
+			}
+			remove_ideas = CHI_corruptgovernment
+		}
+	}
+country_event = {
+	id = Vn_chi.18
+	title = Vn_chi.18.t
+	desc = Vn_chi.18.d
+	is_triggered_only = yes
+
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Breaking point!
+		name = chi.18.a
+		ai_chance = { factor = 90 }
+		effect_tooltip = {
+			JAP = {
+				add_war_support = 0.05
+				country_event = { id = japan.1 }
+				create_wargoal = {
+  					type = annex_everything
+  					target = CHI
+  				}
+  				create_wargoal = {
+  					type = annex_everything
+  					target = HBJ
+  				}
+			}
+		}
+		hidden_effect = {
+			JAP = { country_event = { id = japan.1 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+	option = { # Make more concessions
+		name = chi.18.b
+		ai_chance = { factor = 10 }
+		JAP = {
+			set_truce = { target = ROOT days = 180 }
+			effect_tooltip = {
+				transfer_state = 608
+				transfer_state = 597
+				transfer_state = 614
+				add_state_claim = 613
+				if = {
+					limit = {
+						ROOT = { controls_state = 743 }
+					}
+					transfer_state = 743
+				}
+			}
+			country_event = { id = japan.2 }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					is_historical_focus_on = yes
+					has_country_flag = CHI_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = CHI_ai_behavior
+						option = HISTORICAL
+					}
+				}
+				NOT = {
+					has_game_rule = { #used here instead of checking for default because people might not have WTT
+						rule = CHI_ai_behavior
+						option = ALTERNATE
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				JAP = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 0.25
+				JAP = {
+					any_enemy_country = {
+						is_major = yes
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = Vn_chi.19
+	title = Vn_chi.19.t
+	desc = Vn_chi.19.d
+	is_triggered_only = yes
+
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { # Breaking point!
+		name = chi.19.a
+		ai_chance = { factor = 90 }
+		effect_tooltip = {
+			JAP = {
+				add_war_support = 0.05
+				country_event = { id = japan.1 }
+				create_wargoal = {
+  					type = annex_everything
+  					target = CHI
+  				}
+  				create_wargoal = {
+  					type = annex_everything
+  					target = HBJ
+  				}
+			}
+		}
+		hidden_effect = {
+			JAP = { country_event = { id = japan.1 } }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+	option = { # Make more concessions
+		name = chi.19.b
+		ai_chance = { factor = 10 }
+		JAP = {
+			set_truce = { target = ROOT days = 180 }
+			effect_tooltip = {
+				transfer_state = 608
+				transfer_state = 597
+				transfer_state = 614
+				add_state_claim = 613
+				if = {
+					limit = {
+						ROOT = { controls_state = 743 }
+					}
+					transfer_state = 743
+				}
+			}
+			country_event = { id = japan.2 }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					is_historical_focus_on = yes
+					has_country_flag = CHI_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = CHI_ai_behavior
+						option = HISTORICAL
+					}
+				}
+				NOT = {
+					has_game_rule = { #used here instead of checking for default because people might not have WTT
+						rule = CHI_ai_behavior
+						option = ALTERNATE
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				JAP = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 0.25
+				JAP = {
+					any_enemy_country = {
+						is_major = yes
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = Vn_chi.20
+	title = Vn_chi.20.t
+	desc = Vn_chi.20.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.20.a
+		CHI = {
+			country_event = Vn_chi.18
+			}
+		}
+	}
+country_event = {
+	id = Vn_chi.21
+	title = Vn_chi.21.t
+	desc = Vn_chi.21.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_chi.21.a
+		CHI = {
+			country_event = Vn_chi.19
+			}
+		}
+	}
+

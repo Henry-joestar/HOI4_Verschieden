@@ -1,0 +1,1269 @@
+add_namespace = Vn_Soviet
+country_event = {
+	id = Vn_Soviet.1
+	title = Vn_Soviet.1.t
+	desc = Vn_Soviet.1.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.1.a
+	add_stability = -0.1
+	kill_country_leader = yes
+	clr_country_flag = SOV_lenin_not_dead
+	clr_country_flag = SOV_lenin_not_dead_Decentralization
+	add_political_power = -75
+	add_popularity = { ideology = fascism  popularity = 0.01 }
+	add_popularity = { ideology =  neutrality popularity = 0.01 }
+		hidden_effect = {
+		country_event = Vn_Soviet.2
+		news_event = { id = Vn_news.6 days = 1 random_days = 1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.2
+	title = Vn_Soviet.2.t
+	desc = Vn_Soviet.2.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.2.a
+	set_country_flag = SOV_reputationladder_now
+	set_country_flag = SOV_reputationladder_renminwyh
+	add_stability = 0.05
+	add_political_power = 50
+		custom_effect_tooltip = reputationladder_renminwyh_tt
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.3 days =1 }
+		country_event = { id = Vn_Soviet.8 days =4 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.3
+	title = Vn_Soviet.3.t
+	desc = Vn_Soviet.3.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.3.a
+	add_stability = -0.1
+	add_political_power = -75
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.4 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.4
+	title = Vn_Soviet.4.t
+	desc = Vn_Soviet.4.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.4.a
+	add_stability = -0.1
+	add_political_power = -75
+	add_ideas = SOV_strike
+		random_owned_controlled_state ={
+			damage_building = {
+				type = arms_factory
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = arms_factory
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.5 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.5
+	title = Vn_Soviet.5.t
+	desc = Vn_Soviet.5.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.5.a
+	add_stability = -0.2
+	add_political_power = -75
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		hidden_effect = {
+		add_ideas = SOV_anti_revolution
+		country_event = { id = Vn_Soviet.6 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.6
+	title = Vn_Soviet.6.t
+	desc = Vn_Soviet.6.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.6.a
+	add_stability = -0.2
+	add_political_power = -75
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		random_owned_controlled_state ={
+			damage_building = {
+				type = infrastructure
+				damage = 0.2
+			}
+		}
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.7 days =1 }
+		country_event = { id = Vn_Soviet.15 days =20 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.7
+	title = Vn_Soviet.7.t
+	desc = Vn_Soviet.7.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.7.a
+	add_stability = -0.1
+	add_political_power = -75
+	add_popularity = { ideology = Ssocialism popularity = 0.05 }
+		hidden_effect = {
+		#country_event = { id = Vn_Soviet.7 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.8
+	title = Vn_Soviet.8.t
+	desc = Vn_Soviet.8.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.8.a
+		ai_chance = {
+		factor = 100
+			}
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.9 days =1 }
+			}
+		}
+	option = {
+		name = Vn_Soviet.8.b
+		custom_effect_tooltip = Vn_Soviet_8_tt
+	custom_effect_tooltip = Vn_Soviet_17_tt
+	add_to_variable = { Trotsky = -10 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.10 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.9
+	title = Vn_Soviet.9.t
+	desc = Vn_Soviet.9.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.9.a
+	add_political_power = 25
+	custom_effect_tooltip = Vn_Soviet_20_tt
+	add_to_variable = { Trotsky = 5 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.12 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.10
+	title = Vn_Soviet.10.t
+	desc = Vn_Soviet.10.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.10.a
+	add_political_power = 50
+	custom_effect_tooltip = Vn_Soviet_17_tt
+	add_to_variable = { Trotsky = -10 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.11 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.11
+	title = Vn_Soviet.11.t
+	desc = Vn_Soviet.11.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.11.a
+	add_political_power = 25
+	custom_effect_tooltip = Vn_Soviet_11_tt
+	add_to_variable = { Trotsky = -20 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.14 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.12
+	title = Vn_Soviet.12.t
+	desc = Vn_Soviet.12.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.12.a
+	custom_effect_tooltip = Vn_Soviet_17_tt
+	add_to_variable = { Trotsky = -8 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.13 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.13
+	title = Vn_Soviet.13.t
+	desc = Vn_Soviet.13.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.13.a
+	add_political_power = 125
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.16 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.15
+	title = Vn_Soviet.15.t
+	desc = Vn_Soviet.15.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.15.a
+	add_political_power = 25
+		remove_ideas = SOV_strike
+		hidden_effect = {
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.16
+	title = Vn_Soviet.16.t
+	desc = Vn_Soviet.16.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.16.a
+		add_political_power = 50
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.17 days =2 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.17
+	title = Vn_Soviet.17.t
+	desc = Vn_Soviet.17.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.17.a
+	add_political_power = 25
+	custom_effect_tooltip = Vn_Soviet_17_tt
+	add_to_variable = { Trotsky = -8 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.18 days =2 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.18
+	title = Vn_Soviet.18.t
+	desc = Vn_Soviet.18.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.18.a
+	custom_effect_tooltip = Vn_Soviet_18_tt
+	custom_effect_tooltip = Vn_Soviet_18_Btt
+	add_political_power = 25
+	add_to_variable = { Zinoviev = -15 }
+	add_to_variable = { Kamenev = -15 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.19 days =2 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.19
+	title = Vn_Soviet.19.t
+	desc = Vn_Soviet.19.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.19.a
+	add_political_power = 25
+	custom_effect_tooltip = Vn_Soviet_19_tt
+	add_to_variable = { Stalin = 5 }
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.20 days =2 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.20
+	title = Vn_Soviet.20.t
+	desc = Vn_Soviet.20.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.20.a
+	add_political_power = 25
+	custom_effect_tooltip = Vn_Soviet_20_tt
+	add_to_variable = { Trotsky = 5 }
+		hidden_effect = {
+		set_country_flag = SOV_Trotsky_power_start
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.21
+	title = Vn_Soviet.21.t
+	desc = Vn_Soviet.21.d
+	is_triggered_only = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.21.a
+
+		if = {
+			limit = { check_variable = { Stalin < Trotsky } }
+		add_to_variable = { SOV_party2_seats = 35 }
+		add_to_variable = { SOV_party4_seats = 15 }
+		add_to_variable = { SOV_party5_seats = 15 }
+		add_to_variable = { SOV_party1_seats = -25 }
+		add_to_variable = { SOV_party3_seats = -30 }
+		add_to_variable = { SOV_party6_seats = -20 }
+		add_to_variable = { SOV_party6_seats = 10 }
+	SOV_debug_partys_icon_frames = yes
+			}
+		if = {
+			limit = { check_variable = { Trotsky = Stalin } }
+		add_to_variable = { SOV_party2_seats = 15 }
+		add_to_variable = { SOV_party4_seats = 5 }
+		add_to_variable = { SOV_party5_seats = 5 }
+		add_to_variable = { SOV_party1_seats = -10 }
+		add_to_variable = { SOV_party3_seats = -15 }
+		add_to_variable = { SOV_party6_seats = -10 }
+		add_to_variable = { SOV_party6_seats = 10 }
+	SOV_debug_partys_icon_frames = yes
+			}
+		if = {
+			limit = { check_variable = { Trotsky < Stalin } }
+		add_to_variable = { SOV_party2_seats = -25 }
+		add_to_variable = { SOV_party4_seats = -5 }
+		add_to_variable = { SOV_party5_seats = -5 }
+		add_to_variable = { SOV_party1_seats = 15 }
+		add_to_variable = { SOV_party3_seats = 5 }
+		add_to_variable = { SOV_party6_seats = 5 }
+		add_to_variable = { SOV_party6_seats = 10 }
+	SOV_debug_partys_icon_frames = yes
+			}
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.22 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.22
+	title = Vn_Soviet.22.t
+	desc = Vn_Soviet.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.22.a
+	clr_country_flag = SOV_reputationladder_now
+	clr_country_flag = SOV_reputationladder_renminwyh
+		if = {
+			limit = { check_variable = { SOV_party1_seats < SOV_party2_seats } }
+	custom_effect_tooltip = SOV_Trotsky_chairman
+		load_focus_tree = Trotsky
+		hidden_effect = {
+	add_to_variable = { Trotsky = -100 }
+	set_country_flag = SOV_Trotsky_chairman
+		kill_country_leader = yes
+		kill_country_leader = yes
+				}
+			}
+		if = {
+			limit = { check_variable = { SOV_party1_seats = SOV_party2_seats } }
+	custom_effect_tooltip = SOV_Trotsky_chairman
+		load_focus_tree = Trotsky
+		hidden_effect = {
+	add_to_variable = { Trotsky = -100 }
+	set_country_flag = SOV_Trotsky_chairman
+		kill_country_leader = yes
+		kill_country_leader = yes
+				}
+			}
+		if = {
+			limit = { check_variable = { SOV_party2_seats < SOV_party1_seats } }
+	custom_effect_tooltip = SOV_Stalin_chairman
+		hidden_effect = {
+	add_to_variable = { Stalin = -100 }
+		set_country_flag = SOV_Trotsky_fail
+		kill_country_leader = yes
+				}
+			}
+		hidden_effect = {
+		country_event = { id = Vn_Soviet.22 days =1 }
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.23
+	title = Vn_Soviet.23.t
+	desc = Vn_Soviet.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.23.a
+	custom_effect_tooltip = SOV_Trotsky_chairman
+	load_focus_tree = Trotsky
+	set_country_flag = SOV_Trotsky_chairman
+	clr_country_flag = SOV_reputationladder_now
+	clr_country_flag = SOV_reputationladder_renminwyh
+	add_to_variable = { Trotsky = -100 }
+		add_to_variable = { SOV_party2_seats = 35 }
+		add_to_variable = { SOV_party4_seats = 15 }
+		add_to_variable = { SOV_party5_seats = 15 }
+		add_to_variable = { SOV_party1_seats = -25 }
+		add_to_variable = { SOV_party3_seats = -30 }
+		add_to_variable = { SOV_party6_seats = -20 }
+		add_to_variable = { SOV_party6_seats = 10 }
+	SOV_debug_partys_icon_frames = yes
+		hidden_effect = {
+		kill_country_leader = yes
+				}
+		}
+}
+country_event = {
+	id = Vn_Soviet.24
+	title = Vn_Soviet.24.t
+	desc = Vn_Soviet.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.24.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_manpower = 9357
+		add_popularity = { ideology = Ssocialism popularity = 0.1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		}
+}
+country_event = {
+	id = Vn_Soviet.25
+	title = Vn_Soviet.25.t
+	desc = Vn_Soviet.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.25.a
+		add_stability = -0.1
+		}
+}
+country_event = {
+	id = Vn_Soviet.26
+	title = Vn_Soviet.26.t
+	desc = Vn_Soviet.26.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.26.a
+		add_political_power = 150
+		}
+}
+country_event = {
+	id = Vn_Soviet.27
+	title = Vn_Soviet.27.t
+	desc = Vn_Soviet.27.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	TAG = SOV
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.27.a
+		add_political_power = 150
+		}
+}
+country_event = {
+	id = Vn_Soviet.28
+	title = Vn_Soviet.28.t
+	desc = Vn_Soviet.28.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.28.AP
+		SOV = { country_event = Vn_Soviet.29 }
+			every_state = {
+				limit = {
+					is_capital = yes
+				is_owned_by = ROOT
+				}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		add_dynamic_modifier = {
+			modifier = Kollontai_International
+		}
+	add_to_variable = { KI_research_speed_factor = 0.1 }
+	SOV = { add_to_variable = { KI_research_speed_factor = 0.01 } }
+		SOV = { add_to_variable = { Kollontai_International_country = 1 } }
+		SOV = { country_event = Vn_Soviet.29 }
+		set_country_flag = Kollontai_International_flag
+		custom_effect_tooltip = Kollontai_International_TT_International
+		custom_effect_tooltip = Kollontai_International_TT_mod
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 25
+	trigger = {
+				is_puppet_of = SOV
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.a
+		ai_chance = {
+			factor = 90
+		}
+			every_state = {
+				limit = {
+					is_capital = yes
+				is_owned_by = ROOT
+				}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		SOV = { country_event = Vn_Soviet.29 }
+		add_dynamic_modifier = {
+			modifier = Kollontai_International
+		}
+	add_to_variable = { KI_research_speed_factor = 0.1 }
+	SOV = { add_to_variable = { KI_research_speed_factor = 0.01 } }
+		SOV = { add_to_variable = { Kollontai_International_country = 1 } }
+		set_country_flag = Kollontai_International_flag
+		custom_effect_tooltip = Kollontai_International_TT_International
+		custom_effect_tooltip = Kollontai_International_TT_mod
+		add_political_power = 25
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				OR = {
+				is_in_faction_with = SOV
+				has_government = communism
+				}
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.b
+		ai_chance = {
+			factor = 10
+		}
+		SOV = { country_event = Vn_Soviet.30 }
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				OR = {
+				is_in_faction_with = SOV
+				has_government = communism
+				}
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.c
+		ai_chance = {
+			factor = 80
+		}
+			every_state = {
+				limit = {
+					is_capital = yes
+				is_owned_by = ROOT
+				}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		SOV = { country_event = Vn_Soviet.29 }
+		add_dynamic_modifier = {
+			modifier = Kollontai_International
+		}
+	add_to_variable = { KI_research_speed_factor = 0.1 }
+	SOV = { add_to_variable = { KI_research_speed_factor = 0.01 } }
+		SOV = { add_to_variable = { Kollontai_International_country = 1 } }
+		set_country_flag = Kollontai_International_flag
+		custom_effect_tooltip = Kollontai_International_TT_International
+		custom_effect_tooltip = Kollontai_International_TT_mod
+		add_political_power = 25
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = Ssocialism
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.e
+		ai_chance = {
+			factor = 20
+		}
+		SOV = { country_event = Vn_Soviet.30 }
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = Ssocialism
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.f
+		ai_chance = {
+			factor = 70
+		}
+			every_state = {
+				limit = {
+					is_capital = yes
+				is_owned_by = ROOT
+				}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		SOV = { country_event = Vn_Soviet.29 }
+		add_dynamic_modifier = {
+			modifier = Kollontai_International
+		}
+	add_to_variable = { KI_research_speed_factor = 0.1 }
+	SOV = { add_to_variable = { KI_research_speed_factor = 0.01 } }
+		SOV = { add_to_variable = { Kollontai_International_country = 1 } }
+		set_country_flag = Kollontai_International_flag
+		custom_effect_tooltip = Kollontai_International_TT_International
+		custom_effect_tooltip = Kollontai_International_TT_mod
+		add_political_power = 25
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = democratic
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.g
+		ai_chance = {
+			factor = 30
+		}
+		SOV = { country_event = Vn_Soviet.30 }
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = democratic
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.l
+		ai_chance = {
+			factor = 55
+		}
+			every_state = {
+				limit = {
+					is_capital = yes
+				is_owned_by = ROOT
+				}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		SOV = { country_event = Vn_Soviet.29 }
+		add_dynamic_modifier = {
+			modifier = Kollontai_International
+		}
+	add_to_variable = { KI_research_speed_factor = 0.1 }
+	SOV = { add_to_variable = { KI_research_speed_factor = 0.01 } }
+		SOV = { add_to_variable = { Kollontai_International_country = 1 } }
+		set_country_flag = Kollontai_International_flag
+		custom_effect_tooltip = Kollontai_International_TT_International
+		custom_effect_tooltip = Kollontai_International_TT_mod
+		add_political_power = 25
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = neutrality
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.j
+		ai_chance = {
+			factor = 45
+		}
+		SOV = { country_event = Vn_Soviet.30 }
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = neutrality
+			}
+		}
+	option = {
+		name = Vn_Soviet.28.h
+		ai_chance = {
+			factor = 100
+		}
+		SOV = { country_event = Vn_Soviet.30 }
+	trigger = {
+				NOT = { is_puppet_of = SOV }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { has_government = communism }
+					has_government = fascism
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.29
+	title = Vn_Soviet.29.t
+	desc = Vn_Soviet.29.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.29.a
+		custom_effect_tooltip = Kollontai_International_TT_International_SOV
+		custom_effect_tooltip = Kollontai_International_TT_mod
+		add_political_power = 25
+		}
+}
+country_event = {
+	id = Vn_Soviet.30
+	title = Vn_Soviet.30.t
+	desc = Vn_Soviet.30.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.30.a
+		}
+}
+country_event = {
+	id = Vn_Soviet.31
+	title = Vn_Soviet.31.t
+	desc = Vn_Soviet.31.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.31.a
+		add_political_power = -150
+		add_manpower = -8000
+		add_stability = -0.1
+		}
+}
+country_event = {
+	id = Vn_Soviet.32
+	title = Vn_Soviet.32.t
+	desc = Vn_Soviet.32.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.32.a
+				transfer_state = 714
+			714 = { 
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+			657 = { 
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.33
+	title = Vn_Soviet.33.t
+	desc = Vn_Soviet.33.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.33.a
+		add_political_power = -150
+		add_manpower = -7425
+		add_stability = -0.1
+			328 = { 
+				damage_building = {
+					type = infrastructure#建筑
+					damage = 0.8#级别
+				}
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.34
+	title = Vn_Soviet.34.t
+	desc = Vn_Soviet.34.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.34.a
+		add_political_power = -75
+		add_war_support = -0.05
+			657 = { 
+				damage_building = {
+					type = infrastructure#建筑
+					damage = 0.5#级别
+				}
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.35
+	title = Vn_Soviet.35.t
+	desc = Vn_Soviet.35.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.35.a
+			714 = { 
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.36
+	title = Vn_Soviet.36.t
+	desc = Vn_Soviet.36.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.36.a
+		add_stability = -0.1
+		add_war_support = -0.05
+	add_popularity = { ideology = communism popularity = 0.1 }
+		SOV = {
+		country_event = Vn_Soviet.38
+				}
+		}
+	option = {
+		name = Vn_Soviet.36.a
+		add_stability = -0.05
+		SOV = {
+		country_event = Vn_Soviet.39
+				}
+		}
+}
+country_event = {
+	id = Vn_Soviet.37
+	title = Vn_Soviet.37.t
+	desc = Vn_Soviet.37.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.37.a
+		add_political_power = -150
+		add_stability = -0.15
+		add_war_support = -0.05
+	add_popularity = { ideology = communism popularity = 0.1 }
+		282 = { 
+			damage_building = {
+				type = infrastructure#建筑
+				damage = 0.5#级别
+				}
+			}
+		}
+}
+country_event = {
+	id = Vn_Soviet.38
+	title = Vn_Soviet.38.t
+	desc = Vn_Soviet.38.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.38.a
+custom_effect_tooltip = Vn_Soviet_38_tt
+		}
+}
+country_event = {
+	id = Vn_Soviet.39
+	title = Vn_Soviet.39.t
+	desc = Vn_Soviet.39.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = Vn_Soviet.39.a
+custom_effect_tooltip = Vn_Soviet_38_tt
+	JAP = {
+country_event = { days = 1 id = Vn_Soviet.37 }
+			}
+		}
+}
+
+

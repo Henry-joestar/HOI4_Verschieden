@@ -1,0 +1,526 @@
+add_namespace = Vn_FRA
+country_event = {
+	id = Vn_FRA.1
+	title = Vn_FRA.1.t
+	desc = Vn_FRA.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.1.a
+		hidden_effect = {
+		set_cosmetic_tag = FRA_nationalism
+		set_party_name = { 
+		ideology = neutrality 
+		name = FRA_nationalism_party }
+		add_ideas = economy_Dominate_economy
+		add_ideas = neutrality_Authoritarian_regime
+			16 = {
+			add_resistance = 20
+				}
+			25 = {
+			add_resistance = 20
+				}
+			31 = {
+			add_resistance = 20
+				}
+			22 = {
+			add_resistance = 20
+				}
+			remove_state_core = 785
+			785 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 27
+			27 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 15
+			15 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 24
+			24 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 30
+			30 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 18
+			18 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			}
+			swap_ideas = {
+				remove_idea = FRA_strikerevolution_C
+				add_idea = FRA_strikerevolution_D
+			}
+			set_politics = {
+				ruling_party = neutrality
+			}
+			create_country_leader = {
+				name = Philip_Petain#领导人
+				picture = "gfx\leaders\FRA\FRA_Philippe_Petain.png"
+				expire = "1965.1.1"#下台时间
+				ideology = Patriarchal_dictatorship
+				traits = {}#领导人特质
+			}
+		}
+	}
+}
+country_event = {
+	id = Vn_FRA.2
+	title = Vn_FRA.2.t
+	desc = Vn_FRA.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.2.a
+			swap_ideas = {
+				remove_idea = FRA_Population_movement
+				add_idea = FRA_Population_movement_finsh
+			}
+
+		}
+	}
+
+country_event = {
+	id = Vn_FRA.3
+	title = Vn_FRA.3.t
+	desc = Vn_FRA.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.3.a
+		add_ideas = FRA_strikerevolution
+		add_manpower = -362
+		add_political_power = -50
+		country_event = { days = 1 id = Vn_FRA.5 }
+		}
+	option = {
+		name = Vn_FRA.3.b
+		add_ideas = FRA_strikerevolution
+		country_event = { days = 1 id = Vn_FRA.4 }
+		}
+	}
+
+country_event = {
+	id = Vn_FRA.4
+	title = Vn_FRA.4.t
+	desc = Vn_FRA.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.4.a
+		add_political_power = -50
+		remove_ideas = FRA_strikerevolution
+			add_ideas = { FRA_matignon_agreements }
+		}
+	option = {
+		name = Vn_FRA.4.b
+		country_event = { days = 1 id = Vn_FRA.5 }
+
+		}
+	}
+
+country_event = {
+	id = Vn_FRA.5
+	title = Vn_FRA.5.t
+	desc = Vn_FRA.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.5.a
+		add_manpower = -1457
+		add_political_power = -50
+			swap_ideas = {
+				remove_idea = FRA_strikerevolution
+				add_idea = FRA_strikerevolution_B
+			}
+		hidden_effect = {
+			FRC = {
+				add_state_core = 16
+				add_state_core = 785
+				add_state_core = 29
+				add_state_core = 15
+				add_state_core = 30
+				add_state_core = 14
+				add_state_core = 23
+				add_state_core = 19
+				add_state_core = 806
+				add_state_core = 31
+				add_state_core = 25
+				add_state_core = 22
+				add_state_core = 26
+				add_state_core = 33
+				add_state_core = 24
+				add_state_core = 27
+				add_state_core = 20
+				add_state_core = 32
+				add_state_core = 21
+				add_state_core = 735
+				add_state_core = 851
+				add_state_core = 17
+				add_state_core = 18
+				add_state_core = 28
+				add_state_core = 1
+				}
+			}
+			remove_state_core = 16
+			16 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+		country_event = { days = 1 id = Vn_FRA.6 }
+		}
+}
+country_event = {
+	id = Vn_FRA.6
+	title = Vn_FRA.6.t
+	desc = Vn_FRA.6.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.6.a
+		add_manpower = -4623
+		add_political_power = -50
+		set_country_flag = FRC_socialismrevolution
+		custom_effect_tooltip =  FRC_socialismrevolution_tt
+			swap_ideas = {
+				remove_idea = FRA_strikerevolution_B
+				add_idea = FRA_strikerevolution_C
+			}
+			16 = {
+			add_resistance = 20
+				}
+			remove_state_core = 25
+			25 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 31
+			31 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			remove_state_core = 22
+			22 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+		}
+	}
+country_event = {
+	id = Vn_FRA.7
+	title = Vn_FRA.7.t
+	desc = Vn_FRA.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.7.a
+		set_country_flag = FRA_revolution_panluan
+		remove_state_core = 806
+		remove_state_core = 19
+		remove_state_core = 32
+		remove_state_core = 20
+		remove_state_core = 26
+		remove_state_core = 735
+		remove_state_core = 14
+			806 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+			19 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+			32 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+			20 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+			26 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+			735 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+			14 = {
+			start_resistance = yes
+			set_resistance = 45
+				}
+		}
+	}
+country_event = {
+	id = Vn_FRA.8
+	title = Vn_FRA.8.t
+	desc = Vn_FRA.8.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.8.a
+			hidden_effect = {
+		retire_country_leader = yes
+				news_event = { id = Vn_FRA_news.1 days = 1 random_days = 1 }
+			}
+		retire_country_leader = yes
+			add_country_leader_role = {
+   			character = FRA_Cachin_Marcel
+   			promote_leader = yes
+			country_leader = {
+    			ideology = leninism
+    		  	expire = "1965.1.1.1"
+      		traits = { proletariat_internationalist veteran_communist revolutionary_culture_minister collectivization_specialist international_revolutionary }
+    				}
+			}
+		}
+	option = {
+		name = Vn_FRA.8.b
+			hidden_effect = {
+				news_event = { id = Vn_FRA_news.1 days = 1 random_days = 1 }
+			}
+		retire_country_leader = yes
+			add_country_leader_role = {
+   			character = FRA_maurice_thorez
+   			promote_leader = yes
+			country_leader = {
+    			ideology = stalinism
+    		  	expire = "1965.1.1.1"
+      		traits = {
+			staunch_stalinist
+				the_statist
+					}
+    				}
+			}
+		}
+	}
+country_event = {
+	id = Vn_FRA.9
+	title = Vn_FRA.9.t
+	desc = Vn_FRA.9.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.9.a
+			hidden_effect = {
+		retire_country_leader = yes
+		retire_country_leader = yes
+				news_event = { id = Vn_FRA_news.2 days = 1 random_days = 1 }
+			}
+		retire_country_leader = yes
+			add_country_leader_role = {
+   			character = FRA_Pierre_Semard
+   			promote_leader = yes
+			country_leader = {
+    			ideology = marxism
+    		  	expire = "1965.1.1.1"
+      		traits = {
+		conservative_communist
+		economic_organizer}
+    				}
+			}
+		}
+}
+country_event = {
+	id = Vn_FRA.10
+	title = Vn_FRA.10.t
+	desc = Vn_FRA.10.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.10.a
+			hidden_effect = {
+		retire_country_leader = yes
+				country_event = { id = Vn_FRA.11 days = 20 }
+			}
+			add_power_balance_value = {
+				id = FRA_power_balance_people_font
+				value = 0.05
+			}
+		retire_country_leader = yes
+			add_country_leader_role = {
+				character = FRA_Camille_Chautemp
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {
+						war_profiteer
+					}
+				}
+				promote_leader = yes
+			}
+		}
+}
+country_event = {
+	id = Vn_FRA.11
+	title = Vn_FRA.11.t
+	desc = Vn_FRA.11.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_FRA.11.a
+			hidden_effect = {
+		#retire_country_leader = yes
+		#retire_country_leader = yes
+			}
+			add_power_balance_value = {
+				id = FRA_power_balance_people_font
+				value = 0.1
+			}
+		set_country_flag = FRA_edouard_daladier_event
+		retire_country_leader = yes
+			add_country_leader_role = {
+				character = FRA_edouard_daladier
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {
+						stout_defender 
+						compassionate_commoner 
+						rearmer
+					}
+				}
+				promote_leader = yes
+			}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = FRA_Camille_Chautemp
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = FRA_Henri_Queuille
+		}
+}
+country_event = {
+	id = Vn_FRA.12
+	title = Vn_FRA.12.t
+	desc = Vn_FRA.12.d
+	is_triggered_only = yes
+    fire_only_once = yes
+	option = {
+		name = Vn_FRA.12.a
+		add_stability = 0.05
+			swap_ideas = {
+				remove_idea = FRA_agricultural_collectivization_movent
+				add_idea = FRA_agricultural_collectivization_movent_2
+			}
+			hidden_effect = {
+			country_event = { id = Vn_FRA.13 days = 35 }
+			}
+		}
+}
+country_event = {
+	id = Vn_FRA.13
+	title = Vn_FRA.13.t
+	desc = Vn_FRA.13.d
+	is_triggered_only = yes
+    fire_only_once = yes
+	option = {
+		name = Vn_FRA.13.a
+		add_stability = 0.1
+		if = {
+			limit = {
+			has_idea = FRA_agricultural_collectivization_movent
+				}
+			swap_ideas = {
+				remove_idea = FRA_agricultural_collectivization_movent
+				add_idea = FRA_agricultural_collectivization
+				}
+			}
+		if = {
+			limit = {
+			has_idea = FRA_agricultural_collectivization_movent_2
+				}
+			swap_ideas = {
+				remove_idea = FRA_agricultural_collectivization_movent_2
+				add_idea = FRA_agricultural_collectivization
+			}
+		}
+	}
+}
+country_event = {
+	id = Vn_FRA.14
+	title = Vn_FRA.14.t
+	desc = Vn_FRA.14.d
+	is_triggered_only = yes
+    #fire_only_once = yes
+	option = {
+		name = Vn_FRA.14.a
+	}
+	option = {
+		name = Vn_FRA.14.b
+	}
+}
+country_event = {
+	id = Vn_FRA.15
+	title = Vn_FRA.15.t
+	desc = Vn_FRA.15.d
+	is_triggered_only = yes
+    #fire_only_once = yes
+	option = {
+		name = Vn_FRA.15.a
+	}
+	option = {
+		name = Vn_FRA.15.b
+	}
+}
+country_event = {
+	id = Vn_FRA.16
+	title = Vn_FRA.16.t
+	desc = Vn_FRA.16.d
+	is_triggered_only = yes
+    #fire_only_once = yes
+	option = {
+		name = Vn_FRA.16.a
+	}
+	option = {
+		name = Vn_FRA.16.b
+	}
+}
+country_event = {
+	id = Vn_FRA.17
+	title = Vn_FRA.17.t
+	desc = Vn_FRA.17.d
+	is_triggered_only = yes
+    #fire_only_once = yes
+	option = {
+		name = Vn_FRA.17.a
+	}
+	option = {
+		name = Vn_FRA.17.b
+	}
+}
+country_event = {
+	id = Vn_FRA.18
+	title = Vn_FRA.18.t
+	desc = Vn_FRA.18.d
+	is_triggered_only = yes
+    #fire_only_once = yes
+	option = {
+		name = Vn_FRA.18.a
+	}
+	option = {
+		name = Vn_FRA.18.b
+	}
+}
+country_event = {
+	id = Vn_FRA.19
+	title = Vn_FRA.19.t
+	desc = Vn_FRA.19.d
+	is_triggered_only = yes
+    #fire_only_once = yes
+	option = {
+		name = Vn_FRA.19.a
+	}
+	option = {
+		name = Vn_FRA.19.b
+	}
+}

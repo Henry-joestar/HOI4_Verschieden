@@ -1,0 +1,1459 @@
+add_namespace = Vn_jap
+country_event = {
+	id = Vn_jap.1
+	title = Vn_jap.1.t
+	desc = Vn_jap.1.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.1.a
+		country_event = { days = 1 id = Vn_jap.2 }
+		}
+	}
+country_event = {
+	id = Vn_jap.2
+	title = Vn_jap.2.t
+	desc = Vn_jap.2.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.2.a
+		country_event = { days = 1 id = Vn_jap.3 }
+		set_party_name = { 
+		ideology = democratic
+		long_name = JAP_democratic_party_now
+		name = JAP_democratic_party_now
+			}
+		set_party_name = { 
+		ideology = Ssocialism
+		long_name = JAP_Ssocialism_party_now
+		name = JAP_Ssocialism_party_now
+			 }
+		set_party_name = { 
+		ideology = communism
+		long_name = JAP_communism_party_now
+		name = JAP_communism_party_now
+					}
+		}
+	}
+country_event = {
+	id = Vn_jap.3
+	title = Vn_jap.3.t
+	desc = Vn_jap.3.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.3.a
+		country_event = { days = 1 id = Vn_jap.4 }
+		#set_global_flag = JAP_Decentralization
+		add_popularity = { ideology = Ssocialism  popularity = 0.03 }
+		add_popularity = { ideology = democratic  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.3.b
+		#set_global_flag = JAP_Centralization
+		country_event = { days = 1 id = Vn_jap.4 }
+		add_popularity = { ideology = communism  popularity = 0.03 }
+		}
+	}
+country_event = {
+	id = Vn_jap.4
+	title = Vn_jap.4.t
+	desc = Vn_jap.4.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.4.a
+		country_event = { days = 1 id = Vn_jap.5 }
+		add_popularity = { ideology = democratic  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.4.b
+		country_event = { days = 1 id = Vn_jap.5 }
+		set_country_flag = JAP_Ssocialism_plan
+		add_popularity = { ideology = Ssocialism  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.4.c
+		set_country_flag = JAP_communism_plan
+		country_event = { days = 1 id = Vn_jap.5 }
+		add_popularity = { ideology = communism  popularity = 0.03 }
+		}
+	}
+country_event = {
+	id = Vn_jap.5
+	title = Vn_jap.5.t
+	desc = Vn_jap.5.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.5.a
+		country_event = { days = 1 id = Vn_jap.6 }
+		#set_global_flag = JAP_democracy_soc
+		add_popularity = { ideology = democratic  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.5.b
+		#set_global_flag = JAP_socialism_soc
+		country_event = { days = 1 id = Vn_jap.6 }
+		add_popularity = { ideology = Ssocialism  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.5.c
+		#set_global_flag = JAP_communism_soc
+		country_event = { days = 1 id = Vn_jap.6 }
+		add_popularity = { ideology = communism  popularity = 0.03 }
+		}
+	}
+country_event = {
+	id = Vn_jap.6
+	title = Vn_jap.6.t
+	desc = Vn_jap.6.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.6.a
+		country_event = { days = 1 id = Vn_jap.7 }
+		#set_global_flag = JAP_democracy_election
+		add_popularity = { ideology = democratic  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.6.b
+		#set_global_flag = JAP_socialism_election
+		country_event = { days = 1 id = Vn_jap.7 }
+		add_popularity = { ideology = Ssocialism  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.6.c
+		#set_global_flag = JAP_communism_election
+		country_event = { days = 1 id = Vn_jap.7 }
+		add_popularity = { ideology = communism  popularity = 0.03 }
+		}
+	}
+country_event = {
+	id = Vn_jap.7
+	title = Vn_jap.7.t
+	desc = Vn_jap.7.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.7.a
+		country_event = { days = 1 id = Vn_jap.8 }
+		#set_global_flag = JAP_democracy_meeting
+		add_popularity = { ideology = democratic  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.7.b
+		#set_global_flag = JAP_socialism_meeting
+		country_event = { days = 1 id = Vn_jap.8 }
+		add_popularity = { ideology = Ssocialism  popularity = 0.03 }
+		}
+	option = {
+		name = Vn_jap.7.c
+		#set_global_flag = JAP_communism_meeting
+		country_event = { days = 1 id = Vn_jap.8 }
+		add_popularity = { ideology = communism  popularity = 0.03 }
+		}
+	}
+country_event = {
+	id = Vn_jap.8
+	title = Vn_jap.8.t
+	desc = Vn_jap.8.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.8.a
+		if = {
+			limit = { 
+		Ssocialism > 0.4
+			}
+			country_event = { days = 1 id = Vn_jap.9 }
+		}
+		if = {
+			limit = { 
+		democratic > 0.4
+			}
+			country_event = { days = 1 id = Vn_jap.11 }
+		}
+		if = {
+			limit = { 
+		communism > 0.4
+			}
+			country_event = { days = 1 id = Vn_jap.10 }
+			}
+		if = {
+			limit = { 
+		communism < 0.4
+		democratic < 0.4
+		Ssocialism < 0.4
+			}
+			country_event = { days = 1 id = Vn_jap.12 }
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.9
+	title = Vn_jap.9.t
+	desc = Vn_jap.9.d
+	is_triggered_only = yes
+
+	option = {
+		name = Vn_jap.9.a
+		set_country_flag = JAP_socialism_Elected
+		set_global_flag = JAP_meeting_end
+			set_cosmetic_tag = JAP_new
+			set_politics = {
+				ruling_party = Ssocialism
+				}
+		hidden_effect = {
+		create_country_leader = {
+			name = JAP_kyuichi_tokuda
+			picture = "GFX_Portrait_kyuichi_tokuda"
+			expire = "1989.1.1.1"
+			ideology = leninism
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_Kotoku_Shusui
+			picture = "gfx\leaders\JAP\Portrait_Kotoku_Shusui.png"
+			expire = "1989.1.1.1"
+			ideology = anarchism_1
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_tetsu_katayama
+			picture = "GFX_Portrait_tetsu_katayama"
+			expire = "1989.1.1.1"
+			ideology = social_democracy
+			traits = {}
+				}
+			}
+		}
+
+	option = {
+		name = Vn_jap.9.b
+			set_cosmetic_tag = JAP_new
+			country_event = { days = 1 id = Vn_jap.15 }
+			add_political_power = -150
+			set_politics = {
+				ruling_party = Ssocialism
+				}
+		hidden_effect = {
+		create_country_leader = {
+			name = JAP_kyuichi_tokuda
+			picture = "GFX_Portrait_kyuichi_tokuda"
+			expire = "1989.1.1.1"
+			ideology = leninism
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_Kotoku_Shusui
+			picture = "gfx\leaders\JAP\Portrait_Kotoku_Shusui.png"
+			expire = "1989.1.1.1"
+			ideology = anarchism_1
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_tetsu_katayama
+			picture = "GFX_Portrait_tetsu_katayama"
+			expire = "1989.1.1.1"
+			ideology = social_democracy
+			traits = {}
+				}
+			}
+		}
+	}
+
+country_event = {
+	id = Vn_jap.11
+	title = Vn_jap.11.t
+	desc = Vn_jap.11.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.11.a
+		set_country_flag = JAP_democracy_Elected
+		set_global_flag = JAP_meeting_end
+			set_cosmetic_tag = JAP_new
+			set_politics = {
+				ruling_party = democratic
+				}
+		hidden_effect = {
+		create_country_leader = {
+			name = JAP_kyuichi_tokuda
+			picture = "GFX_Portrait_kyuichi_tokuda"
+			expire = "1989.1.1.1"
+			ideology = leninism
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_Kotoku_Shusui
+			picture = "gfx\leaders\JAP\Portrait_Kotoku_Shusui.png"
+			expire = "1989.1.1.1"
+			ideology = anarchism_1
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_tetsu_katayama
+			picture = "GFX_Portrait_tetsu_katayama"
+			expire = "1989.1.1.1"
+			ideology = social_democracy
+			traits = {}
+				}
+			}
+		}
+	option = {
+		name = Vn_jap.11.b
+			country_event = { days = 1 id = Vn_jap.15 }
+			add_political_power = -150
+			set_cosmetic_tag = JAP_new
+			country_event = { days = 1 id = Vn_jap.15 }
+			set_politics = {
+				ruling_party = democratic
+				}
+		hidden_effect = {
+		create_country_leader = {
+			name = JAP_kyuichi_tokuda
+			picture = "GFX_Portrait_kyuichi_tokuda"
+			expire = "1989.1.1.1"
+			ideology = leninism
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_Kotoku_Shusui
+			picture = "gfx\leaders\JAP\Portrait_Kotoku_Shusui.png"
+			expire = "1989.1.1.1"
+			ideology = anarchism_1
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_tetsu_katayama
+			picture = "GFX_Portrait_tetsu_katayama"
+			expire = "1989.1.1.1"
+			ideology = social_democracy
+			traits = {}
+				}
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.10
+	title = Vn_jap.10.t
+	desc = Vn_jap.10.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.10.a
+		set_country_flag = JAP_communism_Elected
+		set_global_flag = JAP_meeting_end
+			set_cosmetic_tag = JAP_new
+			set_politics = {
+				ruling_party = communism
+				}
+		hidden_effect = {
+		create_country_leader = {
+			name = JAP_kyuichi_tokuda
+			picture = "GFX_Portrait_kyuichi_tokuda"
+			expire = "1989.1.1.1"
+			ideology = leninism
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_Kotoku_Shusui
+			picture = "gfx\leaders\JAP\Portrait_Kotoku_Shusui.png"
+			expire = "1989.1.1.1"
+			ideology = anarchism_1
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_tetsu_katayama
+			picture = "GFX_Portrait_tetsu_katayama"
+			expire = "1989.1.1.1"
+			ideology = social_democracy
+			traits = {}
+				}
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.12
+	title = Vn_jap.12.t
+	desc = Vn_jap.12.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = Vn_jap.12.a
+			country_event = { days = 1 id = Vn_jap.13 }
+		add_political_power = -150
+			add_stability = -0.1
+		}
+	}
+country_event = {
+	id = Vn_jap.15
+	title = Vn_jap.15.t
+	desc = Vn_jap.15.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.15.a
+			country_event = { days = 1 id = Vn_jap.14 }
+		add_political_power = -150
+			add_stability = -0.1
+		}
+	}
+country_event = {
+	id = Vn_jap.13
+	title = Vn_jap.13.t
+	desc = Vn_jap.13.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.13.a
+			country_event = { days = 1 id = Vn_jap.14 }
+		add_political_power = -150
+			add_stability = -0.1
+		}
+	}
+country_event = {
+	id = Vn_jap.14
+	title = Vn_jap.14.t
+	desc = Vn_jap.14.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.14.a
+			country_event = { days = 1 id = Vn_jap.16 }
+		add_political_power = -150
+			add_stability = -0.1
+		}
+	}
+country_event = {
+	id = Vn_jap.16
+	title = Vn_jap.16.t
+	desc = Vn_jap.16.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.16.a
+		add_ideas = JAP_SBgovernment
+		add_ideas = JAP_Sailor_rebellion
+		load_focus_tree = japan_communism_focus
+		set_global_flag = JAP_meeting_fk
+			hidden_effect = {
+			country_event = { days = 10 id = Vn_jap.21 }
+				}
+		add_political_power = -150
+			add_stability = -0.1
+			set_cosmetic_tag = JAP_new
+			set_politics = {
+				ruling_party = communism
+				}
+		hidden_effect = {
+		create_country_leader = {
+			name = JAP_kyuichi_tokuda
+			picture = "GFX_Portrait_kyuichi_tokuda"
+			expire = "1989.1.1.1"
+			ideology = leninism
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_Kotoku_Shusui
+			picture = "gfx\leaders\JAP\Portrait_Kotoku_Shusui.png"
+			expire = "1989.1.1.1"
+			ideology = anarchism_1
+			traits = {}
+				}
+		create_country_leader = {
+			name = JAP_tetsu_katayama
+			picture = "GFX_Portrait_tetsu_katayama"
+			expire = "1989.1.1.1"
+			ideology = social_democracy
+			traits = {}
+				}
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.17
+	title = Vn_jap.17.t
+	desc = Vn_jap.17.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.17.a
+			swap_ideas = {
+				remove_idea = JAP_dictatorship_proletariat
+				add_idea = JAP_dictatorship_proletariat_3
+			}
+		}
+	option = {
+		name = Vn_jap.17.b
+			swap_ideas = {
+				remove_idea = JAP_dictatorship_proletariat
+				add_idea = JAP_dictatorship_proletariat_2
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.18
+	title = Vn_jap.18.t
+	desc = Vn_jap.18.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.18.a
+				hidden_effect = {
+			add_ideas = JAP_army_fascism_2
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.19
+	title = Vn_jap.19.t
+	desc = Vn_jap.19.d
+	is_triggered_only = yes
+	option = {
+		name = WTF
+		set_party_name = { 
+			ideology =democratic
+			long_name =revolutionJAP_democracy_socialism
+			name = revolutionJAP_democracy_socialism
+				}
+		}
+	}
+country_event = {
+	id = Vn_jap.20
+	title = Vn_jap.20.t
+	desc = Vn_jap.20.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.20.a
+				set_politics = {
+					ruling_party = democratic
+				elections_allowed = yes
+				}
+		set_party_name = { 
+			ideology =democratic
+			long_name =revolutionJAP_democracy_socialism
+			name = revolutionJAP_democracy_socialism
+				}
+			create_country_leader = {
+				name = "片山哲"#领导人
+				picture = "gfx\leaders\JAP\portrait_jap_tetsu_katayama.dds"#领导人画像
+				expire = "1965.1.1"#下台时间
+				ideology = social_democracy
+				traits = {}#领导人特质
+			}
+		}
+		name = Vn_jap.20.ab
+				set_politics = {
+					ruling_party = democratic
+				elections_allowed = yes
+				}
+		set_party_name = { 
+			ideology =democratic
+			long_name =revolutionJAP_democracy_socialism
+			name = revolutionJAP_democracy_socialism
+				}
+			create_country_leader = {
+				name = "鸠山一郎"#领导人
+				picture = "gfx\leaders\JAP\geshanyilian.png"#领导人画像
+				expire = "1965.1.1"#下台时间
+				ideology = social_democracy
+				traits = {}#领导人特质
+			}
+		}
+		name = Vn_jap.20.b
+				set_politics = {
+					ruling_party = democratic
+				elections_allowed = yes
+				}
+		set_party_name = { 
+			ideology =democratic
+			long_name =revolutionJAP_democracy_democracy
+			name = revolutionJAP_democracy_democracy
+				}
+			create_country_leader = {
+				name = "芦田均"#领导人
+				picture = "gfx\leaders\JAP\JAP_JAP_lutianjun.png"#领导人画像
+				expire = "1965.1.1"#下台时间
+				ideology = conservatism
+				traits = {}#领导人特质
+			}
+		}
+		name = Vn_jap.20.bb
+		set_party_name = { 
+				set_politics = {
+					ruling_party = democratic
+				elections_allowed = yes
+				}
+			ideology =democratic
+			long_name =revolutionJAP_democracy_democracy
+			name = revolutionJAP_democracy_democracy
+				}
+			create_country_leader = {
+				name = "吉田茂"#领导人
+				picture = "gfx\leaders\JAP\JAP_juntianmao.png"#领导人画像
+				expire = "1965.1.1"#下台时间
+				ideology = conservatism
+				traits = {}#领导人特质
+			}
+		}
+		name = Vn_jap.20.c
+				set_politics = {
+					ruling_party = neutrality
+				elections_allowed = yes
+				}
+			create_country_leader = {
+				name = "岸信介"#领导人
+				picture = "gfx\leaders\JAP\JAP_anxinjie.png"#领导人画像
+				expire = "1965.1.1"#下台时间
+				ideology = Authoritarian_democracy
+				traits = {}#领导人特质
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.21
+	title = Vn_jap.21.t
+	desc = Vn_jap.21.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.21.a
+		add_ideas = JAP_strike
+		set_global_flag = JAP_Clivewar
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = -4000
+			producer = JAP
+				}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -4000
+			producer = JAP
+				}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = -1000
+			producer = JAP
+				}
+
+		hidden_effect = {
+			country_event = { days = 15 id = Vn_jap.22 }
+			ANJ = {
+				add_state_core = 526
+				add_state_core = 528
+				add_state_core = 530
+				add_state_core = 529
+				add_state_core = 537
+				add_state_core = 536
+				add_state_core = 645
+				add_state_core = 555
+				add_state_core = 533
+				add_state_core = 282
+				add_state_core = 532
+				add_state_core = 531
+				add_state_core = 534
+				add_state_core = 535
+				transfer_state = 645
+				transfer_state = 526
+				transfer_state = 528
+				transfer_state = 529
+				transfer_state = 537
+				transfer_state = 536
+				transfer_state = 555
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 8000
+			producer = JAP
+				}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 1000
+			producer = JAP
+				}
+			add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 4000
+			producer = JAP
+				}
+				division_template = { name = "黑军" division_names_group = JAP_INF_01 is_locked = yes regiments = { cavalry = { x = 0 y = 0 }cavalry = { x = 0 y = 1 }cavalry = { x = 0 y = 2 }cavalry = { x = 1 y = 0 }cavalry = { x = 1 y = 1 }cavalry = { x = 1 y = 2 }cavalry_artillery_brigade { x = 2 y = 0 }cavalry_GUN { x = 2 y = 1 }  } }
+				555 = {
+					create_unit = { 
+						division = "name = \"1黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+				}
+				537 = {
+					create_unit = { 
+						division = "name = \"2黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"3黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+				}
+				645 = {
+					create_unit = { 
+						division = "name = \"5黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"6黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"7黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner =ANJ
+					}
+				}
+				536 = {
+					create_unit = { 
+						division = "name = \"8黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"9黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"10黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"11黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+				}
+				529 = {
+					create_unit = { 
+						division = "name = \"12黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner =ANJ
+					}
+					create_unit = { 
+						division = "name = \"13黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"14黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"4黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"15黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner =ANJ
+					}
+					create_unit = { 
+						division = "name = \"16黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+				}
+				528 = {
+					create_unit = { 
+						division = "name = \"18黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"19黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"20黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"21黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"22黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner =ANJ
+					}
+					create_unit = { 
+						division = "name = \"23黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"24黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"25黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"35黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"34黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"33黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+				}
+				526 = {
+					create_unit = { 
+						division = "name = \"26黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"27黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"28黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"29黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"30黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"31黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"32黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+					create_unit = { 
+						division = "name = \"17黑军\" division_template = \"黑军\" start_experience_factor = 0" 
+						owner = ANJ
+					}
+				}
+			}
+
+			DEJ = {
+
+				add_state_core = 645
+				add_state_core = 526
+				add_state_core = 528
+				add_state_core = 530
+				add_state_core = 529
+				add_state_core = 537
+				add_state_core = 536
+				add_state_core = 555
+				add_state_core = 533
+				add_state_core = 282
+				add_state_core = 532
+				add_state_core = 531
+				add_state_core = 534
+				add_state_core = 535
+				transfer_state = 533
+				transfer_state = 534
+				transfer_state = 282
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 8000
+			producer = JAP
+				}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 1000
+			producer = JAP
+				}
+			add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 4000
+			producer = JAP
+				}
+				division_template = { name = "南征军" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 }infantry = { x = 0 y = 1 }infantry = { x = 0 y = 2 }infantry = { x = 1 y = 0 }infantry = { x = 1 y = 1 }infantry = { x = 1 y = 2 }artillery_brigade { x = 2 y = 0 }
+cavalry_GUN { x = 2 y = 1 }  } }
+				533 = {
+					create_unit = { 
+						division = "name = \"1南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"2南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"5南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner =DEJ
+					}
+					create_unit = { 
+						division = "name = \"3南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner =DEJ
+					}
+					create_unit = { 
+						division = "name = \"4南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"6南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner =DEJ
+					}
+					create_unit = { 
+						division = "name = \"7南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"8南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"23南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"29南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"27南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"28南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+				}
+				534 = {
+					create_unit = { 
+						division = "name = \"9南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"10南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"11南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"12南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"13南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"25南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"24南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"26南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+				}
+				282 = {
+					create_unit = { 
+						division = "name = \"14南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"15南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"16南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"17南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"18南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"19南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+					}
+					create_unit = { 
+						division = "name = \"20.南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+						}
+					create_unit = { 
+						division = "name = \"21.南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+						}
+					create_unit = { 
+						division = "name = \"22.南征军\" division_template = \"南征军\" start_experience_factor = 0" 
+						owner = DEJ
+						}
+					}
+				}
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.22
+	title = Vn_jap.22.t
+	desc = Vn_jap.22.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.22.a
+		set_country_flag = JAP_new_communism_civil_war
+		declare_war_on = { target = DEJ type = civil_war }
+		declare_war_on = { target = ANJ type = civil_war }
+		ANJ ={
+		declare_war_on = { target = DEJ type = civil_war }
+		declare_war_on = { target = JAP type = civil_war }
+			}
+		DEJ ={
+		declare_war_on = { target = JAP type = civil_war }
+		declare_war_on = { target = ANJ type = civil_war }
+			}
+		}
+	}
+country_event = {
+	id = Vn_jap.23
+	title = Vn_jap.23.t
+	desc = Vn_jap.23.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.23.a
+			set_country_flag = JAP_rebellion_535_flag
+			set_country_flag = JAP_rebellion_530_flag
+			set_country_flag = JAP_rebellion_531_flag
+				remove_state_core = 530
+				remove_state_core = 535
+				remove_state_core = 531
+				remove_state_claim = 530
+				remove_state_claim = 531
+				remove_state_claim = 535
+			531 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+			530 = {
+			start_resistance = yes
+			add_resistance = 20
+				}
+			535 = {
+			start_resistance = yes
+			set_resistance = 40
+				}
+		}
+	}
+country_event = {
+	id = Vn_jap.24
+	title = Vn_jap.24.t
+	desc = Vn_jap.24.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.24.a
+			set_country_flag = JAP_rebellion_530_flag
+				remove_state_core = 530
+				remove_state_claim = 530
+			530 = {
+			start_resistance = yes
+			set_resistance = 20
+				}
+		}
+	}
+country_event = {
+	id = Vn_jap.25
+	title = Vn_jap.25.t
+	desc = Vn_jap.25.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.25.a
+		add_manpower = -1500
+		add_stability = -0.2
+		add_political_power = -75
+		hidden_effect = { country_event = { id = Vn_jap.26 days = 3 } }
+		}
+	}
+country_event = {
+	id = Vn_jap.26
+	title = Vn_jap.26.t
+	desc = Vn_jap.26.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.26.a
+		retire_country_leader = yes
+	set_party_name = { ideology = neutrality name = JAP_TZP long_name = JAP_TZP }
+			add_country_leader_role = {
+   			 character = JAP_Koki_Hirota
+   			 promote_leader = yes
+   				 country_leader = {
+       				 ideology = Social_nationalism
+      				  expire = "1989.1.1.1"
+      			traits={ statism_adept }
+   					 }
+				}
+		}
+	}
+country_event = {
+	id = Vn_jap.27
+	title = Vn_jap.27.t
+	desc = Vn_jap.27.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.27.a
+		retire_country_leader = yes
+	set_party_name = { ideology = fascism name = JAP_TZP long_name = JAP_TZP }
+				set_politics = {
+					ruling_party = fascism
+				}
+			add_country_leader_role = {
+   			 character = JAP_Senjuro_Hayashi
+   			 promote_leader = yes
+   				 country_leader = {
+       				 ideology = fascism_militarism
+      				  expire = "1989.1.1.1"
+      			traits={ devoted_corporatist }
+   					 }
+				}
+		}
+	}
+country_event = {
+	id = Vn_jap.28
+	title = Vn_jap.28.t
+	desc = Vn_jap.28.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.28.a
+		retire_country_leader = yes
+			add_country_leader_role = {
+   			 character = JAP_Fumimaro_Konoe
+   			 promote_leader = yes
+   				 country_leader = {
+       				 ideology = fascism_militarism
+      				  expire = "1989.1.1.1"
+      			traits={ conservative_grandee }
+   					 }
+				}
+		}
+	}
+country_event = {
+	id = Vn_jap.29
+	title = Vn_jap.29.t
+	desc = Vn_jap.29.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.29.a
+add_popularity = { ideology = neutrality popularity = -0.1 }
+
+		}
+	}
+country_event = {
+	id = Vn_jap.31
+	title = Vn_jap.31.t
+	desc = Vn_jap.31.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.31.a
+		}
+}
+country_event = {
+	id = Vn_jap.32
+	title = Vn_jap.32.t
+	desc = Vn_jap.32.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.32.a
+		}
+}
+country_event = {
+	id = Vn_jap.30
+	title = Vn_jap.30.t
+	desc = Vn_jap.30.d
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = Vn_jap.30.a
+		JAP_77_SHIBIAN = YES
+		}
+	option = {
+		name = Vn_jap.30.b
+		JAP_77_SHIBIAN = YES
+		}
+	option = {
+		name = Vn_jap.30.c
+		JAP_77_SHIBIAN = YES
+		}
+	option = {
+		name = Vn_jap.30.dd
+		JAP_77_SHIBIAN = YES
+		}
+	}
+country_event = {
+	id = Vn_jap.33
+	title = Vn_jap.33.t
+	desc = Vn_jap.33.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.33.a
+			swap_ideas = {
+				remove_idea = JAP_Get_carried_away_by_victory
+				add_idea = JAP_Get_carried_away_by_victory_1
+			}
+		hidden_effect = {
+				remove_ideas = JAP_Get_carried_away_by_victory_1
+		add_timed_idea = { idea = JAP_Get_carried_away_by_victory_1 days = 850 }
+
+			}
+		}
+	option = {
+		name = Vn_jap.33.b
+		remove_ideas = JAP_Get_carried_away_by_victory
+		add_political_power = -150
+		add_war_support = -0.15
+		}
+}
+country_event = {
+	id = Vn_jap.34
+	title = Vn_jap.34.t
+	desc = Vn_jap.34.d
+	is_triggered_only = yes
+	option = {
+		name = Vn_jap.34.a
+		MAN = {
+		remove_ideas = MAN_Puppet_regime
+			every_owned_state = {
+			add_core_of = man
+				}
+			}
+		MEN = {
+		remove_ideas = MAN_Puppet_regime
+			every_state = {
+				limit = {
+				OR = {
+					state = 611
+						}
+					}
+			transfer_state_to= MEN
+				}
+			every_owned_state = {
+			add_core_of = men
+				}
+			}
+		CHI = {
+			add_stability = -0.1
+			}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = SHX
+						}
+					}
+			transfer_state_to= SHX
+				}
+	set_autonomy = {
+		target = SHX
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = YUN
+						}
+					}
+			transfer_state_to= YUN
+				}
+	set_autonomy = {
+		target = YUN
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = GXC
+						}
+					}
+			transfer_state_to= GXC
+				}
+	set_autonomy = {
+		target = GXC
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = SCS
+						}
+					}
+			transfer_state_to= SCS
+				}
+	set_autonomy = {
+		target = SCS
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = SIK
+						}
+					}
+			transfer_state_to= SIK
+				}
+	set_autonomy = {
+		target = SIK
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = XKS
+						}
+					}
+			transfer_state_to= XKS
+				}
+	set_autonomy = {
+		target = XKS
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = XSM
+						}
+					}
+			transfer_state_to= XSM
+				}
+	set_autonomy = {
+		target = XSM
+		autonomous_state = autonomy_integrated_puppet
+	}
+			every_state = {
+				limit = {
+				OR = {
+				is_core_of = XYM
+						}
+					}
+			transfer_state_to= XYM
+				}
+	set_autonomy = {
+		target = XYM
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = CHI
+		autonomous_state = autonomy_integrated_puppet
+	}
+
+		hidden_effect = {
+			CHI = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			SHX = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			SIK = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			YUN = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			GXC = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			MAN = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			MEN = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			SCS = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			XKS = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			XYM = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			XSM = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			}
+		}
+	option = {
+		name = Vn_jap.34.b
+		MAN = {
+		remove_ideas = MAN_Puppet_regime
+			every_owned_state = {
+			add_core_of = man
+				}
+			}
+		MEN = {
+		remove_ideas = MAN_Puppet_regime
+			every_state = {
+				limit = {
+				OR = {
+					state = 611
+						}
+					}
+			transfer_state_to= MEN
+				}
+			every_owned_state = {
+			add_core_of = men
+				}
+			}
+		CHI = {
+			add_stability = 0.1
+			}
+		hidden_effect = {
+			CHI = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			SHX = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			SIK = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			YUN = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			GXC = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			MAN = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			MEN = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			SCS = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			XKS = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			XYM = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			XSM = {
+		set_cosmetic_tag = JAP_VN_COLORS
+				}
+			}
+		}
+}
+
+

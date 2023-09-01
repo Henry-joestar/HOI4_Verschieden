@@ -1,0 +1,660 @@
+add_namespace = Vn_mod
+add_namespace = CFYPC_event
+add_namespace = maket_event
+
+country_event = {
+
+	id = Vn_mod.1
+	title = Vn_mod.1.t
+	desc = Vn_mod.1.desc
+        is_triggered_only = yes
+    fire_only_once = yes
+	trigger = {
+        ROOT = {
+			is_ai = no
+		}
+    }
+	immediate = {
+		set_global_flag = Vn_start
+	}
+
+	option = {
+		
+		name = Vn_mod.1.a
+		set_global_flag = Vn_start_meme
+		set_global_flag = Vn_start_yes
+		hidden_effect = {
+		DYE = { 
+		annex_country = { target = MAN }
+		every_state = { add_core_of = DYE }
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		
+		name = Vn_mod.1.b
+		ai_chance = {
+			factor = 100000
+		}
+	}
+}
+news_event = {
+
+	id = Vn_mod.2
+	title = Vn_mod.2.t
+	desc = Vn_mod.2.desc
+        is_triggered_only = yes
+    fire_only_once = yes
+	picture = GFX_news_event_001
+	option = {
+		name = Vn_mod.2.a
+	trigger = {
+		NOT = { TAG = CHI }
+		NOT = { TAG = PRC }
+		has_government = democratic
+		}
+	}
+	option = {
+		name = Vn_mod.2.b
+	trigger = {
+		NOT = { TAG = CHI }
+		NOT = { TAG = PRC }
+		has_government = Ssocialism
+		}
+	}
+	option = {
+		name = Vn_mod.2.c
+	trigger = {
+		NOT = { TAG = CHI }
+		NOT = { TAG = PRC }
+		has_government = communism
+		}
+	}
+	option = {
+		name = Vn_mod.2.d
+	trigger = {
+		NOT = { TAG = CHI }
+		NOT = { TAG = PRC }
+		has_government = neutrality
+		}
+	}
+	option = {
+		name = Vn_mod.2.e
+	trigger = {
+		NOT = { TAG = CHI }
+		NOT = { TAG = PRC }
+		has_government = fascism
+		}
+	}
+	option = {
+		name = Vn_mod.2.f
+	trigger = {
+		TAG = PRC
+		}
+	}
+	option = {
+		name = Vn_mod.2.g
+	trigger = {
+		TAG = CHI
+		}
+	}
+}
+
+
+country_event = {
+
+	id = CFYPC_event.1
+	title = CFYPC_event.1.t
+	desc = CFYPC_event.1.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.1.a
+		country_event = CFYPC_event.2
+	}
+}
+country_event = {
+
+	id = CFYPC_event.2
+	title = CFYPC_event.2.t
+	desc = CFYPC_event.2.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.2.a
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_A
+		country_event = CFYPC_event.3
+		set_country_flag =  CFYPC_event_2_a_flag
+	}
+	option = {
+		name = CFYPC_event.2.b
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_B
+		country_event = CFYPC_event.4
+		set_country_flag =  CFYPC_event_2_b_flag
+		add_to_variable = { GPESN_consumer_goods_factor = -0.01 }
+	}
+}
+country_event = {
+
+	id = CFYPC_event.3
+	title = CFYPC_event.3.t
+	desc = CFYPC_event.3.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.3.a
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_C
+		country_event = CFYPC_event.5
+	}
+	option = {
+		name = CFYPC_event.3.b
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_D
+		country_event = CFYPC_event.6
+	}
+}
+country_event = {
+
+	id = CFYPC_event.4
+	title = CFYPC_event.4.t
+	desc = CFYPC_event.4.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.4.a
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_C
+		add_to_variable = { GPESN_consumer_goods_factor = -0.02 }
+		country_event = CFYPC_event.7
+	}
+	option = {
+		name = CFYPC_event.4.b
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_D
+	set_variable = { GPES_Financial_investment_points_GFYPC = num_of_civilian_factories }
+			multiply_variable = { Budget_invest_in_investment_points_GFYPC = 0.2 }
+	add_to_variable = { GPES_Financial_investment_points = Budget_invest_in_investment_points_GFYPC }
+		country_event = CFYPC_event.7
+	}
+}
+country_event = {
+
+	id = CFYPC_event.5
+	title = CFYPC_event.5.t
+	desc = CFYPC_event.5.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.5.a
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_D_A
+		add_to_variable = { GPESN_consumer_goods_factor = -0.05 }
+		country_event = CFYPC_event.7
+	}
+	option = {
+		name = CFYPC_event.5.b
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_D_B
+	set_variable = { GPES_Financial_investment_points_GFYPC = num_of_civilian_factories }
+			multiply_variable = { Budget_invest_in_investment_points_GFYPC = 0.5 }
+	add_to_variable = { GPES_Financial_investment_points = Budget_invest_in_investment_points_GFYPC }
+		country_event = CFYPC_event.7
+	}
+}
+country_event = {
+
+	id = CFYPC_event.6
+	title = CFYPC_event.6.t
+	desc = CFYPC_event.6.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.6.a
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_E
+		country_event = CFYPC_event.7
+		set_country_flag =  CFYPC_event_6_a_flag
+	}
+	option = {
+		name = CFYPC_event.6.b
+custom_effect_tooltip = Common_five_year_plan_country_decision_tt_F
+		country_event = CFYPC_event.7
+		hidden_effect = {
+		add_ideas = CFYPC_ideas_6
+			}
+	}
+}
+country_event = {
+
+	id = CFYPC_event.7
+	title = CFYPC_event.7.t
+	desc = CFYPC_event.7.desc
+        is_triggered_only = yes
+	trigger = {
+    		}
+	immediate = {
+	}
+
+	option = {
+		name = CFYPC_event.7.a
+	}
+}
+country_event = {
+
+	id = maket_event.1
+	title = maket_event.1.t
+	desc = maket_event.1.desc
+        is_triggered_only = yes
+	trigger = {
+	any_owned_state = {
+	has_state_flag = maket_event_1_flag
+			}
+    		}
+	immediate = {
+	all_owned_state = {
+	clr_state_flag = maket_event_1_flag
+		}
+	}
+
+	option = {
+		name = maket_event.1.a
+	add_political_power = -12
+	add_timed_idea = { idea = Aftermath_of_civilian_nationalization days = 70 }
+		all_owned_state = {
+	set_state_flag = maket_event_country_1_flag
+		}
+	}
+}
+country_event = {
+
+	id = maket_event.2
+	title = maket_event.2.t
+	desc = maket_event.2.desc
+	trigger = {
+	any_owned_state = {
+	has_state_flag = maket_event_2_flag
+			}
+    		}
+	immediate = {
+	all_owned_state = {
+	clr_state_flag = maket_event_2_flag
+		}
+	}
+
+	option = {
+		name = maket_event.2.a
+	add_political_power = -12
+	add_timed_idea = { idea = Aftermath_of_civilian_privatization days = 70 }
+		all_owned_state = {
+	set_state_flag = maket_event_country_2_flag
+		}
+	}
+}
+country_event = {
+
+	id = maket_event.3
+	title = maket_event.3.t
+	desc = maket_event.3.desc
+        is_triggered_only = yes
+	trigger = {
+	any_owned_state = {
+	has_state_flag = maket_event_3_flag
+			}
+    		}
+	immediate = {
+	all_owned_state = {
+	clr_state_flag = maket_event_3_flag
+		}
+	}
+	option = {
+		name = maket_event.3.a
+	add_political_power = -12
+	add_timed_idea = { idea = Aftermath_of_military_nationalization days = 70 }
+		all_owned_state = {
+	set_state_flag = maket_event_country_3_flag
+		}
+	}
+}
+country_event = {
+
+	id = maket_event.4
+	title = maket_event.4.t
+	desc = maket_event.4.desc
+        is_triggered_only = yes
+	trigger = {
+	any_owned_state = {
+	has_state_flag = maket_event_4_flag
+			}
+    		}
+	immediate = {
+	all_owned_state = {
+	clr_state_flag = maket_event_4_flag
+		}
+	}
+
+	option = {
+		name = maket_event.4.a
+		add_political_power = -12
+	add_timed_idea = { idea = Aftermath_of_military_privatization days = 70 }
+		all_owned_state = {
+	set_state_flag = maket_event_country_4_flag
+		}
+	}
+}
+country_event = {
+	id = Vn_mod.3
+	title = Vn_mod.3.t
+	desc = Vn_mod.3.d
+	is_triggered_only = yes
+
+
+	immediate = {
+	}
+	option = {
+		name = Vn_mod.3.a
+		add_stability = 0.1
+
+		ai_chance = {
+			factor = 0
+						
+			modifier = {
+				factor = 60
+			has_government = communism
+			}
+			modifier = {
+				factor = 40
+			has_government = Ssocialism
+			}
+			modifier = {
+				factor = 40
+			has_government = neutrality
+			}
+			modifier = {
+				factor = 80
+			has_government = fascism
+			}
+		}
+		add_ideas = One_party_state
+			remove_ideas = Revolutionary_dictatorship
+			trigger = {
+				#neutrality
+				NOT = { has_government = democratic }
+		NOT = { has_country_leader_ideology = Enterprise_company}
+		NOT = { has_country_leader_ideology = Theocratic_absolutism_fascism}
+		NOT = { has_country_leader_ideology = Theocratic_absolutism}
+		NOT = { has_country_leader_ideology = absolutism}
+		NOT = { has_country_leader_ideology = Patriarchal_dictatorship}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+		}
+	option = {
+		name = Vn_mod.3.b
+		add_stability = 0.1
+		ai_chance = {
+			factor = 0
+						
+			modifier = {
+				factor = 70
+			has_government = Ssocialism
+			}
+			modifier = {
+				factor = 30
+			has_government = communism
+			}
+			modifier = {
+				factor = 10
+			has_government = democratic
+			}
+		}
+		add_ideas = Multi_party_cooperation
+			remove_ideas = Revolutionary_dictatorship
+			trigger = {
+			or = {
+				has_government = communism
+				has_government = Ssocialism
+				has_government = democratic
+				}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+		}
+	option = {
+		name = Vn_mod.3.c
+		add_stability = 0.1
+		add_ideas = Multi_party_democracy
+		ai_chance = {
+			factor = 0
+						
+			modifier = {
+				factor = 20
+			has_government = Ssocialism
+			}
+			modifier = {
+				factor = 70
+			has_government = democratic
+			}
+		}
+			trigger = {
+			or = {
+				has_government = Ssocialism
+				has_government = democratic
+				}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+		}
+	option = {
+		name = Vn_mod.3.da
+		add_stability = 0.1
+		add_ideas = Dictatorship_STS
+			remove_ideas = Revolutionary_dictatorship
+		ai_chance = {
+			factor = 0
+						
+			modifier = {
+				factor = 80
+			OR = {
+		has_country_leader_ideology = Enterprise_company
+		has_country_leader_ideology = Theocratic_absolutism_fascism
+		has_country_leader_ideology = Theocratic_absolutism
+		has_country_leader_ideology = absolutism
+		has_country_leader_ideology = Patriarchal_dictatorship
+				}
+			}
+		}
+			trigger = {
+			or = {
+				has_government = neutrality
+				has_government = fascism
+				}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+		}
+	option = {
+		name = Vn_mod.3.e
+		add_stability = 0.1
+		add_ideas = Commune_Committee 
+			remove_ideas = Revolutionary_dictatorship
+			trigger = {
+			or = {
+		has_country_leader_ideology = anarchist_communism
+		has_country_leader_ideology = Revolutionary_syndicalism
+		has_country_leader_ideology = anarchism_1
+		has_country_leader_ideology = Communalism
+		has_country_leader_ideology = Anarcho_syndicalism
+		has_country_leader_ideology = anarchism
+				}
+			}
+		}
+}
+country_event = {
+	id = Vn_mod.4
+	title = Vn_mod.4.t
+	desc = Vn_mod.4.d
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = Vn_mod.4.a
+	add_political_power = 150
+		add_ideas = universal_suffrage
+			remove_ideas = revolution_bureaucracy
+		ai_chance = {
+			factor = 0
+						
+			modifier = {
+				factor = 30
+			has_government = Ssocialism
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+			modifier = {
+				factor = 100
+			or = {
+		has_country_leader_ideology = anarchist_communism
+		has_country_leader_ideology = Revolutionary_syndicalism
+		has_country_leader_ideology = anarchism_1
+		has_country_leader_ideology = Communalism
+		has_country_leader_ideology = Anarcho_syndicalism
+		has_country_leader_ideology = anarchism
+				}
+			}
+			modifier = {
+				factor = 20
+			has_government = communism
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+			modifier = {
+				factor = 100
+			has_government = democratic
+			}
+		}
+			trigger = {
+			or = {
+				NOT = { has_government = neutrality }
+				NOT = { has_government = fascism }
+				}
+			}
+		}
+	option = {
+		name = Vn_mod.4.b
+	add_political_power = 150
+		add_ideas = Appointment_bureaucracy
+			remove_ideas = revolution_bureaucracy
+		ai_chance = {
+			factor = 0
+						
+			modifier = {
+				factor = 20
+			has_government = Ssocialism
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+
+			modifier = {
+				factor = 70
+			has_government = communism
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			}
+			modifier = {
+				factor = 50
+			has_government = neutrality
+			}
+			modifier = {
+				factor = 80
+			has_government = fascism
+			}
+		}
+			trigger = {
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			NOT = { has_government = democratic}
+			}
+		}
+	option = {
+		name = Vn_mod.4.c
+	add_political_power = 150
+		add_ideas = Noble_bureaucrats
+			remove_ideas = revolution_bureaucracy
+		ai_chance = {
+			factor = 40
+		}
+			trigger = {
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+			or = {
+		has_country_leader_ideology = Enterprise_company
+		has_country_leader_ideology = Theocratic_absolutism_fascism
+		has_country_leader_ideology = Theocratic_absolutism
+		has_country_leader_ideology = absolutism
+		has_country_leader_ideology = Patriarchal_dictatorship
+				}
+			}
+		}
+}
