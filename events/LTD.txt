@@ -1,0 +1,103 @@
+add_namespace = LTD
+country_event = {
+	id = LTD.1
+	title = LTD.1.t
+	desc = LTD.1.d
+	picture = GFX_decision_LTD_DJDIE
+
+	is_triggered_only = yes
+
+
+	option = {
+		name =幸亏只是擦伤！佛祖保佑！
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name =丁真死了！
+		ai_chance = {
+			factor = 50
+		}
+		kill_country_leader = yes
+			LTD = { country_event = LTD.2 }
+		hidden_effect = {
+			if = {
+				limit = {
+					original_tag = LTD
+				}
+
+					create_country_leader = {
+						name = "临时总理"
+						desc = "临时总理_DESC"
+						expire = "1965.1.1"
+						ideology = Authoritarian_democracy
+						traits = {}
+					}
+			}
+		}
+	}
+}
+country_event = {
+	id = LTD.2
+	title = LTD.2.t
+	desc = LTD.2.d
+	picture = GFX_decision_LTD_DJDIE2
+	is_triggered_only = yes
+
+
+	option = {
+		name =丁真舅舅成为继任者
+		ai_chance = {
+			factor = 50
+		}
+			if = {
+				limit = {
+					original_tag = LTD
+				}
+					create_country_leader = {
+						name = "四郎罗布"
+						desc = "四郎罗布_DESC"
+						picture = "gfx\leaders\LTD\LTD_DJJJ.png"
+						expire = "1965.1.1"#下台时间
+						ideology = Authoritarian_democracy
+						traits = {}
+					}
+			}
+	}
+	option = {
+		name =选举陷入僵局
+		ai_chance = {
+			factor = 50
+		}
+			LTD = { country_event = LTD.3 }
+	}
+}
+country_event = {
+	id = LTD.3
+	title = LTD.3.t
+	desc = LTD.3.d
+	picture = GFX_decision_LTD_DJDIE3
+	is_triggered_only = yes
+
+
+	option = {
+		name = epe芭蕾aqa亏内！
+		set_global_flag = LTD_LJLrevolution
+			if = {
+				limit = {
+					original_tag = LTD
+				}
+
+					create_country_leader = {
+						name = "刘建龙"
+						desc = "刘建龙_DESC"
+						picture = "gfx\leaders\LTD\LTD_LL.png"
+						expire = "1965.1.1"
+						ideology = Authoritarian_democracy
+						traits = {}
+					}
+			}
+	}
+}
+

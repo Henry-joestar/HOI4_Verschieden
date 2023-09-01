@@ -1,0 +1,19 @@
+add_namespace = MANVN
+country_event = {
+	id = MANVN.1
+	title = MANVN.1.t
+	desc = MANVN.1.d
+	is_triggered_only = yes
+
+	option = {
+	}
+}
+country_event = {
+	id = MANVN.2
+	title = MANVN.2.t
+	desc = MANVN.2.d
+	is_triggered_only = yes
+
+	option = {
+	}
+}

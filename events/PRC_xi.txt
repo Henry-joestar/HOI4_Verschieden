@@ -1,0 +1,48 @@
+add_namespace = PRCXI
+country_event = {
+	id = PRCXI.1
+	title = PRCXI.1.t
+	desc = PRCXI.1.d
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = PRC
+		has_global_flag = Vn_start_meme
+	}
+	immediate = {
+	}
+	option = {
+		name = 真是个怪日子！
+		ai_chance = {
+			factor = 50
+			}
+		}
+	option = {
+		name = 一些不好的事情发生了....
+		ai_chance = {
+			factor = 50
+		}
+	hidden_effect = {
+		load_focus_tree = PRC_xi
+			if = {
+			limit = {
+				original_tag = PRC
+			}
+		set_party_name = { ideology = fascism long_name = 中国共产党 name = 中国共产党 }
+				set_politics = {
+					ruling_party =fascism
+				}
+			set_cosmetic_tag = PRC_xi
+		add_popularity = { ideology = fascism  popularity = 0.55 }#意识形态支持率增加
+				create_country_leader = {
+					name = "习近平"
+					desc = "习近平_DESC"
+					picture = "gfx\leaders\PRC\xi_jin_ping.png"
+					expire = "1985.1.1"
+					ideology = PRC_Socialism_characteristics
+					traits = {}
+					}
+				}
+			}
+		}
+	}

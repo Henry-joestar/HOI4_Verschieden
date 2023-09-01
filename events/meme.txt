@@ -1,0 +1,75 @@
+add_namespace = meme
+country_event = {
+	id = meme.1
+	title = meme.1.t
+	desc = meme.1.d
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Vn_start_yes
+		original_tag = CHI
+	}
+	immediate = {
+	}
+	option = {
+		name = FK
+		country_event = { days = 1 id = meme.2 }
+		hidden_effect = {
+			SAH = {
+				transfer_state = 613
+				add_state_core = 613
+				}
+			}
+		}
+	option = {
+		name = andMore？
+		country_event = { days = 1 id = meme.2 }
+		hidden_effect = {
+			SAH = {
+				transfer_state = 613
+				add_state_core = 613
+				change_tag_from = CHI
+				}
+			}
+		}
+	option = {
+		name = nothingMore
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = meme.2
+	title = meme.2.t
+	desc = meme.2.d
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = FK
+		hidden_effect = {
+			PEK = {
+				transfer_state = 608
+				add_state_core = 608
+				}
+			}
+		}
+	option = {
+		name = andMore？
+		hidden_effect = {
+			PEK = {
+				transfer_state = 608
+				add_state_core = 608
+				change_tag_from = CHI
+				}
+			}
+		}
+	option = {
+		name = nothingMore
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
