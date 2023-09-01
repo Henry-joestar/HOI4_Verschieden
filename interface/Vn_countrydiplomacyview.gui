@@ -1,0 +1,20 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ruling_party_info"
+		position = { x = 258 y = 25 }
+		
+		instantTextboxType = {
+			name = "ideology"
+			position = { x = 4 y = 115 }
+			font = "hoi_16mbs"
+			text = "[GetSubIdeologyLoc]"
+			alwaystransparent = yes
+			maxWidth = 155
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+	}
+
+}

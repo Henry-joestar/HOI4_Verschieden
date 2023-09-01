@@ -1,0 +1,479 @@
+guiTypes = {
+	containerWindowType = {
+		name = "economy_system"
+		containerWindowType = {
+			name = "economy_system_info"
+			position = { x= 19 y = 390 }
+			size = { width = 1555 height = 160 }
+			clipping = no
+##############
+##############以下内容改为countrypoliticisview.gui编写
+##############
+		#buttonType = { 
+		#	name = "polite_party_governing_icon"
+		#	quadTextureSprite = GFX_button_ideology
+		#	position = { x= 76 y = 51 }
+		#}
+		#buttonType = { 
+		#	name = "polite_party_power_icon"
+		#	quadTextureSprite = GFX_button_ideology
+		#	position = { x= 76 y = 29 }
+		#}
+		#buttonType = { 
+		#	name = "polite_party_election_icon"
+		#	quadTextureSprite = GFX_button_ideology
+		#	position = { x= 73 y = -30 }
+		#}
+		#buttonType = { 
+		#	name = "polite_party_voting_icon"
+		#	quadTextureSprite = GFX_button_ideology
+		#	position = { x= 73 y = -52 }
+		#}
+###############################################################
+
+
+		iconType ={
+			name ="econ_type_icon"
+			position = { x= 0 y = 0 }
+			pdx_tooltip = "GetpoliteTypeNEWTT"
+		pdx_tooltip_delayed = "GetpoliteTypeNEWDESC"
+			}
+			instantTextboxType = {
+				name = "econ_type"
+				position = { x = 82 y = 8 }
+				font = "hoi_20b"
+				text = "GetpoliteTypeNEWNAME"
+			pdx_tooltip = "GetpoliteTypeNEWTT"
+		pdx_tooltip_delayed = "GetpoliteTypeNEWDESC"
+				maxWidth = 155
+				maxHeight = 20
+			}
+			instantTextboxType = {
+				name = "polite_party_election_icon_TT"
+				position = { x = 105 y = 54 }
+				font = "hoi_16mbs"
+				text = "GetpartyTypeNEWNAME"
+			pdx_tooltip = "GetpartyTypeNEWTT"
+				maxWidth = 70
+				maxHeight = 20
+			}
+			instantTextboxType = {
+				name = "polite_party_Bureaucracy_icon_TT"
+				position = { x = 105 y = 34 }
+				font = "hoi_16mbs"
+				text = "GetBureaucracyTypeNEWNAME"
+			pdx_tooltip = "GetBureaucracyTypeNEWTT"
+				maxWidth = 70
+				maxHeight = 20
+			}
+		iconType ={
+			name ="econzhenzheng_type_icon"
+			position = { x= 305 y = 5 }
+			pdx_tooltip = "econzhenzheng_type_tt_ture"
+		pdx_tooltip_delayed = "econzhenzheng_type_desc"
+			}
+		}
+	}
+	#containerWindowType = {
+	#	name = "International_system"
+	#	containerWindowType = {
+	#		name = "International_system_info"
+	#			position = { x = 258 y = 25 }
+	#		size = { width = 100 height = 100 }
+	#		clipping = no
+	#	iconType ={
+	#		name ="International_type_icon"
+	#		position = { x = 165 y = 90 }
+	#		pdx_tooltip = "International_type_tt"
+	#	pdx_tooltip_delayed = "International_type_desc"
+	#		}
+	#	}
+	#}
+	#containerWindowType = {
+	#	name = "International_diplo_system"
+	#	containerWindowType = {
+	#		name = "International_diplo_system_info"
+	#			position = { x = 258 y = 25 }
+	#		size = { width = 100 height = 100 }
+	#		clipping = no
+	#	iconType ={
+	#		name ="International_diplo_type_icon"
+	#		position = { x = 165 y = 90 }
+	#		pdx_tooltip = "International_type_tt"
+	#	pdx_tooltip_delayed = "International_type_desc"
+	#		}
+	#	}
+	#}
+	containerWindowType = {
+		name = "planed_Economy_Group_system_window"
+		position = { x = 0 y = 0 }#你的窗口坐标，单位为像素，X轴正数为向右、Y轴正数为向下
+		#verticalScrollbar = "right_vertical_slider" 右滑条
+		#size = { width = 宽 height = 高} 窗口大小
+		buttonType = { #按钮窗口
+			name = "add_agricultural"
+			position = { x = 25 y = -210 } #你的按钮位置（在窗口中）
+			#quadTextureSprite = GFX_execute_button_ongoing_order
+			quadTextureSprite = GFX_leader_selection_button
+			buttonFont = hoi_16mbs
+			buttonText = "add_agricultural_value"
+		}
+		buttonType = { #按钮窗口
+			name = "add_industry"
+			position = { x = 139 y = -210 } #你的按钮位置（在窗口中）
+			quadTextureSprite = GFX_leader_selection_button
+			#quadTextureSprite = GFX_execute_button_ongoing_order
+			buttonFont = hoi_16mbs
+			buttonText = "add_industry_value"
+		}
+		buttonType = { #按钮窗口
+			name = "Investment_interface"
+			position = { x = 25 y = -320 } #你的按钮位置（在窗口中）
+			quadTextureSprite = GFX_add_one
+		}
+
+		iconType = {
+			name ="Planned_economy_propaganda"
+			position = { x = 260  y = -305 }
+			pdx_tooltip = Planned_economy_propaganda_TT
+		}
+
+
+		buttonType = { #按钮窗口
+			name = "start_five_plane_years"
+			position = { x = 35 y = -175 } #你的按钮位置（在窗口中）
+			quadTextureSprite = GFX_start_five_plane_years
+			#quadTextureSprite = GFX_execute_button_ongoing_order
+			pdx_tooltip =  Common_five_year_plan_country_mission_tt
+		}
+		instantTextboxType = {
+			name = "PE_Flyouts"
+			position = { x = 289 y = -355 }
+			font = "hoi_36header"
+			text = "PE_Flyouts"
+			maxWidth = 180
+			maxHeight = 80
+			format = left
+		}
+	}
+	containerWindowType = {
+		name = "Investment_interface_window"
+		position = { x = 535 y = 520 }#你的窗口坐标，单位为像素，X轴正数为向右、Y轴正数为向下
+		size = { width = 527 height= 388 }
+		moveable = yes
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_diplo_action_imp_relations_bg_new"
+		}
+		instantTextboxType = {
+			name = "Investment_interface_tt"
+			position = { x = 135 y = 25 }#你的文本位置（相对于窗口）
+			font = "hoi_36header"
+			text = "Investment_interface_tt"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		buttonType = { #按钮窗口
+			name = "close_Investment_interface"
+			position = { x = 380 y = 27 }
+			spriteType ="GFX_closebutton"
+		}
+		buttonType = { #按钮窗口
+			name = "deployment_named_division_bg_heavy_industry"
+			position = { x = 16 y = 90 }
+			spriteType ="GFX_deployment_named_division_bg_heavy_industry"
+		}
+		buttonType = { #按钮窗口
+			name = "deployment_named_division_bg_scientific_research"
+			position = { x = 16 y = 162 }
+			spriteType ="GFX_deployment_named_division_bg_scientific_research"
+		}
+		buttonType = { #按钮窗口
+			name = "deployment_named_division_bg_Economic_industry"
+			position = { x = 16 y = 235 }
+			spriteType ="GFX_deployment_named_division_bg_Economic_industry"
+		}
+
+		instantTextboxType = {
+			name = "Investment_interface_A_tt"
+			position = { x = 106 y = 105 }#你的文本位置（相对于窗口）
+			font = "hoi_36header"
+			text = "GEPS_ADDbutton_A_click_ture_tt"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		instantTextboxType = {
+			name = "Investment_interface_B_tt"
+			position = { x = 106 y = 173 }#你的文本位置（相对于窗口）
+			font = "hoi_36header"
+			text = "Budget_invest_in_research_ture_tt"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		instantTextboxType = {
+			name = "Investment_interface_C_tt"
+			position = { x = 106 y = 250 }#你的文本位置（相对于窗口）
+			font = "hoi_36header"
+			text = "Budget_invest_in_investment_points_ture_tt"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+
+
+		buttonType = { #按钮窗口
+			name = "GEPS_ADDbutton_A"
+			position = { x = 362 y = 90 }
+			spriteType ="GFX_deployment_named_division_bg_plus"
+		}
+		buttonType = { #按钮窗口
+			name = "GEPS_ADDbutton_B"
+			position = { x = 362 y = 162 }
+			spriteType ="GFX_deployment_named_division_bg_plus"
+		}
+		buttonType = { #按钮窗口
+			name = "GEPS_ADDbutton_C"
+			position = { x = 362 y = 235 }
+			spriteType ="GFX_deployment_named_division_bg_plus"
+		}
+
+		buttonType = { #按钮窗口
+			name = "GEPS_decreasebutton_A"
+			position = { x = 405 y = 90 }
+			spriteType ="GFX_deployment_named_division_bg_minus_sign"
+		}
+		buttonType = { #按钮窗口
+			name = "GEPS_decreasebutton_B"
+			position = { x = 405 y = 162 }
+			spriteType ="GFX_deployment_named_division_bg_minus_sign"
+		}
+		buttonType = { #按钮窗口
+			name = "GEPS_decreasebutton_C"
+			position = { x = 405 y = 235 }
+			spriteType ="GFX_deployment_named_division_bg_minus_sign"
+		}
+
+	}
+	containerWindowType = {
+		name = "Regional_Economic_Policy_Window"
+		position = {x=463 y=285}
+		size = { width=412 height=185 }
+		moveable = no
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_constructions_bg1"
+		}
+		buttonType = {
+			name = "state_Nationalization_of_industry" 
+			position = {x=-27 y=42}	
+			spriteType = "GFX_Regional_Economic_Policy_cilck2"
+			buttonFont = "hoi_16mbs"
+			buttonText = "state_Nationalization_of_industry"
+		}
+		buttonType = {
+			name = "state_Industrial_privatization" 
+			position = {x=-27 y=62}	
+			spriteType = "GFX_Regional_Economic_Policy_cilck2"
+			buttonFont = "hoi_16mbs"
+			buttonText = "state_Industrial_privatization"
+		}
+		buttonType = {
+			name = "state_Nationalization_of_industry_arms" 
+			position = {x=-27 y=82}	
+			spriteType = "GFX_Regional_Economic_Policy_cilck2"
+			buttonFont = "hoi_16mbs"
+			buttonText = "state_Nationalization_of_industry_arms"
+		}
+		buttonType = {
+			name = "state_Industrial_arms_privatization" 
+			position = {x=-27 y=102}	
+			spriteType = "GFX_Regional_Economic_Policy_cilck2"
+			buttonFont = "hoi_16mbs"
+			buttonText = "state_Industrial_arms_privatization"
+		}
+		buttonType = {
+			name = "state_Private_industry_coefficient_refreshed" 
+			position = {x=3 y=121}	
+			spriteType = "GFX_Regional_Economic_Policy_cilck"
+			buttonFont = "hoi_16mbs"
+			buttonText = "state_Private_industry_coefficient_refreshed"
+		}
+
+	}
+	containerWindowType = {
+		name = "maket_Economy_Group_system_window"
+		position = { x = 0 y = 0 }#你的窗口坐标，单位为像素，X轴正数为向右、Y轴正数为向下
+		#verticalScrollbar = "right_vertical_slider" 右滑条
+		#size = { width = 宽 height = 高} 窗口大小
+
+		iconType = {
+			name ="maket_economy_propaganda"
+			position = { x = 60  y = -295 }
+			#pdx_tooltip = maket_economy_propaganda_TT
+		}
+		iconType = {
+			name ="Centralized_economy_propaganda"
+			position = { x = 60  y = -245 }
+			#pdx_tooltip = maket_economy_propaganda_TT
+		}
+		iconType = {
+			name ="Classification_of_economic_system_icons"
+			position = { x = 30  y = -135 }
+			pdx_tooltip = econzhenzheng_type_tt_ture
+		}
+		instantTextboxType = {
+			name = "Classification_of_economic_system_tt"
+			position = { x = 105 y = -100 }#你的文本位置（相对于窗口）
+			font = "hoi_24header"
+			text = "econzhenzheng_type_tt"
+			maxWidth = 200
+			maxHeight = 50
+		}
+		buttonType = { #按钮窗口
+			name = "Centralized_balance_bar_logo"
+			position = { x = 5 y = -245 }
+			spriteType ="GFX_Centralized_left"
+			buttonFont = "hoi_16mbs"
+			buttonText = "Centralized_balance_bar_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "Centralized_balance_bar_right_logo"
+			position = { x = 405 y = -245 }
+			spriteType ="GFX_Centralized_right"
+			buttonFont = "hoi_16mbs"
+			buttonText = "Centralized_balance_bar_right_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "Economic_balance_bar_logo"
+			position = { x = 5 y = -295 }
+			spriteType ="GFX_intervene_left"
+			buttonFont = "hoi_16mbs"
+			buttonText = "Economic_balance_bar_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "Economic_balance_bar_HHHHHHHH_logo"
+			position = { x = 405 y = -298 }
+			spriteType ="GFX_intervene_right"
+			buttonFont = "hoi_16mbs"
+			buttonText = "Economic_balance_bar_right_tt"
+		}
+
+		buttonType = { #按钮窗口
+			name = "maket_Economy_1_add"
+			position = { x = 250 y = -95 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "maket_Economy_2_add_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "maket_Economy_1_jian"
+			position = { x = 365 y = -95 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "maket_Economy_2_jian_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "maket_Economy_2_add"
+			position = { x = 250 y = -170 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "maket_Economy_1_add_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "maket_Economy_2_jian"
+			position = { x = 365 y = -170 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "maket_Economy_1_jian_tt"
+		}
+	}
+	containerWindowType = {
+		name = "cooperative_ownership_Economy_Group_system_window"
+		position = { x = 0 y = 0 }#你的窗口坐标，单位为像素，X轴正数为向右、Y轴正数为向下
+		#verticalScrollbar = "right_vertical_slider" 右滑条
+		#size = { width = 宽 height = 高} 窗口大小
+
+		iconType = {
+			name ="cooperative_ownership_economy_propaganda"
+			position = { x = 60  y = -295 }
+			#pdx_tooltip = cooperative_ownership_economy_propaganda_TT
+		}
+		iconType = {
+			name ="cooperative_ownership_Centralized_economy_propaganda"
+			position = { x = 60  y = -245 }
+			#pdx_tooltip = cooperative_ownership_economy_propaganda_TT
+		}
+		iconType = {
+			name ="cooperative_ownership_Classification_of_economic_system_icons"
+			position = { x = 30  y = -135 }
+			pdx_tooltip = econzhenzheng_type_tt_ture
+		}
+		instantTextboxType = {
+			name = "cooperative_ownership_Classification_of_economic_system_tt"
+			position = { x = 105 y = -100 }#你的文本位置（相对于窗口）
+			font = "hoi_24header"
+			text = "econzhenzheng_type_tt"
+			maxWidth = 200
+			maxHeight = 50
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Centralized_balance_bar_logo"
+			position = { x = 5 y = -245 }
+			spriteType ="GFX_Centralized_left"
+			buttonFont = "hoi_16mbs"
+			buttonText = "ownership_Centralized_balance_bar_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Centralized_balance_bar_right_logo"
+			position = { x = 405 y = -245 }
+			spriteType ="GFX_Centralized_right"
+			buttonFont = "hoi_16mbs"
+			buttonText = "ownership_Centralized_balance_bar_right_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Economic_balance_bar_logo"
+			position = { x = 5 y = -295 }
+			spriteType ="GFX_intervene_left"
+			buttonFont = "hoi_16mbs"
+			buttonText = "ownership_Economic_balance_bar_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Economic_balance_bar_HHHHHHHH_logo"
+			position = { x = 405 y = -298 }
+			spriteType ="GFX_intervene_right"
+			buttonFont = "hoi_16mbs"
+			buttonText = "ownership_Economic_balance_bar_right_tt"
+		}
+
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Economy_1_add"
+			position = { x = 250 y = -95 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "cooperative_ownership_Economy_2_add_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Economy_1_jian"
+			position = { x = 365 y = -95 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "cooperative_ownership_Economy_2_jian_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Economy_2_add"
+			position = { x = 250 y = -170 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "cooperative_ownership_Economy_1_add_tt"
+		}
+		buttonType = { #按钮窗口
+			name = "cooperative_ownership_Economy_2_jian"
+			position = { x = 365 y = -170 }
+			spriteType ="GFX_maket_Economy_1"
+			buttonFont = "hoi_16mbs"
+			buttonText = "cooperative_ownership_Economy_1_jian_tt"
+		}
+	}
+}

@@ -1,0 +1,33 @@
+spriteTypes = {
+	spriteType = { name = "GFX_group_cavalry_artillery_brigade_icon"								textureFile = "gfx/interface/counters/divisions_large/unit_C_art_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_cavalry_artillery_brigade_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_C_art_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_cavalry_artillery_brigade_icon_medium_white"								textureFile = "gfx/interface/counters/divisions_small/onmap_unit_C_art_icon.png" noOfFrames = 2 }
+
+
+
+	spriteType = { name = "GFX_group_cavalry_GUN_icon"								textureFile = "gfx/interface/counters/divisions_large/unit_C_gun_icon.png" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_cavalry_GUN_icon_medium"									textureFile = "gfx/interface/counters/divisions_large/unit_C_gun_icon.png" noOfFrames = 2 }
+
+	spriteType = { 
+	name = "GFX_unit_cavalry_GUN_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/cavalry_artillery_brigade" noOfFrames = 2 }
+############################################
+	spriteType = { 
+	name = "GFX_group_artillery_mountaineers_icon"			textureFile = "gfx/interface/counters/divisions_large/unit_mountain_ART_icon.png" 		noOfFrames = 2 
+				}
+	spriteType = { 
+	name = "GFX_unit_artillery_mountaineers_icon_medium"			textureFile = "gfx/interface/counters/divisions_large/unit_mountain_ART_icon.png" 		noOfFrames = 2 
+				}
+	spriteType = { 
+	name = "GFX_unit_artillery_mountaineers_icon_medium_white"			textureFile = "gfx/interface/counters//divisions_small/unit_mountain_ART_icon.png" 		noOfFrames = 2 
+				}
+############################################
+	spriteType = { 
+	name = "GFX_group_guerilla_icon"			textureFile = "gfx/interface/counters/divisions_large/unit_guerilla_icon.png" 		noOfFrames = 2 
+				}
+	spriteType = { 
+	name = "GFX_unit_guerilla_icon_medium"			textureFile = "gfx/interface/counters/divisions_large/unit_guerilla_icon.png" 		noOfFrames = 2 
+				}
+	spriteType = { 
+	name = "GFX_unit_guerilla_icon_medium_white"			textureFile = "gfx/interface/counters//divisions_small/onmap_guerilla_icon.png" 		noOfFrames = 2 
+				}
+}

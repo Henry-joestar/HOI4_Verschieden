@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_FRA_communist_font_dark"
+		texturefile = "gfx/interface/bop/FRA_communist_font_dark.png"
+	}
+	spriteType = {
+		name = "GFX_FRA_communist_font_light"
+		texturefile = "gfx/interface/bop/FRA_communist_font_light.png"
+	}
+	spriteType = {
+		name = "GFX_FRA_democratic_font_dark"
+		texturefile = "gfx/interface/bop/FRA_democratic_font_dark.png"
+	}
+	spriteType = {
+		name = "GFX_FRA_democratic_font_light"
+		texturefile = "gfx/interface/bop/FRA_democratic_font_light.png"
+	}
+}

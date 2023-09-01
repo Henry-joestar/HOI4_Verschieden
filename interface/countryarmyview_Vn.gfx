@@ -1,0 +1,70 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_nothing"
+		textureFile = "gfx//interface//modifiers//nothing.png"
+	}
+	spriteType = {
+		name = "GFX_Collectivization_of_agriculture"
+		textureFile = "gfx//interface//modifiers//Collectivization_of_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_Electrification_industry"
+		textureFile = "gfx//interface//modifiers//Electrification_industry.png"
+	}
+	spriteType = {
+		name = "GFX_Electrification_zhang3"
+		textureFile = "gfx//interface//modifiers//Electrification_zhang3.png"
+	}
+	spriteType = {
+		name = "GFX_Electrified_areas"
+		textureFile = "gfx//interface//modifiers//Electrified_areas.png"
+	}
+	spriteType = {
+		name = "GFX_Industrial_collectivization"
+		textureFile = "gfx//interface//modifiers//Industrial_collectivization.png"
+	}
+	spriteType = {
+		name = "GFX_Nationalization_of_land"
+		textureFile = "gfx//interface//modifiers//Nationalization_of_land.png"
+	}
+	spriteType = {
+		name = "GFX_Bavaria_Resistance"
+		textureFile = "gfx//interface//modifiers//Bavaria_Resistance.png"
+	}
+	spriteType = {
+		name = "GFX_Kollontai_International"
+		textureFile = "gfx//interface//modifiers//Kollontai_International.png"
+	}
+	spriteType = {
+		name = "GFX_freetrade"
+		textureFile = "gfx//interface//modifiers//freetrade.png"
+	}
+	spriteType = {
+		name = "GFX_Agricultural_mechanization"
+		textureFile = "gfx//interface//modifiers//Agricultural_mechanization.png"
+	}
+	spriteType = {
+		name = "GFX_Armed_communes"
+		textureFile = "gfx//interface//modifiers//Armed_communes.png"
+	}
+	spriteType = {
+		name = "GFX_Armed_workers"
+		textureFile = "gfx//interface//modifiers//Armed_workers.png"
+	}
+	spriteType = {
+		name = "GFX_Collectivization_of_agriculture_N"
+		textureFile = "gfx//interface//modifiers//Collectivization_of_agriculture_N.png"
+	}
+	spriteType = {
+		name = "GFX_fortress"
+		textureFile = "gfx//interface//modifiers//fortress.png"
+	}
+	spriteType = {
+		name = "GFX_Modernization_scientific_research"
+		textureFile = "gfx//interface//modifiers//Modernization_scientific_research.png"
+	}
+	spriteType = {
+		name = "GFX_SOV_Industrialization_program"
+		textureFile = "gfx//interface//ideas//SOV_Industrialization_program.png"
+	}
+}

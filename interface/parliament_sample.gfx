@@ -1,0 +1,35 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_button_ideology"
+		texturefile = "/gfx/interface/parliament_sample/button_ideology.png"
+	}
+
+	spriteType = {
+		name = "GFX_Parliament_Background"
+		textureFile = "/gfx/interface/parliament_sample/parliament_background.dds"
+	}
+	spriteType = {
+		name = "GFX_supermesoviet"
+		textureFile = "/gfx/interface/parliament_sample/supermesoviet.png"
+	}
+
+	spriteType = {
+		name = "GFX_Parliament_Seat"
+		textureFile = "/gfx/interface/parliament_sample/parliament_seat.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_Soviet_Parliament_Seat"
+		textureFile = "/gfx/interface/parliament_sample/parliament_seat_sovit.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_parliament_SOV_seat"
+		textureFile = "/gfx/interface/parliament_sample/parliament_SOV_seat.png"
+		noOfFrames = 7
+	}
+
+}
+

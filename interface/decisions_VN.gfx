@@ -1,0 +1,163 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_category_MEX_congress_senate_ui"
+		texturefile = "gfx/interface/decisions/decision_category_MEX_congress_senate_ui.png"
+		noOfFrames = 7
+	}	
+	spriteType = {
+		name = "GFX_decision_bigbrohter"
+		texturefile = "gfx/interface/decisions/decision_bigbrohter.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Take_Shanghai"
+		texturefile = "gfx/interface/decisions/PRC_Take_Shanghai.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Take_Shanghai_2"
+		texturefile = "gfx/interface/decisions/PRC_Take_Shanghai_2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Great_leap_forward_dont"
+		texturefile = "gfx/interface/decisions/PRC_Great_leap_forward_dont.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_steelmaking"
+		texturefile = "gfx/interface/decisions/PRC_steelmaking.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Take_Shanghai_3"
+		texturefile = "gfx/interface/decisions/PRC_Take_Shanghai_3.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_F4"
+		texturefile = "gfx/interface/decisions/PRC_F4.png"
+	}
+	spriteType = {
+		name = "GFX_decision_CHI_Cultural_revolution_s_s"
+		texturefile = "gfx/interface/decisions/CHI_Cultural_revolution_s_s.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Great_leap_forward_2"
+		texturefile = "gfx/interface/decisions/PRC_Great_leap_forward_2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Organize_the_Red_Guards"
+		texturefile = "gfx/interface/decisions/PRC_Organize_the_Red_Guards.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Great_leap_forward_az"
+		texturefile = "gfx/interface/decisions/PRC_Great_leap_forward_az.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_SOVconstruction_2"
+		texturefile = "gfx/interface/decisions/PRC_SOVconstruction_2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_CHI_Cultural_revolution_B"
+		texturefile = "gfx/interface/decisions/CHI_Cultural_revolution_B.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_Cultural_revolution_B"
+		texturefile = "gfx/interface/decisions/PRC_Cultural_revolution_B.png"
+	}
+	spriteType = {
+		name = "GFX_decision_tank_fuckall"
+		texturefile = "gfx/interface/decisions/tank_fuckall.png"
+	}
+	spriteType = {
+		name = "GFX_decision_soviet_parliament_2"
+		texturefile = "gfx/interface/decisions/soviet_parliament_2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_SOVconstruction_1"
+		texturefile = "gfx/interface/decisions/PRC_SOVconstruction_1.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_SOVconstruction_1_2"
+		texturefile = "gfx/interface/decisions/PRC_SOVconstruction_1_2.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_SOVconstruction_1_3"
+		texturefile = "gfx/interface/decisions/PRC_SOVconstruction_1_3.png"
+	}
+	spriteType = {
+		name = "GFX_decision_PRC_SOVconstruction_1_4"
+		texturefile = "gfx/interface/decisions/PRC_SOVconstruction_1_4.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_PRC_Cultural_revolution_s"
+		texturefile = "gfx/interface/decisions/PRC_Cultural_revolution_s.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_CHI_Cultural_revolution_s"
+		texturefile = "gfx/interface/decisions/CHI_Cultural_revolution_s.png"
+	}
+	spriteType = {
+		name = "GFX_decision_SOV_permanent_revolution"
+		texturefile = "gfx/interface/decisions/decision_category_SOV_permanent_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_saf_anti_colonialist_crusade"
+		texturefile = "gfx/interface/decisions/decision_category_saf_anti_colonialist_crusade.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_eng_organize_the_blackshirts"
+		texturefile = "gfx/interface/decisions/decision_category_eng_organize_the_blackshirts.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_eng_move_to_secure_the_dominions"
+		texturefile = "gfx/interface/decisions/decision_category_eng_move_to_secure_the_dominions.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_sov_great_patriotic_war"
+		texturefile = "gfx/interface/decisions/decision_category_sov_great_patriotic_war.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_SOV_propaganda"
+		texturefile = "gfx/interface/decisions/decision_category_SOV_propaganda.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_SOV_paranoia"
+		texturefile = "gfx/interface/decisions/decision_category_SOV_paranoia.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_con"
+		texturefile = "gfx/interface/decisions/JAP_con.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_PRC_Great_leap_forward_s"
+		texturefile = "gfx/interface/decisions/PRC_Great_leap_forward_s.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_soviet_parliament_big"
+		texturefile = "gfx/interface/decisions/soviet_parliament_big.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_PRC_SOVconstruction"
+		texturefile = "gfx/interface/decisions/PRC_SOVconstruction.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_g_f_congress_house_ui"
+		texturefile = "gfx/interface/decisions/decision_category_g_f_congress_house_ui.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_g_f_congress_senate_ui"
+		texturefile = "gfx/interface/decisions/decision_category_g_f_congress_senate_ui.dds"
+		noOfFrames = 21
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_eng_congress_house_ui"
+		texturefile = "gfx/interface/decisions/decision_category_eng_congress_house_ui.png"
+		noOfFrames = 21
+	}
+	spriteType = {
+		name = "GFX_decision_category_eng_congress_senate_ui"
+		texturefile = "gfx/interface/decisions/decision_category_eng_congress_senate_ui.dds"
+		noOfFrames = 21
+	}
+	spriteType = {
+		name = "GFX_decision_category_SOV_planned_economy"
+		texturefile = "gfx/interface/decisions/SOV_planned_economy.png"
+	}
+}

@@ -1,0 +1,215 @@
+guiTypes = {
+	containerWindowType = {
+		name = "parliament_sample_gui"
+		position = { x = 0 y = 0}	
+		size = { width = 450 height= 250 }
+		orientation = center
+		origo = center
+		moveable = yes
+		
+		background = {
+			name = "background"		
+			quadTextureSprite = "GFX_Parliament_Background"
+		}
+
+		gridboxtype = {
+			name = "parliament_diagram"
+			position = { x = 28 y = 52 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+
+		# Utility buttons for demo, not needed for parliament diagram
+		buttonType = {
+			name = "close_button"
+			spriteType = "GFX_closebutton"
+			position = { x = 398 y = 20 }
+			pdx_tooltip = "parliament_test"
+		}
+		buttonType = {
+			name = "refresh_button"
+			spriteType = "GFX_browser_refresh"
+			position = { x = 16 y = 16 }
+		}
+	}
+	containerWindowType = {
+		name = "SAMPLE_parliament_seat"
+		position = { x = 0 y = 0 }
+
+		iconType = { 
+			name = "parliament_dot_icon"
+			quadTextureSprite = "GFX_Parliament_Seat"
+			pdx_tooltip = "SAMPLE_seat_tt"
+		}
+	}
+##################################
+	containerWindowType = {
+		name = "Soviet_parliament_gui"
+		position = { x = 0 y = 0}	
+		size = { width = 450 height= 250 }
+		orientation = center
+		origo = center
+		moveable = yes
+		
+
+		gridboxtype = {
+			name = "Soviet_parliament_diagram"
+			position = { x = 28 y = 52 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		buttonType = {
+			name = "Soviet_close_button"
+			spriteType = "GFX_closebutton"
+			position = { x = 398 y = 20 }
+			pdx_tooltip = "Soviet_parliament_test"
+		}
+		buttonType = {
+			name = "Soviet_refresh_button"
+			spriteType = "GFX_browser_refresh"
+			position = { x = 16 y = 16 }
+			}
+		}
+
+		# Utility buttons for demo, not needed for parliament diagram
+
+	}
+	containerWindowType = {
+		name = "Soviet_parliament_seat"
+		position = { x = 0 y = 0 }
+
+		iconType = { 
+			name = "Soviet_parliament_dot_icon"
+			quadTextureSprite = "GFX_Soviet_Parliament_Seat"
+			pdx_tooltip = "Soviet_seat_tt"
+		}
+
+	}
+##################################
+	containerWindowType = {
+		name = "SOV_parliament_gui"
+		position = { x = 0 y = -160}	
+		size = { width = 450 height= 500 }
+		orientation = center
+		origo = center
+		moveable = yes
+		iconType ={
+			name ="sov_type_icon"
+			position = { x= 47 y = -20 }
+			pdx_tooltip = "SOV_parliament_sample_category"
+			}
+			instantTextboxType = {
+				name = "parliament_clique"
+				position = { x = 370 y = 368 }
+				font = "hoi_16mbs"
+				text = SOV_parliament_clique
+			pdx_tooltip = "SOV_parliament_clique"
+				maxWidth = 140
+				maxHeight = 120
+			}
+			instantTextboxType = {
+				name = "prestige_ladder"
+				position = { x = 10 y = 368 }
+				font = "hoi_16mbs"
+				text = prestige_ladder
+			pdx_tooltip = "prestige_ladder_tt"
+				maxWidth = 140
+				maxHeight = 120
+			}
+		instantTextboxType = {
+				name = "prestige_ladder_name"
+				position = { x = 10 y = 398 }
+				font = "hoi_18mbs"
+				text = prestige_ladder_name
+			pdx_tooltip = "prestige_ladder_tt"
+				maxWidth = 180
+				maxHeight = 120
+			}
+			instantTextboxType = {
+				name = "reputation_ladder"
+				position = { x = 10 y = 418 }
+				font = "hoi_16mbs"
+				text = reputation_ladder
+			pdx_tooltip = "reputation_ladder_tt"
+		pdx_tooltip_delayed = "reputation_ladder_desc"
+				maxWidth = 185
+				maxHeight = 120
+			}
+		instantTextboxType = {
+				name = "reputation_ladder_name"
+				position = { x = 10 y = 433 }
+				font = "hoi_18mbs"
+				text = reputation_ladder_name
+			pdx_tooltip = "reputation_ladder_tt"
+		pdx_tooltip_delayed = "reputation_ladder_desc"
+				maxWidth = 185
+				maxHeight = 120
+			}
+			instantTextboxType = {
+				name = "actual_ladder"
+				position = { x = 10 y = 453 }
+				font = "hoi_16mbs"
+				text = actual_ladder
+			pdx_tooltip = "actual_ladder_tt"
+		pdx_tooltip_delayed = "actual_ladder_desc"
+				maxWidth = 185
+				maxHeight = 120
+			}
+		instantTextboxType = {
+				name = "actual_ladder_name"
+				position = { x = 10 y = 468 }
+				font = "hoi_18mbs"
+				text = actual_ladder_name
+			pdx_tooltip = "actual_ladder_tt"
+		pdx_tooltip_delayed = "actual_ladder_desc"
+				maxWidth = 185
+				maxHeight = 120
+			}
+			instantTextboxType = {
+				name = "prestige_clique"
+				position = { x = 185 y = 388 }
+				font = "hoi_20mbs"
+				text = prestige_clique
+			pdx_tooltip = "prestige_clique_tt"
+				maxWidth = 185
+				maxHeight = 120
+			}
+		instantTextboxType = {
+				name = "prestige_clique_name"
+				position = { x = 235 y = 420 }
+				font = "hoi_22mbs"
+				text = prestige_clique_name
+			pdx_tooltip = "prestige_clique_tt"
+				maxWidth = 185
+				maxHeight = 120
+			}
+		#background = {
+		#	name = "background"		
+		#	quadTextureSprite = "GFX_supermesoviet"
+		#}
+		gridboxtype = {
+			name = "SOV_parliament_diagram"
+			position = { x = 52 y = 154 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 100%% height = 0 }
+			max_slots_horizontal = 1
+			add_horizontal = no
+		}
+
+		# Utility buttons for demo, not needed for parliament diagram
+
+	}
+	containerWindowType = {
+		name = "SOV_parliament_seat"
+		position = { x = 0 y = 0 }
+		iconType = { 
+			name = "SOV_parliament_dot_icon"
+			quadTextureSprite = "GFX_parliament_SOV_seat"
+			pdx_tooltip = "SOV_seat_tt"
+		}
+
+	}
+}

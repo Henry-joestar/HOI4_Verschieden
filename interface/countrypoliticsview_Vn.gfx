@@ -1,0 +1,690 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_categories"
+		texturefile = "gfx/interface/idea_categories_new.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_PE_economic_winodwss"
+		texturefile = "gfx/interface/economy_system/PE_economic_winodwss.png"
+	}
+	spriteType = {
+		name = "GFX_PE_economic_winodwss_ad"
+		texturefile = "gfx/interface/economy_system/PE_economic_winodwss_ad.png"
+	}
+	spriteType = {
+		name = "GFX_PE_economic_winodwss_jian"
+		texturefile = "gfx/interface/economy_system/PE_economic_winodwss_jian.png"
+	}
+	spriteType = {
+		name = "GFX_PE_time_to_bulid"
+		texturefile = "gfx/interface/economy_system/PE_time_to_bulid.png"
+	}
+	spriteType = {
+		name = "GFX_start_five_plane_years"
+		texturefile = "gfx/interface/economy_system/start_five_plane_years.png"
+	}
+	spriteType = {
+		name = "GFX_start_five_plane_years_stop"
+		texturefile = "gfx/interface/economy_system/start_five_plane_years_stop.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines"
+		texturefile = "gfx/interface/economy_system/PE_Free_up_production_lines.png"
+	}
+	spriteType = {
+		name = "GFX_PE_in_lein_leader"
+		texturefile = "gfx/interface/economy_system/PE_in_lein_leader.png"
+	}
+	spriteType = {
+		name = "GFX_button_ideology"
+		texturefile = "gfx/interface/button_ideology.png"
+	}
+	spriteType = {
+		name = "GFX_Reign_of_Terror"
+		texturefile = "gfx/interface/economy_system/polity/Reign_of_Terror.png"
+	}
+	spriteType = {
+		name = "GFX_communism_Centralized_government"
+		texturefile = "gfx/interface/economy_system/polity/communism_Centralized_government.png"
+	}
+	spriteType = {
+		name = "GFX_communism_democratic_centralism"
+		texturefile = "gfx/interface/economy_system/polity/communism_democratic_centralism.png"
+	}
+	spriteType = {
+		name = "GFX_communism_democratic_polity"
+		texturefile = "gfx/interface/economy_system/polity/communism_democratic_polity.png"
+	}
+	spriteType = {
+		name = "GFX_communism_People_democracy"
+		texturefile = "gfx/interface/economy_system/polity/communism_People_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_communism_proletariat_Dictatorship"
+		texturefile = "gfx/interface/economy_system/polity/communism_proletariat_Dictatorship.png"
+	}
+	spriteType = {
+		name = "GFX_communism_Totalitarian_regimes"
+		texturefile = "gfx/interface/economy_system/polity/communism_Totalitarian_regimes.png"
+	}
+	spriteType = {
+		name = "GFX_democracy_Corrupt_democracy"
+		texturefile = "gfx/interface/economy_system/polity/democracy_Corrupt_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_democracy_democratic_polity"
+		texturefile = "gfx/interface/economy_system/polity/democracy_democratic_polity.png"
+	}
+	spriteType = {
+		name = "GFX_fascism_dictatorship_regime"
+		texturefile = "gfx/interface/economy_system/polity/fascism_dictatorship_regime.png"
+	}
+	spriteType = {
+		name = "GFX_fascism_Syndicalist"
+		texturefile = "gfx/interface/economy_system/polity/fascism_Syndicalist.png"
+	}
+	spriteType = {
+		name = "GFX_fascism_totalitarian_regime"
+		texturefile = "gfx/interface/economy_system/polity/fascism_totalitarian_regime.png"
+	}
+	spriteType = {
+		name = "GFX_neutrality_Authoritarian_regime"
+		texturefile = "gfx/interface/economy_system/polity/neutrality_Authoritarian_regime.png"
+	}
+	spriteType = {
+		name = "GFX_neutrality_Enterprise_control"
+		texturefile = "gfx/interface/economy_system/polity/neutrality_Enterprise_control.png"
+	}
+	spriteType = {
+		name = "GFX_neutrality_king_regime"
+		texturefile = "gfx/interface/economy_system/polity/neutrality_king_regime.png"
+	}
+	spriteType = {
+		name = "GFX_neutrality_oligarchy_regime"
+		texturefile = "gfx/interface/economy_system/polity/neutrality_oligarchy_regime.png"
+	}
+	spriteType = {
+		name = "GFX_neutrality_republican_regime"
+		texturefile = "gfx/interface/economy_system/polity/neutrality_republican_regime.png"
+	}
+	spriteType = {
+		name = "GFX_neutrality_totalitarian_regime"
+		texturefile = "gfx/interface/economy_system/polity/neutrality_totalitarian_regime.png"
+	}
+	spriteType = {
+		name = "GFX_socialism_Anarchy"
+		texturefile = "gfx/interface/economy_system/polity/socialism_Anarchy.png"
+	}
+	spriteType = {
+		name = "GFX_socialism_democratic_polity"
+		texturefile = "gfx/interface/economy_system/polity/socialism_democratic_polity.png"
+	}
+	spriteType = {
+		name = "GFX_socialism_revolution_Dictatorship"
+		texturefile = "gfx/interface/economy_system/polity/socialism_revolution_Dictatorship.png"
+	}
+	spriteType = {
+		name = "GFX_socialism_Union_Craftsmen"
+		texturefile = "gfx/interface/economy_system/polity/socialism_Union_Craftsmen.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Anarchy_economy"
+		texturefile = "gfx/interface/economy_system/economy_Anarchy_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_bureaucratic_economy"
+		texturefile = "gfx/interface/economy_system/economy_bureaucratic_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Burgundy_economy"
+		texturefile = "gfx/interface/economy_system/economy_Burgundy_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Dominate_economy"
+		texturefile = "gfx/interface/economy_system/economy_Dominate_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Feudal_capital_economy"
+		texturefile = "gfx/interface/economy_system/economy_Feudal_capital_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Free_market_economy"
+		texturefile = "gfx/interface/economy_system/economy_Free_market_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Half_cent_planned_economy"
+		texturefile = "gfx/interface/economy_system/economy_Half_cent_planned_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_oligarchic_economy"
+		texturefile = "gfx/interface/economy_system/economy_oligarchic_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_junta_communism_economy"
+		texturefile = "gfx/interface/economy_system/economy_junta_communism_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_planned_economy"
+		texturefile = "gfx/interface/economy_system/economy_planned_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Roosevelt_NewDeal"
+		texturefile = "gfx/interface/economy_system/economy_Roosevelt_NewDeal.png"
+	}
+	spriteType = {
+		name = "GFX_economy_slavery_economy"
+		texturefile = "gfx/interface/economy_system/economy_slavery_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_smallholder_economy"
+		texturefile = "gfx/interface/economy_system/economy_smallholder_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Socialist_market_economy"
+		texturefile = "gfx/interface/economy_system/economy_Socialist_market_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Syndicalism_economy"
+		texturefile = "gfx/interface/economy_system/economy_Syndicalism_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_Syndication_economy"
+		texturefile = "gfx/interface/economy_system/economy_Syndication_economy.png"
+	}
+	spriteType = {
+		name = "GFX_economy_worker_planned_economy"
+		texturefile = "gfx/interface/economy_system/economy_worker_planned_economy.png"
+	}
+	spriteType = {
+		name = "GFX_Reign_of_Terror_economy"
+		texturefile = "gfx/interface/economy_system/Reign_of_Terror_economy.png"
+	}
+	spriteType = {
+		name = "GFX_planned_economy"
+		texturefile = "gfx/interface/economy_system/planned_economy.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_marxism"
+		texturefile = "gfx/interface/ideologies/marxism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Authoritarian_socialism"
+		texturefile = "gfx/interface/ideologies/Authoritarian_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Nazbol"
+		texturefile = "gfx/interface/ideologies/Nazbol.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Strasserism"
+		texturefile = "gfx/interface/ideologies/Strasserism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchism_1"
+		texturefile = "gfx/interface/ideologies/anarchism_1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_conservatism"
+		texturefile = "gfx/interface/ideologies/conservatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_liberalism"
+		texturefile = "gfx/interface/ideologies/liberalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socialism"
+		texturefile = "gfx/interface/ideologies/socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_totalist_group"
+		texturefile = "gfx/interface/ideologies/totalist_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Three_Principles_of_the_People"
+		texturefile = "gfx/interface/ideologies/Three_Principles_of_the_People.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democracy"
+		texturefile = "gfx/interface/ideologies/social_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_leninism"
+		texturefile = "gfx/interface/ideologies/leninism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_stalinism"
+		texturefile = "gfx/interface/ideologies/stalinism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anti_revisionism"
+		texturefile = "gfx/interface/ideologies/anti_revisionism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchist_communism"
+		texturefile = "gfx/interface/ideologies/anarchist_communism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_Trotskyism"
+		texturefile = "gfx/interface/ideologies/Trotskyism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Maoism"
+		texturefile = "gfx/interface/ideologies/Maoism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Revolutionary_syndicalism"
+		texturefile = "gfx/interface/ideologies/Revolutionary_syndicalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_totalitarianism"
+		texturefile = "gfx/interface/ideologies/totalitarianism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Market_socialism"
+		texturefile = "gfx/interface/ideologies/Market_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_despotism"
+		texturefile = "gfx/interface/ideologies/despotism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_oligarchism"
+		texturefile = "gfx/interface/ideologies/oligarchism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_moderatism"
+		texturefile = "gfx/interface/ideologies/moderatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_people"
+		texturefile = "gfx/interface/ideologies/people.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Patriarchal_dictatorship"
+		texturefile = "gfx/interface/ideologies/Patriarchal_dictatorship.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Authoritarian_democracy"
+		texturefile = "gfx/interface/ideologies/Authoritarian_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Social_nationalism"
+		texturefile = "gfx/interface/ideologies/Social_nationalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_falangism"
+		texturefile = "gfx/interface/otheride/fascism_falangism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_nazism"
+		texturefile = "gfx/interface/otheride/fascism_nazism_group.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_gen_nazism"
+		texturefile = "gfx/interface/ideologies/gen_nazism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_rexism"
+		texturefile = "gfx/interface/ideologies/rexism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_National_Syndicalism"
+		texturefile = "gfx/interface/ideologies/National_Syndicalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Liberal_democracy"
+		texturefile = "gfx/interface/ideologies/Liberal_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_National_Renewal_Front"
+		texturefile = "gfx/interface/ideologies/National_Renewal_Front.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Burgundian_system"
+		texturefile = "gfx/interface/ideologies/Burgundian_system.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_fascism_militarism"
+		texturefile = "gfx/interface/ideologies/fascism_militarism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_State_capitalism"
+		texturefile = "gfx/interface/ideologies/State_capitalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Trade_liberalism"
+		texturefile = "gfx/interface/ideologies/Trade_liberalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Enterprise_company"
+		texturefile = "gfx/interface/ideologies/Enterprise_company.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_populism"
+		texturefile = "gfx/interface/ideologies/populism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchism"
+		texturefile = "gfx/interface/ideologies/anarchism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_Agrarian_socialism"
+		texturefile = "gfx/interface/ideologies/Agrarian_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Agrarian_socialism_2"
+		texturefile = "gfx/interface/ideologies/Agrarian_socialism_2.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Communalism"
+		texturefile = "gfx/interface/ideologies/Communalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Anarcho_syndicalism"
+		texturefile = "gfx/interface/ideologies/Anarcho_syndicalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Radical_progressiveism"
+		texturefile = "gfx/interface/ideologies/Radical_progressiveism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socialism_1"
+		texturefile = "gfx/interface/ideologies/socialism_1.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_ingsoc"
+		texturefile = "gfx/interface/ideologies/ingsoc.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_new_democratic"
+		texturefile = "gfx/interface/ideologies/new_democratic.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_moderatism_communism"
+		texturefile = "gfx/interface/ideologies/moderatism_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_National_Syndicalism_socialism"
+		texturefile = "gfx/interface/ideologies/National_Syndicalism_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_National_communism"
+		texturefile = "gfx/interface/ideologies/National_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Integralism"
+		texturefile = "gfx/interface/ideologies/Integralism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_A_free_India"
+		texturefile = "gfx/interface/ideologies/A_free_India.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Extreme_authoritarianism"
+		texturefile = "gfx/interface/ideologies/Extreme_authoritarianism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_republicanism"
+		texturefile = "gfx/interface/ideologies/republicanism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Kemalism"
+		texturefile = "gfx/interface/ideologies/Kemalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_juche"
+		texturefile = "gfx/interface/ideologies/juche.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_PRC_Socialism_characteristics"
+		texturefile = "gfx/interface/ideologies/PRC_Socialism_characteristics.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_yananmos"
+		texturefile = "gfx/interface/ideologies/yananmos.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Deterritorialization"
+		texturefile = "gfx/interface/ideologies/Deterritorialization.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Nuclear_waste"
+		texturefile = "gfx/interface/ideologies/Nuclear_waste.png"
+	}
+	spriteType = {
+		name = "GFX_warlord_icon"
+		texturefile = "gfx/interface/autonomy/warlord.png"	
+	}
+	spriteType = {
+		name = "GFX_union_republic_icon"
+		texturefile = "gfx/interface/autonomy/union_republic.png"	
+	}
+	spriteType = {
+		name = "GFX_localgovernment_icon"
+		texturefile = "gfx/interface/autonomy/local_government.png"	
+	}
+	spriteType = {
+		name = "GFX_ideology_left_social_democracy"
+		texturefile = "gfx/interface/ideologies/left_social_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_new_socialism"
+		texturefile = "gfx/interface/ideologies/new_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_MEME_soy_milkism"
+		texturefile = "gfx/interface/ideologies/MEME_soy_milkism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_junta_communism"
+		texturefile = "gfx/interface/ideologies/junta_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Theocratic_absolutism_fascism"
+		texturefile = "gfx/interface/ideologies/Theocratic_absolutism_fascism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_absolutism"
+		texturefile = "gfx/interface/ideologies/absolutism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Theocratic_absolutism"
+		texturefile = "gfx/interface/ideologies/Theocratic_absolutism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_centrism"
+		texturefile = "gfx/interface/ideologies/centrism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_Fascist_republicanism"
+		texturefile = "gfx/interface/ideologies/Fascist_republicanism.png"
+	}
+
+	spriteType = {
+		name = "GFX_NEW_absolute_monarchy"
+		texturefile = "gfx/interface/economy_system/polity/NEW_absolute_monarchy.png"
+	}
+	spriteType = {
+		name = "GFX_NEW_Committee_Republic"
+		texturefile = "gfx/interface/economy_system/polity/NEW_Committee_Republic.png"
+	}
+	spriteType = {
+		name = "GFX_NEW_Democracies_polity"
+		texturefile = "gfx/interface/economy_system/polity/NEW_Democracies_polity.png"
+	}
+	spriteType = {
+		name = "GFX_NEW_Fascist_dictatorship"
+		texturefile = "gfx/interface/economy_system/polity/NEW_Fascist_dictatorship.png"
+	}
+	spriteType = {
+		name = "GFX_NEW_Fascist_republic"
+		texturefile = "gfx/interface/economy_system/polity/NEW_Fascist_republic.png"
+	}
+	spriteType = {
+		name = "GFX_NEW_Presidential_Republic"
+		texturefile = "gfx/interface/economy_system/polity/NEW_Presidential_Republic.png"
+	}
+	spriteType = {
+		name = "GFX_deployment_named_division_bg_Economic_industry"
+		texturefile = "gfx/interface/economy_system/deployment_named_division_bg_Economic_industry.png"
+	}
+	spriteType = {
+		name = "GFX_deployment_named_division_bg_heavy_industry"
+		texturefile = "gfx/interface/economy_system/deployment_named_division_bg_heavy_industry.png"
+	}
+	spriteType = {
+		name = "GFX_deployment_named_division_bg_scientific_research"
+		texturefile = "gfx/interface/economy_system/deployment_named_division_bg_scientific_research.png"
+	}
+	spriteType = {
+		name = "GFX_deployment_named_division_bg_minus_sign"
+		texturefile = "gfx/interface/economy_system/deployment_named_division_bg_minus_sign.png"
+	}
+	spriteType = {
+		name = "GFX_diplo_action_imp_relations_bg_new"
+		texturefile = "gfx/interface/economy_system/diplo_action_imp_relations_bg_new.png"
+	}
+	spriteType = {
+		name = "GFX_deployment_named_division_bg_plus"
+		texturefile = "gfx/interface/economy_system/deployment_named_division_bg_plus.png"
+	}
+	spriteType = {
+		name = "GFX_planned_offensive_land"
+		texturefile = "gfx/interface/modifiers/planned_offensive_land.png"
+	}
+	spriteType = {
+		name = "GFX_private_army_complex_MOD"
+		texturefile = "gfx/interface/modifiers/private_army_complex_MOD.png"
+	}
+	spriteType = {
+		name = "GFX_private_industrial_complex_MOD"
+		texturefile = "gfx/interface/modifiers/private_industrial_complex_MOD.png"
+	}
+	spriteType = {
+		name = "GFX_Regional_Economic_Policy_cilck2"
+		texturefile = "gfx/interface/economy_system/Regional_Economic_Policy_cilck2.png"
+	}
+	spriteType = {
+		name = "GFX_Regional_Economic_Policy_cilck"
+		texturefile = "gfx/interface/economy_system/Regional_Economic_Policy_cilck.png"
+	}
+	spriteType = {
+		name = "GFX_maket_Economy_1"
+		texturefile = "gfx/interface/economy_system/maket_Economy_1.png"
+	}
+	spriteType = {
+		name = "GFX_economy_cooperative_ownership"
+		texturefile = "gfx/interface/economy_system/economy_cooperative_ownership.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_0"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_0.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_1"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_1.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_2"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_2.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_3"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_3.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_4"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_4.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_5"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_5.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_6"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_6.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_7"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_7.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_8"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_8.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_9"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_9.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_balancing_10"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_balancing_10.png"
+	}
+
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_0"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_0.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_1"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_1.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_2"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_2.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_3"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_3.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_4"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_4.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_5"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_5.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_6"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_6.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_7"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_7.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_8"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_8.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_9"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_9.png"
+	}
+	spriteType = {
+		name = "GFX_PE_Free_up_production_lines_10"
+		texturefile = "gfx/interface/economy_system/Progress_bar/PE_Free_up_production_lines_10.png"
+	}
+
+	spriteType = {
+		name = "GFX_Centralized_left"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_left.png"
+	}
+	spriteType = {
+		name = "GFX_Centralized_right"
+		texturefile = "gfx/interface/economy_system/Progress_bar/Centralized_right.png"
+	}
+	spriteType = {
+		name = "GFX_intervene_left"
+		texturefile = "gfx/interface/economy_system/Progress_bar/intervene_left.png"
+	}
+	spriteType = {
+		name = "GFX_intervene_right"
+		texturefile = "gfx/interface/economy_system/Progress_bar/intervene_right.png"
+	}
+}
