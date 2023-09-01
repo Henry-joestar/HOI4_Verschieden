@@ -1,0 +1,727 @@
+
+scripted_gui = {
+	Regional_Economic_Policy_Window = {
+		parent_window_token = selected_state_view
+		context_type = selected_state_context	
+		
+		window_name = "Regional_Economic_Policy_Window"
+		effects = {
+			state_Nationalization_of_industry_click = {
+			add_political_power = -12
+			FROM = {
+set_state_flag = maket_event_1_flag
+		remove_building = {
+		type = private_industrial_complex
+		level = 1
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = 0.08 }
+	add_to_variable = { PICM_monthly_population = 0.01 }
+				}
+			}
+
+			state_Industrial_privatization_click = {
+			add_political_power = -12
+			FROM = {
+set_state_flag = maket_event_2_flag
+		remove_building = {
+		type = industrial_complex
+		level = 1
+		}
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.01 }
+				}
+			}
+
+			state_Nationalization_of_industry_arms_click= {
+			add_political_power = -12
+			FROM = {
+set_state_flag = maket_event_3_flag
+			remove_building = {
+			type = private_army_complex
+			level = 1
+			}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = 0.08 }
+	add_to_variable = { PACM_monthly_population = 0.01 }
+				}
+			}
+
+			state_Industrial_arms_privatization_click = {
+			add_political_power = -12
+						FROM = {
+set_state_flag = maket_event_4_flag
+			remove_building = {
+			type = arms_factory
+			level = 1
+			}
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.01 }
+				}
+			}
+			state_Private_industry_coefficient_refreshed_click = {
+				FROM = {
+				}
+			}
+		}
+
+		triggers = {
+			state_Nationalization_of_industry_click_enabled = {
+				FROM = {
+			not = { has_state_flag = maket_event_country_1_flag }
+			private_industrial_complex > 0
+				}
+			}
+			state_Industrial_privatization_click_enabled = {
+				FROM = {
+			not = { has_state_flag = maket_event_country_2_flag }
+			industrial_complex > 0
+				}
+			}
+			state_Nationalization_of_industry_arms_click_enabled= {
+				FROM = {
+			not = { has_state_flag = maket_event_country_3_flag }
+			private_army_complex > 0
+				}
+			}
+			state_Industrial_arms_privatization_click_enabled = {
+				FROM = {
+			not = { has_state_flag = maket_event_country_4_flag }
+			arms_factory > 0
+				}
+			}
+			state_Private_industry_coefficient_refreshed_click_enabled = {
+				FROM = {
+				}
+			}
+		}
+	}
+	economy_system_pol = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "economy_system"
+		visible = {
+			always = yes
+		}
+		properties = {
+			econ_type_icon = {
+				image = "[GetpoliteTypeNEWGFX]"
+			}
+			econzhenzheng_type_icon = {
+				image = "[GetEconomyTypeGFX]"
+			}
+		}
+	}
+	cooperative_ownership_Economy_Group_system_ui = {
+		context_type = player_context
+		#parent_window_token = politics_tab
+		window_name = "cooperative_ownership_Economy_Group_system_window"
+		visible = {
+			always = yes
+		}
+		properties = {
+			cooperative_ownership_Classification_of_economic_system_icons= {
+			image = "[GetEconomyTypeGFX]"
+			}
+			cooperative_ownership_economy_propaganda= {
+			image = "[GET_CO_Economic_balance_bar]"
+			}
+			cooperative_ownership_Centralized_economy_propaganda= {
+			image = "[GET_CO_Centralized_balance_bar]"
+			}
+		}
+		effects = {
+			cooperative_ownership_Economy_2_add_click = {#公营化
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+		set_variable = { ooperative_ownership_Economy_start = 1 }
+		add_to_variable = { cooperative_ownership_Economic_balance_bar = 1 }
+		add_to_variable = { cooperative_ownership_Economic_balance_bar_right = -1 }
+		add_to_variable = { COES_local_resources_factor = 0.05 }
+		add_to_variable = { COES_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { COES_consumer_goods_factor = 0.01 }
+		add_to_variable = { COES_political_power_cost = 0.015 }
+
+		add_to_variable = { COES_local_resources_factor_SJ = 5 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = 5 }
+		add_to_variable = { COES_consumer_goods_factor_SJ = 1 }
+
+			}
+			cooperative_ownership_Economy_2_jian_click = {#私营化
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+		add_to_variable = { cooperative_ownership_Economic_balance_bar = -1 }
+		add_to_variable = { cooperative_ownership_Economic_balance_bar_right = 1 }
+		add_to_variable = { COES_local_resources_factor = -0.05 }
+		add_to_variable = { COES_production_speed_buildings_factor = -0.05 }
+		add_to_variable = { COES_consumer_goods_factor = -0.01 }
+		add_to_variable = { COES_political_power_cost = -0.015 }
+
+		add_to_variable = { COES_local_resources_factor_SJ = -5 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = -5 }
+		add_to_variable = { COES_consumer_goods_factor_SJ = -1 }
+			if = {
+			limit = {
+		check_variable = { cooperative_ownership_Economic_balance_bar < 4}
+		has_idea = economy_Dominate_economy
+				}
+				add_ideas = economy_cooperative_ownership
+				}
+		set_variable = { cooperative_ownership_Economic_balance_bar = 8 }
+		set_variable = { cooperative_ownership_Economic_balance_bar_right = 2 }
+		add_to_variable = { COES_local_resources_factor = 0.15 }
+		add_to_variable = { COES_production_speed_buildings_factor = 0.15 }
+		add_to_variable = { COES_consumer_goods_factor = 0.03 }
+		add_to_variable = { COES_political_power_cost = 0.045 }
+		add_to_variable = { COES_local_resources_factor_SJ = 15 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = 15 }
+		add_to_variable = { COES_consumer_goods_factor_SJ = 3 }
+			}
+			cooperative_ownership_Economy_1_add_click = {#集中化
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar = 1 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar_right = -1 }
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor = 0.03}
+		add_to_variable = { COES_production_factory_efficiency_gain_factor = -0.03 }
+		add_to_variable = { COES_political_power_cost = 0.025 }
+		ALL_EC_ownership_construction_bulidng_speed_jian = yes
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor_SJ = 3 }
+		add_to_variable = { COES_production_factory_efficiency_gain_factor_SJ = -3 }
+		add_to_variable = { COES_gongshejianzaosudu_SJ = -10 }
+			}
+			cooperative_ownership_Economy_1_jian_click = {#放任化
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar = -1 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar_right = 1 }
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor = -0.03}
+		add_to_variable = { COES_production_factory_efficiency_gain_factor = 0.03 }
+		add_to_variable = { COES_political_power_cost = -0.025 }
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor_SJ = -3 }
+		add_to_variable = { COES_production_factory_efficiency_gain_factor_SJ = 3 }
+		add_to_variable = { COES_gongshejianzaosudu_SJ = 10 }
+
+		ALL_EC_ownership_construction_bulidng_speed_add = yes
+			}
+
+		}
+		triggers = {
+			cooperative_ownership_Economy_1_add_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 10 }
+			}
+			cooperative_ownership_Economy_1_jian_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 0 }
+			}
+			cooperative_ownership_Economy_2_add_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { cooperative_ownership_Economic_balance_bar < 10 }
+			}
+			cooperative_ownership_Economy_2_jian_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { cooperative_ownership_Economic_balance_bar > 0 }
+			}
+		}
+	}
+		
+	economy_system_pol = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "economy_system"
+		visible = {
+			always = yes
+		}
+		properties = {
+			econ_type_icon = {
+				image = "[GetpoliteTypeNEWGFX]"
+			}
+			econzhenzheng_type_icon = {
+				image = "[GetEconomyTypeGFX]"
+			}
+		}
+	}
+	maket_Economy_Group_system_ui = {
+		context_type = player_context
+		#parent_window_token = politics_tab
+		window_name = "maket_Economy_Group_system_window"
+		visible = {
+			always = yes
+		}
+		properties = {
+			Classification_of_economic_system_icons= {
+			image = "[GetEconomyTypeGFX]"
+			}
+			maket_economy_propaganda= {
+			image = "[GETEconomic_balance_bar]"
+			}
+			Centralized_economy_propaganda= {
+			image = "[GETCentralized_balance_bar]"
+			}
+		}
+		effects = {
+			maket_Economy_2_add_click = {
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+			if = {
+			limit = {
+		check_variable = { Centralized_balance_bar > 5 }
+		has_idea = economy_Free_market_economy
+			}
+				add_ideas = economy_Dominate_economy
+			}
+	add_to_variable = { Economic_balance_bar = 1 }
+	add_to_variable = { Economic_balance_bar_right = -1 }
+		add_to_variable = { GMES_political_power_cost = 0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = 0.01 }
+
+		add_to_variable = { COES_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = 5 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = 1 }
+		add_to_variable = { Private_construction_units = -10 }
+	
+			add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			days = 7
+				}
+			}
+			maket_Economy_2_jian_click  = {
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+			if = {
+			limit = {
+		check_variable = { Centralized_balance_bar < 8}
+		has_idea = economy_Dominate_economy
+				}
+				add_ideas = economy_Free_market_economy
+			}
+	add_to_variable = { Economic_balance_bar = -1 }
+	add_to_variable = { Economic_balance_bar_right = 1 }
+		add_to_variable = { GMES_political_power_cost = -0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = -0.01 }
+
+		add_to_variable = { COES_production_speed_buildings_factor = -0.05 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = -5 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = -1 }
+		add_to_variable = { Private_construction_units = 10 }
+add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			days = -7
+				}
+			}
+			maket_Economy_1_add_click = {
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+	add_to_variable = { Centralized_balance_bar = 1 }
+	add_to_variable = { Centralized_balance_bar_right = -1 }
+		add_to_variable = { GMES_political_power_cost = 0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = 0.01 }
+	add_to_variable = { GMES_economy_cost_factor = -0.08 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_industrial_concern_cost_factor = -0.08 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor = 0.05 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = 1 }
+	add_to_variable = { GMES_economy_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_industrial_concern_cost_factor_shuju = -8 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor_shuju = 5 }
+			}
+			maket_Economy_1_jian_click = {
+		add_timed_idea = { idea = General_Economic_Adjustment days = 35 }
+	add_to_variable = { Centralized_balance_bar = -1 }
+	add_to_variable = { Centralized_balance_bar_right = 1 }
+		add_to_variable = { GMES_political_power_cost = -0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = -0.01 }
+	add_to_variable = { GMES_economy_cost_factor = 0.08 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_industrial_concern_cost_factor = 0.08 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor = -0.05 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = -1 }
+	add_to_variable = { GMES_economy_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_industrial_concern_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_production_speed_buildings_factor_shuju = -5 }
+			}
+
+		}
+		triggers = {
+			maket_Economy_1_add_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { Centralized_balance_bar < 10 }
+			}
+			maket_Economy_1_jian_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { Centralized_balance_bar > 0 }
+			}
+			maket_Economy_2_add_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { Economic_balance_bar < 10 }
+			}
+			maket_Economy_2_jian_click_enabled = {
+		NOT = { has_idea = General_Economic_Adjustment }
+		check_variable = { Economic_balance_bar > 0 }
+			}
+		}
+	}
+
+	planed_Economy_Group_system_ui = {
+		context_type = player_context
+		#parent_window_token = politics_tab
+		window_name = "planed_Economy_Group_system_window"
+		visible = {
+			always = yes
+		}
+		properties = {
+			Planned_economy_propaganda= {
+			image = "[GETPlanned_economy_propaganda_JPG]"
+			}
+		}
+		effects = {
+			add_agricultural_click = {
+				add_to_variable = { GPES_Agricultural_cap = 5 }
+				add_to_variable = { GPES_Full_cap_ture = -5 }
+			set_variable = { GPESN_PFEGFX = GPES_Agricultural_cap }
+			set_variable = { CGFX = GPES_Agricultural_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.042 }
+			multiply_variable = { CGFX = -0.042 }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			add_to_variable = { GPESN_consumer_goods_factor = CGFX }
+			multiply_variable = { GPESN_production_factory_efficiency_gain_factor = 0.01 }
+			multiply_variable = { GPESN_consumer_goods_factor = 0.01 }
+
+			set_variable = { GPESN_PFEGFX = GPES_industry_cap }
+			set_variable = { BIIIPX = GPES_industry_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.053 }
+			multiply_variable = { BIIIPX = 0.031 }
+			add_to_variable = { Budget_invest_in_investment_points = BIIIPX }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			multiply_variable = { Budget_invest_in_investment_pointsr = 0.01 }
+			multiply_variable = { GPESN_production_factory_efficiency_gain_factor = 0.01 }
+			}
+			add_industry_click = {
+				add_to_variable = {  GPES_industry_cap = 5 }
+				add_to_variable = { GPES_Full_cap_ture = -5 }
+			set_variable = { GPESN_PFEGFX = GPES_Agricultural_cap }
+			set_variable = { CGFX = GPES_Agricultural_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.042 }
+			multiply_variable = { CGFX = -0.042 }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			add_to_variable = { GPESN_consumer_goods_factor = CGFX }
+			multiply_variable = { GPESN_production_factory_efficiency_gain_factor = 0.01 }
+			multiply_variable = { GPESN_consumer_goods_factor = 0.01 }
+
+			set_variable = { GPESN_PFEGFX = GPES_industry_cap }
+			set_variable = { BIIIPX = GPES_industry_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.053 }
+			multiply_variable = { BIIIPX = 0.031 }
+			add_to_variable = { Budget_invest_in_investment_points = BIIIPX }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			multiply_variable = { Budget_invest_in_investment_pointsr = 0.01 }
+			multiply_variable = { GPESN_production_factory_efficiency_gain_factor = 0.01 }
+			}
+			Investment_interface_click = {
+				if = {
+					limit = { has_country_flag = open_Investment_interface_gui }
+					clr_country_flag = open_Investment_interface_gui
+				}
+				else_if = {
+					limit = { NOT = { has_country_flag = open_Investment_interface_gui } }
+					set_country_flag = open_Investment_interface_gui
+				}
+			}
+		}
+		triggers = {
+			add_industry_click_enabled = {
+				check_variable = { GPES_Full_cap_ture > 4 }
+
+			}
+			add_agricultural_click_enabled = {
+				check_variable = { GPES_Full_cap_ture > 4 }
+
+			}
+		}
+	}
+	Investment_interface_ui = {
+		window_name = "Investment_interface_window"
+		context_type = player_context
+
+		visible = {
+			has_country_flag = open_Investment_interface_gui
+		}
+		effects = {
+			close_Investment_interface_click = {
+			clr_country_flag = open_Investment_interface_gui
+			}
+			GEPS_ADDbutton_A_click = {
+			add_to_variable = { GEPS_ADDbutton_A_click_ture = 1 }
+			add_to_variable = { GPES_Financial_investment_points_ture = -1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+					building = industrial_complex#建造类型
+						size > 2#数量
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots =1#创造建筑插槽数量
+				add_building_construction = {
+					type = industrial_complex#建造类型
+					level = 1#建造数量
+					instant_build = yes
+						}
+					}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+					building = arms_factory
+						size > 2#数量
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots =1#创造建筑插槽数量
+				add_building_construction = {
+					type = arms_factory
+					level = 1#建造数量
+					instant_build = yes
+						}
+					}
+			}
+			GEPS_ADDbutton_B_click = {
+			add_to_variable = { Budget_invest_in_research = 10 }
+			add_to_variable = { Budget_invest_in_research_ture = 1 }
+
+			add_to_variable = { GPES_Financial_investment_points_ture = -1 }
+			}
+			GEPS_ADDbutton_C_click = {
+			add_to_variable = { Budget_invest_in_consumer_goods = -5 }
+			add_to_variable = { Budget_invest_in_investment_points = 5 }
+			add_to_variable = { Budget_invest_in_investment_points_ture = 1 }
+
+			add_to_variable = { GPES_Financial_investment_points_ture = -1 }
+			}
+
+			close_Investment_interface_click = {
+			clr_country_flag = open_Investment_interface_gui
+			}
+			GEPS_decreasebutton_A_click = {
+			add_to_variable = { GEPS_ADDbutton_A_click_ture = -1 }
+			add_to_variable = { GPES_Financial_investment_points_ture = 1 }
+			random_owned_controlled_state = {
+					limit = {
+					industrial_complex > 0
+						}
+					remove_building = {
+					type = industrial_complex
+					level = 1
+						}
+					}
+			random_owned_controlled_state = {
+					limit = {
+					arms_factory > 0
+					}
+					remove_building = {
+					type = arms_factory
+					level = 1
+					}
+				}
+			}
+			GEPS_decreasebutton_B_click = {
+			add_to_variable = { Budget_invest_in_research = -10 }
+			add_to_variable = { Budget_invest_in_research_ture = -1 }
+
+			add_to_variable = { GPES_Financial_investment_points_ture = 1 }
+			}
+			GEPS_decreasebutton_C_click = {
+			add_to_variable = { Budget_invest_in_consumer_goods = -5 }
+			add_to_variable = { Budget_invest_in_investment_points = 5 }
+			add_to_variable = { Budget_invest_in_investment_points_ture = -1 }
+
+			add_to_variable = { GPES_Financial_investment_points_ture = 1 }
+			}
+
+			start_five_plane_years_click = {
+			}
+		}
+		triggers = {
+			GEPS_ADDbutton_A_click_enabled = {
+				check_variable = { GPES_Financial_investment_points_ture > 0.999 }
+			}
+			GEPS_ADDbutton_B_click_enabled = {
+				check_variable = { GPES_Financial_investment_points_ture > 0.999 }
+			}
+			GEPS_ADDbutton_C_click_enabled = {
+				check_variable = { GPES_Financial_investment_points_ture > 0.999 }
+			}
+			start_five_plane_years_click_enabled = {
+			NOT = { has_country_flag = Common_five_year_plan_country_flag }
+			has_country_flag = Common_five_year_plan_makefnishi_flag
+			}
+			GEPS_decreasebutton_A_click_enabled = {
+					industrial_complex > 0
+					arms_factory > 0
+			check_variable = { GEPS_ADDbutton_A_click_ture > 0 }
+			}
+
+			GEPS_decreasebutton_B_click_enabled = {
+				check_variable = { Budget_invest_in_research_ture > 0 }
+			}
+			GEPS_decreasebutton_C_click_enabled = {
+				check_variable = { Budget_invest_in_investment_points_ture > 0 }
+			}
+		}
+	}
+
+
+
+#	Vn_economy_window = {
+#		context_type = player_context
+#		parent_window_token = politics_tab
+#		window_name = "economy_system_info"
+#	}
+#		visible = {
+#			always = yes
+#		}
+#		properties = {
+#			economy_system_icon = {
+#				image = "[GetEconomyTypeGFX]"
+#			}
+#		}
+#	}
+	polite_party_gui = {
+		window_name = "polite_party_gui"
+		context_type = player_context
+		visible = {
+		has_country_flag = polite_party_A_start
+		}
+		effects = {
+			polite_party_close_button = {
+			clr_country_flag = polite_party_A_start
+			}
+		}
+	}
+	polite_party_GFX_GUI = {
+		window_name = "polite_party_GFX_GUI"
+		context_type = player_context
+		parent_window_token = politics_tab
+		visible = {
+		always = yes
+		}
+		effects = {
+			polite_party_A_icon = {
+			set_country_flag = polite_party_A_start
+			}
+		}
+	}
+}

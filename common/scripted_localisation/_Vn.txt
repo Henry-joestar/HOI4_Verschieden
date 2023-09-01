@@ -1,0 +1,1357 @@
+defined_text = {
+	name = GetPRC_artillery_equipment#中共火炮生产
+	text = {
+	trigger = { 
+	NOT = { has_completed_focus = PRC_Artillery_production }
+			} 
+	localization_key = PRC_Artillery_production_dont
+	}
+	text = {
+	trigger = { 
+	has_completed_focus = PRC_Artillery_production
+			} 
+	localization_key = PRC_Artillery_production_finshi
+	}
+}
+defined_text = {
+	name = GetPRC_no_guns#缴获枪械
+	text = {
+	trigger = { 
+	NOT = { has_completed_focus = PRC_no_guns }
+			} 
+	localization_key = PRC_Artillery_production_dont
+	}
+	text = {
+	trigger = { 
+	has_completed_focus = PRC_no_guns
+			} 
+	localization_key = PRC_no_guns_fnishi
+	}
+}
+defined_text = {
+	name = GETEconomic_balance_bar#经济平衡
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 0 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_0"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 1 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_1"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 2 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_2"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 3 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_3"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 4 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_4"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 5 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_5"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 6 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_6"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 7 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_7"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 8 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_8"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 9 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_9"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Economic_balance_bar = 10 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_10"
+	}
+
+}
+defined_text = {
+	name = GETCentralized_balance_bar#经济平衡
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 0 }
+			} 
+	localization_key = "GFX_Centralized_balancing_0"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 1 }
+			} 
+	localization_key = "GFX_Centralized_balancing_1"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 2 }
+			} 
+	localization_key = "GFX_Centralized_balancing_2"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 3 }
+			} 
+	localization_key = "GFX_Centralized_balancing_3"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 4 }
+			} 
+	localization_key = "GFX_Centralized_balancing_4"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 5 }
+			} 
+	localization_key = "GFX_Centralized_balancing_5"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 6 }
+			} 
+	localization_key = "GFX_Centralized_balancing_6"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 7 }
+			} 
+	localization_key = "GFX_Centralized_balancing_7"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 8 }
+			} 
+	localization_key = "GFX_Centralized_balancing_8"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 9 }
+			} 
+	localization_key = "GFX_Centralized_balancing_9"
+	}
+	text = {
+	trigger = { 
+	check_variable = { Centralized_balance_bar = 10 }
+			} 
+	localization_key = "GFX_Centralized_balancing_10"
+	}
+
+}
+defined_text = {
+	name = GET_CO_Economic_balance_bar#经济平衡_合作社
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 0 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_0"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 1 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_1"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 2 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_2"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 3 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_3"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 4 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_4"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 5 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_5"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 6 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_6"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 7 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_7"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 8 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_8"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 9 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_9"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Economic_balance_bar = 10 }
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines_10"
+	}
+
+}
+defined_text = {
+	name = GET_CO_Centralized_balance_bar#经济平衡_合作社
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 0 }
+			} 
+	localization_key = "GFX_Centralized_balancing_0"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 1 }
+			} 
+	localization_key = "GFX_Centralized_balancing_1"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 2 }
+			} 
+	localization_key = "GFX_Centralized_balancing_2"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 3 }
+			} 
+	localization_key = "GFX_Centralized_balancing_3"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 4 }
+			} 
+	localization_key = "GFX_Centralized_balancing_4"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 5 }
+			} 
+	localization_key = "GFX_Centralized_balancing_5"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 6 }
+			} 
+	localization_key = "GFX_Centralized_balancing_6"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 7 }
+			} 
+	localization_key = "GFX_Centralized_balancing_7"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 8 }
+			} 
+	localization_key = "GFX_Centralized_balancing_8"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 9 }
+			} 
+	localization_key = "GFX_Centralized_balancing_9"
+	}
+	text = {
+	trigger = { 
+	check_variable = { cooperative_ownership_Centralized_balance_bar = 10 }
+			} 
+	localization_key = "GFX_Centralized_balancing_10"
+	}
+
+}
+defined_text = {
+	name = GetBureaucracyTypeNEWTT#政体
+	text = {
+	trigger = { 
+	has_idea = Noble_bureaucrats
+			} 
+	localization_key = "Noble_bureaucrats_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Appointment_bureaucracy
+			} 
+	localization_key = "Appointment_bureaucracy_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = universal_suffrage
+			} 
+	localization_key = "universal_suffrage_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = revolution_bureaucracy
+			} 
+	localization_key = "revolution_bureaucracy_TT"
+	}
+}
+defined_text = {
+	name = GETPlanned_economy_propaganda_TT#计划经济宣传栏
+	text = {
+	trigger = { 
+	has_idea = Planned_economy_propaganda_bulidingidea
+			} 
+	localization_key = "Planned_economy_propaganda_bulidingTT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Planned_economy_propaganda_outputidea
+			} 
+	localization_key = "Planned_economy_propaganda_outputTT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Planned_economy_propaganda_mobilizationidea
+			} 
+	localization_key = "Planned_economy_propaganda_mobilizationTT"
+	}
+}
+defined_text = {
+	name = GETPlanned_economy_propaganda_JPG#计划经济宣传栏
+	text = {
+	trigger = { 
+	has_idea = Planned_economy_propaganda_bulidingidea
+			} 
+	localization_key = "GFX_PE_time_to_bulid"
+	}
+	text = {
+	trigger = { 
+	has_idea = Planned_economy_propaganda_outputidea
+			} 
+	localization_key = "GFX_PE_Free_up_production_lines"
+	}
+	text = {
+	trigger = { 
+	has_idea = Planned_economy_propaganda_mobilizationidea
+			} 
+	localization_key = "GFX_PE_in_lein_leader"
+	}
+}
+defined_text = {
+	name = GetBureaucracyTypeNEWNAME#政体
+	text = {
+	trigger = { 
+	has_idea = Noble_bureaucrats
+			} 
+	localization_key = "Noble_bureaucrats"
+	}
+	text = {
+	trigger = { 
+	has_idea = Appointment_bureaucracy
+			} 
+	localization_key = "Appointment_bureaucracy"
+	}
+	text = {
+	trigger = { 
+	has_idea = universal_suffrage
+			} 
+	localization_key = "universal_suffrage"
+	}
+	text = {
+	trigger = { 
+	has_idea = revolution_bureaucracy
+			} 
+	localization_key = "revolution_bureaucracy"
+	}
+}
+
+defined_text = {
+	name = GetpartyTypeNEWTT#政体
+	text = {
+	trigger = { 
+	has_idea = One_party_state
+			} 
+	localization_key = "One_party_state_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Multi_party_democracy
+			} 
+	localization_key = "Multi_party_democracy_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Multi_party_cooperation
+			} 
+	localization_key = "Multi_party_cooperation_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = people_democracy
+			} 
+	localization_key = "people_democracy_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Dictatorship_STS
+			} 
+	localization_key = "Dictatorship_STS_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Commune_Committee
+			} 
+	localization_key = "Commune_Committee_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Revolutionary_dictatorship
+			} 
+	localization_key = "Revolutionary_dictatorship_TT"
+	}
+}
+
+defined_text = {
+	name = GetpartyTypeNEWNAME#政体
+	text = {
+	trigger = { 
+	has_idea = One_party_state
+			} 
+	localization_key = "One_party_state"
+	}
+	text = {
+	trigger = { 
+	has_idea = Multi_party_democracy
+			} 
+	localization_key = "Multi_party_democracy"
+	}
+	text = {
+	trigger = { 
+	has_idea = Multi_party_cooperation
+			} 
+	localization_key = "Multi_party_cooperation"
+	}
+	text = {
+	trigger = { 
+	has_idea = people_democracy
+			} 
+	localization_key = "people_democracy"
+	}
+	text = {
+	trigger = { 
+	has_idea = Dictatorship_STS
+			} 
+	localization_key = "Dictatorship_STS"
+	}
+	text = {
+	trigger = { 
+	has_idea = Commune_Committee
+			} 
+	localization_key = "Commune_Committee"
+	}
+	text = {
+	trigger = { 
+	has_idea = Revolutionary_dictatorship
+			} 
+	localization_key = "Revolutionary_dictatorship"
+	}
+}
+
+defined_text = {
+	name = GetpoliteTypeNEWGFX#政体
+	text = {
+	trigger = { 
+	has_idea = Committee_Republic
+			} 
+	localization_key = "GFX_NEW_Committee_Republic"
+	}
+	text = {
+	trigger = { 
+	has_idea = Democracies_polity
+			} 
+	localization_key = "GFX_NEW_Democracies_polity"
+	}
+	text = {
+	trigger = { 
+	has_idea = Presidential_Republic
+			} 
+	localization_key = "GFX_NEW_Presidential_Republic"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_republic
+			} 
+	localization_key = "GFX_NEW_Fascist_republic"
+	}
+	text = {
+	trigger = { 
+	has_idea = absolute_monarchy
+			} 
+	localization_key = "GFX_NEW_absolute_monarchy"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_dictatorship
+			} 
+	localization_key = "GFX_NEW_Fascist_dictatorship"
+	}
+	text = {
+	trigger = { 
+	has_idea = Theocracy_dictatorship
+			} 
+	localization_key = "GFX_NEW_Theocracy_dictatorship"
+	}
+}
+
+defined_text = {
+	name = GetpoliteTypeNEWTT#政体
+	text = {
+	trigger = { 
+	has_idea = Committee_Republic
+			} 
+	localization_key = "Committee_Republic_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Democracies_polity
+			} 
+	localization_key = "Democracies_polity_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Presidential_Republic
+			} 
+	localization_key = "Presidential_Republic_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_republic
+			} 
+	localization_key = "Fascist_republic_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = absolute_monarchy
+			} 
+	localization_key = "absolute_monarchy_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_dictatorship
+			} 
+	localization_key = "Fascist_dictatorship_TT"
+	}
+	text = {
+	trigger = { 
+	has_idea = Theocracy_dictatorship
+			} 
+	localization_key = "Theocracy_dictatorship_TT"
+	}
+}
+
+defined_text = {
+	name = GetpoliteTypeNEWNAME#政体
+	text = {
+	trigger = { 
+	has_idea = Committee_Republic
+			} 
+	localization_key = "Committee_Republic"
+	}
+	text = {
+	trigger = { 
+	has_idea = Democracies_polity
+			} 
+	localization_key = "Democracies_polity"
+	}
+	text = {
+	trigger = { 
+	has_idea = Presidential_Republic
+			} 
+	localization_key = "Presidential_Republic"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_republic
+			} 
+	localization_key = "Fascist_republic"
+	}
+	text = {
+	trigger = { 
+	has_idea = absolute_monarchy
+			} 
+	localization_key = "absolute_monarchy"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_dictatorship
+			} 
+	localization_key = "Fascist_dictatorship"
+	}
+	text = {
+	trigger = { 
+	has_idea = Theocracy_dictatorship
+			} 
+	localization_key = "Theocracy_dictatorship"
+	}
+}
+
+
+defined_text = {
+	name = GetpoliteTypeNEWDESC#政体
+	text = {
+	trigger = { 
+	has_idea = Committee_Republic
+			} 
+	localization_key = "Committee_Republic_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = Democracies_polity
+			} 
+	localization_key = "Democracies_polity_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = Presidential_Republic
+			} 
+	localization_key = "Presidential_Republic_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_republic
+			} 
+	localization_key = "Fascist_republic_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = absolute_monarchy
+			} 
+	localization_key = "absolute_monarchy_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = Fascist_dictatorship
+			} 
+	localization_key = "Fascist_dictatorship_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = Theocracy_dictatorship
+			} 
+	localization_key = "Theocracy_dictatorship_desc"
+	}
+}
+defined_text = {
+	name = GetpoliteTypeGFX#政体
+	text = {
+	trigger = { 
+	has_idea = communism_Centralized_government
+			} 
+	localization_key = "GFX_communism_Centralized_government"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = revolution_centralism_orther
+			} 
+	localization_key = "GFX_socialism_revolution_Dictatorship"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_centralism
+			} 
+	localization_key = "GFX_communism_democratic_centralism"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_centralism_orther
+			} 
+	localization_key = "GFX_communism_democratic_centralism"
+	} 
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_polity
+			} 
+	localization_key = "GFX_communism_democratic_polity"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_People_democracy
+			}
+	localization_key = "GFX_communism_People_democracy"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_proletariat_Dictatorship
+			} 
+	localization_key = "GFX_communism_proletariat_Dictatorship"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_Totalitarian_regimes
+			} 
+	localization_key = "GFX_communism_Totalitarian_regimes"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = democracy_democratic_polity
+			} 
+	localization_key = "GFX_democracy_democratic_polity"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_Authoritarian_regime
+			} 
+	localization_key = "GFX_neutrality_Authoritarian_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_republican_regime
+			} 
+	localization_key = "GFX_neutrality_republican_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_oligarchy_regime
+			} 
+	localization_key = "GFX_neutrality_oligarchy_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_totalitarian_regime
+			} 
+	localization_key = "GFX_neutrality_totalitarian_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = fascism_totalitarian_regime
+			} 
+	localization_key = "GFX_fascism_totalitarian_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = fascism_dictatorship_regime
+			} 
+	localization_key = "GFX_fascism_dictatorship_regime"
+	}
+###################
+	text = {
+	trigger = { 
+	has_country_leader_ideology = National_Syndicalism
+			} 
+	localization_key = "GFX_fascism_Syndicalist"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_Anarchy
+			} 
+	localization_key = "GFX_socialism_Anarchy"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_democratic_polity
+			} 
+	localization_key = "GFX_socialism_democratic_polity"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_revolution_Dictatorship
+			} 
+	localization_key = "GFX_socialism_revolution_Dictatorship"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_Union_Craftsmen
+			} 
+	localization_key = "GFX_socialism_Union_Craftsmen"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = FRA_Jacobin_Jdictatorship
+			} 
+	localization_key = "GFX_Reign_of_Terror"
+	}
+}
+#################################################################################################################################################################################
+
+defined_text = {
+	name = GetpoliteTypeTT
+	text = {
+	trigger = { 
+	has_idea = FRA_Jacobin_Jdictatorship
+			} 
+	localization_key = "FRA_Jacobin_Jdictatorship"
+	}
+##############
+	text = {
+	trigger = { 
+	has_idea = communism_Centralized_government
+			} 
+	localization_key = "communism_Centralized_government"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = revolution_centralism_orther
+			} 
+	localization_key = "revolution_centralism_orther"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_centralism
+			} 
+	localization_key = "communism_democratic_centralism"
+	}
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_centralism_orther
+			} 
+	localization_key = "communism_democratic_centralism"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_polity
+			} 
+	localization_key = "communism_democratic_polity"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_People_democracy
+			} 
+	localization_key = "communism_People_democracy"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_proletariat_Dictatorship
+			} 
+	localization_key = "communism_proletariat_Dictatorship"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_Totalitarian_regimes
+			} 
+	localization_key = "communism_Totalitarian_regimes"
+	}
+###################
+	text = {
+	trigger = { 
+	has_idea = democracy_democratic_polity
+			} 
+	localization_key = "democracy_democratic_polity"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_Authoritarian_regime
+			} 
+	localization_key = "neutrality_Authoritarian_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_republican_regime
+			} 
+	localization_key = "neutrality_republican_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_oligarchy_regime
+			} 
+	localization_key = "neutrality_oligarchy_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_totalitarian_regime
+			} 
+	localization_key = "neutrality_totalitarian_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = fascism_totalitarian_regime
+			} 
+	localization_key = "fascism_totalitarian_regime"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = fascism_dictatorship_regime
+			} 
+	localization_key = "fascism_dictatorship_regime"
+	}
+###################
+	text = {
+	trigger = { 
+	has_country_leader_ideology = National_Syndicalism
+			} 
+	localization_key = "fascism_Syndicalist"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_Anarchy
+			} 
+	localization_key = "socialism_Anarchy"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_democratic_polity
+			} 
+	localization_key = "socialism_democratic_polity"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_revolution_Dictatorship
+			} 
+	localization_key = "socialism_revolution_Dictatorship"
+	}
+###################
+	text = {
+	trigger = { 
+has_idea = socialism_Union_Craftsmen
+			} 
+	localization_key = "socialism_Union_Craftsmen"
+	}
+}
+#################################################################################################################################################################################
+
+defined_text = {
+	name = GetpoliteTypeDESC
+	text = {
+	trigger = { 
+	has_idea = communism_Centralized_government
+			} 
+	localization_key = "communism_Centralized_government_desc"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = FRA_Jacobin_Jdictatorship
+			} 
+	localization_key = "FRA_Jacobin_Jdictatorship_desc"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = revolution_centralism_orther
+			} 
+	localization_key = "revolution_centralism_orthern_desc"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_centralism
+			} 
+	localization_key = "communism_democratic_centralism_desc"
+	}
+	text = {
+	trigger = { 
+	has_idea = communism_democratic_centralism_orther
+			} 
+	localization_key = "communism_democratic_centralism_desc"
+	}
+##############
+	text = {
+	trigger = { 
+		has_idea = communism_democratic_polity
+			} 
+	localization_key = "communism_democratic_polity_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_People_democracy
+			} 
+	localization_key = "communism_People_democracy_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_proletariat_Dictatorship
+			} 
+	localization_key = "communism_proletariat_Dictatorship_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = communism_Totalitarian_regimes
+			} 
+	localization_key = "communism_Totalitarian_regimes_desc"
+	}
+###################
+	text = {
+	trigger = { 
+	has_idea = democracy_democratic_polity
+			} 
+	localization_key = "democracy_democratic_polity_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_Authoritarian_regime
+			} 
+	localization_key = "neutrality_Authoritarian_regime_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_republican_regime
+			} 
+	localization_key = "neutrality_republican_regime_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_oligarchy_regime
+			} 
+	localization_key = "neutrality_oligarchy_regime_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = neutrality_totalitarian_regime
+			} 
+	localization_key = "neutrality_totalitarian_regime_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = fascism_totalitarian_regime
+			} 
+	localization_key = "fascism_totalitarian_regime_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = fascism_dictatorship_regime
+			} 
+	localization_key = "fascism_dictatorship_regime_desc"
+	}
+###################
+	text = {
+	trigger = { 
+	has_idea = fascism_Syndicalist
+			} 
+	localization_key = "fascism_Syndicalist_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_Anarchy
+			} 
+	localization_key = "socialism_Anarchy_desc"
+	}
+###################
+	text = {
+	trigger = { 
+		has_idea = socialism_democratic_polity
+			} 
+	localization_key = "socialism_democratic_polity_desc"
+	}
+###################
+	text = {
+	trigger = { 
+	has_idea = socialism_revolution_Dictatorship
+			} 
+	localization_key = "socialism_revolution_Dictatorship_desc"
+	}
+###################
+	text = {
+	trigger = { 
+	has_idea = socialism_Union_Craftsmen
+			} 
+	localization_key = "socialism_Union_Craftsmen_desc"
+	}
+}
+#################################################################################################################################################################################
+defined_text = {
+	name = GetEconomyTypeGFX#经济
+	text = {
+	trigger = { has_idea = economy_Half_cent_planned_economy } 
+	localization_key = "GFX_economy_Half_cent_planned_economy"
+	}
+	text = {
+	trigger = { has_idea = Reign_of_Terror_economy } 
+	localization_key = "GFX_Reign_of_Terror_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_Anarchy_economy } 
+	localization_key = "GFX_economy_Anarchy_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_planned_economy } 
+	localization_key = "GFX_economy_planned_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_Roosevelt_NewDeal } 
+	localization_key = "GFX_economy_Roosevelt_NewDeal"
+	}
+	text = {
+	trigger = { has_idea = economy_Feudal_capital_economy } 
+	localization_key = "GFX_economy_Feudal_capital_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_Free_market_economy } 
+	localization_key = "GFX_economy_Free_market_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_Dominate_economy } 
+	localization_key = "GFX_economy_Dominate_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_Syndicalism_economy } 
+	localization_key = "GFX_economy_Syndicalism_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_oligarchic_economy } 
+	localization_key = "GFX_economy_oligarchic_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_junta_communism_economy } 
+	localization_key = "GFX_economy_junta_communism_economy"
+	}
+	text = {
+	trigger = { has_idea = economy_cooperative_ownership } 
+	localization_key = "GFX_economy_cooperative_ownership"
+	}
+}
+defined_text = {
+	name = GETeconzhenzhengTT
+	text = {
+	trigger = { has_idea = economy_Half_cent_planned_economy } 
+	localization_key =  economy_Half_cent_planned_economy 
+	}
+	text = {
+	trigger = { has_idea = Reign_of_Terror_economy } 
+	localization_key = Reign_of_Terror_economy
+	}
+	text = {
+	trigger = { has_idea = economy_Anarchy_economy } 
+	localization_key =  economy_Anarchy_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_planned_economy } 
+	localization_key =  economy_planned_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_Roosevelt_NewDeal } 
+	localization_key =  economy_Roosevelt_NewDeal 
+	}
+	text = {
+	trigger = { has_idea = economy_Feudal_capital_economy } 
+	localization_key =  economy_Feudal_capital_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_Free_market_economy } 
+	localization_key =  economy_Free_market_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_Dominate_economy } 
+	localization_key =  economy_Dominate_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_Syndicalism_economy } 
+	localization_key =  economy_Syndicalism_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_oligarchic_economy } 
+	localization_key =  economy_oligarchic_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_junta_communism_economy } 
+	localization_key = junta_communism
+	}
+	text = {
+	trigger = { has_idea = economy_cooperative_ownership } 
+	localization_key = economy_cooperative_ownership
+	}
+}
+
+defined_text = {
+	name = GETeconzhenzhengTT_ture
+	text = {
+	trigger = { has_idea = economy_Half_cent_planned_economy } 
+	localization_key =  economy_Half_cent_planned_economy_tt
+	}
+	text = {
+	trigger = { has_idea = Reign_of_Terror_economy } 
+	localization_key = Reign_of_Terror_economy
+	}
+	text = {
+	trigger = { has_idea = economy_Anarchy_economy } 
+	localization_key =  economy_Anarchy_economy 
+	}
+	text = {
+	trigger = { has_idea = economy_planned_economy } 
+	localization_key =  economy_planned_economy_tt 
+	}
+	text = {
+	trigger = { has_idea = economy_Roosevelt_NewDeal } 
+	localization_key =  economy_Roosevelt_NewDeal_tt 
+	}
+	text = {
+	trigger = { has_idea = economy_Feudal_capital_economy } 
+	localization_key =  economy_Feudal_capital_economy_tt
+	}
+	text = {
+	trigger = { has_idea = economy_Free_market_economy } 
+	localization_key =  economy_Free_market_economy_tt
+	}
+	text = {
+	trigger = { has_idea = economy_Dominate_economy } 
+	localization_key =  economy_Dominate_economy_tt
+	}
+	text = {
+	trigger = { has_idea = economy_Syndicalism_economy } 
+	localization_key =  economy_Syndicalism_economy_tt 
+	}
+	text = {
+	trigger = { has_idea = economy_oligarchic_economy } 
+	localization_key =  economy_oligarchic_economy_tt 
+	}
+	text = {
+	trigger = { has_idea = economy_junta_communism_economy } 
+	localization_key = junta_communism
+	}
+	text = {
+	trigger = { has_idea = economy_cooperative_ownership } 
+	localization_key = economy_cooperative_ownership_tt
+	}
+}
+
+
+defined_text = {
+	name = GETeconzhenzhengDESC
+	text = {
+	trigger = { has_idea = economy_Half_cent_planned_economy } 
+	localization_key =  economy_Half_cent_planned_economy_desc
+	}
+	text = {
+	trigger = { has_idea = economy_Anarchy_economy } 
+	localization_key =  economy_Anarchy_economy_desc
+	}
+	text = {
+	trigger = { has_idea = Reign_of_Terror_economy } 
+	localization_key = Reign_of_Terror_economy_desc
+	}
+	text = {
+	trigger = { has_idea = economy_planned_economy } 
+	localization_key =  economy_planned_economy_desc 
+	}
+	text = {
+	trigger = { has_idea = economy_Roosevelt_NewDeal } 
+	localization_key =  economy_Roosevelt_NewDeal_desc 
+	}
+	text = {
+	trigger = { has_idea = economy_Feudal_capital_economy } 
+	localization_key =  economy_Feudal_capital_economy_desc 
+	}
+	text = {
+	trigger = { has_idea = economy_Free_market_economy } 
+	localization_key =  economy_Free_market_economy_desc 
+	}
+	text = {
+	trigger = { has_idea = economy_Dominate_economy } 
+	localization_key =  economy_Dominate_economy_desc 
+	}
+	text = {
+	trigger = { has_idea = economy_Syndicalism_economy } 
+	localization_key =  economy_Syndicalism_economy_desc
+	}
+	text = {
+	trigger = { has_idea = economy_oligarchic_economy } 
+	localization_key =  economy_oligarchic_economy_desc
+	}
+	text = {
+	trigger = { has_idea = economy_junta_communism_economy } 
+	localization_key = junta_communism_desc
+	}
+	text = {
+	trigger = { has_idea = economy_cooperative_ownership } 
+	localization_key = economy_cooperative_ownership_desc
+	}
+}
+defined_text = {
+	name = Getpolite_governingTypeTT#权力分配/生产关系
+	
+}
+defined_text = {
+	name = Getpolite_powerTypeTT#执政党
+}
+
+defined_text = {
+	name = Getpolite_votingTypeTT#选举制
+
+	#text = {
+	#trigger = { 
+	#} 
+	#localization_key =universal_suffrage
+	#}
+}

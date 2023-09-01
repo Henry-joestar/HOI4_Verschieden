@@ -1,0 +1,1426 @@
+focus_tree = {
+	id = PRK
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRk
+		}
+	}
+continuous_focus_position = { x = 15 y = 1850 }
+	default = no
+	focus = {
+		id = PRK_shoot#射向旭日的心脏
+		icon = GFX_goal_unknown
+		cost = 1.00
+		x = 19
+		y = 0
+
+	}
+	focus = {
+		id = PRK_DP_JRC_RB#金日成主体思想
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_JRC_RD#改组朝鲜人民军
+		}
+		x = 13
+		y = 12
+
+	}
+	focus = {
+		id = PRK_red_army#朝鲜红军
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = PRK_shoot#射向旭日的心脏
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = PRK_Mobilize_masses#发动群众
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = PRK_red_army#朝鲜红军
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = PRK_Guerrilla_warfare#游击战争
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_red_army#朝鲜红军
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = PRK_United_front#朝鲜人民统一战线
+		icon = GFX_goal_generic_national_unity
+		cost = 4.00
+		prerequisite = {
+			focus = PRK_shoot#射向旭日的心脏
+		}
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = PRK_Southern_cooperation#全面统一战线
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 3.00
+		prerequisite = {
+			focus = PRK_United_front#朝鲜人民统一战线
+		}
+		mutually_exclusive = {
+			focus = PRK_Stupid_capitalists#不与白匪同流合污
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = PRK_Stupid_capitalists#不与白匪同流合污
+		icon = GFX_goal_generic_major_war
+		cost = 3.00
+		prerequisite = {
+			focus = PRK_United_front#朝鲜人民统一战线
+		}
+		mutually_exclusive = {
+			focus = PRK_Southern_cooperation#全面统一战线
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = PRK_If_you_are_not_free_you_would_rather_die#不自由，毋宁死
+		icon = GFX_goal_generic_secret_weapon
+		cost = 4.00
+		prerequisite = {
+			focus = PRK_Southern_cooperation#全面统一战线
+			focus = PRK_Stupid_capitalists#不与白匪同流合污
+		}
+		prerequisite = {
+			focus = PRK_Guerrilla_warfare#游击战争
+		}
+		prerequisite = {
+			focus = PRK_Mobilize_masses#发动群众
+		}
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CB#妇女权利
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_CA#国家无神论
+		}
+		x = 21
+		y = 15
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CA#劳动崇拜
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_CA#国家无神论
+		}
+		x = 23
+		y = 15
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CC#生育革命
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_ALL_CA#劳动崇拜
+		}
+		prerequisite = {
+			focus = PRK_DP_ALL_CB#妇女权利
+		}
+		x = 22
+		y = 16
+
+	}
+	focus = {
+		id = PRK_free_Korea#自由朝鲜
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_If_you_are_not_free_you_would_rather_die#不自由，毋宁死
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = PRK_DP#无产阶级专政
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_free_Korea#自由朝鲜
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = PRK_DP_LA#民主集中制
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP#无产阶级专政
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = PRK_DP_LRA#镇压反革命
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_LRB#秘密警察
+		}
+		x = 9
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_LRB#秘密警察
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_DP_LA#民主集中制
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = PRK_DP_LRC#大众宣传
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_LRA#镇压反革命
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_LRD#政治正确
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_LRC#大众宣传
+		}
+		x = 9
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_LLA#清洗安人
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_LLLA#社会主义铁拳
+		}
+		x = 7
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_LLB#驱逐日本文化
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_LLA#清洗安人
+		}
+		x = 7
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_LLC#革命心脏
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_LLB#驱逐日本文化
+		}
+		x = 7
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_LLLA#社会主义铁拳
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_LA#民主集中制
+		}
+		x = 7
+		y = 8
+
+	}
+	focus = {
+		id = PRK_DP_CA#国家无神论
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_cult_of_personality#个人崇拜
+			focus = PRK_DP_YAN_E#毛主义军事
+			focus = PRK_DP_SOV_D#个人崇拜
+		}
+		x = 22
+		y = 14
+
+	}
+	focus = {
+		id = PRK_DP_LCB#高举马克思列宁主义旗帜
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_DP_LRD#政治正确
+		}
+		prerequisite = {
+			focus = PRK_DP_LLC#革命心脏
+		}
+		x = 8
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_CB#马克思主义原则
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP#无产阶级专政
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = PRK_DP_JRC#金日成
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_CB#马克思主义原则
+		}
+		mutually_exclusive = {
+			focus = PRK_DP_YAN#延安
+			focus = PRK_DP_SOV#苏联派
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = PRK_DP_YAN#延安
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_CB#马克思主义原则
+		}
+		mutually_exclusive = {
+			focus = PRK_DP_JRC#金日成
+			focus = PRK_DP_SOV#苏联派
+		}
+		x = 19
+		y = 8
+
+	}
+	focus = {
+		id = PRK_DP_SOV#苏联派
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_CB#马克思主义原则
+		}
+		mutually_exclusive = {
+			focus = PRK_DP_JRC#金日成
+			focus = PRK_DP_YAN#延安
+		}
+		x = 25
+		y = 8
+
+	}
+	focus = {
+		id = PRK_DP_JRC_LA#大清洗
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = PRK_DP_JRC#金日成
+		}
+		prerequisite = {
+			focus = PRK_DP_LRB#秘密警察
+		}
+		x = 11
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_JRC_LB#朴永宪
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = PRK_DP_JRC_LA#大清洗
+		}
+		x = 11
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_JRC_LC#肃反延安派
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_DP_JRC_LB#朴永宪
+		}
+		x = 11
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_JRC_LD#肃反苏联派
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_DP_JRC_LC#肃反延安派
+		}
+		x = 11
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_JRC_LE#盯紧人民
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_JRC_LD#肃反苏联派
+		}
+		x = 11
+		y = 14
+
+	}
+	focus = {
+		id = PRK_DP_JRC_RA#朝鲜马克思主义
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_JRC#金日成
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = PRK_intergenerational_punishment#家庭连坐
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_JRC_LD#肃反苏联派
+		}
+		x = 10
+		y = 13
+
+	}
+	focus = {
+		id = PRK_cult_of_personality#个人崇拜
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_JRC_LD#肃反苏联派
+		}
+		prerequisite = {
+			focus = PRK_DP_JRC_RB#金日成主体思想
+		}
+		x = 13
+		y = 13
+
+	}
+	focus = {
+		id = PRK_JRC_JZE#家族继承
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_cult_of_personality#个人崇拜
+		}
+		prerequisite = {
+			focus = PRK_DP_ALL_CC#生育革命
+		}
+		mutually_exclusive = {
+			focus = PRK_DP_ALL_CE#真正共和国
+		}
+		x = 13
+		y = 17
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CE#真正共和国
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_ALL_CC#生育革命
+		}
+		mutually_exclusive = {
+			focus = PRK_JRC_JZE#家族继承
+		}
+		x = 22
+		y = 17
+
+	}
+	focus = {
+		id = PRK_DP_JRC_RC#宣称东三省
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_JRC_RA#朝鲜马克思主义
+		}
+		x = 13
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_JRC_RD#改组朝鲜人民军
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_JRC_RC#宣称东三省
+		}
+		x = 13
+		y = 11
+
+	}
+	focus = {
+		id = PRK_diplomacy_A#国家外交部
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP#无产阶级专政
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = PRK_diplomacy_LA#东北问题
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_A#国家外交部
+		}
+		x = 0
+		y = 8
+
+	}
+	focus = {
+		id = PRK_diplomacy_LB#整合东北
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_LA#东北问题
+		}
+		x = 0
+		y = 10
+
+	}
+	focus = {
+		id = PRK_diplomacy_CA#朝鲜民族主义
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_A#国家外交部
+		}
+		x = 3
+		y = 8
+
+	}
+	focus = {
+		id = PRK_diplomacy_CB#大阅兵
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_CA#朝鲜民族主义
+		}
+		x = 2
+		y = 9
+
+	}
+	focus = {
+		id = PRK_diplomacy_CC#反美帝国主义
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_CA#朝鲜民族主义
+		}
+		x = 4
+		y = 9
+
+	}
+	focus = {
+		id = PRK_diplomacy_CRA#朝鲜志愿军
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_CC#反美帝国主义
+		}
+		prerequisite = {
+			focus = PRK_diplomacy_CB#大阅兵
+		}
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = PRK_diplomacy_CD#统一战争
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_CC#反美帝国主义
+		}
+		prerequisite = {
+			focus = PRK_diplomacy_CB#大阅兵
+		}
+		x = 3
+		y = 10
+
+	}
+	focus = {
+		id = PRK_diplomacy_CE#终归一统
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_diplomacy_CD#统一战争
+		}
+		x = 3
+		y = 11
+
+	}
+	focus = {
+		id = PRK_diplomacy_CELA#整合南方
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_diplomacy_CE#终归一统
+		}
+		x = 2
+		y = 12
+
+	}
+	focus = {
+		id = PRK_diplomacy_CERA#巩固海岸线
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_diplomacy_CE#终归一统
+		}
+		x = 4
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_YAN_LA#同甘共苦
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_DP_YAN#延安
+		}
+		x = 16
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_YAN_LLA#中式教育
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_YAN_LA#同甘共苦
+		}
+		x = 15
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_YAN_LLB#进口汽车工业
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_YAN_LLA#中式教育
+		}
+		x = 15
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_YAN_LRA#开放边境
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_YAN_LA#同甘共苦
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_YAN_LRB#公有制一体化经济
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_YAN_LRA#开放边境
+		}
+		x = 17
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_YAN_CA#理想本心
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_YAN_LRB#公有制一体化经济
+		}
+		prerequisite = {
+			focus = PRK_DP_YAN_LLB#进口汽车工业
+		}
+		x = 16
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_YAN_A#基层党员
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_YAN#延安
+		}
+		x = 19
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_YAN_B#人民民主专政
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_YAN_A#基层党员
+		}
+		x = 19
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_YAN_C#毛泽东思想
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_YAN_B#人民民主专政
+		}
+		x = 19
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_YAN_D#发动群众
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_DP_YAN_C#毛泽东思想
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_YAN_E#毛主义军事
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_YAN_D#发动群众
+		}
+		x = 19
+		y = 13
+
+	}
+	focus = {
+		id = PRK_DP_SOV_A#苏式计划经济
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_SOV#苏联派
+		}
+		x = 25
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_SOV_B#苏联宪法
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV_A#苏式计划经济
+		}
+		x = 25
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_SOV_EA#苏式教育
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_SOV_B#苏联宪法
+		}
+		x = 25
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_SOV_C#肃反运动
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_SOV_EA#苏式教育
+		}
+		x = 25
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_SOV_D#个人崇拜
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP_SOV_C#肃反运动
+		}
+		x = 25
+		y = 13
+
+	}
+	focus = {
+		id = PRK_DP_SOV_E#苏联经济援助
+		icon = GFX_goal_generic_soviet_construction
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV#苏联派
+		}
+		x = 28
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_SOV_LA#军事援助
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV_E#苏联经济援助
+		}
+		x = 27
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_SOV_LLA#苏联军官团
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV_LA#军事援助
+		}
+		x = 27
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_SOV_LLB#苏联工业援助
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV_E#苏联经济援助
+		}
+		x = 29
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_SOV_LRA#科研援助
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV_LLB#苏联工业援助
+		}
+		x = 29
+		y = 11
+
+	}
+	focus = {
+		id = PRK_DP_SOV_LRB#进口苏联化肥
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV_LRA#科研援助
+			focus = PRK_DP_SOV_LLA#苏联军官团
+		}
+		x = 28
+		y = 12
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CF#革命无国界
+		icon = GFX_goal_support_communism
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_SOV#苏联派
+			focus = PRK_DP_YAN#延安
+		}
+		x = 22
+		y = 9
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CG#保持主权
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_ALL_CF#革命无国界
+		}
+		mutually_exclusive = {
+			focus = PRK_DP_ALL_CH#加入盟友
+		}
+		x = 21
+		y = 10
+
+	}
+	focus = {
+		id = PRK_DP_ALL_CH#加入盟友
+		icon = GFX_goal_tripartite_pact
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_DP_ALL_CF#革命无国界
+		}
+		mutually_exclusive = {
+			focus = PRK_DP_ALL_CG#保持主权
+		}
+		x = 23
+		y = 10
+
+	}
+	focus = {
+		id = PRK_land_reform#土地改革
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP#无产阶级专政
+		}
+		x = 33
+		y = 7
+
+	}
+	focus = {
+		id = PRK_Nationalization_heavy_industry#重工业国有化
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = PRK_land_reform#土地改革
+		}
+		x = 32
+		y = 8
+
+	}
+	focus = {
+		id = PRK_Nationalization_banks#银行国有化
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = PRK_Nationalization_heavy_industry#重工业国有化
+		}
+		x = 31
+		y = 9
+
+	}
+	focus = {
+		id = PRK_Nationalization_chemical_industry#化学工业国有化
+		icon = GFX_goal_unknown
+		cost = 2.00
+		prerequisite = {
+			focus = PRK_Nationalization_heavy_industry#重工业国有化
+		}
+		x = 33
+		y = 9
+
+	}
+	focus = {
+		id = PRK_Nationalization_light_industry#轻工业国有化
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = PRK_Nationalization_chemical_industry#化学工业国有化
+		}
+		prerequisite = {
+			focus = PRK_Nationalization_banks#银行国有化
+		}
+		x = 32
+		y = 10
+
+	}
+	focus = {
+		id = PRK_Collectivized_agriculture#农业集体化
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_land_reform#土地改革
+		}
+		x = 35
+		y = 8
+
+	}
+	focus = {
+		id = PRK_Collectivization_handicrafts#手工业集体化
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Collectivized_agriculture#农业集体化
+		}
+		x = 35
+		y = 10
+
+	}
+	focus = {
+		id = PRK_planned_economy#计划经济
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Collectivization_handicrafts#手工业集体化
+		}
+		prerequisite = {
+			focus = PRK_Nationalization_light_industry#轻工业国有化
+		}
+		x = 33
+		y = 11
+
+	}
+	focus = {
+		id = PRK_constitution#宪法
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_planned_economy#计划经济
+		}
+		x = 33
+		y = 12
+
+	}
+	focus = {
+		id = PRK_Six_year_plan#一六计划
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_DP#无产阶级专政
+		}
+		x = 39
+		y = 7
+
+	}
+	focus = {
+		id = PRK_Strengthening_heavy_industry#强化重工业
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Six_year_plan#一六计划
+		}
+		x = 38
+		y = 8
+
+	}
+	focus = {
+		id = PRK_Build_infrastructure#基础设施开发
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Strengthening_heavy_industry#强化重工业
+		}
+		x = 38
+		y = 9
+
+	}
+	focus = {
+		id = PRK_Network#铁路网
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Build_infrastructure#基础设施开发
+		}
+		x = 38
+		y = 10
+
+	}
+	focus = {
+		id = PRK_scientific_research#科研院
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Network#铁路网
+		}
+		x = 38
+		y = 11
+
+	}
+	focus = {
+		id = PRK_Light_industry_adjustment#轻工业
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Network#铁路网
+		}
+		prerequisite = {
+			focus = PRK_collectivization_process#集体化进程
+		}
+		x = 39
+		y = 12
+
+	}
+	focus = {
+		id = PRK_Mineral_development#矿产开发
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Light_industry_adjustment#轻工业
+		}
+		x = 39
+		y = 13
+
+	}
+	focus = {
+		id = PRK_Maxima_homework_class_movement#千里马作业班
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Six_year_plan#一六计划
+		}
+		x = 41
+		y = 8
+
+	}
+	focus = {
+		id = PRK_Maxima_Movement#千里马运动全面开展
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Maxima_homework_class_movement#千里马作业班
+		}
+		x = 43
+		y = 9
+
+	}
+	focus = {
+		id = PRK_Mass_enthusiasm#群众积极性
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Maxima_homework_class_movement#千里马作业班
+		}
+		prerequisite = {
+			focus = PRK_Six_year_plan#强化重工业
+		}
+		x = 40
+		y = 9
+
+	}
+	focus = {
+		id = PRK_collectivization_process#集体化进程
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Mass_enthusiasm#群众积极性
+		}
+		x = 40
+		y = 10
+
+	}
+	focus = {
+		id = PRK_Union_WP#巩固工农联盟
+		icon = GFX_goal_support_communism
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_collectivization_process#集体化进程
+		}
+		x = 40
+		y = 11
+
+	}
+	focus = {
+		id = PRK_CR#文化革命
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Maxima_Movement#千里马运动全面开展
+		}
+		prerequisite = {
+			focus = PRK_Mass_enthusiasm#群众积极性
+		}
+		x = 43
+		y = 10
+
+	}
+	focus = {
+		id = PRK_ER#教育革命
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Maxima_Movement#千里马运动全面开展
+		}
+		prerequisite = {
+			focus = PRK_Mass_enthusiasm#群众积极性
+		}
+		x = 45
+		y = 10
+
+	}
+	focus = {
+		id = PRK_PWC#工人文化宫
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_CR#文化革命
+		}
+		x = 43
+		y = 11
+
+	}
+	focus = {
+		id = PRK_compulsory_education#义务教育
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_ER#教育革命
+		}
+		x = 45
+		y = 11
+
+	}
+	focus = {
+		id = PRK_collectivist_propaganda#集体主义宣传
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_PWC#工人文化宫
+		}
+		prerequisite = {
+			focus = PRK_compulsory_education#义务教育
+		}
+		x = 45
+		y = 13
+
+	}
+	focus = {
+		id = PRK_positive_heroism#英雄主义
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_compulsory_education#义务教育
+		}
+		prerequisite = {
+			focus = PRK_PWC#工人文化宫
+		}
+		x = 43
+		y = 13
+
+	}
+	focus = {
+		id = PRK_socialist_realism#社会主义的现实主义
+		icon = GFX_goal_unknown
+		cost = 6.00
+		prerequisite = {
+			focus = PRK_collectivist_propaganda#集体主义宣传
+		}
+		x = 45
+		y = 14
+
+	}
+	focus = {
+		id = PRK_militarized_schools#军事化学校
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_positive_heroism#英雄主义
+		}
+		x = 43
+		y = 14
+
+	}
+	focus = {
+		id = PRK_the_komsomol#共青团
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_compulsory_education#义务教育
+		}
+		x = 47
+		y = 12
+
+	}
+	focus = {
+		id = PRK_Soviet_aid_A#苏联农业援助
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Mineral_development#矿产开发
+		}
+		x = 38
+		y = 14
+
+	}
+	focus = {
+		id = PRK_Soviet_aid_B#苏联工业援助
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_Soviet_aid_A#苏联农业援助
+		}
+		x = 38
+		y = 15
+
+	}
+	focus = {
+		id = PRK_Soviet_aid_C#苏联海军科技
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Soviet_aid_A#苏联农业援助
+		}
+		x = 36
+		y = 15
+
+	}
+	focus = {
+		id = PRK_Construction_development_A#水利工程
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_Mineral_development#矿产开发
+		}
+		x = 40
+		y = 14
+
+	}
+	focus = {
+		id = PRK_Construction_development_B#军事工业
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Construction_development_A#水利工程
+		}
+		x = 40
+		y = 15
+
+	}
+	focus = {
+		id = PRK_Construction_development_C#港口建设
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Construction_development_A#水利工程
+		}
+		x = 42
+		y = 15
+
+	}
+	focus = {
+		id = PRK_Six_year_plan_finsh#一六计划胜利完成
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Construction_development_B#军事工业
+		}
+		prerequisite = {
+			focus = PRK_Soviet_aid_B#苏联工业援助
+		}
+		x = 39
+		y = 16
+
+	}
+	focus = {
+		id = PRK_optimize_production_lines#优化生产线
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_Six_year_plan_finsh#一六计划胜利完成
+		}
+		x = 39
+		y = 17
+
+	}
+	focus = {
+		id = PRK_industrial_modernization#工业现代化
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_optimize_production_lines#优化生产线
+		}
+		x = 38
+		y = 18
+
+	}
+	focus = {
+		id = PRK_transformation_of_nature#改造大自然
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_optimize_production_lines#优化生产线
+		}
+		x = 40
+		y = 18
+
+	}
+	focus = {
+		id = PRK_Against_clock#争分夺秒
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = PRK_militarized_schools#军事化学校
+			focus = PRK_socialist_realism#社会主义的现实主义
+		}
+		prerequisite = {
+			focus = PRK_Six_year_plan_finsh#一六计划胜利完成
+		}
+		x = 44
+		y = 17
+
+	}
+	focus = {
+		id = PRK_Improve_production_metrics#提高生产指标
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRK_Against_clock#争分夺秒
+		}
+		x = 43
+		y = 18
+
+	}
+	focus = {
+		id = PRK_no_time_for_peace#无暇和平
+		icon = GFX_focus_rocketry
+		cost = 8.00
+		prerequisite = {
+			focus = PRK_Against_clock#争分夺秒
+		}
+		x = 45
+		y = 18
+
+	}
+
+}

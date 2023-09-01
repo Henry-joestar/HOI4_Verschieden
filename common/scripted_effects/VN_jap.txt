@@ -1,0 +1,59 @@
+JAP_amry_comme = {
+	set_variable = { JAM_army_org_factor = JAP.JAM_army_org_factor }#陆军组织度
+	set_variable = { JAM_army_morale_factor = JAP.JAM_army_morale_factor }#陆军组织度恢复
+	set_variable = { JAM_org_loss_when_moving = JAP.JAM_org_loss_when_moving }#陆军组织度移动损失
+	set_variable = { JAM_army_speed_factor = JAP.JAM_army_speed_factor }#陆军速度
+	set_variable = { JAM_attrition = JAP.JAM_attrition }#陆军损耗
+	set_variable = { JAM_experience_loss_factor = JAP.JAM_experience_loss_factor }#有经验的陆军损失
+	set_variable = { JAM_consumer_goods_factor = JAP.JAM_consumer_goods_factor }#生活消费品
+	set_variable = { JAF_air_attack_factor = JAP.JAF_air_attack_factor }#对空攻击
+	set_variable = { JAF_air_agility_factor = JAP.JAF_air_agility_factor }#空军航程
+	set_variable = { JAF_air_superiority_efficiency = JAP.JAF_air_superiority_efficiency }#夺取制空权
+	set_variable = { JAF_air_range_factor = JAP.JAF_air_range_facto }r#机动
+	set_variable = { JAF_air_accidents = JAP.JAF_air_accidents }#空军事故概率
+	set_variable = { JAF_air_night_penalty = JAP.JAF_air_night_penalty }#夜晚惩罚
+	set_variable = { JAF_air_weather_penalty = JAP.JAF_air_weather_penalty }#天气惩罚
+	set_variable = { JAF_army_bonus_air_superiority_factor = JAP.JAF_army_bonus_air_superiority_factor }#制空对地面加成
+	set_variable = { JAN_sortie_efficiency = JAP.JAN_sortie_efficiency }#航母飞机效率
+	set_variable = { JAN_naval_strike = JAP.JAN_naval_strike }#对海攻击
+	set_variable = { JAN_naval_detection = JAP.JAN_naval_detection }#侦测能力
+	set_variable = { JAN_naval_coordination = JAP.JAN_naval_coordination }#舰队协同性
+	set_variable = { JAN_sortie_efficiency = JAP.JAN_sortie_efficiency }#出击效率
+	set_variable = { JAN_consumer_goods_factor = JAP.JAN_consumer_goods_factor }#生活消费品
+}
+JAP_77_SHIBIAN = {
+set_country_flag = JAP_intervene_in_china
+complete_national_focus = JAP_intervene_in_china
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 609
+        num_provinces = 4
+        modifier = 0.1
+        dig_in_factor = -0.20
+        terrain_factor = -0.20
+        on_win = Vn_jap.32
+        on_lose = Vn_jap.31
+        on_cancel = Vn_jap.31
+    }	
+    defender = {
+        state = 608
+        num_provinces = 4
+        on_win = Vn_chi.20
+        on_lose = Vn_chi.21
+        on_cancel = Vn_chi.20
+        dig_in_factor = 0.45
+        terrain_factor = 0.45
+    }
+}
+		hidden_effect = {
+			set_border_war_data = {
+    			attacker = 609
+   			 defender = 608
+    			defender_modifier = 0.8
+    			combat_width = 100
+			attacker_modifier = -1.5
+				}
+
+			}
+}

@@ -1,0 +1,37 @@
+scripted_gui = {
+	Soviet_parliament_scripted_gui = {
+		window_name = "Soviet_parliament_gui"
+		#context_type = player_context
+		context_type = decision_category
+
+		visible = {
+			has_country_flag = open_Soviet_parliament_gui
+		}
+
+		dynamic_lists = {
+			Soviet_parliament_diagram = {
+				array = Soviet_seat_x
+				change_scope = no
+			entry_container = Soviet_parliament_seat
+				index = Soviet_seat_idx
+			}
+		}
+
+		properties = {
+			Soviet_parliament_dot_icon = {
+				x = Soviet_seat_x^Soviet_seat_idx
+				y = Soviet_seat_y^Soviet_seat_idx
+			frame = Soviet_seat_frame^Soviet_seat_idx
+			}
+		}
+
+		effects = {
+			Soviet_close_button_click = {
+			clr_country_flag = open_Soviet_parliament_gui
+			}
+			Soviet_refresh_button_click = {
+				Soviet_init_parliament = yes
+			}
+		}
+	}
+}

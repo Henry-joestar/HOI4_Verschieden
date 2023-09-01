@@ -1,0 +1,216 @@
+SOV_ration_consumer_goods_factor_need_available = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_ration_consumer_goods_factor_need_tt
+		check_variable = { ration_consumer_goods_factor > 4 }
+	}
+}
+SOV_politburo_consumer_goods_factor_need_available_up = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_politburo_add_4
+		NOT = { check_variable = { politburo_consumer_goods_factor < 8 } }
+	}
+}
+SOV_politburo_consumer_goods_factor_need_available_down = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_politburo_lower_4
+		NOT = { check_variable = { politburo_consumer_goods_factor > -8 } }
+	}
+}
+SOV_produce_consumer_goods_factor_need_available_up = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_produce_add_4
+		NOT = { check_variable = { produce_consumer_goods_factor < 5 } }
+	}
+}
+SOV_produce_consumer_goods_factor_need_available_down = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_produce_lower_4
+		NOT = { check_variable = { produce_consumer_goods_factor > -5 } }
+	}
+}
+SOV_build_consumer_goods_factor_need_available_up = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_build_add_4
+		NOT = { check_variable = { produce_consumer_goods_factor < 12 } }
+	}
+}
+SOV_build_consumer_goods_factor_need_available_down = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_build_lower_4
+		NOT = { check_variable = { produce_consumer_goods_factor > -12 } }
+	}
+}
+SOV_army_consumer_goods_factor_need_available_up = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_army_add_4
+		NOT = { check_variable = { army_consumer_goods_factor < 12 } }
+	}
+}
+SOV_army_consumer_goods_factor_need_available_down = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_army_lower_4
+		NOT = { check_variable = { army_consumer_goods_factor > -12 } }
+	}
+}
+SOV_study_consumer_goods_factor_need_available_up = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_study_add_4
+		NOT = { check_variable = { study_consumer_goods_factor < 8 } }
+	}
+}
+SOV_study_consumer_goods_factor_need_available_down = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_study_lower_4
+		NOT = { check_variable = { study_consumer_goods_factor > -8 } }
+	}
+}
+SOV_dockyard_consumer_goods_factor_need_available_up = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_dockyard_add_4
+		NOT = { check_variable = { dockyard_consumer_goods_factor < 8 } }
+	}
+}
+SOV_dockyard_consumer_goods_factor_need_available_down = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_dockyard_lower_4
+		NOT = { check_variable = { dockyard_consumer_goods_factor > -4 } }
+	}
+}
+SOV_has_unsupported_economic_law = {
+	if = {
+		limit = {
+			has_country_flag = SOV_mobilization_D
+		}
+				has_war = yes
+		has_war_support > 0.9
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0.5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_C
+		}
+		has_war_support > 0.7
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_B
+		}
+		has_war_support > 0.25
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_A
+		}
+		has_war_support > 0.15
+	}
+}
+SOV_has_unsupported_economic_law_lower = {
+	if = {
+		limit = {
+			has_country_flag = SOV_mobilization_E
+		}
+			has_country_flag = SOV_mobilization_E
+				OR = {
+		has_war_support < 0.9
+				NOT = { has_war = yes }
+				NOT = { 
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio < 0.5
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_D
+		}
+		has_war_support < 0.7
+			has_country_flag = SOV_mobilization_D
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_C
+		}
+		has_war_support < 0.25
+			has_country_flag = SOV_mobilization_C
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_B
+		}
+		has_war_support < 0.15
+			has_country_flag = SOV_mobilization_B
+	}
+	else_if = {
+		limit = {
+			NOT ={ has_country_flag = SOV_mobilization_B }
+			NOT ={ has_country_flag = SOV_mobilization_C }
+			NOT ={ has_country_flag = SOV_mobilization_D }
+			NOT ={ has_country_flag = SOV_mobilization_E }
+		}
+		always = no
+	}
+}
+SOV_has_unsupported_economic_law_descision = {
+	if = {
+		limit = {
+			has_country_flag = SOV_mobilization_E
+		}
+			has_country_flag = SOV_mobilization_E
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_D
+		}
+			has_country_flag = SOV_mobilization_D
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_C
+		}
+			has_country_flag = SOV_mobilization_C
+	}
+	else_if = {
+		limit = {
+			has_country_flag = SOV_mobilization_B
+		}
+			has_country_flag = SOV_mobilization_B
+	}
+	else_if = {
+		limit = {
+			NOT ={ has_country_flag = SOV_mobilization_B }
+			NOT ={ has_country_flag = SOV_mobilization_C }
+			NOT ={ has_country_flag = SOV_mobilization_D }
+			NOT ={ has_country_flag = SOV_mobilization_E }
+		}
+		always = no
+	}
+}
+SOV_Electrification_industry_triggers = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_Electrification_industry_triggers_tt
+		check_variable = { 
+		var = Electrification_industry
+		value = num_of_controlled_states
+		compare = greater_than_or_equals
+		 }
+	}
+}
+SOV_Electrification_areas_triggers = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_Electrification_areas_triggers_tt
+		check_variable = { 
+		var = Electrified_areas
+		value = num_of_controlled_states
+		compare = greater_than_or_equals
+		 }
+	}
+}

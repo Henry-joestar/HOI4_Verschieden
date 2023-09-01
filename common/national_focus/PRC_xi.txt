@@ -1,0 +1,1286 @@
+focus_tree = {
+	id = PRC_xi
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			tag = PRC
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 1350 y = 15 }
+	focus = {
+		id = PRCXI_clear_CPC#清洗共产党
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5.00
+		x = 8
+		y = 0
+	completion_reward = {
+	add_timed_idea = { idea = PRCXI_clear_CPC days = 150 }
+			set_global_flag = PRC_power_fuck
+			swap_ideas = {
+				remove_idea = PRC_power_struggles
+				add_idea = PRC_power_struggles_1
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_ZTS#中特社
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_clear_CPC#清洗共产党
+		}
+		x = 8
+		y = 1
+	completion_reward = {
+				remove_ideas = PRC_power_struggles_1
+		add_dynamic_modifier = {
+			modifier = PRCXI_ZTS
+			}
+			swap_ideas = {
+				remove_idea = PRC_the_long_march_1
+				add_idea = PRC_the_long_march_2
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_MZFX#民族复兴
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_ZTS#中特社
+		}
+		mutually_exclusive = {
+			focus = PRCXI_CTFX#传统复兴
+		}
+		x = 6
+		y = 2
+	completion_reward = {
+			PRC_low_popular_support_level_down = yes
+	add_country_leader_trait = warmonger
+	add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = PRCXI_WATCHYOU#无处不在
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_MZFX#民族复兴
+		}
+		x = 6
+		y = 3
+	completion_reward = {
+		add_country_leader_trait = PRC_big_brother
+			remove_ideas = PRC_inorganization
+		}
+	}
+	focus = {
+		id = PRCXI_GRCB#习近平的个人崇拜
+		icon = GFX_PRCxi_WATHCYOU
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WATCHYOU#无处不在
+		}
+		x = 6
+		y = 5
+	completion_reward = {
+	custom_effect_tooltip =PRCXI_GRCB_tt
+	add_to_variable = { ZTS_political_power_factor = 0.15 }
+	add_to_variable = { ZTS_drift_defence_factor = 0.1 }
+	add_to_variable = { ZTS_production_factory_max_efficiency_factor = 0.2 }
+			PRC_low_popular_support_level_down = yes
+		}
+	}
+	focus = {
+		id = PRCXI_HANZU#汉族至上
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_GRCB#习近平的个人崇拜
+		}
+		x = 6
+		y = 7
+	completion_reward = {
+	custom_effect_tooltip =PRCXI_HANZU_tt
+	add_to_variable = { ZTS_conscription_factor = -0.2 }
+	add_to_variable = { ZTS_non_core_manpower = -1 }
+	add_to_variable = { ZTS_resistance_growth = -0.4 }
+	add_to_variable = { ZTS_compliance_gain = 0.05 }
+	add_to_variable = { ZTS_resistance_target = -0.4 }
+	add_to_variable = { ZTS_industrial_capacity_factory = 0.2 }
+		}
+	}
+	focus = {
+		id = PRCXI_XINYONG#社会信用系统
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_HANZU#汉族至上
+		}
+		x = 4
+		y = 8
+	completion_reward = {
+	add_manpower = -98765
+	add_political_power = 150
+	add_stability = 0.15
+	add_war_support = 0.15
+	hidden_effect = {
+				create_country_leader = {
+					name = PRC_djg
+					desc = PRC_djg_DESC
+					picture = "gfx\leaders\PRC\xi_jin_ping_west.png"
+					expire = "1985.1.1"
+					ideology = PRC_Socialism_characteristics
+					traits = { 
+					PRC_big_brother 
+					warmonger
+							}
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_CTFX#传统复兴
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_ZTS#中特社
+		}
+		mutually_exclusive = {
+			focus = PRCXI_MZFX#民族复兴
+		}
+		x = 10
+		y = 2
+	completion_reward = {
+	add_stability = 0.1
+	hidden_effect = {
+				create_country_leader = {
+					name = PRC_djg
+					desc = PRC_djg_DESC
+					picture = "gfx\leaders\PRC\xjp_fupi2.png"
+					expire = "1985.1.1"
+					ideology = PRC_Socialism_characteristics
+					traits = { 
+					warmonger
+							}
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_XZTX#重建行政
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_MZFX#民族复兴
+			focus = PRCXI_CTFX#传统复兴
+		}
+		x = 8
+		y = 3
+	completion_reward = {
+	add_political_power = 150
+	custom_effect_tooltip = PRCXI_XZTX_tt
+	add_to_variable = { ZTS_political_power_factor = 0.15 }
+	add_timed_idea = { idea = PRCXI_clear_XZ days = 70 }
+		}
+	}
+	focus = {
+		id = PRCXI_CFD#主席冲锋队
+		icon = GFX_goal_generic_demand_territory
+		cost = 8.00
+		prerequisite = {
+			focus = PRCXI_XZTX#重建行政
+		}
+		x = 7
+		y = 4
+	completion_reward = {
+		add_ideas = PRCXI_CFD
+		}
+	}
+	focus = {
+		id = PRCXI_MZJS#弘扬民族精神
+		icon = GFX_goal_support_fascism
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_XZTX#重建行政
+		}
+		x = 9
+		y = 4
+	completion_reward = {
+		add_ideas = PRCXI_MZJS
+		}
+	}
+	focus = {
+		id = PRCXI_WLJY#未来教育
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_CFD#主席冲锋队
+		}
+		prerequisite = {
+			focus = PRCXI_MZJS#弘扬民族精神
+		}
+		x = 8
+		y = 5
+	completion_reward = {
+	custom_effect_tooltip = PRCXI_WLJY_tt
+	add_to_variable = { ZTS_research_speed_factor = 0.4 }
+		add_research_slot = 2
+	remove_ideas = PRC_Civilization_is_everywhere
+		}
+	}
+	focus = {
+		id = PRCXI_WLJYB#特色社会主义研究院
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLJY#未来教育
+		}
+		x = 8
+		y = 6
+	completion_reward = {
+	custom_effect_tooltip = PRCXI_WLJY_tt
+	add_to_variable = { ZTS_research_speed_factor = 0.4 }
+		add_research_slot = 3
+		}
+	}
+	focus = {
+		id = PRCXI_TUOPIN#脱贫运动
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_HANZU#汉族至上
+		}
+		x = 7
+		y = 8
+	completion_reward = {
+			PRC_low_popular_support_level_down = yes
+	add_timed_idea = { idea = PRCXI_TUOPIN days = 1250 }
+		}
+	}
+	focus = {
+		id = PRCXI_QPLD#自愿劳动
+		icon = GFX_goal_generic_national_unity
+		cost = 8.00
+		prerequisite = {
+			focus = PRCXI_CTFX#传统复兴
+		}
+		x = 10
+		y = 3
+	completion_reward = {
+			PRC_low_popular_support_level_down = yes
+					remove_ideas = PRC_inorganization
+		}
+	}
+	focus = {
+		id = PRCXI_KZZS#孔圣人
+		icon = GFX_PRCxi_KZ
+		cost = 8.00
+		prerequisite = {
+			focus = PRCXI_QPLD#自愿劳动
+		}
+		x = 10
+		y = 5
+	completion_reward = {
+			PRC_low_popular_support_level_down = yes
+		add_stability = 0.1
+	custom_effect_tooltip = PRCXI_KZZS_tt
+	add_to_variable = { ZTS_political_power_factor = 0.05 }
+	add_to_variable = { ZTS_industrial_capacity_factory = 0.1 }
+	add_to_variable = { ZTS_global_building_slots_factor = 0.1 }
+	add_to_variable = { ZTS_resistance_growth = 0.1 }
+		}
+	}
+	focus = {
+		id = PRCXI_TDGG#特色土改
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_KZZS#孔圣人
+		}
+		x = 10
+		y = 7
+	completion_reward = {
+			PRC_low_popular_support_level_down = yes
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =5
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =5
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =5
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =5
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =5
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_TSSC#特色市场经济
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_TDGG#特色土改
+		}
+		x = 9
+		y = 8
+	completion_reward = {
+	add_ideas = PRCXI_TSSC
+	add_ideas = free_trade
+		}
+	}
+	focus = {
+		id = PRCXI_FUYQLL#富起来了！
+		icon = GFX_goal_generic_trade
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_TUOPIN#脱贫运动
+			focus = PRCXI_TSSC#特色市场经济
+		}
+		x = 8
+		y = 9
+	completion_reward = {
+			if = { limit = { has_idea = PRC_low_popular_support_1 } remove_ideas = PRC_low_popular_support_1 }
+			else_if = { limit = { has_idea = PRC_low_popular_support_2 } remove_ideas = PRC_low_popular_support_2 }
+			else_if = { limit = { has_idea = PRC_low_popular_support_3 } remove_ideas = PRC_low_popular_support_3 }
+			else_if = { limit = { has_idea = PRC_low_popular_support_4 } remove_ideas = PRC_low_popular_support_4 }
+			else = { remove_ideas = PRC_low_popular_support_5 }
+	add_ideas = PRCXI_FUYQLL
+	remove_ideas = PRC_the_long_march_2
+		}
+	}
+	focus = {
+		id = PRCXI_JZXJP#家长习近平
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_QPLD#自愿劳动
+		}
+		x = 11
+		y = 4
+	completion_reward = {
+	add_country_leader_trait = PRCXI_JZXJP
+		}
+	}
+	focus = {
+		id = PRCXI_TESMZ#特色民主
+		icon = GFX_goal_generic_major_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_TDGG#特色土改
+		}
+		prerequisite = {
+			focus = PRCXI_JZXJP#家长习近平
+		}
+		x = 12
+		y = 8
+	completion_reward = {
+		add_ideas = PRCXI_TESMZ
+		}
+	}
+	focus = {
+		id = PRCXI_TYZX#抗日民族统一战线
+		icon = GFX_PRC_United_front
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_FUYQLL#富起来了！
+		}
+		mutually_exclusive = {
+			focus = PRCXI_RBHZ#与日本合作
+		}
+		bypass = {
+				has_global_flag = PRC_war_japan_United_front
+			is_in_faction_with = CHI
+		}
+		x = 7
+		y = 10
+	completion_reward = {
+				create_faction = chinese_united_front
+		set_global_flag = PRC_war_japan_United_front
+			news_event = { id = news.288 days = 2 } 
+		}
+	}
+	focus = {
+		id = PRCXI_RBHZ#与日本合作
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_FUYQLL#富起来了！
+		}
+		mutually_exclusive = {
+			focus = PRCXI_TYZX#抗日民族统一战线
+		}
+		bypass = {
+				has_global_flag = PRC_war_japan_United_front
+			is_in_faction_with = CHI
+		}
+		x = 9
+		y = 10
+	completion_reward = {
+	diplomatic_relation = { country = JAP relation = non_aggression_pact }
+		}
+	}
+	focus = {
+		id = PRCXI_ZQWZ#中国领土主权完整不受侵犯
+		icon = GFX_focus_chi_one_china_policy
+		cost = 5.00
+		prerequisite = {
+			focus = PRCXI_TYZX#抗日民族统一战线
+			focus = PRCXI_RBHZ#与日本合作
+		}
+		x = 8
+		y = 11
+	completion_reward = {
+		add_ideas = PRCXI_ZQWZ
+	if = {
+			limit = {
+				any_other_country = {
+				OR = {
+				tag = HBJ
+				tag = XKS
+				tag = SCS
+				tag = XYM
+				}
+					is_literally_china = yes
+					is_in_faction_with = ROOT
+				} 
+			} 
+			remove_from_faction = ROOT
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.46 days = 3 }
+		}
+		every_other_country = {
+			limit = {
+				is_literally_china = yes
+				OR = {
+				tag = HBJ
+				tag = XKS
+				tag = SCS
+				tag = XYM
+				}
+				NOT = { has_war_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+				NOT = { ROOT = { has_wargoal_against = PREV } }
+				NOT = { tag = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = civil_war
+					target = PREV
+					expire = 0
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WLJS#未来军事
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_ZQWZ#中国领土主权完整不受侵犯
+		}
+		x = 4
+		y = 12
+	completion_reward = {
+	remove_ideas = PRC_red_army_weakened
+		add_ideas = PRCXI_WLJS
+		}
+	}
+	focus = {
+		id = PRCXI_WLGY#未来工业力量
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_ZQWZ#中国领土主权完整不受侵犯
+		}
+		x = 6
+		y = 12
+	completion_reward = {
+			every_state = {
+		limit = {
+				is_owned_by = PRC
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WLJSA#未来军事工业
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLJS#未来军事
+		}
+		x = 4
+		y = 13
+	completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WLJSB#未来军事工业2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLJSA#未来军事工业
+		}
+		x = 4
+		y = 14
+	completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WLMYGY#未来民用工业
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLGY#未来工业力量
+		}
+		x = 6
+		y = 13
+	completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WLMYGYB#未来工业2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLMYGY#未来民用工业
+		}
+		x = 6
+		y = 14
+	completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WLGYQG#工业强国
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLMYGYB#未来工业2
+		}
+		prerequisite = {
+			focus = PRCXI_WLJSB#未来军事工业2
+		}
+		x = 5
+		y = 15
+	completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =5#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 5#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_NJTY#南京条约
+		icon = GFX_focus_attack_britain
+		cost = 2.00
+		prerequisite = {
+			focus = PRCXI_ZQWZ#中国领土主权完整不受侵犯
+		}
+		x = 10
+		y = 12
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = ENG
+		expire = 0
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WSTY#望厦条约
+		icon = GFX_focus_attack_france
+		cost = 2.00
+		prerequisite = {
+			focus = PRCXI_NJTY#南京条约
+		}
+		x = 10
+		y = 13
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = FRA
+		expire = 0 #战争目标持续时间
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_HPTY#黄埔条约
+		icon = GFX_goal_generic_major_war
+		cost = 2.00
+		prerequisite = {
+			focus = PRCXI_WSTY#望厦条约
+		}
+		x = 10
+		y = 14
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = USA
+		expire = 0 #战争目标持续时间
+			}
+		}
+	}
+	focus = {
+		id =  PRCXI_MGTY#马关条约
+		icon = GFX_focus_attack_japan
+		cost = 2.00
+		prerequisite = {
+			focus = PRCXI_ZQWZ#中国领土主权完整不受侵犯
+		}
+		x = 12
+		y = 12
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = JAP
+		expire = 0 #战争目标持续时间
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_BLSQ#蒙古条约
+		icon = GFX_focus_generic_attack_mongolia
+		cost = 2.00
+		prerequisite = {
+			focus =  PRCXI_MGTY#马关条约
+		}
+		x = 12
+		y = 13
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = MON
+		expire = 0
+			}
+		create_wargoal = {
+		type = take_state
+		target = TAN
+		expire = 0
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_NBCTY#尼布楚条约
+		icon = GFX_focus_attack_soviet
+		cost = 2.00
+		prerequisite = {
+			focus = PRCXI_BLSQ#蒙古条约
+		}
+		x = 12
+		y = 14
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = SOV
+		expire = 0 #战争目标持续时间
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_XCTY#辛丑条约
+		icon = GFX_goal_generic_territory_or_war
+		cost = 4.00
+		prerequisite = {
+			focus = PRCXI_HPTY#黄埔条约
+		}
+		prerequisite = {
+			focus = PRCXI_NBCTY#尼布楚条约
+		}
+		x = 11
+		y = 15
+	completion_reward = {
+		create_wargoal = {
+		type = take_state
+		target = GER
+		expire = 0
+			}
+		create_wargoal = {
+		type = take_state
+		target = ITA
+		expire = 0
+			}
+		create_wargoal = {
+		type = take_state
+		target = SPR
+		expire = 0
+			}
+		create_wargoal = {
+		type = take_state
+		target = HOL
+		expire = 0
+			}
+		create_wargoal = {
+		type = take_state
+		target = AUS
+		expire = 0
+			}
+		}
+	}
+	focus = {
+		id = PRCXI_WDMZFX#伟大复兴
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = PRCXI_WLGYQG#工业强国
+		}
+		prerequisite = {
+			focus = PRCXI_XCTY#辛丑条约
+		}
+		x = 8
+		y = 16
+	completion_reward = {
+	add_ideas = PRCXI_WDMZFX
+		}
+	}
+}

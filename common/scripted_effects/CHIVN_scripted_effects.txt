@@ -1,0 +1,146 @@
+CHI_Popular_support_level_up = {
+	custom_effect_tooltip = CHI_Popular_support_up_tt
+CHI_Popular_support_level_up_genuine = yes
+}
+CHI_Popular_support_level_up_genuine = {
+	if = {
+		limit = { has_idea = CHI_Popular_support_Vlow }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_Vlow
+			add_idea = CHI_Popular_support_low
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Popular_support_low }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_low
+			add_idea = CHI_Popular_support_Slightly
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Popular_support_Slightly }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_Slightly
+			add_idea = CHI_Popular_support_medium
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Popular_support_medium }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_medium
+			add_idea = CHI_Popular_support_nobad
+		}		
+	}
+	else_if = {
+		limit = { has_idea = CHI_Popular_support_nobad  }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_nobad
+			add_idea = CHI_Popular_support_high
+		}		
+	}
+}
+CHI_Popular_support_level_lower = {
+	custom_effect_tooltip = CHI_Popular_support_lower_tt
+CHI_Popular_support_level_lower_genuine = yes
+}
+CHI_Popular_support_level_lower_genuine = {
+	if = {
+		limit = { has_idea = CHI_Popular_support_high }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_high
+			add_idea = CHI_Popular_support_nobad
+		}
+	}
+	else_if = {
+		limit = { has_idea =CHI_Popular_support_nobad }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_nobad
+			add_idea = CHI_Popular_support_medium
+		}
+	}
+	else_if = {
+		limit = { has_idea =CHI_Popular_support_medium }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_medium
+			add_idea = CHI_Popular_support_Slightly
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Popular_support_Slightly }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_Slightly
+			add_idea = CHI_Popular_support_low
+		}		
+	}
+	else_if = {
+		limit = { has_idea = CHI_Popular_support_low  }
+		swap_ideas = {
+			remove_idea = CHI_Popular_support_low
+			add_idea = CHI_Popular_support_Vlow
+		}		
+	}
+}
+CHI_Porous_level_up = {
+	custom_effect_tooltip = CHI_Porous_level_up_tt
+	hidden_effect = {
+	if = {
+		limit = { has_idea = CHI_Porous }
+		swap_ideas = {
+			remove_idea = CHI_Porous
+			add_idea = CHI_Porous_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Porous_1 }
+		swap_ideas = {
+			remove_idea = CHI_Porous_1
+			add_idea = CHI_Porous_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Porous_2 }
+		swap_ideas = {
+			remove_idea = CHI_Porous_2
+			add_idea = CHI_Porous_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Porous_3 }
+		swap_ideas = {
+			remove_idea = CHI_Porous_3
+			add_idea = CHI_Porous_4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = CHI_Porous_4 }
+		swap_ideas = {
+			remove_idea = CHI_Porous_4
+			add_idea = CHI_Porous_5
+		}		
+	}
+	else_if = {
+		limit = { has_idea = CHI_Porous_5 }
+		swap_ideas = {
+			remove_idea = CHI_Porous_5
+			add_idea = CHI_Porous_6
+		}		
+	}
+	else_if = {
+		limit = { has_idea = CHI_Porous_6 }
+		swap_ideas = {
+			remove_idea = CHI_Porous_6
+			add_idea = CHI_Porous_7
+			}		
+		}
+	else_if = {
+		limit = { has_idea = CHI_Porous_7 }
+		CHI_Porous_level_up_7 = yes
+		}	
+	}
+}
+CHI_Porous_level_up_7 = {
+	custom_effect_tooltip = CHI_Porous_level_up_7_tt
+	hidden_effect = {
+			remove_ideas = CHI_Porous_7
+	}
+}

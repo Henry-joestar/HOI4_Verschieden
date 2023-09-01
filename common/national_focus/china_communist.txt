@@ -1,0 +1,4234 @@
+focus_tree = {
+	id = china_communist_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 1420 y = 1600 }
+	shared_focus = CHI_invite_foreign_investors
+	focus = {
+		id = PRC_Completion_of_land_reform#完成土地改革
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10.00
+		x = 13
+		y = 0
+		ai_will_do = {
+		factor = 100
+			}
+		completion_reward = {
+		country_event = { days = 1 id =  Vn_PRC.1 }
+		PRC_low_popular_support_level_down = yes
+			swap_ideas = {
+				remove_idea = PRC_Land_reform_has_not_been_completed
+				add_idea = PRC_kulak_rioted
+			}
+		618 = {
+		add_extra_state_shared_building_slots =1
+			}
+		617 = {
+		add_extra_state_shared_building_slots =1
+			}
+		759 = {
+		add_extra_state_shared_building_slots =1
+			}
+		322 = {
+		add_extra_state_shared_building_slots =1
+			}
+		hidden_effect = {
+		every_state = {
+			limit = {
+			is_owned_by = PRC
+			}
+		add_extra_state_shared_building_slots =2
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Local_Soviets#地方苏维埃
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Completion_of_land_reform#完成土地改革
+		}
+		x = 12
+		y = 1
+		ai_will_do = {
+		factor = 100
+			}
+		completion_reward = {
+				remove_ideas = PRC_kulak_rioted
+		add_political_power = 150
+		}
+
+	}
+	focus = {
+		id = PRC_strengthen_the_central_secretariat_not#强化地方权威
+		icon = GFX_not_democracy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Local_Soviets#地方苏维埃
+		}
+		ai_will_do = {
+		factor = 5
+			}
+		mutually_exclusive = {
+			focus = PRC_strengthen_the_central_secretariat#中央权威
+		}
+		x = 1
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = PRC_zhang_guo_tao_add_supporter_8add
+		custom_effect_tooltip = PRC_mao_ze_dong_decrease_supporter
+		custom_effect_tooltip = PRC_wang_ming_decrease_supporter
+		}
+	}
+	focus = {
+		id = PRC_strengthen_the_central_secretariat#中央权威
+		icon = GFX_newfocus_13_PEK
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Local_Soviets#地方苏维埃
+		}
+		ai_will_do = {
+		factor = 80
+			}
+		mutually_exclusive = {
+			focus = PRC_strengthen_the_central_secretariat_not#强化地方权威
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			add_political_power = 150
+		custom_effect_tooltip = PRC_mao_ze_dong_add_supporter
+		custom_effect_tooltip = PRC_wang_ming_add_supporter
+		custom_effect_tooltip = PRC_zhang_guo_tao_decrease_supporter_8decrease
+		}
+	}
+	focus = {
+		id = PRC_Base#根据地建设
+		icon = GFX_ogf_commie_construct
+		cost = 12.00
+		prerequisite = {
+			focus = PRC_strengthen_the_central_secretariat#中央权威
+			focus = PRC_strengthen_the_central_secretariat_not#强化地方权威
+		}
+		x = 3
+		y = 3
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+	622 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	621 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	747 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	751 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	755 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	616 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	601 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	322 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Public_industry#大众工业
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12.00
+		prerequisite = {
+			focus = PRC_Base#根据地建设
+		}
+		x = 1
+		y = 4
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+	322 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	751 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	622 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	617 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Yellow_Cliff_Cave#黄崖洞兵工厂
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Public_industry#大众工业
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+				add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	focus = {
+		id = PRC_Bank_VN#银行扩建
+		icon = GFX_ogf_focus_sector
+		cost = 12.00
+		prerequisite = {
+			focus = PRC_Base#根据地建设
+		}
+		x = 3
+		y = 4
+		completion_reward = {
+	322 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	622 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	755 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	617 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Public_salt_substitution#公盐代金
+		icon = GFX_focus_ITA_devaluate_the_lire
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Bank_VN#银行扩建
+		}
+		x = 3
+		y = 6
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+		add_ideas = PRC_Public_salt_substitution
+		}
+	}
+	focus = {
+		id = PRC_ban_the_opium_trade#查禁鸦片
+		icon = GFX_PRC_ban_the_opium_trade
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_enforce_the_three_rules#贯彻三大纪律
+		}
+		mutually_exclusive = {
+			focus = PRC_permit_opium_trade_VN#鸦片贸易国有化
+		}
+		x = 4
+		y = 7
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+		remove_ideas = PRC_Opium_trade_VN
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 120
+		}
+	}
+	focus = {
+		id = PRC_permit_opium_trade_VN#鸦片贸易国有化
+		icon = GFX_JAP_Industrial_Committee
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_enforce_the_three_rules#贯彻三大纪律
+		}
+		mutually_exclusive = {
+			focus = PRC_ban_the_opium_trade#查禁鸦片
+		}
+		x = 6
+		y = 7
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = 200
+		}
+	}
+	focus = {
+		id = PRC_abolish_the_land_rent#废除地租
+		icon = GFX_abolish_the_land_rent
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_permit_opium_trade_VN#鸦片贸易国有化
+			focus = PRC_ban_the_opium_trade#查禁鸦片
+		}
+		x = 5
+		y = 9
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+			PRC_low_popular_support_level_down = yes
+			every_state = {
+				limit = {
+					is_owned_by = PRC
+				}
+		add_extra_state_shared_building_slots =1
+			}
+		}
+	}
+	focus = {
+		id = PRC_permit_opium_trade_VN_B#扩大鸦片种植
+		icon = GFX_PRC_ok_the_opium_trade
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_permit_opium_trade_VN#鸦片贸易国有化
+		}
+		x = 6
+		y = 8
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_Opium_trade_VN
+				add_idea = PRC_Opium_trade_VN_big
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_literacy_programs#扫盲运动
+		icon = GFX_ogf_focus_generic_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Base#根据地建设
+		}
+		x = -1
+		y = 4
+		ai_will_do = {
+			factor = 50
+			}
+		completion_reward = {
+		add_research_slot = 1
+			swap_ideas = {
+				remove_idea = PRC_Low_literacy_rate
+				add_idea = PRC_Low_literacy_rate_B
+			}
+		}
+	}
+	focus = {
+		id = PRC_democratic_centralism#民主集中制
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Local_Soviets#地方苏维埃
+		}
+		available = {
+		has_country_flag = PRC_party_commands_gun
+			}
+		x = 10
+		y = 2
+		ai_will_do = {
+			factor = 50
+			}
+		completion_reward = {
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+			swap_ideas = {
+				remove_idea = communism_democratic_polity
+				add_idea = communism_democratic_centralism_orther
+			}
+		custom_effect_tooltip = PRC_democratic_centralism_tt_B
+		hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = PRC_communism_democratic_centralism
+				}
+			}
+		add_to_variable = { PRCDC_trade_laws_cost_factor = -0.1 }
+		add_to_variable = { PRCDC_mobilization_laws_cost_factor = -0.1 }
+		add_to_variable = { PRCDC_economy_cost_factor = -0.1 }
+		}
+	}
+	focus = {
+		id = PRC_Commissioner_s_Office#专员行政公署
+		icon = GFX_ogf_focus_generic_soviet_politics
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		x = 8
+		y = 3
+		ai_will_do = {
+			factor = 25
+			}
+		completion_reward = {
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+		custom_effect_tooltip = PRC_Commissioner_s_Office_tt
+		add_to_variable = { PRCDC_political_power_gain = 0.05 }
+		add_to_variable = { PRCDC_local_resources_factor = 0.1 }
+		add_to_variable = { PRCDC_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { PRCDC_production_factory_max_efficiency_factor = 0.05 }
+		add_to_variable = { PRCDC_production_speed_infrastructure_factor = 0.05 }
+		add_to_variable = { PRCDC_political_advisor_cost_factor = -0.1 }
+		add_to_variable = { PRCDC_trade_laws_cost_factor = -0.05 }
+		add_to_variable = { PRCDC_mobilization_laws_cost_factor = -0.05 }
+		add_to_variable = { PRCDC_economy_cost_factor = -0.05 }
+		add_to_variable = { PRCDC_communism_drift = 0.05 }
+		add_to_variable = { PRCDC_conscription_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_Peoples_court#工农法院
+		icon = GFX_Trial_1
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		x = 10
+		y = 3
+		ai_will_do = {
+			factor = 25
+			}
+		completion_reward = {
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+		PRC_low_popular_support_level_down = yes
+		custom_effect_tooltip = PRC_Peoples_court_tt
+		add_to_variable = { PRCDC_stability_factor = 0.05 }
+		add_to_variable = { PRCDC_drift_defence_factor = 0.1 }
+		custom_effect_tooltip = PRC_Peoples_court_PP
+		show_ideas_tooltip = PRC_xi_zhong_xun
+		}
+	}
+	focus = {
+		id = PRC_Three_three_system#三三制
+		icon = GFX_focus_spr_unify_the_london_bureau
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_democratic_centralism#民主集中制
+		}
+		x = 12
+		y = 3
+		ai_will_do = {
+			factor = 25
+			}
+		completion_reward = {
+		add_political_power = 150
+		add_stability = 0.05
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+		custom_effect_tooltip = PRC_Three_three_system_tt
+		add_to_variable = { PRCDC_political_power_gain = 0.05 }
+		add_to_variable = { PRCDC_communism_drift = 0.05 }
+		add_to_variable = { PRCDC_Ssocialism_drift = 0.05 }
+		add_to_variable = { PRCDC_democratic_drift = 0.05 }
+		add_to_variable = { PRCDC_conscription_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_State_atheism#国家无神论
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 6.00
+		ai_will_do = {
+			factor = 100
+			}
+		prerequisite = {
+			focus = PRC_Three_three_system#三三制
+		}
+		prerequisite = {
+			focus = PRC_Peoples_court#工农法院
+		}
+		prerequisite = {
+			focus = PRC_Commissioner_s_Office#专员行政公署
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+		add_stability = -0.05
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+		custom_effect_tooltip = PRC_State_atheism_tt
+		add_to_variable = { PRCDC_drift_defence_factor = 0.1 }
+		add_to_variable = { PRCDC_production_factory_max_efficiency_factor = 0.05 }
+		add_to_variable = { PRCDC_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { PRCDC_neutrality_drift = -0.05 }
+		add_to_variable = { PRCDC_research_speed_factor = 0.05 }
+		add_to_variable = { PRCDC_industrial_capacity_factory = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_Wallaobao_Conference#瓦窑堡会议
+		icon = GFX_PRC_think
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Completion_of_land_reform#完成土地改革
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 14
+		y = 1
+		completion_reward = {
+		country_event = Vn_PRC.18
+		}
+	}
+	focus = {
+		id = PRC_Liberation_Daily#解放日报
+		icon = GFX_PRC_news
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_Wallaobao_Conference#瓦窑堡会议
+		}
+		available = {
+		has_country_flag = PRC_party_commands_gun
+			}
+		x = 13
+		y = 2
+		ai_will_do = {
+			factor = 50
+			}
+		completion_reward = {
+		add_political_power = 25
+		add_ideas = PRC_Liberation_Daily
+	622 = {
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Soviet_Republic#苏维埃共和国
+		icon = GFX_PRC_soviet_rep
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Wallaobao_Conference#瓦窑堡会议
+		}
+		mutually_exclusive = {
+			focus = PRC_people_Republic#人民共和国
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+		set_country_flag = PRC_Soviet_Republic_flag
+		add_political_power = 50
+		add_war_support = 0.05
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+		}
+	}
+	focus = {
+		id = PRC_Eliminate_Sheng_Shicai#清剿盛世才
+		icon = GFX_PRC_Eliminate_Sheng_Shicai
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Completion_of_land_reform#完成土地改革
+		}
+		ai_will_do = {
+		factor = 100
+			}
+		x = 16
+		y = 1
+		completion_reward = {
+		add_timed_idea = { idea = PRC_FK_SIK days = 150 }
+			declare_war_on = {
+			target = SIK
+			type = civil_war
+			}
+		}
+	}
+	focus = {
+		id = PRC_people_Republic#人民共和国
+		icon = GFX_PRC_marx
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Wallaobao_Conference#瓦窑堡会议
+		}
+		mutually_exclusive = {
+			focus = PRC_Soviet_Republic#苏维埃共和国
+		}
+		x = 17
+		y = 2
+		completion_reward = {
+		set_country_flag = People_democracy_flag_start
+		add_political_power = 50
+		add_stability = 0.05
+		custom_effect_tooltip = PRC_democratic_centralism_tt
+		}
+	}
+	focus = {
+		id = PRC_rectification_campaign#整风运动
+		icon = GFX_PRC_rectification_campaign
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_people_Republic#人民共和国
+			focus = PRC_Soviet_Republic#苏维埃共和国
+		}
+		available = {
+		has_country_flag = PRC_party_commands_gun
+		has_country_flag = PRC_maos_leader
+			}
+		x = 16
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_power_struggles
+				add_idea = PRC_power_struggles_A
+			}
+		hidden_effect = {
+						remove_ideas = PRC_power_struggles_A
+				add_dynamic_modifier = {
+					modifier = PRC_power_struggles_DM
+				}
+			}
+		add_to_variable = { PPSD_stability_factor = -0.06 }
+		add_to_variable = { PPSD_political_power_factor = -0.18 }
+		add_to_variable = { PPSD_mobilization_laws_cost_factor = 0.375 }
+		add_to_variable = { PPSD_political_advisor_cost_factor = 0.375 }
+		add_to_variable = { PPSD_trade_laws_cost_factor = 0.375 }
+		add_to_variable = { PPSD_economy_cost_factor = 0.375 }
+		}
+	}
+	focus = {
+		id = PRC_rectification_campaign_party#整顿党风 宗派主义
+		icon = GFX_PRC_rectification_campaign_party
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_rectification_campaign#整风运动
+		}
+		x = 14
+		y = 4
+		completion_reward = {
+		custom_effect_tooltip = PRC_rectification_campaign_party_tt
+		add_to_variable = { PPSD_stability_factor = 0.02 }
+		add_to_variable = { PPSD_political_power_factor = 0.05 }
+		add_to_variable = { PPSD_political_advisor_cost_factor = -0.20 }
+		}
+	}
+	focus = {
+		id = PRC_rectification_campaign_learn#整顿学风 唯心主义
+		icon = GFX_PRC_rectification_campaign_learn
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_rectification_campaign#整风运动
+		}
+		x = 16
+		y = 4
+		completion_reward = {
+		custom_effect_tooltip = PRC_rectification_campaign_learn_tt
+		add_to_variable = { PPSD_stability_factor = 0.02 }
+		add_to_variable = { PPSD_mobilization_laws_cost_factor = -0.20 }
+		add_to_variable = { PPSD_trade_laws_cost_factor = -0.20 }
+		add_to_variable = { PPSD_economy_cost_factor = -0.20 }
+		}
+	}
+	focus = {
+		id = PRC_rectification_campaign_literature#整顿文风 党八股
+		icon = GFX_PRC_rectification_campaign_literature
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_rectification_campaign#整风运动
+		}
+		x = 18
+		y = 4
+		completion_reward = {
+		custom_effect_tooltip = PRC_rectification_campaign_literature_tt
+		add_to_variable = { PPSD_stability_factor = 0.02 }
+		add_to_variable = { PPSD_political_power_factor = 0.08 }
+		add_to_variable = { PPSD_mobilization_laws_cost_factor = -0.075 }
+		add_to_variable = { PPSD_political_advisor_cost_factor = -0.075 }
+		add_to_variable = { PPSD_trade_laws_cost_factor = -0.075 }
+		add_to_variable = { PPSD_economy_cost_factor = -0.075 }
+		}
+	}
+	focus = {
+		id = PRC_socialism_with_chinese_characteristics#中国化
+		icon = GFX_PRC_marx
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_rectification_campaign_learn#整顿学风
+		}
+		prerequisite = {
+			focus = PRC_rectification_campaign_literature#整顿文风
+		}
+		prerequisite = {
+			focus = PRC_rectification_campaign_party#整顿党风
+		}
+		x = 16
+		y = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#set_rule = { can_create_factions = yes }
+			add_ideas = PRC_socialism_with_chinese_characteristics
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = PRC_mao_faction
+			}
+		}
+	}
+	focus = {
+		id = PRC_Literature_art_serve_politics#文艺为政治服务
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Liberation_Daily#解放日报
+		}
+		prerequisite = {
+			focus = PRC_rectification_campaign_party#整顿党风
+		}
+		prerequisite = {
+			focus = PRC_rectification_campaign_learn#整顿学风
+		}
+		prerequisite = {
+			focus = PRC_rectification_campaign_literature#整顿文风
+		}
+		x = 13
+		y = 5
+		completion_reward = {
+		add_political_power = 75
+			swap_ideas = {
+				remove_idea = PRC_Liberation_Daily
+				add_idea = PRC_Literature_art_serve_politics
+			}
+		}
+	}
+	focus = {
+		id = PRC_maoism#毛泽东思想
+		icon = GFX_focus_prc_maoism
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_socialism_with_chinese_characteristics#中国化
+		}
+		x = 16
+		y = 6
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = { ideology = communism popularity = 0.1 }
+			swap_ideas = {
+				remove_idea = PRC_socialism_with_chinese_characteristics
+				add_idea = PRC_maoism_Vn
+			}
+		}
+	}
+	focus = {
+		id = PRC_Luochuan_Conference#洛川会议
+		icon = GFX_PRC_zhi
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Wallaobao_Conference#瓦窑堡会议
+		}
+		x = 20
+		y = 2
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+					date > 1936.4.1
+			}	
+		}
+		completion_reward = {
+		country_event = Vn_PRC.19
+		}
+	}
+	focus = {
+		id = PRC_yanan_meeting#延安会议
+		icon = GFX_PRC_chairman_zhanglan
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Luochuan_Conference#洛川会议
+		}
+		mutually_exclusive = {
+			focus = PRC_Wallaobao_Conference_democracy#第二次瓦窑堡
+
+		}
+		x = 34
+		y = 3
+		available = {
+		always = no
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_luxian_meizuo
+		}
+	}
+	focus = {
+		id = PRC_Wallaobao_Conference_democracy#第二次瓦窑堡
+		icon = GFX_PRC_chairman_wangming
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Luochuan_Conference#洛川会议
+		}
+		mutually_exclusive = {
+			focus = PRC_yanan_meeting#延安会议
+		}
+		x = 28
+		y = 3
+		available = {
+		always = no
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_luxian_meizuo
+		}
+	}
+	focus = {
+		id = PRC_Luochuan_Conference_notMTT#第二次洛川
+		icon = GFX_PRC_zhi_2
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_yanan_meeting#延安会议
+			focus = PRC_Wallaobao_Conference_democracy#第二次瓦窑堡
+			focus = PRC_Chengdu_meeting#成都会议
+		}
+		x = 22
+		y = 4
+		available = {
+		always = no
+		}
+		completion_reward = {
+		custom_effect_tooltip = PRC_huiyi_meizuo
+		custom_effect_tooltip = PRC_neirong_meizuo
+		}
+	}
+	focus = {
+		id = PRC_prepare_for_war_with_japan#为抗日战争做准备
+		icon = GFX_focus_AST_war_japan
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Luochuan_Conference_notMTT#第二次洛川
+			focus = PRC_Luochuan_Conference#洛川会议
+		}
+		ai_will_do = {
+		factor = 100
+			}
+		x = 20
+		y = 5
+		completion_reward = {
+		add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = PRC_war_japan_United_front_VN#统一战线
+		icon = GFX_PRC_United_front
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_prepare_for_war_with_japan#为抗日战争做准备
+		}
+		prerequisite = {
+			focus = PRC_Wallaobao_Conference#瓦窑堡会议
+		}
+		x = 19
+		y = 6
+		ai_will_do = {
+		factor = 100
+			}
+		bypass = {
+			or = {
+			is_in_faction_with = CHI
+			has_war_with = CHI
+			}
+		}
+		completion_reward = {
+			CHI = {
+				country_event = Vn_PRC.2
+			}
+		}
+	}
+	focus = {
+		id = PRC_focus_on_china#聚焦国内
+		icon = GFX_Socialist_revolution
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_prepare_for_war_with_japan#为抗日战争做准备
+		}
+		x = 25
+		y = 6
+		completion_reward = {
+		add_ideas = PRC_focus_on_china
+		}
+	}
+	focus = {
+		id = PRC_Maintain_status_quo#维持现状
+		icon = GFX_PRC_soviet_rep
+		cost = 5.00
+		ai_will_do = {
+		factor = 5
+		}
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+			focus = PRC_war_japan_United_front_VN#统一战线
+		}
+		mutually_exclusive = {
+			focus = PRC_government_of_national_defense#国防政府
+			focus = PRC_Reorganization_border_areas#改组边区政府
+		}
+		x = 22
+		y = 7
+		completion_reward = {
+		add_popularity = { ideology = communism popularity = 0.1 }
+		add_opinion_modifier = { target = CHI modifier = PRC_Damage_relationships }
+		CHI = {
+		add_opinion_modifier = { target = PRC modifier = PRC_Damage_relationships }
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = PRC_government_of_national_defense#国防政府
+		icon = GFX_focus_chi_united_front
+		cost = 5.00
+		ai_will_do = {
+		factor = 1
+		}
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+			focus = PRC_war_japan_United_front_VN#统一战线
+		}
+		mutually_exclusive = {
+			focus = PRC_Maintain_status_quo#维持现状
+			focus = PRC_Reorganization_border_areas#改组边区政府
+		}
+		x = 24
+		y = 7
+		completion_reward = {
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = {
+						is_puppet = no
+						exists = yes
+					}
+				}
+				event_target:WTT_current_china_leader = { country_event = wtt_prc.1 }
+			}
+			else = {
+				set_rule = { can_create_factions = yes }
+				create_faction = PRC_government_of_national_defense
+			}
+		}
+	}
+	focus = {
+		id = PRC_revolutionary_military_commission#革命军事委员会
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+		custom_effect_tooltip = PRC_revolutionary_military_commission_tt
+		add_to_variable = { PRA_army_org_factor = 0.05 }
+		add_to_variable = { PRA_army_morale_factor = 0.05 }
+		add_to_variable = { PRA_max_command_power = 20 }
+		add_to_variable = { PRA_military_leader_cost_factor = -0.1 }
+		add_to_variable = { PRA_army_speed_factor = 0.05 }
+		add_to_variable = { PRA_experience_gain_army_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_central_military_commission#中央军事委员会
+		icon = GFX_goal_generic_position_armies
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_revolutionary_military_commission#革命军事委员会
+		}
+		x = 26
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_central_military_commission_tt
+		add_to_variable = { PRA_army_org_factor = 0.05 }
+		add_to_variable = { PRA_army_morale_factor = 0.05 }
+		add_to_variable = { PRA_max_command_power = 10 }
+		add_to_variable = { PRA_military_leader_cost_factor = -0.1 }
+		add_to_variable = { PRA_army_speed_factor = 0.1 }
+		add_to_variable = { PRA_command_power_gain_mult = 0.15 }
+		add_to_variable = { PRA_experience_gain_army_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_confrontation_with_the_warlords#对抗军阀
+		icon = GFX_PRC_confrontation_with_the_warlords
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_revolutionary_military_commission#革命军事委员会
+		}
+		x = 29
+		y = 8
+		completion_reward = {
+		add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = PRC_focus_on_china
+				add_idea = PRC_focus_on_china_2
+			}
+		}
+	}
+	focus = {
+		id = PRC_Qinghai_VN#解放青海
+		icon = GFX_PRC_Qinghai_VN
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_confrontation_with_the_warlords#对抗军费
+		}
+		x = 28
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_Qinghai_VN_TT
+		add_timed_idea = { idea = PRC_FK_XSM days = 200 }
+		}
+	}
+	focus = {
+		id = PRC_peoples_liberation_army#解放军
+		icon = GFX_JAP_red_brigades
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_central_military_commission#中央军事委员会
+		}
+		x = 29
+		y = 10
+		completion_reward = {
+		country_lock_all_division_template = 
+		remove_ideas = PRC_Guerrilla_warfare
+		remove_ideas = PRC_Guerrilla_warfare_hidden
+		hidden_effect = {
+		add_dynamic_modifier = {
+			modifier = PRC_peoples_liberation_army_idea
+		}
+		remove_ideas = PRC_Guerrilla_warfare_hidden_A
+		remove_ideas = PRC_Guerrilla_warfare_hidden_B
+		remove_ideas = PRC_Guerrilla_warfare_hidden_C
+		}
+		set_global_flag = PRC_peoples_liberation_army_flag
+		custom_effect_tooltip = PRC_peoples_liberation_army_tt
+		add_to_variable = { PRA_army_core_attack_factor = 0.1 }
+		add_to_variable = { PRA_army_core_defence_factor = 0.1 }
+		add_to_variable = { PRA_command_power_gain_mult = 0.05 }
+		add_to_variable = { PRA_experience_gain_army_factor = 0.1 }
+		set_rule = {
+			can_puppet = yes
+			can_declare_war = yes
+			can_create_collaboration_government = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		icon = GFX_PRC_The_Great_War_of_Liberation
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_peoples_liberation_army#解放军
+		}
+		x = 29
+		y = 11
+		completion_reward = {
+		add_war_support = 0.1
+		set_cosmetic_tag = PRC
+		add_timed_idea = { idea = PRC_FK_CHI days = 500 }
+		remove_from_faction = PRC
+		news_event = Vn_mod.2
+		CHI = {
+		declare_war_on = { target = PRC type = civil_war }
+			}
+		}
+	}
+	focus = {
+		id = PRC_Yunnan_strategy#云南战略
+		icon = GFX_PRC_Yunnan_strategy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		}
+		x = 28
+		y = 12
+		completion_reward = {
+		YUN = {
+		country_event = { id = Vn_PRC.10 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = PRC_guangxi_strategy#广西战略
+		icon = GFX_PRC_guangxi_strategy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_The_Great_War_of_Liberation#伟大的解放战争
+		}
+		x = 30
+		y = 12
+		completion_reward = {
+		GXC = {
+		country_event = { id = Vn_PRC.7 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = PRC_proclaim_the_peoples_republic#新中国
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_guangxi_strategy#广西战略
+		}
+		prerequisite = {
+			focus = PRC_Yunnan_strategy#云南战略
+		}
+		available = {
+		OR = {
+		has_country_flag = PRC_gun_commands_party
+		AND = {
+		has_completed_focus = PRC_State_atheism
+		has_completed_focus = PRC_maoism
+			}
+		}
+			strength_ratio = {
+				tag = event_target:WTT_current_china_leader
+				ratio > 0.5
+			}
+			num_of_factories > 59
+			NOT = { has_idea = PRC_the_long_march_1 }
+		}
+		x = 29
+		y = 14
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		add_stability = 0.1
+		if = {
+		limit = {
+				has_country_leader = { ruling_only = yes 
+		character = PRC_mao_zedong }
+			}
+		set_country_leader_ideology = Maoism
+		set_country_leader_portrait = {
+			ideology = communism
+			portrait = GFX_portrait_PRC_maozedong_old
+			}
+		}
+			if = {
+				limit = { has_country_flag = People_democracy_flag_start }
+				set_cosmetic_tag = PRC_proclaimed
+			}
+			if = {
+				limit = { has_country_flag = PRC_Soviet_Republic_flag}
+				set_cosmetic_tag = PRC_soviet
+			}
+			if = {
+				limit = { has_idea = PRC_Agriculturalg }
+		swap_ideas = {
+			remove_idea = PRC_Agricultural
+			add_idea = PRC_Agricultural_A
+					}
+			}
+			if = {
+				limit = { has_idea = PRC_Agricultural_junta_A }
+		swap_ideas = {
+			remove_idea = PRC_Agricultural_junta_A
+			add_idea = PRC_Agricultural_junta_B
+					}
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.37 days = 3 random_days = 3 }
+			}
+		}
+	}
+	focus = {
+		id = PRC_shanxi_VN#解放山西
+		icon = GFX_PRC_shanxi_VN
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_confrontation_with_the_warlords#对抗军费
+		}
+		x = 30
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_shanxi_VN_TT
+		add_timed_idea = { idea = PRC_FK_SHX days = 200 }
+		}
+	}
+	focus = {
+		id = PRC_Soviet_cooperation#向苏联学习
+		icon = GFX_PRC_Soviet_cooperation
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_proclaim_the_peoples_republic#新中国
+		}
+		mutually_exclusive = {
+			focus = PRC_unimpressed#灯塔
+		}
+		x = 30
+		y = 15
+
+	}
+	focus = {
+		id = PRC_peoples_volunteer_army#志愿军
+		icon = GFX_ogf_focus_generic_little_entente
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_peoples_liberation_army
+		}
+		x = 31
+		y = 11
+		completion_reward = {
+		custom_effect_tooltip = PRC_peoples_volunteer_army_tt
+		add_to_variable = { PRA_send_volunteer_size = 10 }
+		add_to_variable = { PRA_send_volunteers_tension = -1 }
+		add_to_variable = { PRA_send_volunteer_divisions_required = -1 }
+		set_rule = {
+			can_send_volunteers = yes
+			}
+		}
+	}
+	focus = {
+		id = PRC_unimpressed#灯塔
+		icon = GFX_PRC_unimpressed
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_proclaim_the_peoples_republic#新中国
+		}
+		mutually_exclusive = {
+			focus = PRC_Soviet_cooperation#向苏联学习
+		}
+		x = 28
+		y = 15
+
+	}
+	focus = {
+		id = PRC_people_Dictatorship#人民民主专政
+		icon = GFX_PRC_people_Dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Soviet_cooperation#向苏联学习
+			focus = PRC_unimpressed#灯塔
+		}
+		mutually_exclusive = {
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 31
+		y = 16
+
+	}
+	focus = {
+		id = PRC_proletariat_Dictatorship#无产阶级专政
+		icon = GFX_PRC_proletariat_Dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_unimpressed#灯塔
+			focus = PRC_Soviet_cooperation#向苏联学习
+		}
+		mutually_exclusive = {
+			focus = PRC_people_Dictatorship#人民民主专政
+		}
+		x = 27
+		y = 16
+
+	}
+	focus = {
+		id = PRC_military_intelligence_department#军委情报部
+		icon = GFX_PRC_military_intelligence_department
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_central_military_commission#中央军事委员会
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		x = 33
+		y = 10
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = PRC_kang_sheng_political_advisor
+		}
+	}
+	focus = {
+		id = PRC_central_security_bureau#中央政治保卫局
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_military_intelligence_department#军委情报部
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		x = 33
+		y = 12
+		completion_reward = {
+			add_stability = 0.1
+					create_intelligence_agency = yes
+		}
+	}
+
+	focus = {
+		id = PRC_Reorganization_border_areas#改组边区政府
+		icon = GFX_focus_prc_social_democracy
+		cost = 5.00
+		ai_will_do = {
+		factor = 25
+		}
+		prerequisite = {
+			focus = PRC_focus_on_china#聚焦国内
+			focus = PRC_war_japan_United_front_VN#统一战线
+		}
+		mutually_exclusive = {
+			focus = PRC_Maintain_status_quo#维持现状
+			focus = PRC_government_of_national_defense#国防政府
+		}
+		available = {
+			is_in_faction_with = CHI
+		}
+		x = 20
+		y = 7
+		completion_reward = {
+		set_cosmetic_tag = PRC_Reorganization_border_areas
+		add_opinion_modifier = { target = CHI modifier = PRC_Border_District_Government }
+		CHI = {
+		add_opinion_modifier = { target = PRC modifier = PRC_Border_District_Government }
+		}
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		add_stability = -0.05
+		add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = PRC_Anti_Japanese_mobilization#抗日动员
+		icon = GFX_goal_generic_propaganda
+		cost = 8.00
+		ai_will_do = {
+		factor = 50
+		}
+		prerequisite = {
+			focus = PRC_Reorganization_border_areas#改组边区政府
+			focus = PRC_Maintain_status_quo#维持现状
+			focus = PRC_government_of_national_defense#国防政府
+		}
+		x = 21
+		y = 8
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = PRC
+						tag = HBJ
+						tag = CHI
+						tag = SHX
+						tag = SCS
+						tag = XSM
+						tag = GXC
+						tag = YUN 
+					}
+				}
+			country_event = Vn_PRC.6
+			}
+		custom_effect_tooltip = PRC_Anti_Japanese_mobilization_TT
+		hidden_effect = {
+				remove_ideas = PRC_Guerrilla_warfare
+				add_dynamic_modifier = {
+					modifier = PRC_Guerrilla_warfare_antijapen
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Northern_Shaanxi_defense#陕北防御
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		x = 17
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_Northern_Shaanxi_defense_tt
+		add_to_variable = { PGW_production_speed_bunker_factor = 0.1 }
+		 621= {
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 12331
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 12331
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 7048
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 7158
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 10424
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 7631
+		 	instant_build = yes
+				}
+			}
+		 616= {
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 8081
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 10724
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 8055
+		 	instant_build = yes
+				}
+			}
+		 622= {
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 5007
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 7208
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 1458
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 7659
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 7314
+		 	instant_build = yes
+				}
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 10880
+		 	instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Wartime_industrialization#战时工业化
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Northern_Shaanxi_defense#陕北防御
+		}
+		x = 17
+		y = 10
+		completion_reward = {
+		custom_effect_tooltip = PRC_Wartime_industrialization_tt
+		add_to_variable = { PGW_production_speed_arms_factory_factor = 0.1 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_anti_japanese_expedition_VN#敌后抗战
+		icon = GFX_PRC_guerrilla_warfare
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		x = 22
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_anti_japanese_expedition_VN_tt
+		add_to_variable = { PGW_compliance_growth_on_our_occupied_states = -0.1 }
+		add_to_variable = { PGW_resistance_growth_on_our_occupied_states = 0.15 }
+		}
+	}
+	focus = {
+		id = PRC_anti_japanese_expedition_big#扩大游击战争
+		icon = GFX_focus_prc_infiltration
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_anti_japanese_expedition_VN#敌后抗战
+		}
+		x = 22
+		y = 10
+		completion_reward = {
+		custom_effect_tooltip = PRC_anti_japanese_expedition_big_tt
+		add_to_variable = { PGW_compliance_growth_on_our_occupied_states = -0.1 }
+		add_to_variable = { PGW_resistance_growth_on_our_occupied_states = 0.15 }
+		}
+	}
+	focus = {
+		id = PRC_Frontal_battlefield#支援正面战场
+		icon = GFX_ogf_focus_generic_manpower
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		x = 20
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_Frontal_battlefield_tt
+		add_to_variable = { PGW_army_core_defence_factor = 0.1 }
+		add_to_variable = { PGW_army_core_attack_factor = 0.1 }
+		}
+	}
+	focus = {
+		id = PRC_pertinence#针对性进攻
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Frontal_battlefield#支援正面战场
+		}
+		x = 20
+		y = 11
+		completion_reward = {
+		custom_effect_tooltip = PRC_pertinence_tt
+		add_to_variable = { PRA_army_org_factor = 0.05 }
+		add_to_variable = { PRA_army_morale_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_no_guns#没枪没炮敌人造
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Frontal_battlefield#支援正面战场
+		}
+		x = 19
+		y = 10
+		completion_reward = {
+		custom_effect_tooltip = PRC_no_guns_TT
+			add_to_variable = { PGW_equipment_capture = 0.25 }
+		}
+	}
+	focus = {
+		id = PRC_big_army#扩大红军
+		icon = GFX_ogf_focus_SOV_mobilization_plan
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Anti_Japanese_mobilization#抗日动员
+		}
+		x = 24
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = PRC_big_army_TT
+		add_to_variable = { PGW_conscription = 0.005 }
+		add_to_variable = { PGW_training_time_factor = -0.1 }
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			}
+		}
+	}
+	focus = {
+		id = PRC_AJMAPU#抗日军政大学
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_big_army#扩大红军
+		}
+		x = 24
+		y = 10
+		completion_reward = {
+		custom_effect_tooltip = PRC_AJMAPU_TT
+		add_to_variable = { PGW_military_leader_cost_factor = -0.15 }
+		add_to_variable = { PGW_experience_gain_army_unit_factor = 0.1 }
+		add_to_variable = { PGW_army_core_defence_factor = 0.05 }
+		add_to_variable = { PGW_army_core_attack_factor = -0.05 }
+		army_experience = 50
+		}
+	}
+	focus = {
+		id = PRC_Artillery_production#火炮生产
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_AJMAPU#抗日军政大学
+		}
+		x = 23
+		y = 11
+		completion_reward = {
+		custom_effect_tooltip = PRC_Artillery_production_TT
+		add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 400
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		hidden_effect = {
+		add_ideas = PRC_Guerrilla_warfare_hidden_A
+			}
+		}
+	}
+	focus = {
+		id = PRC_peoples_war#人民战争
+		icon = GFX_focus_ITA_grande_rivolta_rurale
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_AJMAPU#抗日军政大学
+		}
+		prerequisite = {
+			focus = PRC_central_military_commission#中央军事委员会
+		}
+		x = 25
+		y = 11
+		completion_reward = {
+		custom_effect_tooltip =PRC_peoples_war_tt
+		if = {
+		limit = {
+				has_country_leader = { ruling_only = yes 
+		character = PRC_mao_zedong }
+			}
+		set_country_leader_portrait = {
+			ideology = communism
+			portrait = GFX_portrait_PRC_maozedong_yong_3
+			}
+		}
+		custom_effect_tooltip = PRC_people_war_TT_B
+		custom_effect_tooltip = PRC_people_war_TT
+		add_to_variable = { PGW_supply_consumption_factor = -0.15 }
+		add_to_variable = { PGW_production_speed_bunker_factor = -0.1 }
+		add_to_variable = { PGW_production_speed_rail_way_factor = 0.1 }
+		}
+	}
+	focus = {
+		id = PRC_protracted_warfare#持久战
+		icon = GFX_focus_generic_population_growth
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_peoples_war#人民战争
+		}
+		x = 24
+		y = 12
+		completion_reward = {
+		custom_effect_tooltip = PRC_protracted_warfare_TT
+		add_to_variable = { PGW_army_core_defence_factor = 0.2 }
+		add_to_variable = { PGW_conscription = 0.01 }
+		add_to_variable = { PGW_nscription_factorctor = 0.25 }
+		}
+	}
+	focus = {
+		id = PRC_mobile_warfare#运动战
+		icon = GFX_ogf_focus_army_tank_guardian
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_peoples_war#人民战争
+		}
+		x = 26
+		y = 12
+		completion_reward = {
+		custom_effect_tooltip = PRC_mobile_warfare_TT
+		add_to_variable = { PGW_army_core_attack_factor = 0.2 }
+		add_to_variable = { PGW_army_speed_factor = 0.15 }
+		}
+	}
+	focus = {
+		id = PRC_100_regiments_campaign#百团大战
+		icon = ogf_focus_army_men_wave
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_mobile_warfare#运动战
+		}
+		x = 27
+		y = 13
+		completion_reward = {
+			unlock_decision_tooltip = PRC_launch_100_regiments_campaign
+		}
+	}
+	focus = {
+		id = PRC_peoples_war_B#军民合作
+		icon = GFX_JAP_mobilization
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_mobile_warfare#运动战
+			focus = PRC_protracted_warfare#持久战
+		}
+		x = 25
+		y = 13
+		completion_reward = {
+		custom_effect_tooltip = PRC_junminhezuo_TT
+		add_to_variable = { PGW_supply_consumption_factor = -0.1 }
+		add_to_variable = { PGW_resistance_growth_on_our_occupied_states = 0.15 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_peoples_war_C#劳动军事化
+		icon = GFX_JAP_Militarization_labor
+		cost = 8.00
+		bypass = {
+		has_country_flag = PRC_gun_commands_party
+			}
+		prerequisite = {
+			focus = PRC_protracted_warfare#持久战
+		}
+		x = 23
+		y = 13
+		completion_reward = {
+		set_country_flag = PRC_peoples_war_C_flag
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		custom_effect_tooltip = PRC_peoples_war_C_flag
+			if = {
+				limit = { has_idea = PRC_Understaffed_factories }
+				swap_ideas = {
+					remove_idea = PRC_Understaffed_factories
+					add_idea = PRC_Militarization_of_labors_idea
+				}
+			}
+		}
+	}
+
+#######################################军政
+	focus = {
+		id = PRC_Deepen_reform_armed_forces#深化军队改革
+		icon = GFX_ogf_focus_secret_rearmament
+		cost = 5.00
+		x = 7
+		y = 4
+		prerequisite = {
+			focus = PRC_Base#根据地建设
+		}
+		completion_reward = {
+		country_event = Vn_PRC.13
+		custom_effect_tooltip = PRC_Deepen_reform_armed_forces_TT
+		}
+	}
+	focus = {
+		id = PRC_party_commands_gun#党指挥枪
+		icon = GFX_ogf_focus_SOV_builder_of_the_red_army
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Deepen_reform_armed_forces#深化军队改革
+		}
+		available = {
+		has_country_flag = PRC_party_commands_gun
+			}
+		mutually_exclusive = {
+			focus = PRC_gun_commands_party#枪指挥党
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_army_qution
+				add_idea = PRC_party_lader_army
+			}
+		}
+	}
+	focus = {
+		id = PRC_gun_commands_party#枪指挥党
+		icon = GFX_ogf_focus_fas_civil_war
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Deepen_reform_armed_forces#深化军队改革
+		}
+		available = {
+		has_country_flag = PRC_gun_commands_party
+			}
+		mutually_exclusive = {
+			focus = PRC_party_commands_gun#党指挥枪
+		}
+		x = 8
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_army_qution
+				add_idea = PRC_amry_lader_party
+			}
+		}
+	}
+	focus = {
+		id = PRC_enforce_the_three_rules#三大纪律
+		prerequisite = {
+			focus = PRC_party_commands_gun#党指挥枪
+			focus = PRC_gun_commands_party#枪指挥党
+		}
+		x = 5
+		y = 6
+		icon = GFX_ogf_focus_SOV_mobilization_plan
+		cost = 5.00
+		ai_will_do = {
+			factor = 35
+			}
+		completion_reward = {
+		PRC_low_popular_support_level_down = yes
+		custom_effect_tooltip = PRC_enforce_the_three_rules_tt
+		add_to_variable = { PRA_army_org_factor = 0.05 }
+		add_to_variable = { PRA_army_morale_factor = 0.05 }
+		}
+	}
+	focus = {
+		id = PRC_army_seizes_power#红军夺权
+		icon = GFX_ogf_focus_SOV_mobilization_plan
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_gun_commands_party#枪指挥党
+		}
+		bypass = {
+		has_completed_focus = PRC_Recommend_zhang
+		}
+		x = 8
+		y = 8
+		completion_reward = {
+		country_event = Vn_PRC.17
+		}
+	}
+	focus = {
+		id = PRC_Recommend_peng#彭德怀
+		icon = GFX_PRC_Recommend_peng
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_army_seizes_power#红军夺权
+		}
+		mutually_exclusive = {
+			focus = PRC_Recommend_zhang#张国焘
+			focus = PRC_Recommend_Lin#推举林彪
+		}
+		x = 7
+		y = 9
+		completion_reward = {
+			add_country_leader_role = {
+   			character = PRC_peng_dehuai
+   			promote_leader = yes
+			country_leader = {
+    			ideology = junta_communism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Military_centralism#军事集中制
+		icon = GFX_ogf_focus_shield_commie
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		x = 7
+		y = 10
+		completion_reward = {
+		add_ideas = PRC_Military_centralism
+		}
+	}
+	focus = {
+		id = PRC_Revolutionary_Daily#革命日报
+		icon = GFX_ogf_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Military_centralism#军事集中制
+		}
+		x = 6
+		y = 11
+		completion_reward = {
+		add_ideas = PRC_Revolutionary_Daily
+		}
+	}
+	focus = {
+		id = PRC_Civilian_government#文官政府
+		icon = GFX_ogf_focus_reform
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Military_centralism#军事集中制
+		}
+		x = 7
+		y = 12
+		completion_reward = {
+		custom_effect_tooltip = PRC_PRC_Civilian_governmen_TT
+		}
+	}
+	focus = {
+		id = PRC_Recommend_Lin#推举林彪
+		icon = GFX_PRC_Recommend_Lin
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_army_seizes_power#红军夺权
+		}
+		mutually_exclusive = {
+			focus = PRC_Recommend_zhang#张国焘
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		x = 11
+		y = 9
+		completion_reward = {
+			add_country_leader_role = {
+   			character = PRC_lin_biao
+   			promote_leader = yes
+			country_leader = {
+    			ideology = junta_communism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Great_commander#伟大的统帅
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Recommend_Lin#推举林彪
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		x = 9
+		y = 10
+		completion_reward = {
+		add_country_leader_trait = PRC_Great_commander
+		}
+	}
+	focus = {
+		id = PRC_Militarize_economy#军事化经济
+		icon = GFX_ogf_focus_generic_tank_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_commander#伟大的统帅
+		}
+		x = 9
+		y = 11
+		completion_reward = {
+		custom_effect_tooltip = PRC_Militarize_economy_TT
+		add_to_variable = { PJC_production_speed_arms_factory_factor = 0.1 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = PRC_strong_Revolutionary_committees#强化革命委员会
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Militarize_economy#军事化经济
+		}
+		x = 9
+		y = 12
+		completion_reward = {
+		custom_effect_tooltip = PRC_strong_Revolutionary_committees_TT
+		add_to_variable = { PJC_political_power_factor = 0.15 }
+		add_to_variable = { PJC_max_command_power = 30 }
+		add_to_variable = { PJC_command_power_gain_mult = 0.25 }
+		add_to_variable = { PJC_economy_cost_factor = -0.15 }
+		add_to_variable = { PJC_mobilization_laws_cost_factor = -0.15 }
+		}
+	}
+	focus = {
+		id = PRC_Marshal_Lin_Biao#林彪大元帅
+		icon = GFX_PRC_Marshal_Lin_Biao
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Recommend_Lin#推举林彪
+		}
+		x = 11
+		y = 10
+		completion_reward = {
+		add_country_leader_trait = PRC_BIG_Marshal
+		}
+	}
+	focus = {
+		id = PRC_Recommend_zhang#张国焘
+		icon = GFX_PRC_Recommend_zhang
+		cost = 5.00
+		available = {
+		has_country_flag = PRC_Recommend_zhang
+			}
+		prerequisite = {
+			focus = PRC_army_seizes_power#红军夺权
+		}
+		mutually_exclusive = {
+			focus = PRC_Recommend_Lin#推举林彪
+			focus = PRC_Recommend_peng#彭德怀
+		}
+		x = 15
+		y = 9
+		completion_reward = {
+			add_country_leader_role = {
+   			character = PRC_zhang_guo_tao_Vn
+   			promote_leader = yes
+			country_leader = {
+    			ideology = stalinism
+    		  	expire = "1965.1.1.1"
+      		traits = {}
+    				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Qing_party#党内大清洗
+		icon = GFX_ogf_focus_fas_mon_true_enemy
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Recommend_Lin#推举林彪
+			focus = PRC_Recommend_zhang#张国焘
+		}
+		x = 13
+		y = 10
+		completion_reward = {
+		remove_ideas = PRC_power_struggles
+		custom_effect_tooltip = PRC_Qing_party_TT
+		show_ideas_tooltip = PRC_zhang_wen_tian
+		show_ideas_tooltip = PRC_bo_gu
+		show_ideas_tooltip = PRC_zhou_enlai
+		show_ideas_tooltip = PRC_wang_ming
+		show_ideas_tooltip = PRC_ottobraun
+		show_ideas_tooltip = PRC_zhang_lan
+		show_ideas_tooltip = PRC_huang_yuan_pei
+		show_ideas_tooltip = PRC_zhang_bo_jun
+		show_ideas_tooltip = PRC_zhang_guo_tao_Vn
+		show_ideas_tooltip = PRC_li_zhu_sheng
+		custom_effect_tooltip = PRC_Qing_party_B_TT
+		show_ideas_tooltip = PRC_chen_geng
+		show_ideas_tooltip = PRC_chen_yun
+		show_ideas_tooltip = PRC_daoshangfei
+		show_ideas_tooltip = PRC_liu_shaoqi
+		show_ideas_tooltip = PRC_xi_zhong_xun
+		show_ideas_tooltip = PRC_lu_fu_tan
+		}
+	}
+	focus = {
+		id = PRC_New_Revolutionary_Theory#新革命理论
+		icon = GFX_PRC_zhi
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Marshal_Lin_Biao#林彪大元帅
+		}
+		prerequisite = {
+			focus = PRC_Qing_party#党内大清洗
+		}
+		x = 11
+		y = 11
+		completion_reward = {
+		add_ideas = PRC_New_Revolutionary_Theory
+		}
+	}
+	focus = {
+		id = PRC_Authoritarian_regimes#专制化
+		icon = GFX_newfocus_18_PEK
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_New_Revolutionary_Theory#新革命理论
+		}
+		x = 11
+		y = 12
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_Agricultural
+				add_idea = PRC_Agricultural_junta_A
+			}
+		}
+	}
+	focus = {
+		id = PRC_Literature_art_serve_military#文艺为军事服务
+		icon = GFX_focus_generic_combined_arms
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Revolutionary_Daily#革命日报
+		}
+		x = 6
+		y = 13
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_Revolutionary_Daily
+				add_idea = PRC_Literature_art_serve_military
+			}
+		}
+	}
+	focus = {
+		id = PRC_A_sea_of_people#人民的汪洋大海
+		icon = GFX_PRC_confrontation_with_the_warlords
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Civilian_government#文官政府
+			focus = PRC_Authoritarian_regimes#专制化
+		}
+		prerequisite = {
+			focus = PRC_strong_Revolutionary_committees#强化革命委员会
+		}
+		x = 8
+		y = 13
+		completion_reward = {
+		custom_effect_tooltip = PRC_A_sea_of_people_TT
+		add_to_variable = { PJC_conscription = 0.02 }
+		add_to_variable = { PJC_training_time_factor = -0.1 }
+		}
+	}
+	focus = {
+		id = PRC_fortification#防御工事
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Civilian_government#文官政府
+			focus = PRC_Authoritarian_regimes#专制化
+		}
+		prerequisite = {
+			focus = PRC_strong_Revolutionary_committees#强化革命委员会
+		}
+		x = 10
+		y = 13
+		completion_reward = {
+		custom_effect_tooltip = PRC_fortification_TT
+		add_to_variable = { PJC_dig_in_speed_factor = 0.15 }
+		add_to_variable = { PJC_max_dig_in = 1 }
+		add_to_variable = { PJC_army_defence_factor = 0.1 }
+		}
+	}
+	focus = {
+		id = PRC_Resource_industry#资源工业
+		icon = GFX_ogf_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_A_sea_of_people#人民的汪洋大海
+		}
+		prerequisite = {
+			focus = PRC_fortification#防御工事
+		}
+		x = 9
+		y = 14
+		completion_reward = {
+		custom_effect_tooltip = PRC_Resource_industry_TT
+		add_to_variable = { PJC_local_resources_factor = 0.15 }
+		add_to_variable = { PJC_industrial_capacity_factory = 0.05 }
+		add_to_variable = { PJC_production_factory_max_efficiency_factor = 0.05 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Militarization_of_labors_JUNTA#劳动军事化
+		icon = GFX_JAP_Militarization_labor
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_A_sea_of_people#人民的汪洋大海
+		}
+		x = 7
+		y = 14
+		completion_reward = {
+		set_country_flag = PRC_peoples_war_C_flag
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		custom_effect_tooltip = PRC_peoples_war_C_flag
+			if = {
+				limit = { has_idea = PRC_Understaffed_factories }
+				swap_ideas = {
+					remove_idea = PRC_Understaffed_factories
+					add_idea = PRC_Militarization_of_labors_idea
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_One_gun_per_person#人手一支枪
+		icon = GFX_PRC_confrontation_with_the_warlords
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Militarization_of_labors_JUNTA#劳动军事化
+		}
+		x = 6
+		y = 15
+		completion_reward = {
+		add_ideas = PRC_One_gun_per_person
+		}
+	}
+	focus = {
+		id = PRC_Military_industry#强化军事工业
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_One_gun_per_person#人手一支枪
+		}
+		x = 6
+		y = 16
+		completion_reward = {
+		custom_effect_tooltip = PRC_Military_industry_TT
+		add_to_variable = { PJC_production_speed_arms_factory_factor = 0.15 }
+		add_to_variable = { PJC_industrial_capacity_factory = 0.05 }
+		add_to_variable = { PJC_production_factory_max_efficiency_factor = 0.05 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Armed_militias#治安赤卫队
+		icon = GFX_ogf_focus_generic_manpower
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_fortification#防御工事
+		}
+		x = 11
+		y = 14
+		completion_reward = {
+		add_ideas = PRC_Armed_militias
+		}
+	}
+	focus = {
+		id = PRC_Train_pilots_advance#提前培养飞行员
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Resource_industry#资源工业
+		}
+		x = 8
+		y = 15
+		completion_reward = {
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			engines_1 = 1
+			engines_2 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+		}
+		air_experience = 50
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	622 = {
+		add_building_construction = {
+			type = air_base#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Railways_and_trains#铁路与火车
+		icon = GFX_focus_generic_railroad
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Resource_industry#资源工业
+		}
+		x = 10
+		y = 15
+		completion_reward = {
+		set_technology = { basic_train = 1 }
+	add_equipment_to_stockpile = {
+		type = train_equipment
+		amount = 30
+	}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_Deepening_Soviet_cooperation#深化苏联合作
+		icon = GFX_SOV_Comrade_East
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Train_pilots_advance#提前培养飞行员
+		}
+		prerequisite = {
+			focus = PRC_Railways_and_trains#铁路与火车
+		}
+		x = 9
+		y = 16
+		completion_reward = {
+			add_tech_bonus = {
+			name = infantry_weapons_bonus #(取研究类型名开头即可)
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			}
+			add_tech_bonus = {
+			name = artillery_bonus #(取研究类型名开头即可)
+			bonus = 1
+			uses = 1
+			category = artillery
+			}
+			add_tech_bonus = {
+			name = armor_bonus #(取研究类型名开头即可)
+			bonus = 1
+			uses = 2
+			category = armor
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 5000
+			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			type = artillery_equipment_1 
+			amount = 600
+			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 700
+			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 1200
+			producer = SOV
+			}
+		}
+	}
+	focus = {
+		id = PRC_Reunification_Tibet#武统西藏
+		icon = GFX_goal_generic_position_armies
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Deepening_Soviet_cooperation#深化苏联合作
+		}
+		prerequisite = {
+			focus = PRC_Armed_militias#治安赤卫队
+		}
+		x = 11
+		y = 17
+		completion_reward = {
+		if = {
+			limit = {
+				322 = { is_owned_and_controlled_by = TIB }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = take_state_focus
+					target = TIB
+					expire = 0
+					generator = { 322 }
+				}
+			}
+		}
+		else = {
+			create_wargoal = {
+				type = annex_everything
+				target = TIB				
+				expire = 0
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRC_oneCHI#一个中国政策
+		icon = GFX_focus_chi_one_china_policy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Reunification_Tibet#武统西藏
+		}
+		x = 11
+		y = 18
+		completion_reward = {
+
+		if = {
+			limit = {
+				any_other_country = {
+					is_literally_china = yes
+					is_in_faction_with = ROOT
+				} 
+			} 
+			remove_from_faction = ROOT
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.46 days = 3 }
+		}
+		every_other_country = {
+			limit = {
+				is_literally_china = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+				NOT = { ROOT = { has_wargoal_against = PREV } }
+				NOT = { tag = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = civil_war
+					target = PREV
+					expire = 0
+					}
+				}
+			}
+		}
+	}
+
+#####################################
+#######################################
+#############################新中国
+#####################################
+#######################################
+
+	focus = {
+		id = PRC_Power_grab#夺取生产资料
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		mutually_exclusive = {
+			focus = PRC_Three_major_transformations#三大改造
+		}
+		x = 25
+		y = 17
+
+	}
+	focus = {
+		id = PRC_Three_major_transformations#三大改造
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		mutually_exclusive = {
+			focus = PRC_Power_grab#夺取生产资料
+		}
+		x = 29
+		y = 17
+
+	}
+	focus = {
+		id = PRC_Agrarian_revolution#土地革命
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Power_grab#夺取生产资料
+			focus = PRC_Three_major_transformations#三大改造
+		}
+		x = 21
+		y = 18
+
+	}
+	focus = {
+		id = PRC_Agricultural_cooperatives#农业合作社
+		icon = GFX_goal_unknown
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_Agrarian_revolution#土地革命
+		}
+		mutually_exclusive = {
+			focus = PRC_Collectivization_agriculture#农业集体化
+		}
+		x = 20
+		y = 19
+
+	}
+	focus = {
+		id = PRC_Collectivization_agriculture#农业集体化
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Agrarian_revolution#土地革命
+		}
+		prerequisite = {
+			focus = PRC_Power_grab#夺取生产资料
+		}
+		mutually_exclusive = {
+			focus = PRC_Agricultural_cooperatives#农业合作社
+		}
+		x = 22
+		y = 19
+
+	}
+	focus = {
+		id = PRC_Industrial_collectivization#手工业集体化
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Three_major_transformations#三大改造
+			focus = PRC_Power_grab#夺取生产资料
+		}
+		x = 24
+		y = 18
+
+	}
+	focus = {
+		id = PRC_Nationalization_industry#工业国有化
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Power_grab#夺取生产资料
+			focus = PRC_Three_major_transformations#三大改造
+		}
+		x = 28
+		y = 18
+
+	}
+	focus = {
+		id = PRC_Forced_nationalization#强制国有化
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Power_grab#夺取生产资料
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_industry#工业国有化
+		}
+		x = 27
+		y = 19
+
+	}
+	focus = {
+		id = PRC_Public_private_partnership#公私合营
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 13.00
+		prerequisite = {
+			focus = PRC_Nationalization_industry#工业国有化
+		}
+		x = 29
+		y = 19
+
+	}
+	focus = {
+		id = PRC_Nationalization_heavy_industrialization#重工业国有化
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Forced_nationalization#强制国有化
+			focus = PRC_Public_private_partnership#公私合营
+		}
+		x = 28
+		y = 20
+
+	}
+	focus = {
+		id = PRC_Nationalization_chemical_industry#化学工业国有化
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Nationalization_heavy_industrialization#重工业国有化
+		}
+		x = 29
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Nationalization_extractive_industries#矿业国有化
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Nationalization_heavy_industrialization#重工业国有化
+		}
+		x = 27
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Nationalization_printing_industry#印刷业国有化
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Nationalization_chemical_industry#化学工业国有化
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_extractive_industries#矿业国有化
+		}
+		x = 30
+		y = 22
+
+	}
+	focus = {
+		id = PRC_Nationalization_transport_sector#运输业国有化
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Nationalization_chemical_industry#化学工业国有化
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_extractive_industries#矿业国有化
+		}
+		x = 26
+		y = 22
+
+	}
+	focus = {
+		id = PRC_Thought_transformation#思想改造运动
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 32
+		y = 17
+
+	}
+	focus = {
+		id = PRC_TSEM#三识教育运动
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 34
+		y = 17
+
+	}
+	focus = {
+		id = PRC_china_medical_university#中国医科大学
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 36
+		y = 17
+
+	}
+	focus = {
+		id = PRC_suppress_counterrevolutionaries#镇压反革命
+		icon = GFX_goal_unknown
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_TSEM#三识教育运动
+		}
+		prerequisite = {
+			focus = PRC_Thought_transformation#思想改造运动
+		}
+		prerequisite = {
+			focus = PRC_china_medical_university#中国医科大学
+		}
+		x = 33
+		y = 18
+
+	}
+	focus = {
+		id = PRC_Three_anti_movement#三反运动
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_suppress_counterrevolutionaries#镇压反革命
+		}
+		x = 31
+		y = 19
+
+	}
+	focus = {
+		id = PRC_cult_of_personality#建立个人崇拜
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_suppress_counterrevolutionaries#镇压反革命
+		}
+		x = 34
+		y = 19
+
+	}
+	focus = {
+		id = PRC_people_soviet_education_system#大众教育
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_cult_of_personality#建立个人崇拜
+		}
+		mutually_exclusive = {
+			focus = PRC_adopt_soviet_education_system#苏式教育
+		}
+		x = 33
+		y = 21
+
+	}
+	focus = {
+		id = PRC_CR_system#文化革命小组
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_people_soviet_education_system#大众教育
+		}
+		x = 33
+		y = 22
+
+	}
+	focus = {
+		id = PRC_educational_revolution#教育革命
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_CR_system#文化革命小组
+		}
+		x = 32
+		y = 24
+
+	}
+	focus = {
+		id = PRC_educational_revolution_B#打倒反动学术权威
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_educational_revolution#教育革命
+		}
+		x = 33
+		y = 25
+
+	}
+	focus = {
+		id = PRC_Health_care#公共医保
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_china_medical_university#中国医科大学
+		}
+		x = 35
+		y = 18
+
+	}
+	focus = {
+		id = PRC_barefoot_doctor#赤脚医生
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Health_care#公共医保
+		}
+		x = 35
+		y = 20
+
+	}
+	focus = {
+		id = PRC_adopt_soviet_education_system#苏式教育
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_cult_of_personality#建立个人崇拜
+		}
+		mutually_exclusive = {
+			focus = PRC_people_soviet_education_system#大众教育
+		}
+		x = 35
+		y = 21
+
+	}
+	focus = {
+		id = PRC_hundred_flowers_campaign#百花齐放运动
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_CR_system#文化革命小组
+			focus = PRC_adopt_soviet_education_system#苏式教育
+		}
+		x = 36
+		y = 24
+
+	}
+	focus = {
+		id = PRC_Socialist_realism#社会主义的现实主义
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_hundred_flowers_campaign#百花齐放运动
+		}
+		x = 35
+		y = 25
+
+	}
+	focus = {
+		id = PRC_form_the_academy_of_sciences#组建中国科学院
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_china_medical_university#中国医科大学
+		}
+		x = 37
+		y = 18
+
+	}
+	focus = {
+		id = PRC_People_Air_Force#人民空军
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 38
+		y = 17
+
+	}
+	focus = {
+		id = PRC_People_Navy#人民海军
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 40
+		y = 17
+
+	}
+	focus = {
+		id = PRC_Liberate_Taiwan#解放台湾
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_People_Navy#人民海军
+		}
+		prerequisite = {
+			focus = PRC_People_Air_Force#人民空军
+		}
+		x = 39
+		y = 18
+
+	}
+	focus = {
+		id = PRC_the_first_five_year_plan#五年计划
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_people_Dictatorship#人民民主专政
+			focus = PRC_proletariat_Dictatorship#无产阶级专政
+		}
+		x = 42
+		y = 17
+
+	}
+	focus = {
+		id = PRC_Two_bombs_and_one_star#两弹一星
+		icon = GFX_focus_wonderweapons
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Liberate_Taiwan#解放台湾
+		}
+		prerequisite = {
+			focus = PRC_the_first_five_year_plan#五年计划
+		}
+		x = 40
+		y = 19
+
+	}
+	focus = {
+		id = PRC_strengthen_heavy_industry#强化重工业
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_the_first_five_year_plan#五年计划
+		}
+		x = 42
+		y = 19
+
+	}
+	focus = {
+		id = PRC_industrialization_NW#西北地区工业化
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_strengthen_heavy_industry#强化重工业
+		}
+		x = 41
+		y = 20
+
+	}
+	focus = {
+		id = PRC_Chengdu_Chongqing_Railway#成渝铁路
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_strengthen_heavy_industry#强化重工业
+		}
+		x = 39
+		y = 20
+
+	}
+	focus = {
+		id = PRC_baocheng_Railway#宝成铁路
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Chengdu_Chongqing_Railway#成渝铁路
+		}
+		x = 38
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Anshan_iron_ore#鞍山铁矿
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Chengdu_Chongqing_Railway#成渝铁路
+		}
+		x = 40
+		y = 21
+
+	}
+	focus = {
+		id = PRC_pioneering_the_north_east#东北开发局
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_strengthen_heavy_industry#强化重工业
+		}
+		x = 43
+		y = 20
+
+	}
+	focus = {
+		id = PRC_Jiefang_brand_cars#解放牌汽车
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_pioneering_the_north_east#东北开发局
+			focus = PRC_industrialization_NW#西北地区工业化
+		}
+		x = 42
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Fertilizer_production#化肥生产
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Jiefang_brand_cars#解放牌汽车
+		}
+		x = 42
+		y = 22
+
+	}
+	focus = {
+		id = PRC_yumen_Oilfield#玉门油田
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_pioneering_the_north_east#东北开发局
+		}
+		x = 44
+		y = 21
+
+	}
+	focus = {
+		id = PRC_kelamay_Oilfield#克拉玛依油田
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_yumen_Oilfield#玉门油田
+		}
+		x = 44
+		y = 23
+
+	}
+	focus = {
+		id = PRC_156_project#156工程
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_the_first_five_year_plan#五年计划
+		}
+		x = 45
+		y = 18
+
+	}
+	focus = {
+		id = PRC_hire_sov_experts#苏联专家
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_156_project#156工程
+		}
+		x = 45
+		y = 19
+
+	}
+	focus = {
+		id = PRC_import_sov_machinery#尽快苏联机械
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_hire_sov_experts#苏联专家
+		}
+		x = 45
+		y = 20
+
+	}
+	focus = {
+		id = PRC_invest_in_new_companies#投资新公司
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_hire_sov_experts#苏联专家
+		}
+		x = 47
+		y = 20
+
+	}
+	focus = {
+		id = PRC_Ministry_Foreign_Affairs_State#国家外交部
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Soviet_cooperation#一边倒
+			focus = PRC_unimpressed#灯塔
+		}
+	prerequisite = { focus = CHI_one_china_policy }
+		x = 53
+		y = 16
+
+	}
+	focus = {
+		id = PRC_Peaceful_coexistence#和平共处五项原则
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Ministry_Foreign_Affairs_State#国家外交部
+		}
+		x = 48
+		y = 17
+
+	}
+	focus = {
+		id = PRC_mongolia_issue#蒙古问题
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Ministry_Foreign_Affairs_State#国家外交部
+		}
+		x = 50
+		y = 17
+
+	}
+	focus = {
+		id = PRC_exert_influence_in_sea#在东南亚施加影响力
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_mongolia_issue#蒙古问题
+		}
+		x = 49
+		y = 19
+
+	}
+	focus = {
+		id = PRC_exert_influence_in_central_asia#在中亚施加影响力
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_mongolia_issue#蒙古问题
+		}
+		x = 51
+		y = 19
+
+	}
+	focus = {
+		id = PRC_aid_india#支援印度
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_exert_influence_in_central_asia#在中亚施加影响力
+		}
+		prerequisite = {
+			focus = PRC_exert_influence_in_sea#在东南亚施加影响力
+		}
+		x = 49
+		y = 20
+
+	}
+	focus = {
+		id = PRC_demand_return_of_trade_ports#要求归还贸易港口
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_mongolia_issue#蒙古问题
+		}
+		x = 50
+		y = 18
+
+	}
+	focus = {
+		id = PRC_aid_the_workers#援助工人阶级
+		icon = GFX_goal_support_communism
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_exert_influence_in_central_asia#在中亚施加影响力
+		}
+		prerequisite = {
+			focus = PRC_exert_influence_in_sea#在东南亚施加影响力
+		}
+		x = 51
+		y = 20
+
+	}
+	focus = {
+		id = PRC_Korean_War#朝鲜战争
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Ministry_Foreign_Affairs_State#国家外交部
+		}
+		x = 53
+		y = 17
+
+	}
+	focus = {
+		id = PRC_Limited_tilt#有限倾斜
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Ministry_Foreign_Affairs_State#国家外交部
+		}
+		mutually_exclusive = {
+			focus = PRC_One_sided#一边倒
+		}
+		x = 57
+		y = 17
+
+	}
+	focus = {
+		id = PRC_Survival_in_seams#夹缝中生存
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Limited_tilt#有限倾斜
+		}
+		x = 56
+		y = 18
+
+	}
+	focus = {
+		id = PRC_Suppression_USSR#抑制苏联
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Survival_in_seams#夹缝中生存
+		}
+		x = 55
+		y = 19
+
+	}
+	focus = {
+		id = PRC_The_United_States_thaws#与美关系解冻
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Survival_in_seams#夹缝中生存
+		}
+		x = 57
+		y = 19
+
+	}
+	focus = {
+		id = PRC_Sino_US_relations_normal#中美关系正常化
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_The_United_States_thaws#与美关系解冻
+		}
+		prerequisite = {
+			focus = PRC_Suppression_USSR#抑制苏联
+		}
+		x = 56
+		y = 20
+
+	}
+	focus = {
+		id = PRC_End_Cold_War#结束冷战
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Sino_US_relations_normal#中美关系正常化
+		}
+		x = 56
+		y = 21
+
+	}
+	focus = {
+		id = PRC_One_sided#一边倒
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Ministry_Foreign_Affairs_State#国家外交部
+		}
+		mutually_exclusive = {
+			focus = PRC_Limited_tilt#有限倾斜
+		}
+		x = 59
+		y = 17
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War#倒向美国
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_One_sided#一边倒
+		}
+		mutually_exclusive = {
+			focus = PRC_USSR_Cold_War#倒向苏联
+		}
+		x = 60
+		y = 18
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War_A#u意识形态民主化
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War#倒向美国
+		}
+		x = 59
+		y = 19
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War_B#经济开放化
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War#倒向美国
+		}
+		x = 61
+		y = 19
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War_C#加入北约
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War_B#经济开放化
+		}
+		prerequisite = {
+			focus = PRC_USA_Cold_War_A#u意识形态民主化
+		}
+		x = 60
+		y = 20
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War_M_A#对美贸易
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War_A#u意识形态民主化
+		}
+		prerequisite = {
+			focus = PRC_USA_Cold_War_B#经济开放化
+		}
+		x = 58
+		y = 20
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War_D#请求美国保护
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War_C#加入北约
+		}
+		x = 60
+		y = 21
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War#倒向苏联
+		icon = GFX_goal_support_communism
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_One_sided#一边倒
+		}
+		mutually_exclusive = {
+			focus = PRC_USA_Cold_War#倒向美国
+		}
+		x = 64
+		y = 18
+
+	}
+	focus = {
+		id = PRC_International_division_labor#国际分工
+		icon = GFX_goal_generic_air_production
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War#倒向美国
+			focus = PRC_USSR_Cold_War#倒向苏联
+		}
+		x = 62
+		y = 20
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War_A#长波电台
+		icon = GFX_goal_generic_radar
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USSR_Cold_War#倒向苏联
+		}
+		x = 63
+		y = 19
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War_B#联合舰队
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USSR_Cold_War#倒向苏联
+		}
+		x = 65
+		y = 19
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War_C#加入华约
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USSR_Cold_War_B#联合舰队
+		}
+		prerequisite = {
+			focus = PRC_USSR_Cold_War_A#长波电台
+		}
+		x = 64
+		y = 20
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War_D#加盟苏联
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USSR_Cold_War_C#加入华约
+		}
+		x = 64
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Regional_national_autonomy#民族区域自治制度
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_constitution#宪法
+		}
+		x = 26
+		y = 25
+
+	}
+	focus = {
+		id = PRC_the_first_five_year_plan_finshi#完成一五计划
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Fertilizer_production#化肥生产
+		}
+		prerequisite = {
+			focus = PRC_Baotou_iron_ore#包头铁矿
+		}
+		x = 41
+		y = 24
+
+	}
+	focus = {
+		id = PRC_electrification#电气化
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_leap_forward#大跃进
+		}
+		x = 36
+		y = 26
+
+	}
+	focus = {
+		id = PRC_trade_union#工人委员会
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Production_team#生产队
+		}
+		x = 24
+		y = 22
+
+	}
+	focus = {
+		id = PRC_Shoot_landlord#枪毙地主
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Collectivization_agriculture#农业集体化
+		}
+		x = 22
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Transform_landlords#改造地主
+		icon = GFX_goal_unknown
+		cost = 15.00
+		prerequisite = {
+			focus = PRC_Agricultural_cooperatives#农业合作社
+		}
+		x = 20
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Redistribution#计划经济
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_trade_union#工人委员会
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_food_processing_industry#食品加工业国有化
+		}
+		x = 24
+		y = 23
+
+	}
+	focus = {
+		id = PRC_five_anti_movement#五反运动
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Three_anti_movement#三反运动
+		}
+		x = 31
+		y = 21
+
+	}
+	focus = {
+		id = PRC_Great_leap_forward#大跃进
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_the_first_five_year_plan_finshi#完成一五计划
+		}
+		prerequisite = {
+			focus = PRC_hundred_flowers_campaign#百花齐放运动
+		}
+		x = 39
+		y = 25
+
+	}
+	focus = {
+		id = PRC_electrification_water#水利工程
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_electrification#电气化
+		}
+		x = 36
+		y = 28
+
+	}
+	focus = {
+		id = PRC_Take_advantage_bourgeois_specialists#利用资产阶级专家
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Industrial_collectivization#手工业集体化
+		}
+		x = 24
+		y = 19
+
+	}
+	focus = {
+		id = PRC_Production_team#生产队
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_Collectivization_agriculture#农业集体化
+			focus = PRC_Agricultural_cooperatives#农业合作社
+		}
+		prerequisite = {
+			focus = PRC_Take_advantage_bourgeois_specialists#利用资产阶级专家
+		}
+		x = 24
+		y = 20
+
+	}
+	focus = {
+		id = PRC_Nationalization_food_processing_industry#食品加工业国有化
+		icon = GFX_goal_generic_consumer_goods
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_Shoot_landlord#枪毙地主
+			focus = PRC_Transform_landlords#改造地主
+		}
+		x = 21
+		y = 22
+
+	}
+	focus = {
+		id = PRC_Nationalization_textile_industry#纺织工业
+		icon = GFX_goal_unknown
+		cost = 6.00
+		prerequisite = {
+			focus = PRC_Nationalization_construction_industry#建筑业国有化
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_transport_sector#运输业国有化
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_printing_industry#印刷业国有化
+		}
+		x = 28
+		y = 23
+
+	}
+	focus = {
+		id = PRC_Nationalization_construction_industry#建筑业国有化
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Nationalization_chemical_industry#化学工业国有化
+		}
+		prerequisite = {
+			focus = PRC_Nationalization_extractive_industries#矿业国有化
+		}
+		x = 28
+		y = 22
+
+	}
+	focus = {
+		id = PRC_constitution#宪法
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Nationalization_textile_industry#纺织工业
+		}
+		prerequisite = {
+			focus = PRC_Redistribution#计划经济
+		}
+		x = 26
+		y = 24
+
+	}
+	focus = {
+		id = PRC_Street_offices#街道办事处
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_constitution#宪法
+		}
+		x = 28
+		y = 25
+
+	}
+	focus = {
+		id = PRC_Distribution#按劳分配
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Street_offices#街道办事处
+		}
+		mutually_exclusive = {
+			focus = PRC_Distribute_equally#平均分配
+		}
+		x = 27
+		y = 26
+
+	}
+	focus = {
+		id = PRC_Distribute_equally#平均分配
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Street_offices#街道办事处
+		}
+		mutually_exclusive = {
+			focus = PRC_Distribution#按劳分配
+		}
+		x = 29
+		y = 26
+
+	}
+	focus = {
+		id = PRC_universal_suffrage#普选权
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_constitution#宪法
+		}
+		x = 24
+		y = 25
+
+	}
+	focus = {
+		id = PRC_Women_rights#妇女权利
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_universal_suffrage#普选权
+		}
+		x = 24
+		y = 26
+
+	}
+	focus = {
+		id = PRC_educational_revolution_A#劳动教育
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_educational_revolution#教育革命
+		}
+		x = 31
+		y = 25
+
+	}
+	focus = {
+		id = PRC_educational_revolution_C#缩短学制
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_educational_revolution_B#打倒反动学术权威
+		}
+		prerequisite = {
+			focus = PRC_educational_revolution_A#劳动教育
+		}
+		x = 32
+		y = 26
+
+	}
+	focus = {
+		id = PRC_educational_revolution_D#取消高考
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_educational_revolution_C#缩短学制
+		}
+		x = 32
+		y = 27
+
+	}
+	focus = {
+		id = PRC_qingzang_Chongqing_Railway#青藏铁路
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_baocheng_Railway#宝成铁路
+		}
+		x = 38
+		y = 22
+
+	}
+	focus = {
+		id = PRC_Panzhihua_ore#攀枝花铁矿
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Anshan_iron_ore#鞍山铁矿
+		}
+		x = 40
+		y = 22
+
+	}
+	focus = {
+		id = PRC_Baotou_iron_ore#包头铁矿
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Panzhihua_ore#攀枝花铁矿
+		}
+		x = 40
+		y = 23
+
+	}
+	focus = {
+		id = PRC_Daqing_Oilfield#大庆油田
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_leap_forward#大跃进
+		}
+		prerequisite = {
+			focus = PRC_kelamay_Oilfield#克拉玛依油田
+		}
+		x = 44
+		y = 26
+
+	}
+	focus = {
+		id = PRC_MSS#多快好省
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_leap_forward#大跃进
+		}
+		x = 40
+		y = 26
+
+	}
+	focus = {
+		id = PRC_Appointed_Liu_Deng#委任刘邓
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_MSS#多快好省
+		}
+		x = 40
+		y = 27
+
+	}
+	focus = {
+		id = PRC_People_communalization#人民公社化
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Appointed_Liu_Deng#委任刘邓
+		}
+		x = 39
+		y = 28
+
+	}
+	focus = {
+		id = PRC_Great_Steelmaking_Movement#大炼钢运动
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Appointed_Liu_Deng#委任刘邓
+		}
+		x = 41
+		y = 28
+
+	}
+	focus = {
+		id = PRC_Except_four_evils#除四害运动
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_Steelmaking_Movement#大炼钢运动
+		}
+		x = 42
+		y = 29
+
+	}
+	focus = {
+		id = PRC_Anti_dogmatism#反教条主义运动
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Great_leap_forward#大跃进
+		}
+		x = 38
+		y = 26
+
+	}
+	focus = {
+		id = PRC_Public_canteen#公共食堂
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_People_communalization#人民公社化
+		}
+		x = 38
+		y = 29
+
+	}
+	focus = {
+		id = PRC_Public_Laundry#公共洗衣房
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Public_canteen#公共食堂
+		}
+		prerequisite = {
+			focus = PRC_Angang_Constitution#鞍钢宪法
+		}
+		prerequisite = {
+			focus = PRC_Except_four_evils#除四害运动
+		}
+		x = 41
+		y = 30
+
+	}
+	focus = {
+		id = PRC_Angang_Constitution#鞍钢宪法
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_People_communalization#人民公社化
+			focus = PRC_Great_Steelmaking_Movement#大炼钢运动
+		}
+		x = 40
+		y = 29
+
+	}
+	focus = {
+		id = PRC_Put_satellites#放卫星
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Public_canteen#公共食堂
+		}
+		x = 39
+		y = 30
+
+	}
+	focus = {
+		id = PRC_Dongfanghong_No_1_plan#东方红一号
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_Great_leap_forward#大跃进
+		}
+		x = 42
+		y = 26
+
+	}
+	focus = {
+		id = PRC_GLF_M_A#庐山会议
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_Public_Laundry#公共洗衣房
+		}
+		prerequisite = {
+			focus = PRC_Put_satellites#放卫星
+		}
+		x = 40
+		y = 31
+
+	}
+	focus = {
+		id = PRC_GLF_win#大跃进全面胜利
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_GLF_M_A#庐山会议
+		}
+		mutually_exclusive = {
+			focus = PRC_GLF#大跃进的惨痛失败
+		}
+		x = 39
+		y = 32
+
+	}
+	focus = {
+		id = PRC_GLF#大跃进的惨痛失败
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_GLF_M_A#庐山会议
+		}
+		mutually_exclusive = {
+			focus = PRC_GLF_win#大跃进全面胜利
+		}
+		x = 41
+		y = 32
+
+	}
+	focus = {
+		id = PRC_GLF_M_B#七千人大会
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_GLF#大跃进的惨痛失败
+		}
+		x = 41
+		y = 33
+
+	}
+	focus = {
+		id = PRC_GLF_A#八字方针
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_GLF_M_B#七千人大会
+		}
+		x = 39
+		y = 34
+
+	}
+	focus = {
+		id = PRC_GLF_B#工业调整
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_GLF_M_B#七千人大会
+		}
+		x = 41
+		y = 34
+
+	}
+	focus = {
+		id = PRC_GLF_C#整顿公社
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = PRC_GLF_M_B#七千人大会
+		}
+		x = 43
+		y = 34
+
+	}
+	focus = {
+		id = PRC_USA_Cold_War_M_B#进口化肥
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = PRC_USA_Cold_War_M_A#对美贸易
+			focus = PRC_End_Cold_War#结束冷战
+		}
+		x = 58
+		y = 22
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War_B_A#苏联经济援助
+		icon = GFX_goal_generic_soviet_construction
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USSR_Cold_War_B#联合舰队
+		}
+		prerequisite = {
+			focus = PRC_USSR_Cold_War_A#长波电台
+		}
+		x = 67
+		y = 20
+
+	}
+	focus = {
+		id = PRC_USSR_Cold_War_B_B#苏联军事援助
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = PRC_USSR_Cold_War_B_A#苏联经济援助
+		}
+		x = 67
+		y = 22
+
+	}
+}

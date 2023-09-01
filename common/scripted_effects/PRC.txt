@@ -1,0 +1,97 @@
+PRC_XI = {
+	set_variable = { ZTS_political_power_factor = PRC.ZTS_political_power_factor }
+	set_variable = { ZTS_drift_defence_factor = PRC.ZTS_drift_defence_factor }
+	set_variable = { ZTS_industrial_capacity_factory = PRC.ZTS_industrial_capacity_factory }
+	set_variable = { ZTS_production_factory_max_efficiency_factor = PRC.ZTS_production_factory_max_efficiency_factor }
+	set_variable = { ZTS_production_factory_efficiency_gain_factor = PRC.ZTS_production_factory_efficiency_gain_factor }
+	set_variable = { ZTS_global_building_slots_factor = PRC.ZTS_global_building_slots_factor }
+	set_variable = { ZTS_production_speed_buildings_factor = PRC.ZTS_production_speed_buildings_factor }
+	set_variable = { ZTS_conscription_factor = PRC.ZTS_conscription_factor }
+	set_variable = { ZTS_non_core_manpower = PRC.ZTS_non_core_manpower }
+	set_variable = { ZTS_resistance_growth = PRC.ZTS_resistance_growth }
+	set_variable = { ZTS_compliance_gain = PRC.ZTS_compliance_gain }
+	set_variable = { ZTS_resistance_target = PRC.ZTS_resistance_target }
+	set_variable = { ZTS_research_speed_factor = PRC.ZTS_research_speed_factor }
+}
+PRC_communism_building = {
+		set_variable = { PRA_conscription_factor = PRC.PRA_conscription_factor }
+		set_variable = { PRA_army_org_factor = PRC.PRA_army_org_factor }
+		set_variable = { PRA_army_morale_factor = PRC.PRA_army_morale_factor }
+		set_variable = { PRA_experience_gain_army_factor = PRC.PRA_experience_gain_army_factor }
+		set_variable = { PRA_military_leader_cost_factor = PRC.PRA_military_leader_cost_factor }
+		set_variable = { PRA_army_speed_factor = PRC.PRA_army_speed_factor }
+		set_variable = { PRA_max_command_power = PRC.PRA_max_command_power }
+		set_variable = { PRA_command_power_gain_mult = PRC.PRA_command_power_gain_mult }
+		set_variable = { PRA_send_volunteer_size = PRC.PRA_send_volunteer_size }
+		set_variable = { PRA_send_volunteers_tension = PRC.PRA_send_volunteers_tension }
+		set_variable = { PRA_send_volunteer_divisions_required = PRC.PRA_send_volunteer_divisions_required }
+		set_variable = { PRA_army_core_defence_factor = PRC.PRA_army_core_defence_factor }
+		set_variable = { PRA_army_core_attack_factor = PRC.PRA_army_core_attack_factor }
+
+		set_variable = { PRCDC_political_power_gain = PRC.PRCDC_political_power_gain } #每日获得的政治点数
+		set_variable = { PRCDC_conscription_factor = PRC.PRCDC_conscription_factor } #适役人口修正
+		set_variable = { PRCDC_communism_drift = PRC.PRCDC_communism_drift } #共产主义理念每日新增支持率
+		set_variable = { PRCDC_Ssocialism_drift = PRC.PRCDC_Ssocialism_drift } #社会主义理念每日新增支持率
+		set_variable = { PRCDC_democratic_drift = PRC.PRCDC_democratic_drift } #民主主义理念每日新增支持率
+		set_variable = { PRCDC_drift_defence_factor = PRC.PRCDC_drift_defence_factor } #意识形态抵制变化力度
+		set_variable = { PRCDC_stability_factor = PRC.PRCDC_stability_factor } #稳定度
+		set_variable = { PRCDC_production_speed_buildings_factor = PRC.PRCDC_production_speed_buildings_factor } #建造速度
+		set_variable = { PRCDC_local_resources_factor = PRC.PRCDC_local_resources_factor } #战略资源获取率
+		set_variable = { PRCDC_production_speed_infrastructure_factor = PRC.PRCDC_production_speed_infrastructure_factor } #基础设施建造速度
+		set_variable = { PRCDC_production_factory_max_efficiency_factor = PRC.PRCDC_production_factory_max_efficiency_factor }  #生产效率上限
+		set_variable = { PRCDC_political_advisor_cost_factor = PRC.PRCDC_political_advisor_cost_factor } #政治顾问花费
+		set_variable = { PRCDC_trade_laws_cost_factor = PRC.PRCDC_trade_laws_cost_factor } #贸易
+		set_variable = { PRCDC_mobilization_laws_cost_factor = PRC.PRCDC_mobilization_laws_cost_factor } #征兵
+		set_variable = { PRCDC_economy_cost_factor = PRC.PRCDC_economy_cost_factor } #经济
+		set_variable = { PRCDC_industrial_capacity_factory = PRC.PRCDC_industrial_capacity_factory } #工厂产出
+		set_variable = { PRCDC_research_speed_factor = PRC.PRCDC_research_speed_factor } #科研速度
+		set_variable = { PRCDC_neutrality_drift = PRC.PRCDC_neutrality_drift } #威权主义理念每日新增支持率
+
+		set_variable = { PPSD_stability_factor = PRC.PPSD_stability_factor }
+		set_variable = { PPSD_political_power_factor = PRC.PPSD_political_power_factor }
+		set_variable = { PPSD_political_advisor_cost_factor = PRC.PPSD_political_advisor_cost_factor }
+		set_variable = { PPSD_trade_laws_cost_factor = PRC.PPSD_trade_laws_cost_factor }
+		set_variable = { PPSD_mobilization_laws_cost_factor = PRC.PPSD_mobilization_laws_cost_factor }
+		set_variable = { PPSD_economy_cost_factor = PRC.PPSD_economy_cost_factor }
+
+		set_variable = { PGW_supply_consumption_factor = PRC.PGW_supply_consumption_factor }
+		set_variable = { PGW_military_leader_cost_factor = PRC.PGW_military_leader_cost_factor }
+		set_variable = { PGW_operation_boost_resistance_outcome = PRC.PGW_military_leader_cost_factor }
+		set_variable = { PGW_compliance_growth_on_our_occupied_states = PRC.PGW_compliance_growth_on_our_occupied_states }
+		set_variable = { PGW_resistance_growth_on_our_occupied_states = PRC.PGW_resistance_growth_on_our_occupied_states }
+		set_variable = { PGW_army_core_defence_factor = PRC.PGW_army_core_defence_factor }
+		set_variable = { PGW_army_core_attack_factor = PRC.PGW_army_core_attack_factor }
+		set_variable = { PGW_army_org_factor = PRC.PGW_army_org_factor }
+		set_variable = { PGW_army_morale_factor = PRC.PGW_army_morale_factor }
+		set_variable = { PGW_training_time_factor = PRC.PGW_training_time_factor }
+		set_variable = { PGW_production_speed_supply_node_factor = PRC.PGW_production_speed_supply_node_factor }
+		set_variable = { PGW_production_speed_rail_way_factor = PRC.PGW_production_speed_rail_way_factor }
+		set_variable = { PGW_production_speed_arms_factory_factor = PRC.PGW_production_speed_arms_factory_factor }
+		set_variable = { PGW_production_speed_bunker_factor = PRC.PGW_production_speed_bunker_factor }
+		set_variable = { PGW_conscription = PRC.PGW_conscription }
+		set_variable = { PGW_nscription_factor = PRC.PGW_nscription_factor }
+		set_variable = { PGW_industrial_capacity_factory = PRC.PGW_industrial_capacity_factory }
+		set_variable = { PGW_local_resources_factor = PRC.PGW_local_resources_factor }
+		set_variable = { PGW_production_speed_buildings_factor = PRC.PGW_production_speed_buildings_factor }
+		set_variable = { PGW_experience_gain_army_unit_factor = PRC.PGW_experience_gain_army_unit_factor }
+		set_variable = { PGW_equipment_capture = PRC.PGW_equipment_capture }
+
+			set_variable = { PJC_production_speed_arms_factory_factor = PRC.PJC_production_speed_arms_factory_factor }
+			set_variable = { PJC_political_power_factor = PRC.PJC_political_power_factor }
+			set_variable = { PJC_political_advisor_cost_factor = PRC.PJC_political_advisor_cost_factor }
+			set_variable = { PJC_max_command_power = PRC.PJC_max_command_power }
+			set_variable = { PJC_command_power_gain_mult = PRC.PJC_command_power_gain_mult }
+			set_variable = { PJC_mobilization_laws_cost_factor = PRC.PJC_mobilization_laws_cost_factor }
+			set_variable = { PJC_economy_cost_factor = PRC.PJC_economy_cost_factor }
+			set_variable = { PJC_conscription = PRC.PJC_conscription }
+			set_variable = { PJC_training_time_factor = PRC.PJC_training_time_factor }
+			set_variable = { PJC_industrial_capacity_factory = PRC.PJC_industrial_capacity_factory }
+			set_variable = { PJC_local_resources_factor = PRC.PJC_local_resources_factor }
+			set_variable = { PJC_consumer_goods_factor = PRC.PJC_consumer_goods_factor }
+			set_variable = { PJC_production_factory_max_efficiency_factor = PRC.PJC_production_factory_max_efficiency_factor }
+			set_variable = { PJC_production_speed_rail_way_factor = PRC.PJC_production_speed_rail_way_factor }
+			set_variable = { dig_in_speed_factor = PRC.PJC_dig_in_speed_factor }
+			set_variable = { max_dig_in = PRC.PJC_max_dig_in }
+			set_variable = { army_defence_factor = PRC.PJC_army_defence_factor }
+
+}

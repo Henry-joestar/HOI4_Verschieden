@@ -1,0 +1,318 @@
+FRA_WORK_MOD_scripted = {
+	set_variable = { FRA_WORK_MOD_communism_drift = FRA.FRA_WORK_MOD_communism_drift }
+	set_variable = { FRA_WORK_MOD_political_power_factor = FRA.FRA_WORK_MOD_political_power_factor }
+	set_variable = { FRA_WORK_MOD_Ssocialism_drift = FRA.FRA_WORK_MOD_Ssocialism_drift }
+
+	set_variable = { FRA_WORK_MOD_industrial_capacity_factory = FRA.FRA_WORK_MOD_industrial_capacity_factory }
+	set_variable = { FRA_WORK_MOD_line_change_production_efficiency_factor = FRA.FRA_WORK_MOD_line_change_production_efficiency_factor }
+	set_variable = { FRA_WORK_MOD_consumer_goods_factor = FRA.FRA_WORK_MOD_consumer_goods_factor }
+}
+FRA_centralright_Vn = {
+		if = {
+		limit = { NOT = {has_country_flag = FRA_centralright_Vn_A } }
+	custom_effect_tooltip = FRA_centralright_Vn_tt
+	set_country_flag = FRA_centralright_Vn_A
+	add_political_power = 50
+	add_stability = 0.03
+	}
+	else_if = {
+		limit = { has_country_flag = FRA_centralright_Vn_A }
+	custom_effect_tooltip = FRA_centralright_Vn_tt
+	set_country_flag = FRA_centralright_Vn_B
+	add_stability = 0.02
+	add_war_support = 0.08
+	add_popularity = { ideology = fascism popularity = 0.05 }
+	}
+	else_if = {
+		limit = { has_country_flag = FRA_centralright_Vn_B }
+		swap_ideas = {
+		remove_idea = neutrality_Authoritarian_regime
+			add_idea = fascism_dictatorship_regime
+		}
+	}
+}
+FRA_Collectivization_of_agriculture_scripted_effects = {
+	if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_A }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_A
+			add_idea = FRA_Collectivization_of_agriculture_idea_B
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_B }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_B
+			add_idea = FRA_Collectivization_of_agriculture_idea_C
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_C }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_C
+			add_idea = FRA_Collectivization_of_agriculture_idea_D
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_D }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_D
+			add_idea = FRA_Collectivization_of_agriculture_idea_E
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_E }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_E
+			add_idea = FRA_Collectivization_of_agriculture_idea_F
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_F }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_F
+			add_idea = FRA_Collectivization_of_agriculture_idea_G
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_G }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_G
+			add_idea = FRA_Collectivization_of_agriculture_idea_H
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_H }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_H
+			add_idea = FRA_Collectivization_of_agriculture_idea_I
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_I }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_I
+			add_idea = FRA_Collectivization_of_agriculture_idea_J
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_J }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_J
+			add_idea = FRA_Collectivization_of_agriculture_idea_K
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_K }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_K
+			add_idea = FRA_Collectivization_of_agriculture_idea_L
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_L }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_L
+			add_idea = FRA_Collectivization_of_agriculture_idea_M
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_M }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_M
+			add_idea = FRA_Collectivization_of_agriculture_idea_N
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_N }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_N
+			add_idea = FRA_Collectivization_of_agriculture_idea_O
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_O }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_O
+			add_idea = FRA_Collectivization_of_agriculture_idea_P
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_P }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_P
+			add_idea = FRA_Collectivization_of_agriculture_idea_Q
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_Q }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_Q
+			add_idea = FRA_Collectivization_of_agriculture_idea_R
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_R }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_R
+			add_idea = FRA_Collectivization_of_agriculture_idea_S
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_S }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_S
+			add_idea = FRA_Collectivization_of_agriculture_idea_T
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Collectivization_of_agriculture_idea_T }
+		swap_ideas = {
+			remove_idea = FRA_Collectivization_of_agriculture_idea_T
+			add_idea = FRA_Collectivization_of_agriculture_idea_U
+		}
+	}
+}
+##############################################################################################################################################################################
+FRA_Industrial_collectivization_scripted_effects = {
+	if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_A }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_A
+			add_idea = FRA_Industrial_collectivization_idea_B
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_B }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_B
+			add_idea = FRA_Industrial_collectivization_idea_C
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_C }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_C
+			add_idea = FRA_Industrial_collectivization_idea_D
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_D }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_D
+			add_idea = FRA_Industrial_collectivization_idea_E
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_E }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_E
+			add_idea = FRA_Industrial_collectivization_idea_F
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_F }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_F
+			add_idea = FRA_Industrial_collectivization_idea_G
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_G }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_G
+			add_idea = FRA_Industrial_collectivization_idea_H
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_H }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_H
+			add_idea = FRA_Industrial_collectivization_idea_I
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_I }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_I
+			add_idea = FRA_Industrial_collectivization_idea_J
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_J }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_J
+			add_idea = FRA_Industrial_collectivization_idea_K
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_K }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_K
+			add_idea = FRA_Industrial_collectivization_idea_L
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_L }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_L
+			add_idea = FRA_Industrial_collectivization_idea_M
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_M }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_M
+			add_idea = FRA_Industrial_collectivization_idea_N
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_N }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_N
+			add_idea = FRA_Industrial_collectivization_idea_O
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_O }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_O
+			add_idea = FRA_Industrial_collectivization_idea_P
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_P }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_P
+			add_idea = FRA_Industrial_collectivization_idea_Q
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_Q }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_Q
+			add_idea = FRA_Industrial_collectivization_idea_R
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_R }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_R
+			add_idea = FRA_Industrial_collectivization_idea_S
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_S }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_S
+			add_idea = FRA_Industrial_collectivization_idea_T
+		}
+	}
+	else_if = {
+		limit = { has_idea = FRA_Industrial_collectivization_idea_T }
+		swap_ideas = {
+			remove_idea = FRA_Industrial_collectivization_idea_T
+			add_idea = FRA_Industrial_collectivization_idea_U
+		}
+	}
+}

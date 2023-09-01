@@ -1,0 +1,530 @@
+focus_tree = {
+	id = PEK_2
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = PEK
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 1800 }
+	focus = {
+		id = PEK_SC#社会主义道路
+		icon = GFX_AFS_Social_Democratic_Party
+		mutually_exclusive = {
+			focus = PEK_fascit
+			focus = PEK_capi
+			focus = PEK_M
+		}
+		cost = 10.00
+			available = {
+			}
+		completion_reward = {
+		remove_ideas = PEK_issue
+	add_popularity = { ideology = democratic  popularity = 0.15 }
+	add_popularity = { ideology = communism  popularity = 0.15 }
+	add_popularity = { ideology = Ssocialism  popularity = 0.15 }
+	add_popularity = { ideology = Authoritarian_capitalism popularity = -0.2 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = PEK_M#奶酪王万岁！
+		icon = GFX_ PEK_M
+		cost = 10.00
+		mutually_exclusive = {
+			focus = PEK_SC
+			focus = PEK_fascit
+			focus = PEK_capi
+		}
+			available = {
+			}
+		completion_reward = {
+		remove_ideas = PEK_issue
+	add_popularity = { ideology = neutrality  popularity = 0.15 }
+	add_popularity = { ideology = Authoritarian_capitalism popularity = -0.2 }
+		if = {
+			limit = {
+				original_tag = PEK
+			}
+				set_politics = {
+					ruling_party =neutrality
+				}
+				create_country_leader = {
+					name = "AmerUzily_3"#领导人
+					desc = "AmerUzily_3_DESC"
+					picture = "gfx\leaders\MEME\AmerUzily_monarch.png"
+					expire = "1985.1.1"#下台时间
+					ideology = despotism
+					traits = {}
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 9
+		y = 1
+
+	}
+	focus = {
+		id = PEK_fascit#汉利安人的胜利！
+		icon = GFX_PEK_fascit
+		cost = 10.00
+		mutually_exclusive = {
+			focus = PEK_SC
+			focus = PEK_capi
+			focus = PEK_M
+		}
+			available = {
+			}
+		completion_reward = {
+		remove_ideas = PEK_issue
+		if = {
+			limit = {
+				original_tag = PEK
+			}
+				set_politics = {
+					ruling_party =fascism
+				}
+	add_popularity = { ideology = fascism  popularity = 0.15 }
+	add_popularity = { ideology = Authoritarian_capitalism popularity = -0.2 }
+				create_country_leader = {
+					name = "AmerUzily_4"#领导人
+					desc = "AmerUzily_4_DESC"
+					picture = "gfx\leaders\MEME\AmerUzily_Burgundy.png"
+					expire = "1985.1.1"#下台时间
+					ideology = Burgundian_system
+					traits = {}
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = PEK_capi#继续资本主义道路
+		icon = GFX_LTD_LLGS
+		cost = 10.00
+		mutually_exclusive = {
+			focus = PEK_SC
+			focus = PEK_fascit
+			focus = PEK_M
+		}
+			available = {
+			}
+		completion_reward = {
+		remove_ideas = PEK_issue
+
+	add_popularity = { ideology = Authoritarian_capitalism popularity = 0.2 }
+		if = {
+			limit = {
+				original_tag = PEK
+			}
+				set_politics = {
+					ruling_party =Authoritarian_capitalism
+				}
+				create_country_leader = {
+					name = "AmerUzily_2"#领导人
+					desc = "AmerUzily_2_DESC"
+					picture = "gfx\leaders\MEME\AmerUzily_capitalist.png"
+					expire = "1985.1.1"#下台时间
+					ideology = Enterprise_company
+					traits = {}
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = newfocus_4_PEK#社会主义革命
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.00
+		prerequisite = {
+			focus = PEK_SC
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = newfocus_5_PEK#民主社会主义
+		icon = GFX_AFS_Social_Democratic_Party
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_4_PEK#社会主义革命
+		}
+		mutually_exclusive = {
+			focus = newfocus_6_PEK#激进社会主义
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = newfocus_10_PEK#三民主义纲领
+		icon = GFX_newfocus_10_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_5_PEK#民主社会主义
+		}
+		x = 1
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_6_PEK#激进社会主义
+		icon = GFX_goal_support_communism
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_4_PEK#社会主义革命
+		}
+		mutually_exclusive = {
+			focus = newfocus_5_PEK#民主社会主义
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = newfocus_7_PEK#银行国有化
+		icon = GFX_LTD_LLYHGHY
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_5_PEK#民主社会主义
+			focus = newfocus_6_PEK#激进社会主义
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = newfocus_8_PEK#土地改革
+		icon = GFX_goal_generic_construct_civilian
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_7_PEK#银行国有化
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_9_PEK#农业集体化
+		icon = GFX_LTD_NYJTH
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_8_PEK#土地改革
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_14_PEK#自由意志社会主义
+		icon = GFX_anarchism
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_6_PEK#激进社会主义
+		}
+		mutually_exclusive = {
+			focus = newfocus_13_PEK#威权社会主义
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_16_PEK#威权只养老马屁精！
+		icon = GFX_goal_generic_attack_allies
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_14_PEK#自由意志社会主义
+		}
+		mutually_exclusive = {
+			focus = newfocus_17_PEK#委员会共产主义
+		}
+		x = 3
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_22_PEK#一切权力归劳联会
+		icon = GFX_AFS_commune
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_16_PEK#威权只养老马屁精！
+		}
+		x = 3
+		y = 10
+
+	}
+	focus = {
+		id = newfocus_17_PEK#委员会共产主义
+		icon = GFX_AFS_all_dictatorship_of_the_proletariat
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_14_PEK#自由意志社会主义
+		}
+		mutually_exclusive = {
+			focus = newfocus_16_PEK#威权只养老马屁精！
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_23_PEK#经济民主化
+		icon = GFX_AFS_Soviet_Democracy
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_16_PEK#威权只养老马屁精！
+			focus = newfocus_17_PEK#委员会共产主义
+		}
+		x = 4
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_24_PEK#产业工联
+		icon = GFX_AFS_Syndical_economy
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_23_PEK#经济民主化
+		}
+		x = 4
+		y = 9
+
+	}
+	focus = {
+		id = newfocus_21_PEK#一切权力归苏维埃！
+		icon = GFX_AFS_all_dictatorship_of_the_proletariat
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_17_PEK#委员会共产主义
+		}
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = newfocus_13_PEK#威权社会主义
+		icon = GFX_newfocus_13_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_6_PEK#激进社会主义
+		}
+		mutually_exclusive = {
+			focus = newfocus_14_PEK#自由意志社会主义
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_15_PEK#社会所有制的革命
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_14_PEK#自由意志社会主义
+			focus = newfocus_13_PEK#威权社会主义
+		}
+		x = 6
+		y = 6
+
+	}
+	focus = {
+		id = newfocus_19_PEK#妇女解放运动
+		icon = GFX_newfocus_19_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_15_PEK#社会所有制的革命
+		}
+		x = 6
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_20_PEK#民族平权运动
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_19_PEK#妇女解放运动
+		}
+		x = 6
+		y = 9
+
+	}
+	focus = {
+		id = newfocus_18_PEK#真正的无产阶级先锋队！
+		icon = GFX_newfocus_18_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_13_PEK#威权社会主义
+		}
+		mutually_exclusive = {
+			focus = newfocus_26_PEK#社会极端主义
+		}
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_28_PEK#必要的个人崇拜
+		icon = GFX_PEK_fuckcup
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_18_PEK#真正的无产阶级先锋队！
+		}
+		x = 7
+		y = 10
+
+	}
+	focus = {
+		id = newfocus_27_PEK#集权化
+		icon = GFX_newfocus_13_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_18_PEK#真正的无产阶级先锋队！
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_29_PEK#民主集中制
+		icon = GFX_not_democracy
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_27_PEK#集权化
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = newfocus_26_PEK#社会极端主义
+		icon = GFX_goal_generic_secret_weapon
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_13_PEK#威权社会主义
+		}
+		mutually_exclusive = {
+			focus = newfocus_18_PEK#真正的无产阶级先锋队！
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_11_PEK#经济改革
+		icon = GFX_socialist_market_economy
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_10_PEK#三民主义纲领
+		}
+		x = 1
+		y = 5
+
+	}
+	focus = {
+		id = newfocus_12_PEK#民主主义官僚机构
+		icon = GFX_newfocus_10_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_11_PEK#经济改革
+		}
+		x = 1
+		y = 6
+
+	}
+	focus = {
+		id = newfocus_25_PEK#联邦化
+		icon = GFX_democracy
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_17_PEK#委员会共产主义
+			focus = newfocus_16_PEK#威权只养老马屁精！
+			focus = newfocus_31_PEK#工会
+		}
+		x = 2
+		y = 8
+
+	}
+	focus = {
+		id = newfocus_30_PEK#无产阶级文化大革命
+		icon = GFX_PRC_Cultural_revolution_1
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_28_PEK#必要的个人崇拜
+		}
+		mutually_exclusive = {
+			focus = newfocus_33_PEK
+		}
+		x = 5
+		y = 11
+
+	}
+	focus = {
+		id = newfocus_33_PEK#大护国公
+		icon = GFX_newfocus_33_PEK
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_28_PEK#必要的个人崇拜
+		}
+		mutually_exclusive = {
+			focus = newfocus_30_PEK
+		}
+		x = 7
+		y = 11
+
+	}
+	focus = {
+		id = newfocus_34_PEK#对内革命
+		icon = GFX_AFS_Revolutionary_terror
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_33_PEK#大护国公
+		}
+		x = 7
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_31_PEK#工会
+		icon = GFX_anarchsyndicalism
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_12_PEK#民主主义官僚机构
+		}
+		x = 1
+		y = 7
+
+	}
+	focus = {
+		id = newfocus_32_PEK#社会民主化改革
+		icon = GFX_goal_support_democracy
+		cost = 0.00
+		prerequisite = {
+			focus = newfocus_31_PEK#工会
+		}
+		x = 1
+		y = 9
+
+	}
+}

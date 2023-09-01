@@ -1,0 +1,150 @@
+sub_units = {
+	cavalry_artillery_brigade = {
+		abbreviation = "CAB"
+		sprite = cavalry
+		sprite = artillery
+		map_icon_category = other
+		priority = 1100
+		ai_priority = 150
+		active = yes
+		cavalry = yes
+
+		type = {
+			infantry
+			artillery
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+			category_artillery
+		}
+
+		
+		combat_width = 2.5
+		
+		#Size Definitions
+		max_organisation = 0
+		max_strength = 15
+		default_morale = 0.2
+		manpower = 1400
+
+		#Misc Abilities
+		maximum_speed = 0.6
+		training_time = 200		
+		weight = 0.5
+		
+		breakthrough = 1
+		supply_consumption = 0.28
+
+		#Offensive Abilities
+		suppression = 2
+	
+		need = {
+			infantry_equipment = 80
+			artillery_equipment = 36
+		}
+
+		forest = {
+			attack = -0.05
+		}
+
+		hills = {
+			attack = -0.05
+		}
+
+		mountain = {
+			attack = -0.1
+			movement = -0.05
+		}
+
+		jungle = {
+			attack = -0.1
+		}
+
+		urban = {
+			attack = -0.05
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+	cavalry_GUN = {
+		abbreviation = "CAG"
+		sprite = cavalry
+		map_icon_category = other
+		priority = 1100
+		ai_priority = 150
+		active = yes
+		cavalry = yes
+
+		type = {
+			infantry
+			artillery
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_army
+		}
+
+		
+		combat_width = 2.5
+		
+		#Size Definitions
+		max_organisation = 1
+		max_strength = 15
+		default_morale = 0.2
+		manpower = 600
+
+		#Misc Abilities
+		maximum_speed = 0.6
+		training_time = 130		
+		weight = 0.5
+		
+		breakthrough = 2.5
+		air_attack = 1.5
+		supply_consumption = 0.28
+
+		soft_attack = 2.8
+
+		#Offensive Abilities
+		suppression = 2
+	
+		need = {
+			support_equipment = 200
+			infantry_equipment = 80
+		}
+
+		forest = {
+			attack = -0.02
+		}
+
+		hills = {
+			attack = -0.02
+		}
+
+		mountain = {
+			attack = -0.05
+			movement = -0.02
+		}
+
+		jungle = {
+			attack = -0.05
+		}
+
+		urban = {
+			attack = -0.02
+		}
+
+		amphibious = {
+			attack = -0.2
+		}
+	}
+}

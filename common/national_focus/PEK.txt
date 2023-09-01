@@ -1,0 +1,44 @@
+focus_tree = {
+	id = PEK
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PEK
+		}
+	}
+	default = no
+	focus = {
+		id = PEK_fuckcup#摘下头套
+		icon = GFX_PEK_fuckcup
+		cost = 10.00
+			available = {
+			}
+		completion_reward = {
+		load_focus_tree = PEK_2
+		if = {
+			limit = {
+				original_tag = PEK
+			}
+				set_politics = {
+					ruling_party =Authoritarian_capitalism
+				}
+				create_country_leader = {
+					name = "AmerUzily_1"#领导人
+					desc = "AmerUzily_1_DESC"
+					picture = "gfx\leaders\MEME\AmerUzily.png"
+					expire = "1985.1.1"#下台时间
+					ideology = State_capitalism
+					traits = {}
+					}
+			}
+
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 1
+		y = 1
+
+	}
+}

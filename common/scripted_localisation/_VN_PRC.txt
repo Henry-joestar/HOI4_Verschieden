@@ -1,0 +1,30 @@
+defined_text = {
+	name = GET_LUOCHUANHUIYI_EVENT#洛川会议事件
+	text = {
+	trigger = { 
+	has_country_flag = PRC_maos_leader
+			} 
+	localization_key = Vn_PRC_19_d_A
+	}
+	text = {
+	trigger = { 
+			has_country_flag = PRC_not_maos_leader
+			} 
+	localization_key = Vn_PRC_19_d_B
+	}
+}
+defined_text = {
+	name = GET_PRC_Luochuan_Conference_desc#洛川会议国策
+	text = {
+	trigger = { 
+	NOT = { has_country_flag = PRC_not_maos_leader }
+			} 
+	localization_key = PRC_Luochuan_Conference_A_desc
+	}
+	text = {
+	trigger = { 
+	has_country_flag = PRC_not_maos_leader
+			} 
+	localization_key = PRC_Luochuan_Conference_B_desc
+	}
+}

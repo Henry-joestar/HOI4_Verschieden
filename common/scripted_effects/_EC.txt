@@ -1,0 +1,301 @@
+ALL_EC_ST = {
+set_temp_variable = { EC1_ALL = Private_enterprise }#私有企业
+set_temp_variable = { EC2_ALL = State_owned_enterprises }#国有企业
+set_temp_variable = { EC3_ALL = Military_industrial_complex }#军工复合体
+set_temp_variable = { EC4_ALL = Military_industry }#民营军事工业
+set_temp_variable = { EC5_ALL = Mining_enterprises }#矿业
+}
+maket_economic_dynamic_modifiers_SP = {
+	set_variable = { GMES_production_speed_industrial_complex_factor = GMES_production_speed_industrial_complex_factor }
+	set_variable = { GMES_production_speed_arms_factory_factor = GMES_production_speed_arms_factory_factor }
+	set_variable = { GMES_production_speed_infrastructure_factor = GMES_production_speed_infrastructure_factor }
+	set_variable = { FBGMES_production_speed_buildings_factor = FBGMES_production_speed_buildings_factor }
+	set_variable = { GMES_production_factory_max_efficiency_factor = GMES_production_factory_max_efficiency_factor }
+	set_variable = { GMES_production_factory_efficiency_gain_factor = GMES_production_factory_efficiency_gain_factor }
+	set_variable = { FBGMES_consumer_goods_factor = FBGMES_consumer_goods_factor }
+	set_variable = { GMES_industrial_capacity_factory = GMES_industrial_capacity_factory }
+	set_variable = { GMES_production_lack_of_resource_penalty_factor = GMES_production_lack_of_resource_penalty_factor }
+	set_variable = { GMES_local_resources_factor = GMES_local_resources_factor }
+	set_variable = { GMES_research_speed_factor = GMES_research_speed_factor }
+	set_variable = { GMES_economy_cost_factor = GMES_economy_cost_factor }
+	set_variable = { GMES_tank_manufacturer_cost_factor = GMES_tank_manufacturer_cost_factor }
+	set_variable = { GMES_naval_manufacturer_cost_factor = GMES_naval_manufacturer_cost_factor }
+	set_variable = { GMES_aircraft_manufacturer_cost_factor = GMES_aircraft_manufacturer_cost_factor }
+	set_variable = { GMES_materiel_manufacturer_cost_factor = GMES_materiel_manufacturer_cost_factor }
+	set_variable = { GMES_industrial_concern_cost_factor = GMES_industrial_concern_cost_factor }
+	set_variable = { GMES_political_power_cost = GMES_political_power_cost }
+}
+planned_economic_dynamic_modifiers_SP = {
+	set_variable = { GPESN_political_power_cost = GPESN_political_power_cost }
+	set_variable = { GPESN_research_speed_factor = GPESN_research_speed_factor }
+	set_variable = { GPESN_production_speed_buildings_factor = GPESN_production_speed_buildings_factor }
+	set_variable = { GPESN_production_factory_max_efficiency_factor = GPESN_production_factory_max_efficiency_factor }
+	set_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_production_factory_efficiency_gain_factor }
+	set_variable = { GPESN_consumer_goods_factor = GPESN_consumer_goods_factor }
+	set_variable = { GPESN_industrial_capacity_factory = GPESN_industrial_capacity_factory }
+	set_variable = { GPESN_local_resources_factor = GPESN_local_resources_factor }
+
+
+#合作社
+	set_variable = { COES_political_power_cost = COES_political_power_cost }
+	set_variable = { COES_consumer_goods_factor = COES_consumer_goods_factor }
+	set_variable = { COES_production_speed_buildings_factor = COES_production_speed_buildings_factor }
+	set_variable = { COES_production_factory_max_efficiency_factor = COES_production_factory_max_efficiency_factor }
+	set_variable = { COES_production_factory_efficiency_gain_factor = COES_production_factory_efficiency_gain_factor }
+	set_variable = { COES_local_resources_factor = COES_local_resources_factor }
+	set_variable = { COES_research_speed_factor = COES_research_speed_factor }
+}
+ALL_EC_Private_enterprise = {
+	custom_effect_tooltip = EC_ST_Increase_private_enterprise
+		add_to_variable = { Private_enterprise = 1 }
+		add_to_variable = { GMES_production_speed_industrial_complex_factor = 0.025 }
+		add_to_variable = { GMES_production_speed_infrastructure_factor = 0.025 }
+		add_to_variable = { GMES_production_speed_buildings_factor = 0.075 }
+		add_to_variable = { GMES_consumer_goods_factor = -0.0025 }
+		add_to_variable = { GMES_research_speed_factor = 0.005 }
+}
+ALL_EC_ownership_construction_bulidng_speed_jian = {
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_1
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_2
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_3
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_4
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_5
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_6
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_7
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_8
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_9
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_4
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_5
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_6
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_7
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_8
+			days = 10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_9
+			days = 10
+				}
+}
+ALL_EC_ownership_construction_bulidng_speed_add = {
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_1
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_2
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_3
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_4
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_5
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_6
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_7
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_8
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = ownership_construction_units_9
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_4
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_5
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_6
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_7
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_8
+			days = -10
+				}
+			add_days_mission_timeout = {
+			mission = Private_ownership_construction_units_9
+			days = -10
+				}
+}
+ALL_EC_Military_industrial_complex = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	custom_effect_tooltip = EC_ST_Increase_Military_investment
+		add_to_variable = { Military_Military_industrial_complex = 1 }
+		add_to_variable = { GMES_production_factory_max_efficiency_factor = -0.025 }
+		add_to_variable = { GMES_production_factory_efficiency_gain_factor = 0.05 }
+		add_to_variable = { GMES_research_speed_factor = 0.005 }
+}
+ALL_EC_Military_industry = {
+	custom_effect_tooltip = EC_ST_Increase_Military_industry
+		add_to_variable = { Military_industry = 1 }
+		add_to_variable = { GMES_industrial_capacity_factory = 0.075 }
+		add_to_variable = { GMES_production_factory_efficiency_gain_factor = 0.025 }
+		add_to_variable = { GMES_production_speed_arms_factory_factor = 0.05 }
+		add_to_variable = { GMES_research_speed_factor = 0.005 }
+}
+ALL_EC_Mining_enterprises = {
+	custom_effect_tooltip = EC_ST_Increase_Mining_enterprises
+		add_to_variable = { Private_enterprise = 1 }
+		add_to_variable = { Mining_enterprises = 1 }
+		add_to_variable = { GMES_production_speed_infrastructure_factor = 0.025 }
+		add_to_variable = { GMES_production_lack_of_resource_penalty_factor = -0.1 }
+		add_to_variable = { GMES_local_resources_factor = 0.05 }
+		add_to_variable = { GMES_research_speed_factor = 0.005 }
+}
+PIAC_building = {
+	set_variable = { PICM_state_production_speed_buildings_factor = PICM_state_production_speed_buildings_factor }
+	set_variable = { PICM_monthly_population = PICM_monthly_population }
+	set_variable = { PACM_state_production_speed_arms_factory_factor = PACM_state_production_speed_arms_factory_factor }
+	set_variable = { PACM_monthly_population = PACM_monthly_population }
+}
+private_industrial_complex_building = {
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+}
+private_army_complex_building = {
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+}
+PIC_privates = {
+		remove_building = {
+		type = industrial_complex
+		level = 1
+		}
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.01 }
+}
+PAC_privates = {
+			remove_building = {
+			type = arms_factory
+			level = 1
+			}
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.01 }
+}
+Private_construction_units_level_up = {
+	custom_effect_tooltip = Private_construction_units_level_up_tt
+	if = {
+		limit = { 
+		NOT = { has_country_flag = Private_construction_units_14_flag } 
+		NOT = { has_country_flag = Private_construction_units_14_1_flag } 
+		}
+		set_country_flag = Private_construction_units_14_flag
+		set_Private_construction_units_14_1_flag
+	}
+	else_if = {
+		limit = { 
+		has_country_flag = Private_construction_units_14_flag
+		NOT = { has_country_flag = Private_construction_units_15_1_flag } 
+		 }
+		set_country_flag = Private_construction_units_15_flag
+		set_Private_construction_units_15_1_flag
+	}
+	else_if = {
+		limit = { 
+		has_country_flag = Private_construction_units_15_flag
+		NOT = { has_country_flag = Private_construction_units_16_1_flag } 
+		 }
+		set_country_flag = Private_construction_units_16_flag
+		set_Private_construction_units_16_1_flag
+	}
+	else_if = {
+		limit = { has_country_flag = Private_construction_units_16_flag }
+		set_country_flag = Private_construction_units_17_flag		
+	}
+}
+

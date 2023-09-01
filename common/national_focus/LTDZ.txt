@@ -1,0 +1,756 @@
+focus_tree = {
+	id = LTDZ_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LTD
+		}
+	}
+	default = no
+	focus = {
+		id = ITD_newfocus_0#重视基础设施
+		icon = GFX_goal_generic_construct_civilian
+		cost = 0.00
+		x = 5
+		y = 0
+
+	}
+	focus = {
+		id = ITD_newfocus_13#草原骑兵
+		icon = GFX_goal_generic_cavalry
+		cost = 0.00
+		x = 11
+		y = 0
+
+	}
+	focus = {
+		id = ITD_newfocus_30#丁真元首
+		icon = GFX_LTD_DJ
+		cost = 0.00
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = ITD_newfocus_31#四郎罗布元首
+		icon = GFX_LTD_DJJJ
+		cost = 0.00
+		x = 22
+		y = 0
+
+	}
+	focus = {
+		id = ITD_newfocus_32#刘建龙元首
+		icon = GFX_LTD_LL
+	visible = {
+		has_global_flag = LTD_LJLrevolution
+	}
+		cost = 0.00
+		x = 27
+		y = 0
+
+	}
+	focus = {
+		id = ITD_newfocus_1#先进设施
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_0#重视基础设施
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = ITD_newfocus_2#重视军工
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_1#先进设施
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_4#军用化建设
+		icon = GFX_Military_factories
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_2#重视军工
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_3#重视民工
+		icon = GFX_Civilian_factories
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_1#先进设施
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_5#民用企业建设
+		icon = GFX_Civilian_factories3
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_3#重视民工
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_6#重视工业化
+		icon = GFX_Civilian_factories2
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_4#军用化建设
+		}
+		prerequisite = {
+			focus = ITD_newfocus_5#民用企业建设
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = ITD_newfocus_10#生产加工专业化
+		icon = GFX_goal_generic_production
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_6#重视工业化
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = ITD_newfocus_11#改进工作场所
+		icon = GFX_goal_generic_production2
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_6#重视工业化
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = ITD_newfocus_8#草原贸易
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_1#先进设施
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_9#特色旅游项目
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_8#草原贸易
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_12#外国大使馆
+		icon = GFX_goal_generic_improve_relations
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_9#特色旅游项目
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = ITD_newfocus_14#理塘军事中心
+		icon = GFX_goal_generic_army_doctrines
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_13#草原骑兵
+		}
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = ITD_newfocus_15#民兵游击队
+		icon = GFX_goal_generic_alliance
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_14#理塘军事中心
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_18#骑兵游击队
+		icon = GFX_goal_generic_cavalry
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_15#民兵游击队
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_16#专业化统帅部
+		icon = GFX_goal_generic_air_doctrine
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_14#理塘军事中心
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = LTD_newfocus_17#理塘军队
+		icon = GFX_goal_generic_small_arms
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_16#专业化统帅部
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_19#理塘训练基地
+		icon = GFX_goal_generic_demand_territory
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_14#理塘军事中心
+			focus = ITD_newfocus_18#骑兵游击队
+			focus = LTD_newfocus_17#理塘军队
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = ITD_newfocus_23#理塘科研
+		icon = GFX_focus_research
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_6#重视工业化
+		}
+		prerequisite = {
+			focus = ITD_newfocus_19#理塘训练基地
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = LTD_newfocus_25#理塘空军基地
+		icon = GFX_goal_generic_build_airforce
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_19#理塘训练基地
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = LTD_newfocus_26#理塘飞机
+		icon = GFX_goal_generic_air_fighter2
+		cost = 0.00
+		prerequisite = {
+			focus = LTD_newfocus_25#理塘空军基地
+		}
+		x = 13
+		y = 6
+
+	}
+	focus = {
+		id = LTD_newfocus_27#理塘轰炸机
+		icon = GFX_goal_generic_air_bomber
+		cost = 0.00
+		prerequisite = {
+			focus = LTD_newfocus_26#理塘飞机
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = LTD_newfocus_28#理塘空军中央指挥部
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 0.00
+		prerequisite = {
+			focus = LTD_newfocus_27#理塘轰炸机
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = ITD_newfocus_33#人民议政会
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_30#丁真元首
+		}
+		x = 17
+		y = 1
+
+	}
+	focus = {
+		id = ITD_newfocus_36#丁真电台
+		icon = GFX_LTD_DJNHG
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_33#人民议政会
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_34#农业集体化
+		icon = GFX_LTD_NYJTH
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_33#人民议政会
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_35#丁真烟草公司
+		icon = GFX_LTD_DJCY
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_34#农业集体化
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_37#一眼丁真
+		icon = GFX_LTD_YYDJ
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_36#丁真电台
+			focus = ITD_newfocus_35#丁真烟草公司
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = ITD_newfocus_42#组建官僚集团
+		icon = GFX_LTD_DJJJG
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_31#四郎罗布元首
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = ITD_newfocus_43#清洗丁真派
+		icon = GFX_goal_generic_secret_weapon
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_42#组建官僚集团
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_44#小心点，老大哥在看着你呢
+		icon = GFX_LTD_DJJJXCN
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_43#清洗丁真派
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_45#农业集体化
+		icon = GFX_LTD_NYJTH
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_42#组建官僚集团
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_46#以丁真之名
+		icon = GFX_LTD_DJ
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_45#农业集体化
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_47#消除文盲
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_44#小心点，老大哥在看着你呢
+			focus = ITD_newfocus_46#以丁真之名
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = ITD_newfocus_55#戴维董事长
+		icon = GFX_LTD_LLGL
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_32#刘建龙元首
+		}
+		x = 27
+		y = 1
+
+	}
+	focus = {
+		id = ITD_newfocus_56#戴维国有企业
+		icon = GFX_LTD_LLGS
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_55#戴维董事长
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_57#徒步浪人
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_56#戴维国有企业
+		}
+		x = 26
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_58#农业集体化
+		icon = GFX_LTD_NYJTH
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_55#戴维董事长
+		}
+		x = 28
+		y = 2
+
+	}
+	focus = {
+		id = ITD_newfocus_59#银行国有化
+		icon = GFX_LTD_LLYHGHY
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_58#农业集体化
+		}
+		x = 28
+		y = 3
+
+	}
+	focus = {
+		id = ITD_newfocus_65#清洗反对者
+		icon = GFX_goal_generic_attack_allies
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_57#徒步浪人
+			focus = ITD_newfocus_59#银行国有化
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = ITD_newfocus_60#消除文盲
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_65#清洗反对者
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = ITD_newfocus_66#华丽直播电台
+		icon = GFX_goal_generic_radar
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_60#消除文盲
+		}
+		x = 28
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_61#禁止犟嘴
+		icon = GFX_LTD_LLJZ
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_60#消除文盲
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_7#保持威慑
+		icon = GFX_goal_generic_military_sphere
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_6#重视工业化
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_20#专用军事手册
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_19#理塘训练基地
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = ITD_newfocus_21#理塘特务部
+		icon = GFX_Horror
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_20#专用军事手册
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_22#理塘火箭军
+		icon = GFX_focus_rocketry
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_23#理塘科研
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_24#理塘核弹
+		icon = GFX_focus_wonderweapons
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_22#理塘火箭军
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_29#面向国际
+		icon = GFX_goal_anschluss
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_21#理塘特务部
+		}
+		x = 11
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_38#理塘专业学校
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_37#一眼丁真
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = ITD_newfocus_39#巩固权力
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_38#理塘专业学校
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_40#消灭舅舅
+		icon = GFX_jail
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_39#巩固权力
+		}
+		mutually_exclusive = {
+			focus = ITD_newfocus_41#压制舅舅权力
+		}
+		x = 16
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_41#压制舅舅权力
+		icon = GFX_Amnesty_world
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_39#巩固权力
+		}
+		mutually_exclusive = {
+			focus = ITD_newfocus_40#消灭舅舅
+		}
+		x = 18
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_48#集权化政体
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_47#消除文盲
+		}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = ITD_newfocus_49#婚姻部
+		icon = GFX_LTD_DJJJXCN
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_48#集权化政体
+		}
+		x = 22
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_50#将眼光看向境外
+		icon = GFX_goal_generic_political_pressure
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_41#压制舅舅权力
+			focus = ITD_newfocus_40#消灭舅舅
+			focus = ITD_newfocus_49#婚姻部
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = ITD_newfocus_51#四川王
+		icon = GFX_goal_generic_air_doctrine
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_48#集权化政体
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = ITD_newfocus_52#一个中国政策
+		icon = GFX_focus_chi_one_china_policy
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_50#将眼光看向境外
+		}
+		x = 20
+		y = 9
+
+	}
+	focus = {
+		id = ITD_newfocus_53#声锁蒙古
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_52#一个中国政策
+		}
+		x = 20
+		y = 10
+
+	}
+	focus = {
+		id = ITD_newfocus_54#声锁西藏
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_53#声锁蒙古
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = ITD_newfocus_62#拷打运动
+		icon = GFX_LTD_torture
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_66#华丽直播电台
+		}
+		x = 29
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_63#epe芭蕾apa亏内
+		icon = GFX_goal_generic_propaganda
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_61#禁止犟嘴
+			focus = ITD_newfocus_66#华丽直播电台
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = ITD_newfocus_64#代表着开心代表着快乐
+		icon = GFX_goal_generic_radar
+		cost = 0.00
+		prerequisite = {
+			focus = ITD_newfocus_63#epe芭蕾apa亏内
+		}
+		x = 27
+		y = 8
+
+	}
+}

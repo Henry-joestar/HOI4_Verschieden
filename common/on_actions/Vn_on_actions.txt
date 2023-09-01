@@ -1,0 +1,1901 @@
+on_actions = {
+		on_daily_JAP = {
+    			effect = {
+       			 if = {
+          			  limit = {
+			NOT = { has_country_flag = JAP_intervene_in_china_2 }
+				613 = {
+					controller = { 
+						OR = {
+							is_in_faction_with = JAP 
+							is_puppet_of = JAP
+							tag = JAP
+								}
+							}
+						}
+					}
+			set_country_flag = JAP_intervene_in_china_2
+			add_timed_idea = { idea = JAP_Get_carried_away_by_victory days = 1200 }
+			}
+       			 if = {
+          			  limit = {
+			has_completed_focus = JAP_Sweep_policy
+					}
+				every_state = {
+						limit = {
+					is_core_of = CHI
+					NOT = { has_state_flag = JAP_Sweep_policy }
+						or = {
+						is_controlled_by = JAP
+									}
+								}
+					set_state_flag = JAP_Sweep_policy
+					add_dynamic_modifier = {
+					modifier = JAP_Sweep_policy
+					scope = jap
+					days = 450
+						}
+					}
+				}
+       			 if = {
+          			  limit = {
+				date > 1937.7.6
+				NOT = { has_country_flag = Vn_jap_30_flag }
+			is_puppet = no 
+			NOT = { has_war_with = CHI }
+		NOT = { has_government = communism }
+		NOT = { has_government = democratic }
+		NOT = { has_government = Ssocialism }
+		has_completed_focus = JAP_purge_the_kodoha_factionVN
+					}
+			country_event = Vn_jap.30
+			set_country_flag = Vn_jap_30_flag
+				}
+       			 if = {
+          			  limit = {
+				date > 1937.2.1
+				NOT = { has_country_flag = Vn_jap_27_flag }
+			is_puppet = no 
+		NOT = { has_government = communism }
+		NOT = { has_government = democratic }
+		NOT = { has_government = Ssocialism }
+		has_completed_focus = JAP_purge_the_kodoha_factionVN
+					}
+			country_event = Vn_jap.27
+			set_country_flag = Vn_jap_27_flag
+				}
+       			 if = {
+          			  limit = {
+				date > 1937.6.3
+				NOT = { has_country_flag = Vn_jap_28_flag }
+			is_puppet = no 
+		NOT = { has_government = communism }
+		NOT = { has_government = democratic }
+		NOT = { has_government = Ssocialism }
+		has_completed_focus = JAP_purge_the_kodoha_factionVN
+					}
+			country_event = Vn_jap.28
+			set_country_flag = Vn_jap_28_flag
+				}
+			}
+		}
+
+		on_monthly = {
+    			effect = {
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+            			}
+			set_variable = { GPESN_PFEGFX = GPES_Agricultural_cap }
+			set_variable = { CGFX = GPES_Agricultural_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.042 }
+			multiply_variable = { CGFX = -0.042 }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			add_to_variable = { GPESN_consumer_goods_factor = CGFX }
+			multiply_variable = { GPESN_production_factory_efficiency_gain_factor = 0.01 }
+			multiply_variable = { GPESN_consumer_goods_factor = 0.01 }
+
+			set_variable = { GPESN_PFEGFX = GPES_industry_cap }
+			set_variable = { BIIIPX = GPES_industry_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.053 }
+			multiply_variable = { BIIIPX = 0.031 }
+			add_to_variable = { Budget_invest_in_investment_points = BIIIPX }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			multiply_variable = { Budget_invest_in_investment_pointsr = 0.01 }
+			multiply_variable = { GPESN_production_factory_efficiency_gain_factor = 0.01 }
+        			}
+			}
+		}
+
+		on_weekly = {
+    			effect = {
+     			 if = {
+          			  limit = {
+			NOT = { has_country_flag = General_planned_economy_system_flag } 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+				}
+			set_country_flag = General_planned_economy_system_flag
+            		add_to_variable = { GPES_Full_cap = 110 }
+            		add_to_variable = { GPES_Full_cap_ture = 10 }
+           		add_to_variable = { GPES_Agricultural_cap = 0 }
+           		add_to_variable = { GPES_industry_cap = 0 }
+			add_dynamic_modifier = {
+				modifier = General_planned_economy_system
+					}
+            			}
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+		check_variable = { num_owned_states < 31 }
+            			}
+			set_variable = { planned_economy_Construction_speed = num_owned_states }
+			set_variable = { planned_economy_Construction_speed_numeric_value = num_owned_states }
+			multiply_variable = { planned_economy_Construction_speed = 0.007 }
+			multiply_variable = { planned_economy_Construction_speed_numeric_value = 0.7 }
+			set_variable = { GPESN_production_speed_buildings_factor = planned_economy_Construction_speed }
+        			}
+
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+			or = {
+          		      is_ai = no
+				is_major = YES
+					}
+            			}
+			set_variable = { GPESN_political_power_cost = num_owned_states }
+			multiply_variable = { GPESN_political_power_cost = 0.003 }
+        			}
+
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+            			}
+			set_variable = { GPESN_research_speed_factor = num_of_factories }#科研速度=民工数量
+			multiply_variable = { GPESN_research_speed_factor = 0.005 }# x0.005
+			multiply_variable = { GPESN_research_speed_factor = 0.1 }# x0.1
+			set_variable = { GPESN_research_speed_factor_other = num_of_factories }# 额外科研速度=民工数量
+			add_to_variable = { GPESN_research_speed_factor_other = Budget_invest_in_research }#给额外科研速度增加一个等同于经济投资数量的值
+			multiply_variable = { GPESN_research_speed_factor_other = 0.001 }# x0.001
+			multiply_variable = { GPESN_research_speed_factor_other = 0.01 }# x0.01
+			add_to_variable = { GPESN_research_speed_factor = GPESN_research_speed_factor_other } #科研速度+额外科研速度
+
+			set_variable = { GPESN_consumer_goods_factor = num_of_factories }
+			add_to_variable = { GPESN_consumer_goods_factor = Budget_invest_in_consumer_goods }
+			multiply_variable = { GPESN_consumer_goods_factor = 0.005 }
+			multiply_variable = { GPESN_consumer_goods_factor = 0.1 }
+
+			set_variable = { GPESN_consumer_goods_factor_shuju = GPESN_consumer_goods_factor }
+			set_variable = { GPESN_research_speed_factor_shuju = GPESN_research_speed_factor }
+			multiply_variable = { GPESN_research_speed_factor_shuju = 100 }
+			multiply_variable = { GPESN_consumer_goods_factor_shuju = 100 }
+        			}
+
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+            			}
+			set_variable = { GPES_Financial_investment_points = num_of_civilian_factories }
+			add_to_variable = { GPES_Financial_investment_points = Budget_invest_in_investment_points }
+			multiply_variable = { GPES_Financial_investment_points = 0.002 }
+			add_to_variable = { GPES_Financial_investment_points_ture = GPES_Financial_investment_points }
+        			}
+
+       			else_if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+				check_variable = { num_owned_states > 30 }
+            			}
+			set_variable = { GPESN_production_speed_buildings_factor = num_owned_states }
+			set_variable = { planned_economy_Construction_speed_numeric_value = num_owned_states }
+			multiply_variable = { GPESN_production_speed_buildings_factor = 0.03}
+			multiply_variable = { planned_economy_Construction_speed_numeric_value = 0.03 }
+			multiply_variable = { GPESN_production_speed_buildings_factor = 0.01}
+				add_to_variable = { GPESN_production_speed_buildings_factor = 0.21 }
+				add_to_variable = { planned_economy_Construction_speed_numeric_value = 21 }
+        			}
+
+       			if = {
+          			  limit = { 
+		has_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+			is_major = NO
+					}
+				custom_effect_tooltip = OK
+				}
+
+       			if = {
+          			  limit = { 
+		has_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+			is_major = YES
+					}
+			clr_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+				}
+
+       			else_if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+		NOT = { has_country_flag = planned_economy_Construction_speed_numeric_value_add_five }
+			is_major = NO
+					}
+			add_to_variable = { GPESN_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { planned_economy_Construction_speed_numeric_value = 5 }
+			set_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+				}
+    			}
+		}
+
+	on_release_as_puppet = { 
+		effect = { 
+			if = {
+				limit = {
+					FROM = { 
+						tag = SOV 
+						has_completed_focus = SOV_autonomous_soviet_republics
+					}
+				}
+				ROOT = {
+					add_ideas = {
+						SOV_system_decentralization_idea
+						SOV_the_local_soviets_idea
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						tag = SOV 
+						has_completed_focus = SOV_Regional_Industria_Administration
+					}
+				}
+				ROOT = {
+			set_country_flag = SOV_Regional_Industria_Administration_start
+					add_ideas = {
+						SOV_Regional_Industria_Administration
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						tag = SOV 
+					has_completed_focus = SOV_Electrical_Authority
+					}
+				}
+				ROOT = {
+			set_country_flag = SOV_Electrical_Authority_start
+					add_ideas = {
+						SOV_Electrical_Authority
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						tag = SOV 
+						has_completed_focus = SOV_Self_government
+					}
+				}
+				ROOT = {
+					swap_ideas = {
+						remove_idea = SOV_the_local_soviets_idea
+						add_idea = SOV_puppet_Self_government
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						tag = SOV 
+						has_completed_focus = SOV_international_union_of_soviet_republics
+					}
+				}
+				ROOT = {
+					add_ideas = {
+						SOV_puppet_international_of_soviet_republics_idea
+					}
+				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			every_state = {
+		add_dynamic_modifier = {
+			modifier = private_industrial_complex_MOD
+		}
+		add_dynamic_modifier = {
+			modifier = private_army_complex_MOD
+		}
+
+				}
+			SPR = {
+			every_state = {
+			limit = {
+				or = {
+				state = 171
+				state = 174
+				state = 791
+				state = 790
+						}
+					}
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+					}
+			every_state = {
+			limit = {
+				or = {
+				state = 169
+				state = 790
+						}
+					}
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+					}
+				41 = {
+		private_industrial_complex_building = yes
+		private_army_complex_building = yes
+					remove_building = {
+					type = arms_factory
+					level = 1
+					}
+					remove_building = {
+					type = industrial_complex
+					level = 1
+						}
+					}
+				}
+			ENG = {
+			every_state = {
+				limit = {
+				or = {
+				state = 126
+				state = 127
+				state = 125
+				state = 122
+				state = 338
+				state = 130
+				state = 128
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 126
+				state = 127
+				state = 125
+				state = 338
+				state = 130
+				state = 128
+						}
+					}
+			PAC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 130
+				state = 128
+				state = 126
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 130
+				state = 128
+				state = 126
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			FRA = {
+			every_state = {
+				limit = {
+				or = {
+				state = 16
+				state = 24
+				state = 15
+				state = 30
+				state = 27
+				state = 26
+				state = 21
+				state = 22
+				state = 31
+				state = 29
+							}
+						}
+			PIC_privates = yes
+					}
+				29 = {
+			PIC_privates = yes
+				}
+			every_state = {
+				limit = {
+				or = {
+				state = 16
+				state = 21
+				state = 31
+				state = 338
+				state = 130
+				state = 128
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			GER = {
+			every_state = {
+				limit = {
+				or = {
+				state = 61
+				state = 59
+				state = 57
+				state = 55
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 64
+				state = 59
+				state = 57
+				state = 55
+						}
+					}
+			PAC_privates = yes
+					}
+					65 = {
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+			PAC_privates = yes
+					}
+					64 = {
+			PIC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+					51 = {
+			PIC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+					50 = {
+			PIC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			AUS = {
+					4 = {
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+			PAC_privates = yes
+					}
+					75 = {
+			PIC_privates = yes
+					}
+					43 = {
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+
+					9 = {
+			PIC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 152
+				state = 155
+				state = 154
+				state = 70
+				state = 75
+				state = 69
+				state = 71
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 70
+				state = 155
+				state = 154
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			CHI = {
+			every_state = {
+				limit = {
+				or = {
+				state = 613
+				state = 595
+				state = 600
+				state = 602
+				state = 607
+				state = 620
+				state = 597
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 629
+				state = 602
+				state = 620
+						}
+					}
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			MEX = {
+			every_state = {
+				limit = {
+				or = {
+				state = 277
+				state = 480
+				state = 485
+				state = 478
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 277
+				state = 480
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			WHR = {
+			every_state = {
+				limit = {
+				or = {
+				state = 653
+				state = 572
+				state = 485
+				state = 478
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 653
+				state = 480
+						}
+					}
+			PAC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 562
+				state = 874
+				state = 637
+							}
+						}
+		add_extra_state_shared_building_slots =7
+		add_building_construction = {
+			type = infrastructure
+			level = 3#建造数量
+			instant_build = yes
+				}
+		add_building_construction = {
+			type = dockyard#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			PIC_privates = yes
+			PIC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			POR = {
+			every_state = {
+				limit = {
+				or = {
+				state = 795
+				state = 181
+				state = 180
+				state = 112
+				state = 179
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 112
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			YUG = {
+			every_state = {
+				limit = {
+				or = {
+				state = 795
+				state = 181
+				state = 180
+				state = 112
+				state = 179
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 112
+						}
+					}
+			PAC_privates = yes
+					}
+
+				}
+			SOV = {
+			every_state = {
+				limit = {
+				or = {
+				state = 219
+				state = 149
+				state = 217
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 219
+				state = 149
+						}
+					}
+			PAC_privates = yes
+					}
+
+				}
+			BUL = {
+			every_state = {
+				limit = {
+				or = {
+				state = 48
+				state = 212
+				state = 211
+							}
+						}
+			PIC_privates = yes
+					}
+				48 = {
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+				}
+			every_state = {
+				limit = {
+				or = {
+				state = 212
+				state = 149
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			ROM = {
+			every_state = {
+				limit = {
+				or = {
+				state = 82
+				state = 81
+				state = 46
+				state = 77
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 81
+				state = 46
+						}
+					}
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			SWI = {
+			every_state = {
+				limit = {
+				or = {
+				state = 3
+				state = 845
+				state = 847
+				state = 151
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 3
+				state = 845
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			PRS = {
+			every_state = {
+				limit = {
+				or = {
+				state = 63
+				state = 66
+				state = 68
+				state = 87
+				state = 807
+				state = 763
+				state = 85
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 807
+				state = 85
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			POL = {
+			every_state = {
+				limit = {
+				or = {
+				state = 88
+				state = 92
+				state = 97
+				state = 10
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 10
+						}
+					}
+			PAC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			DEN = {
+			every_state = {
+				limit = {
+				or = {
+				state = 99
+				state = 37
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 37
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			SWE = {
+			every_state = {
+				limit = {
+				or = {
+				state = 141
+				state = 139
+				state = 150
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 140
+				state = 141
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			NOR = {
+			every_state = {
+				limit = {
+				or = {
+				state = 110
+				state = 142
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 110
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			FIN = {
+			every_state = {
+				limit = {
+				or = {
+				state = 149
+				state = 111
+				state = 150
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 111
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			IRE = {
+			every_state = {
+				limit = {
+				or = {
+				state = 113
+				state = 135
+				state = 150
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+				}
+			BEL = {
+			every_state = {
+				limit = {
+				or = {
+				state = 6
+				state = 34
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			6= {
+			PIC_privates = yes
+			}
+			every_state = {
+				limit = {
+				or = {
+				state = 6
+						}
+					}
+			PAC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			HOL = {
+			every_state = {
+				limit = {
+				or = {
+				state = 36
+				state = 35
+				state = 7
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			35= {
+			PIC_privates = yes
+			PIC_privates = yes
+			}
+			every_state = {
+				limit = {
+				or = {
+				state = 7
+						}
+					}
+			PAC_privates = yes
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			LUX = {
+			every_state = {
+				limit = {
+				or = {
+				state = 8
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 8
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			KAZ = {
+			every_state = {
+				limit = {
+				or = {
+				state = 586
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+				}
+			TUR = {
+			every_state = {
+				limit = {
+				or = {
+				state = 49
+				state = 347
+				state = 342
+				state = 339
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 49
+				state = 797
+						}
+					}
+			PAC_privates = yes
+			PAC_privates = yes
+					}
+				}
+			RAJ = {
+			every_state = {
+				limit = {
+				or = {
+				state = 433
+				state = 443
+				state = 423
+				state = 425
+				state = 424
+							}
+						}
+			PIC_privates = yes
+					}
+				}
+			SIA = {
+			every_state = {
+				limit = {
+				or = {
+				state = 289
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+				}
+			IDC = {
+			every_state = {
+				limit = {
+				or = {
+				state = 286
+				state = 671
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+				}
+			AST = {
+			every_state = {
+				limit = {
+				or = {
+				state = 517
+				state = 285
+				state = 521
+				state = 522
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 517
+				state = 285
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			NZL = {
+			every_state = {
+				limit = {
+				or = {
+				state = 284
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+				}
+			CAN = {
+			every_state = {
+				limit = {
+				or = {
+				state = 465
+				state = 468
+				state = 276
+				state = 740
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+				}
+			USA = {
+			every_state = {
+				limit = {
+				or = {
+				state = 357
+				state = 358
+				state = 360
+				state = 359
+				state = 361
+				state = 396
+				state = 395
+				state = 261
+				state = 393
+				state = 375
+				state = 378
+				state = 392
+				state = 373
+				state = 261
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 358
+				state = 359
+				state = 396
+				state = 353
+				state = 359
+				state = 394		
+				state = 392
+				state = 373
+				state = 391
+				state = 363
+				state = 364
+				state = 365
+				state = 366
+				state = 367
+				state = 378
+				state = 375
+				state = 362
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 378
+				state = 386
+				state = 393
+				state = 358
+				state = 357
+				state = 261
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			JAP = {
+		every_state = {
+				limit = {
+				or = {
+				state = 533
+				state = 282
+				state = 534
+				state = 532
+				state = 535
+				state = 531	
+				state = 529
+							}
+						}
+			PIC_privates = yes
+			PIC_privates = yes
+					}
+		every_state = {
+				limit = {
+				or = {
+				state = 528
+				state = 530
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 282
+				state = 532
+				state = 533
+				state = 534
+				state = 535
+				state = 531
+				state = 529
+
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			GRE = {
+		every_state = {
+				limit = {
+				or = {
+				state = 731
+				state = 185
+				state = 47
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 184
+				state = 186
+
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			ETH = {
+		every_state = {
+				limit = {
+				or = {
+				state = 835
+				state = 271
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 271
+
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			EST = {
+		every_state = {
+				limit = {
+				or = {
+				state = 812
+				state = 13
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 812
+				state = 13
+
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			LAT = {
+		every_state = {
+				limit = {
+				or = {
+				state = 809
+				state = 12
+				state = 810
+				state = 808
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 809
+				state = 810
+
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			LIT = {
+		every_state = {
+				limit = {
+				or = {
+				state = 11
+				state = 814
+				state = 188
+							}
+						}
+			PIC_privates = yes
+					}
+			every_state = {
+				limit = {
+				or = {
+				state = 814
+
+						}
+					}
+			PAC_privates = yes
+					}
+				}
+			PHI = {
+		every_state = {
+				limit = {
+				or = {
+				state = 327
+				state = 624
+				state = 623
+							}
+						}
+			PIC_privates = yes
+					}
+				}
+			every_country = {
+	add_to_variable = { Centralized_balance_bar = 5 }
+	add_to_variable = { Economic_balance_bar = 5 }
+	add_to_variable = { Centralized_balance_bar_right = 5 }
+	add_to_variable = { Economic_balance_bar_right = 5 }
+		if = {
+		limit = {
+		has_idea = economy_Dominate_economy
+				}
+		PALLC_FOUCS_Economy_1_add = yes
+		PALLC_FOUCS_Nationalization_add = yes
+		PALLC_FOUCS_Economy_1_add = yes
+		PALLC_FOUCS_Nationalization_add = yes
+			}
+
+		set_variable = { cooperative_ownership_Economic_balance_bar = 5 }
+		set_variable = { cooperative_ownership_Economic_balance_bar_right = 5 }
+		set_variable = { cooperative_ownership_Centralized_balance_bar = 5 }
+		set_variable = { cooperative_ownership_Centralized_balance_bar_right = 5 }
+		if = {
+		limit = {
+		has_idea = economy_cooperative_ownership 
+			}
+			add_dynamic_modifier = {
+				modifier = cooperative_ownership_Economy_system
+				}
+		set_variable = { cooperative_ownership_Economic_balance_bar = 8 }
+		set_variable = { cooperative_ownership_Economic_balance_bar_right = 2 }
+		add_to_variable = { COES_local_resources_factor = 0.15 }
+		add_to_variable = { COES_production_speed_buildings_factor = 0.15 }
+		add_to_variable = { COES_consumer_goods_factor = 0.03 }
+		add_to_variable = { COES_political_power_cost = 0.045 }
+		add_to_variable = { COES_local_resources_factor_SJ = 15 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = 15 }
+		add_to_variable = { COES_consumer_goods_factor_SJ = 3 }
+
+		set_variable = { cooperative_ownership_Centralized_balance_bar = 6 }
+		set_variable = { cooperative_ownership_Centralized_balance_bar_right = 4 }
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor = 0.03}
+		add_to_variable = { COES_production_factory_efficiency_gain_factor = -0.03 }
+		add_to_variable = { COES_political_power_cost = 0.025 }
+		ALL_EC_ownership_construction_bulidng_speed_jian = yes
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor_SJ = 3 }
+		add_to_variable = { COES_production_factory_efficiency_gain_factor_SJ = -3 }
+		add_to_variable = { COES_gongshejianzaosudu_SJ = -10 }
+				if = {
+					limit = {
+					tag = ITA
+					}
+		add_to_variable = { cooperative_ownership_Economic_balance_bar = -2 }
+		add_to_variable = { cooperative_ownership_Economic_balance_bar_right = 2 }
+		add_to_variable = { COES_local_resources_factor = -0.1 }
+		add_to_variable = { COES_production_speed_buildings_factor = -0.1 }
+		add_to_variable = { COES_consumer_goods_factor = -0.02 }
+		add_to_variable = { COES_political_power_cost = -0.03 }
+
+		add_to_variable = { COES_local_resources_factor_SJ = -10 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = -10 }
+		add_to_variable = { COES_consumer_goods_factor_SJ = -2 }
+
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar = 1 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar_right = -1 }
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor = 0.03}
+		add_to_variable = { COES_production_factory_efficiency_gain_factor = -0.03 }
+		add_to_variable = { COES_political_power_cost = 0.025 }
+		ALL_EC_ownership_construction_bulidng_speed_jian = yes
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor_SJ = 3 }
+		add_to_variable = { COES_production_factory_efficiency_gain_factor_SJ = -3 }
+		add_to_variable = { COES_gongshejianzaosudu_SJ = -10 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar = 1 }
+		add_to_variable = { cooperative_ownership_Centralized_balance_bar_right = -1 }
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor = 0.03}
+		add_to_variable = { COES_production_factory_efficiency_gain_factor = -0.03 }
+		add_to_variable = { COES_political_power_cost = 0.025 }
+		ALL_EC_ownership_construction_bulidng_speed_jian = yes
+
+		add_to_variable = { COES_production_factory_max_efficiency_factor_SJ = 3 }
+		add_to_variable = { COES_production_factory_efficiency_gain_factor_SJ = -3 }
+		add_to_variable = { COES_gongshejianzaosudu_SJ = -10 }
+			}
+		}
+		if = {
+		limit = {
+		or = {
+		has_idea = economy_Syndicalism_economy 
+		has_idea = economy_Roosevelt_NewDeal
+				}
+			}
+	add_to_variable = { Economic_balance_bar = 1 }
+	add_to_variable = { Economic_balance_bar_right = -1 }
+		add_to_variable = { GMES_political_power_cost = 0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = 0.01 }
+		add_to_variable = { COES_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = 5 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = 1 }
+		add_to_variable = { Private_construction_units = -10 }
+		Private_construction_units_level_up
+			add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			days = 7
+				}
+	add_to_variable = { Centralized_balance_bar = 1 }
+	add_to_variable = { Centralized_balance_bar_right = -1 }
+		add_to_variable = { GMES_political_power_cost = 0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = 0.01 }
+	add_to_variable = { GMES_economy_cost_factor = -0.08 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_industrial_concern_cost_factor = -0.08 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor = 0.05 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = 1 }
+	add_to_variable = { GMES_economy_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor_shuju = -8 }
+	add_to_variable = { GMES_industrial_concern_cost_factor_shuju = -8 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor_shuju = 5 }
+		}
+		if = {
+		limit = {
+		or = {
+		has_idea = economy_Free_market_economy
+		has_idea = economy_oligarchic_economy
+				}
+			}
+	add_to_variable = { Economic_balance_bar = -1 }
+	add_to_variable = { Economic_balance_bar_right = 1 }
+		add_to_variable = { GMES_political_power_cost = -0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = -0.01 }
+		add_to_variable = { COES_production_speed_buildings_factor = -0.05 }
+		add_to_variable = { COES_production_speed_buildings_factor_SJ = -5 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = -1 }
+		add_to_variable = { Private_construction_units = 10 }
+add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = -7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			days = -7
+				}
+	add_to_variable = { Centralized_balance_bar = -1 }
+	add_to_variable = { Centralized_balance_bar_right = 1 }
+		add_to_variable = { GMES_political_power_cost = -0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = -0.01 }
+	add_to_variable = { GMES_economy_cost_factor = 0.08 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_industrial_concern_cost_factor = 0.08 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor = -0.05 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = -1 }
+	add_to_variable = { GMES_economy_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_industrial_concern_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_production_speed_buildings_factor_shuju = -5 }
+	add_to_variable = { Centralized_balance_bar = -1 }
+	add_to_variable = { Centralized_balance_bar_right = 1 }
+		add_to_variable = { GMES_political_power_cost = -0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = -0.01 }
+	add_to_variable = { GMES_economy_cost_factor = 0.08 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor = 0.08 }
+	add_to_variable = { GMES_industrial_concern_cost_factor = 0.08 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor = -0.05 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = -1 }
+	add_to_variable = { GMES_economy_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_industrial_concern_cost_factor_shuju = 8 }
+	add_to_variable = { GMES_production_speed_buildings_factor_shuju = -5 }
+			}
+			remove_ideas = Revolutionary_dictatorship
+			remove_ideas = revolution_bureaucracy
+
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+            			}
+			set_variable = { GPESN_PFEGFX = GPES_Agricultural_cap }
+			set_variable = { CGFX = GPES_Agricultural_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.042 }
+			multiply_variable = { CGFX = -0.042 }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+			add_to_variable = { GPESN_consumer_goods_factor = CGFX }
+
+			set_variable = { GPESN_PFEGFX = GPES_industry_cap }
+			set_variable = { BIIIPX = GPES_industry_cap }
+			multiply_variable = { GPESN_PFEGFX = 0.053 }
+			multiply_variable = { BIIIPX = 0.031 }
+			add_to_variable = { Budget_invest_in_investment_points = BIIIPX }
+			add_to_variable = { GPESN_production_factory_efficiency_gain_factor = GPESN_PFEGFX }
+        			}
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+				}
+			add_ideas = Planned_economy_propaganda_mobilizationidea
+            		add_to_variable = { GPES_Full_cap = 110 }
+            		add_to_variable = { GPES_Full_cap_ture = 10 }
+           		add_to_variable = { GPES_Agricultural_cap = 0 }
+           		add_to_variable = { GPES_industry_cap = 0 }
+        			}
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+            			}
+			set_variable = { GPES_Financial_investment_points = num_of_civilian_factories }
+			multiply_variable = { GPES_Financial_investment_points = 0.003 }
+			add_to_variable = { GPES_Financial_investment_points_ture = GPES_Financial_investment_points }
+        			}
+     			 if = {
+          			  limit = { 
+			NOT = { has_country_flag = General_planned_economy_system_flag } 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+				}
+			set_country_flag = General_planned_economy_system_flag
+			add_dynamic_modifier = {
+				modifier = General_planned_economy_system
+					}
+            			}
+
+    			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_Dominate_economy
+                		has_idea = economy_Free_market_economy
+				has_idea = economy_Roosevelt_NewDeal
+				has_idea = economy_oligarchic_economy
+					}
+				}
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+					}
+            			}
+
+
+       				if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+				check_variable = { num_owned_states < 31 }
+            			}
+			set_variable = { planned_economy_Construction_speed = num_owned_states }
+			set_variable = { planned_economy_Construction_speed_numeric_value = num_owned_states }
+			multiply_variable = { planned_economy_Construction_speed = 0.007 }
+			multiply_variable = { planned_economy_Construction_speed_numeric_value = 0.7 }
+			set_variable = { GPESN_production_speed_buildings_factor = planned_economy_Construction_speed }
+        			}
+
+
+       			else_if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+			check_variable = { num_owned_states > 30 }
+            			}
+			set_variable = { GPESN_production_speed_buildings_factor = num_owned_states }
+			set_variable = { planned_economy_Construction_speed_numeric_value = num_owned_states }
+			multiply_variable = { GPESN_production_speed_buildings_factor = 0.03}
+			multiply_variable = { GPESN_production_speed_buildings_factor = 0.01}
+			multiply_variable = { planned_economy_Construction_speed_numeric_value = 0.03 }
+			add_to_variable = { GPESN_production_speed_buildings_factor = 0.21 }
+			add_to_variable = { planned_economy_Construction_speed_numeric_value = 21 }
+        			}
+
+    			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+				is_major = no
+            			}
+			add_to_variable = { GPESN_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { planned_economy_Construction_speed_numeric_value = 5 }
+			set_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+        			}
+
+
+       			 if = {
+          			  limit = { 
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+					}
+            			}
+			set_country_flag = economy_planned_economy_flag
+			set_variable = { GPESN_political_power_cost = num_owned_states }
+			multiply_variable = { GPESN_political_power_cost = 0.003 }
+        			}
+
+
+			if = {
+
+				limit = {
+				OR = {
+					TAG = TIB
+					}
+				}
+				set_country_leader_ideology = Theocratic_absolutism
+				add_ideas = Dictatorship_STS
+				add_ideas = Noble_bureaucrats
+				}
+			if = {
+
+				limit = {
+				OR = {
+					TAG = AFG
+					TAG = IRQ
+					TAG = BUL
+					TAG = PER
+					TAG = ETA
+					TAG = HUN
+					TAG = YUG
+					TAG = ALB
+					TAG = GRE
+					TAG = AMO
+					TAG = YEM
+					TAG = SAU
+					TAG = AFA
+					TAG = OMA
+					TAG = RAJ
+					TAG = SIA
+					}
+				}
+				set_country_leader_ideology = absolutism
+				}
+			}
+			every_country = {
+			if = {
+
+				limit = {
+					has_government = fascism
+
+				}
+				add_ideas = One_party_state
+				add_ideas = Fascist_dictatorship
+				add_ideas = Appointment_bureaucracy
+				}
+			#####################
+			else_if = {
+				limit = {
+			has_country_leader_ideology = absolutism
+				NOT = { tag = JAP }
+				}
+				add_ideas = Dictatorship_STS
+				add_ideas = absolute_monarchy
+				add_ideas = Noble_bureaucrats
+				}
+			#####################
+			else_if = {
+				limit = {
+					has_country_leader_ideology = Theocratic_absolutism
+					NOT =  { TAG = JAP }
+				}
+				add_ideas = Dictatorship_STS
+				add_ideas = Theocracy_dictatorship
+				add_ideas = Noble_bureaucrats
+				}
+			#####################
+			else_if = {
+				limit = {
+					has_government = neutrality
+				NOT = { tag = JAP }
+				}
+				add_ideas = One_party_state
+				add_ideas = Presidential_Republic
+				add_ideas = Appointment_bureaucracy
+				}
+			#####################
+			else_if = {
+				limit = {
+					has_government = democratic
+				}
+				add_ideas = Multi_party_democracy
+				add_ideas = Democracies_polity
+				add_ideas = universal_suffrage
+				}
+			#####################
+			else_if = {
+				limit = {
+					has_government = communism
+				}
+				add_ideas = One_party_state
+				add_ideas = Committee_Republic
+				add_ideas = Appointment_bureaucracy
+				}
+			}
+			FRA = {
+			puppet = IDC
+			}
+		every_state = {
+				limit = {
+					is_core_of = CHI
+				or = {
+				is_controlled_by = JAP
+							}
+						}
+			set_state_flag = JAP_Sweep_policy
+				}
+			#random_country = {
+			#	limit = {
+			#		is_ai = no
+			#	}
+			#	country_event = {
+			#		id = Vn_mod.1
+			#	}
+			#}
+		}
+	}
+]

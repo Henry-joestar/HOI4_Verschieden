@@ -1,0 +1,547 @@
+defined_text = {
+	name = SOV_seat_party
+	text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 1 }
+		}
+		localization_key = SOV_party_1
+	}
+    text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 2 }
+		}
+		localization_key = SOV_party_2
+	}
+    text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 3 }
+		}
+		localization_key = SOV_party_3
+	}
+    text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 4 }
+		}
+		localization_key = SOV_party_4
+	}
+    text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 5 }
+		}
+		localization_key = SOV_party_5
+	}
+    text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 6 }
+		}
+		localization_key = SOV_party_6
+	}
+    text = {
+		trigger = {
+			check_variable = { SOV_seat_frame^SOV_seat_idx = 7 }
+		}
+		localization_key = SOV_party_7
+	}
+}
+defined_text = {
+	name = Getprestigeladdername#最具威望的领导人
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_lev_trotsky } }
+	check_variable = { Trotsky > lenin }
+	check_variable = { Trotsky > Zinoviev }
+	check_variable = { Trotsky > Kamenev }
+	check_variable = { Trotsky > Stalin }
+	check_variable = { Trotsky > Molotov }
+	check_variable = { Trotsky > Kirov }
+	check_variable = { Trotsky > Khrushche }
+	check_variable = { Trotsky > Smirnov }
+	check_variable = { Trotsky > Shlyapnikov }
+	check_variable = { Trotsky > Myasnikov }
+	check_variable = { Trotsky > Nikolay }
+	check_variable = { Trotsky > Kollontai }
+	check_variable = { Trotsky > Bogdanov }
+	check_variable = { Trotsky > Sapronov }
+	check_variable = { Trotsky > Bukharin }
+	check_variable = { Trotsky > Leekov }
+	check_variable = { Trotsky > Tomsky }
+	check_variable = { Trotsky > Spiridonova }
+	check_variable = { Trotsky > Kamkov }
+	check_variable = { Trotsky > Dzerzhinsky }
+			} 
+	localization_key = "lev_Trotsky"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_lenin } }
+	check_variable = { lenin > Trotsky }
+	check_variable = { lenin > Zinoviev }
+	check_variable = { lenin > Kamenev }
+	check_variable = { lenin > Stalin }
+	check_variable = { lenin > Molotov }
+	check_variable = { lenin > Kirov }
+	check_variable = { lenin > Khrushche }
+	check_variable = { lenin > Smirnov }
+	check_variable = { lenin > Shlyapnikov }
+	check_variable = { lenin > Myasnikov }
+	check_variable = { lenin > Nikolay }
+	check_variable = { lenin > Kollontai }
+	check_variable = { lenin > Bogdanov }
+	check_variable = { lenin > Sapronov }
+	check_variable = { lenin > Bukharin }
+	check_variable = { lenin > Leekov }
+	check_variable = { lenin > Tomsky }
+	check_variable = { lenin > Spiridonova }
+	check_variable = { lenin > Kamkov }
+	check_variable = { lenin > Dzerzhinsky }
+			} 
+	localization_key = "SOV_lenin"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_grigory_zinovyev } }
+	check_variable = { Zinoviev > Trotsky }
+	check_variable = { Zinoviev > lenin }
+	check_variable = { Zinoviev > Kamenev }
+	check_variable = { Zinoviev > Stalin }
+	check_variable = { Zinoviev > Molotov }
+	check_variable = { Zinoviev > Kirov }
+	check_variable = { Zinoviev > Khrushche }
+	check_variable = { Zinoviev > Smirnov }
+	check_variable = { Zinoviev > Shlyapnikov }
+	check_variable = { Zinoviev > Myasnikov }
+	check_variable = { Zinoviev > Nikolay }
+	check_variable = { Zinoviev > Kollontai }
+	check_variable = { Zinoviev > Bogdanov }
+	check_variable = { Zinoviev > Sapronov }
+	check_variable = { Zinoviev > Bukharin }
+	check_variable = { Zinoviev > Leekov }
+	check_variable = { Zinoviev > Tomsky }
+	check_variable = { Zinoviev > Spiridonova }
+	check_variable = { Zinoviev > Kamkov }
+	check_variable = { Zinoviev > Dzerzhinsky }
+			} 
+	localization_key = "SOV_grigory_zinovyev"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_lev_kamenev} }
+	check_variable = { Kamenev > Trotsky }
+	check_variable = { Kamenev > lenin }
+	check_variable = { Kamenev > Zinoviev }
+	check_variable = { Kamenev > Stalin }
+	check_variable = { Kamenev > Molotov }
+	check_variable = { Kamenev > Kirov }
+	check_variable = { Kamenev > Khrushche }
+	check_variable = { Kamenev > Smirnov }
+	check_variable = { Kamenev > Shlyapnikov }
+	check_variable = { Kamenev > Myasnikov }
+	check_variable = { Kamenev > Nikolay }
+	check_variable = { Kamenev > Kollontai }
+	check_variable = { Kamenev > Bogdanov }
+	check_variable = { Kamenev > Sapronov }
+	check_variable = { Kamenev > Bukharin }
+	check_variable = { Kamenev > Leekov }
+	check_variable = { Kamenev > Tomsky }
+	check_variable = { Kamenev > Spiridonova }
+	check_variable = { Kamenev > Kamkov }
+	check_variable = { Kamenev > Dzerzhinsky }
+			} 
+	localization_key = "SOV_lev_kamenev"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_iosif_stalin } }
+	check_variable = { Stalin > Trotsky }
+	check_variable = { Stalin > lenin }
+	check_variable = { Stalin > Zinoviev }
+	check_variable = { Stalin > Kamenev }
+	check_variable = { Stalin > Molotov }
+	check_variable = { Stalin > Kirov }
+	check_variable = { Stalin > Khrushche }
+	check_variable = { Stalin > Smirnov }
+	check_variable = { Stalin > Shlyapnikov }
+	check_variable = { Stalin > Myasnikov }
+	check_variable = { Stalin > Nikolay }
+	check_variable = { Stalin > Kollontai }
+	check_variable = { Stalin > Bogdanov }
+	check_variable = { Stalin > Sapronov }
+	check_variable = { Stalin > Bukharin }
+	check_variable = { Stalin > Leekov }
+	check_variable = { Stalin > Tomsky }
+	check_variable = { Stalin > Spiridonova }
+	check_variable = { Stalin > Kamkov }
+	check_variable = { Stalin > Dzerzhinsky }
+			} 
+	localization_key = "SOV_iosif_stalin"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_vyacheslav_molotov } }
+	check_variable = { Molotov > Trotsky }
+	check_variable = { Molotov > lenin }
+	check_variable = { Molotov > Zinoviev }
+	check_variable = { Molotov > Kamenev }
+	check_variable = { Molotov > Stalin }
+	check_variable = { Molotov > Kirov }
+	check_variable = { Molotov > Khrushche }
+	check_variable = { Molotov > Smirnov }
+	check_variable = { Molotov > Shlyapnikov }
+	check_variable = { Molotov > Myasnikov }
+	check_variable = { Molotov > Nikolay }
+	check_variable = { Molotov > Kollontai }
+	check_variable = { Molotov > Bogdanov }
+	check_variable = { Molotov > Sapronov }
+	check_variable = { Molotov > Bukharin }
+	check_variable = { Molotov > Leekov }
+	check_variable = { Molotov > Tomsky }
+	check_variable = { Molotov > Spiridonova }
+	check_variable = { Molotov > Kamkov }
+	check_variable = { Molotov > Dzerzhinsky }
+			} 
+	localization_key = "SOV_vyacheslav_molotov"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_nikolay_bukharin } }
+	check_variable = { Bukharin > Trotsky }
+	check_variable = { Bukharin > lenin }
+	check_variable = { Bukharin > Zinoviev }
+	check_variable = { Bukharin > Kamenev }
+	check_variable = { Bukharin > Stalin }
+	check_variable = { Bukharin > Kirov }
+	check_variable = { Bukharin > Khrushche }
+	check_variable = { Bukharin > Smirnov }
+	check_variable = { Bukharin > Shlyapnikov }
+	check_variable = { Bukharin > Myasnikov }
+	check_variable = { Bukharin > Nikolay }
+	check_variable = { Bukharin > Kollontai }
+	check_variable = { Bukharin > Bogdanov }
+	check_variable = { Bukharin > Sapronov }
+	check_variable = { Bukharin > Molotov }
+	check_variable = { Bukharin > Leekov }
+	check_variable = { Bukharin > Tomsky }
+	check_variable = { Bukharin > Spiridonova }
+	check_variable = { Bukharin > Kamkov }
+	check_variable = { Bukharin > Dzerzhinsky }
+			} 
+	localization_key = "SOV_nikolay_bukharin"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_aleksey_rykov } }
+	check_variable = { Leekov > Trotsky }
+	check_variable = { Leekov > lenin }
+	check_variable = { Leekov > Zinoviev }
+	check_variable = { Leekov > Kamenev }
+	check_variable = { Leekov > Stalin }
+	check_variable = { Leekov > Kirov }
+	check_variable = { Leekov > Khrushche }
+	check_variable = { Leekov > Smirnov }
+	check_variable = { Leekov > Shlyapnikov }
+	check_variable = { Leekov > Myasnikov }
+	check_variable = { Leekov > Nikolay }
+	check_variable = { Leekov > Kollontai }
+	check_variable = { Leekov > Bogdanov }
+	check_variable = { Leekov > Sapronov }
+	check_variable = { Leekov > Bukharin }
+	check_variable = { Leekov > Molotov }
+	check_variable = { Leekov > Tomsky }
+	check_variable = { Leekov > Spiridonova }
+	check_variable = { Leekov > Kamkov }
+	check_variable = { Leekov > Dzerzhinsky }
+			} 
+	localization_key = "SOV_aleksey_rykov"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_Spiridonova } }
+	check_variable = { Spiridonova > Trotsky }
+	check_variable = { Spiridonova > lenin }
+	check_variable = { Spiridonova > Zinoviev }
+	check_variable = { Spiridonova > Kamenev }
+	check_variable = { Spiridonova > Stalin }
+	check_variable = { Spiridonova > Kirov }
+	check_variable = { Spiridonova > Khrushche }
+	check_variable = { Spiridonova > Smirnov }
+	check_variable = { Spiridonova > Shlyapnikov }
+	check_variable = { Spiridonova > Myasnikov }
+	check_variable = { Spiridonova > Nikolay }
+	check_variable = { Spiridonova > Kollontai }
+	check_variable = { Spiridonova > Bogdanov }
+	check_variable = { Spiridonova > Sapronov }
+	check_variable = { Spiridonova > Bukharin }
+	check_variable = { Spiridonova > Leekov }
+	check_variable = { Spiridonova > Tomsky }
+	check_variable = { Spiridonova > Molotov }
+	check_variable = { Spiridonova > Kamkov }
+	check_variable = { Spiridonova > Dzerzhinsky }
+			} 
+	localization_key = "SOV_Spiridonova"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_ivan_smirnov } }
+	check_variable = { Smirnov > Trotsky }
+	check_variable = { Smirnov > lenin }
+	check_variable = { Smirnov > Zinoviev }
+	check_variable = { Smirnov > Kamenev }
+	check_variable = { Smirnov > Stalin }
+	check_variable = { Smirnov > Kirov }
+	check_variable = { Smirnov > Khrushche }
+	check_variable = { Smirnov > Molotov }
+	check_variable = { Smirnov > Shlyapnikov }
+	check_variable = { Smirnov > Myasnikov }
+	check_variable = { Smirnov > Nikolay }
+	check_variable = { Smirnov > Kollontai }
+	check_variable = { Smirnov > Bogdanov }
+	check_variable = { Smirnov > Sapronov }
+	check_variable = { Smirnov > Bukharin }
+	check_variable = { Smirnov > Leekov }
+	check_variable = { Smirnov > Tomsky }
+	check_variable = { Smirnov > Spiridonova }
+	check_variable = { Smirnov > Kamkov }
+	check_variable = { Smirnov > Dzerzhinsky }
+			} 
+	localization_key = "SOV_ivan_smirnov"
+	}
+	text = {
+	trigger = { 
+	NOT = { has_country_leader = { ruling_only = yes character = SOV_Kollontai } }
+	check_variable = { Kollontai > Trotsky }
+	check_variable = { Kollontai > lenin }
+	check_variable = { Kollontai > Zinoviev }
+	check_variable = { Kollontai > Kamenev }
+	check_variable = { Kollontai > Stalin }
+	check_variable = { Kollontai > Kirov }
+	check_variable = { Kollontai > Khrushche }
+	check_variable = { Kollontai > Molotov }
+	check_variable = { Kollontai > Shlyapnikov }
+	check_variable = { Kollontai > Myasnikov }
+	check_variable = { Kollontai > Nikolay }
+	check_variable = { Kollontai > Smirnov }
+	check_variable = { Kollontai > Bogdanov }
+	check_variable = { Kollontai > Sapronov }
+	check_variable = { Kollontai > Bukharin }
+	check_variable = { Kollontai > Leekov }
+	check_variable = { Kollontai > Tomsky }
+	check_variable = { Kollontai > Spiridonova }
+	check_variable = { Kollontai > Kamkov }
+	check_variable = { Kollontai > Dzerzhinsky }
+			} 
+	localization_key = "SOV_Kollontai"
+	}
+}
+defined_text = {
+	name = Getprestactualddername#国家的实际领导人
+	text = {
+	trigger = { 
+	NOT = { has_country_flag = SOV_reputationladder_now }
+			} 
+	localization_key = "[FROM.GetLeader]"
+	}
+	text = {
+	trigger = { 
+	has_country_flag = SOV_reputationladder_now
+	has_country_flag = SOV_reputationladder_renminwyh
+			} 
+	localization_key = "SOV_people_com"
+	}
+}
+defined_text = {
+	name = Getprestigecliquename#最具权势的派系
+	text = {
+	trigger = { 
+	check_variable = { SOV_party1_seats > SOV_party2_seats }
+	check_variable = { SOV_party1_seats > SOV_party3_seats }
+	check_variable = { SOV_party1_seats > SOV_party4_seats }
+	check_variable = { SOV_party1_seats > SOV_party5_seats }
+	check_variable = { SOV_party1_seats > SOV_party6_seats }
+	check_variable = { SOV_party1_seats > SOV_party7_seats }
+			} 
+	localization_key = "SOV_Stalinist"
+	}
+	text = {
+	trigger = { 
+	check_variable = { SOV_party2_seats > SOV_party1_seats }
+	check_variable = { SOV_party2_seats > SOV_party3_seats }
+	check_variable = { SOV_party2_seats > SOV_party4_seats }
+	check_variable = { SOV_party2_seats > SOV_party5_seats }
+	check_variable = { SOV_party2_seats > SOV_party6_seats }
+	check_variable = { SOV_party2_seats > SOV_party7_seats }
+			} 
+	localization_key = "SOV_trotskyist"
+	}
+	text = {
+	trigger = { 
+	check_variable = { SOV_party3_seats > SOV_party2_seats }
+	check_variable = { SOV_party3_seats > SOV_party1_seats }
+	check_variable = { SOV_party3_seats > SOV_party4_seats }
+	check_variable = { SOV_party3_seats > SOV_party5_seats }
+	check_variable = { SOV_party3_seats > SOV_party6_seats }
+	check_variable = { SOV_party3_seats > SOV_party7_seats }
+			} 
+	localization_key = "SOV_Zinovievist"
+	}
+	text = {
+	trigger = { 
+	check_variable = { SOV_party4_seats > SOV_party2_seats }
+	check_variable = { SOV_party4_seats > SOV_party3_seats }
+	check_variable = { SOV_party4_seats > SOV_party1_seats }
+	check_variable = { SOV_party4_seats > SOV_party5_seats }
+	check_variable = { SOV_party4_seats > SOV_party6_seats }
+	check_variable = { SOV_party4_seats > SOV_party7_seats }
+			} 
+	localization_key = "SOV_democracist"
+	}
+	text = {
+	trigger = { 
+	check_variable = { SOV_party5_seats > SOV_party2_seats }
+	check_variable = { SOV_party5_seats > SOV_party3_seats }
+	check_variable = { SOV_party5_seats > SOV_party1_seats }
+	check_variable = { SOV_party5_seats > SOV_party4_seats }
+	check_variable = { SOV_party5_seats > SOV_party6_seats }
+	check_variable = { SOV_party5_seats > SOV_party7_seats }
+			} 
+	localization_key = "SOV_workerist"
+	}
+	text = {
+	trigger = { 
+	check_variable = { SOV_party6_seats > SOV_party2_seats }
+	check_variable = { SOV_party6_seats > SOV_party3_seats }
+	check_variable = { SOV_party6_seats > SOV_party1_seats }
+	check_variable = { SOV_party6_seats > SOV_party4_seats }
+	check_variable = { SOV_party6_seats > SOV_party5_seats }
+	check_variable = { SOV_party6_seats > SOV_party7_seats }
+			} 
+	localization_key = "SOV_Bukharinist"
+	}
+	text = {
+	trigger = { 
+	check_variable = { SOV_party7_seats > SOV_party2_seats }
+	check_variable = { SOV_party7_seats > SOV_party3_seats }
+	check_variable = { SOV_party7_seats > SOV_party1_seats }
+	check_variable = { SOV_party7_seats > SOV_party4_seats }
+	check_variable = { SOV_party7_seats > SOV_party5_seats }
+	check_variable = { SOV_party7_seats > SOV_party6_seats }
+			} 
+	localization_key = "SOV_PLSRist"
+	}
+}
+defined_text = {
+	name = GetVnSoviet22t
+	text = {
+	trigger = {
+	check_variable = { SOV_party1_seats < SOV_party2_seats } 
+	}
+	localization_key = "Vn_Soviet_Trotsky_22_t"
+	}
+  	 text = {
+	trigger = {
+	check_variable = { SOV_party1_seats = SOV_party2_seats }
+	}
+	localization_key = "Vn_Soviet_Trotsky_22_t"
+	}
+  	 text = {
+	trigger = {
+	check_variable = { SOV_party2_seats < SOV_party1_seats } 
+	}
+	localization_key = "Vn_Soviet_Stalin_22_t"
+	}
+}
+
+defined_text = {
+	name = GetVnSoviet22d
+	text = {
+	trigger = {
+	check_variable = { SOV_party1_seats < SOV_party2_seats }
+	}
+	localization_key = "Vn_Soviet_Trotsky_22_d"
+	}
+  	 text = {
+	trigger = {
+	check_variable = { SOV_party1_seats = SOV_party2_seats }
+	}
+	localization_key = "Vn_Soviet_Trotsky_22_d"
+	}
+  	 text = {
+	trigger = {
+	check_variable = { SOV_party2_seats < SOV_party1_seats } }]
+	}
+	localization_key = "Vn_Soviet_Stalin_22_d"
+	}
+}
+
+defined_text = {
+	name = GetVnSoviet22a
+	text = {
+	trigger = {
+	check_variable = { SOV_party1_seats < SOV_party2_seats }
+	}
+	localization_key = "Vn_Soviet_Trotsky_22_a"
+	}
+  	 text = {
+	trigger = {
+	check_variable = { SOV_party1_seats = SOV_party2_seats }
+	}
+	localization_key = "Vn_Soviet_Trotsky_22_a"
+	}
+  	 text = {
+	trigger = {
+	check_variable = { SOV_party2_seats < SOV_party1_seats }
+	}
+	localization_key = "Vn_Soviet_Stalin_22_a"
+	}
+}
+defined_text = {
+	name = GetSOV_mobilization
+	text = {
+	trigger = {
+	has_country_flag = SOV_mobilization_A
+	NOT = { has_country_flag = SOV_mobilization_B }
+	NOT = { has_country_flag = SOV_mobilization_C }
+	NOT = { has_country_flag = SOV_mobilization_D }
+	NOT = { has_country_flag = SOV_mobilization_E }
+	}
+	localization_key = "SOV_mobilization_A"
+	}
+  	 text = {
+	trigger = {
+	has_country_flag = SOV_mobilization_B
+	NOT = { has_country_flag = SOV_mobilization_C }
+	NOT = { has_country_flag = SOV_mobilization_D }
+	NOT = { has_country_flag = SOV_mobilization_E }
+	}
+	localization_key = "SOV_mobilization_B"
+	}
+  	 text = {
+	trigger = {
+	has_country_flag = SOV_mobilization_C
+	NOT = { has_country_flag = SOV_mobilization_D }
+	NOT = { has_country_flag = SOV_mobilization_E }
+	}
+	localization_key = "SOV_mobilization_C"
+	}
+  	 text = {
+	trigger = {
+	has_country_flag = SOV_mobilization_D
+	NOT = { has_country_flag = SOV_mobilization_E }
+	}
+	localization_key = "SOV_mobilization_D"
+	}
+  	 text = {
+	trigger = {
+	has_country_flag = SOV_mobilization_E
+	}
+	localization_key = "SOV_mobilization_E"
+	}
+}
+defined_text = {
+	name = GET_electrification
+	text = {
+	trigger = {
+	has_country_flag = SOV_GET_electrification_A
+	}
+	localization_key = "SOV_GET_electrification_decisions"
+	}
+}

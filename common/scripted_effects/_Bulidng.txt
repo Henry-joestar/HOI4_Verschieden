@@ -1,0 +1,118 @@
+PALLC_FOUCS_Economy_1_add = {
+		custom_effect_tooltip = PALLC_FOUCS_Economy_1_add_TT
+	add_to_variable = { Centralized_balance_bar = 1 }
+	add_to_variable = { Centralized_balance_bar_right = -1 }
+		add_to_variable = { GMES_political_power_cost = 0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = 0.01 }
+	add_to_variable = { GMES_economy_cost_factor = -0.08 }
+	add_to_variable = { GMES_tank_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_naval_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_aircraft_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_materiel_manufacturer_cost_factor = -0.08 }
+	add_to_variable = { GMES_industrial_concern_cost_factor = -0.08 }
+	add_to_variable = { FBGMES_production_speed_buildings_factor = 0.05 }
+}
+PALLC_FOUCS_Nationalization = {
+		every_owned_state = {
+			limit = {
+			OR = {
+				private_industrial_complex > 0
+				}
+			}
+		remove_building = {
+		type = private_industrial_complex
+		level = 1
+				}
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = 0.08 }
+	add_to_variable = { PICM_monthly_population = 0.001 }
+			}
+
+		every_owned_state = {
+			limit = {
+			OR = {
+				private_army_complex > 0
+				}
+			}
+		remove_building = {
+		type = private_army_complex
+		level = 1
+				}
+		
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = 0.08 }
+	add_to_variable = { PACM_monthly_population = 0.001 }
+			}
+}
+PALLC_FOUCS_Nationalization_add = {
+		custom_effect_tooltip = PALLC_FOUCS_Nationalization_add_TT
+		hidden_effect = {
+			if = {
+			limit = {
+		check_variable = { Centralized_balance_bar > 5 }
+		has_idea = economy_Free_market_economy
+			}
+				add_ideas = economy_Dominate_economy
+			}
+	add_to_variable = { Economic_balance_bar = 1 }
+	add_to_variable = { Economic_balance_bar_right = -1 }
+		add_to_variable = { GMES_political_power_cost = 0.05 }
+		add_to_variable = { FBGMES_consumer_goods_factor = 0.01 }
+
+		add_to_variable = { GMES_consumer_goods_factor_shuju = 1 }
+		add_to_variable = { Private_construction_units = -10 }
+	
+			add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = 7
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			}
+		}
+	}
+}

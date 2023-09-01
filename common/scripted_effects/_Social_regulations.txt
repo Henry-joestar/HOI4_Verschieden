@@ -1,0 +1,47 @@
+G_Social_regulations_up = {
+	if = {
+		limit = { has_idea = outlawed_dissent }
+		swap_ideas = {
+			remove_idea = Foutlawed_dissent
+			add_idea = censorship
+		}
+	}
+	else_if = {
+		limit = { has_idea = censorship }
+		swap_ideas = {
+			remove_idea = censorship
+			add_idea = right_of_assembly
+		}
+	}
+	else_if = {
+		limit = { has_idea = right_of_assembly }
+		swap_ideas = {
+			remove_idea = right_of_assembly
+			add_idea = protected_speech
+		}
+	}
+}
+
+G_Social_regulations_down = {
+	if = {
+		limit = { has_idea = protected_speech }
+		swap_ideas = {
+			remove_idea = protected_speech
+			add_idea = right_of_assembly
+		}
+	}
+	else_if = {
+		limit = { has_idea = right_of_assembly }
+		swap_ideas = {
+			remove_idea = right_of_assembly
+			add_idea = censorship
+		}
+	}
+	else_if = {
+		limit = { has_idea = censorship }
+		swap_ideas = {
+			remove_idea = censorship
+			add_idea = Foutlawed_dissent
+		}
+	}
+}

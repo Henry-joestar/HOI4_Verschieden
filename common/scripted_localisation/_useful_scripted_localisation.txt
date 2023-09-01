@@ -1,0 +1,408 @@
+defined_text = {
+	name = GetRulingIdeologyId
+	text = {
+		trigger = {
+			has_government = democratic
+		}
+		localization_key = democratic
+	}
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = communism
+	}
+	text = {
+		trigger = {
+			has_government = fascism
+		}
+		localization_key = fascism
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = neutrality
+	}
+	text = {
+		trigger = {
+			has_government = Ssocialism
+		}
+		localization_key = Ssocialism
+	}
+	text = {
+		trigger = {
+			has_government = Authoritarian_capitalism
+		}
+		localization_key = Authoritarian_capitalism
+	}
+}
+
+
+defined_text = {
+	name = GetRulingIdeologySubtype
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = liberalism
+		}
+		localization_key = liberalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = conservatism
+		}
+		localization_key = conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = socialism
+		}
+		localization_key = socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = people
+		}
+		localization_key = people
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_democracy
+		}
+		localization_key = social_democracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Three_Principles_of_the_People
+		}
+		localization_key = Three_Principles_of_the_People
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Liberal_democracy
+		}
+		localization_key = Liberal_democracy
+	}
+################################################################
+	text = {
+		trigger = {
+			has_country_leader_ideology = marxism
+		}
+		localization_key = marxism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = leninism
+		}
+		localization_key = leninism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = stalinism
+		}
+		localization_key = stalinism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anti_revisionism
+		}
+		localization_key = anti_revisionism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarchist_communism
+		}
+		localization_key = anarchist_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Trotskyism
+		}
+		localization_key = trotskyism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Agrarian_socialism_2
+		}
+		localization_key = Agrarian_socialism_2
+		set_country_flag = have_Agrarian_socialism_2
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology =  Nazbol
+		}
+		localization_key =  Nazbol
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Authoritarian_socialism
+		}
+		localization_key = Authoritarian_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Maoism
+		}
+		localization_key = Maoism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Revolutionary_syndicalism
+		}
+		localization_key = Revolutionary_syndicalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = totalitarianism
+		}
+		localization_key = totalitarianism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = moderatism_communism
+		}
+		localization_key = moderatism_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Market_socialism
+		}
+		localization_key = Market_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Market_liberalism
+		}
+		localization_key = Market_liberalism
+	}
+################################################################
+	text = {
+		trigger = {
+			has_country_leader_ideology = nazism
+		}
+		localization_key = nazism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Strasserism
+		}
+		localization_key = Strasserism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = PRC_Socialism_characteristics
+		}
+		localization_key = PRC_Socialism_characteristics
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = gen_nazism
+		}
+		localization_key = gen_nazism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = fascism_ideology
+		}
+		localization_key = fascism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = falangism 
+		}
+		localization_key = falangism 
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = rexism
+		}
+		localization_key = rexism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = National_Syndicalism
+		}
+		localization_key = National_Syndicalism
+	}
+
+	text = {
+		trigger = {
+			has_country_leader_ideology = Integralism
+		}
+		localization_key = Integralism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = National_Renewal_Front
+		}
+		localization_key = National_Renewal_Front
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Burgundian_system
+		}
+		localization_key = Burgundian_system
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = fascism_militarism
+		}
+		localization_key = fascism_militarism
+	}
+################################################################
+	text = {
+		trigger = {
+			has_country_leader_ideology = despotism
+		}
+		localization_key = despotism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = oligarchism
+		}
+		localization_key = oligarchism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = moderatism
+		}
+		localization_key = moderatism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = centrism
+		}
+		localization_key = centrism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Patriarchal_dictatorship
+		}
+		localization_key =  Patriarchal_dictatorship
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = republicanism
+		}
+		localization_key =  republicanism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = A_free_India
+		}
+		localization_key =  A_free_India
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarchism
+		}
+		localization_key = anarchism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Kemalism
+		}
+		localization_key =  Kemalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Authoritarian_democracy
+		}
+		localization_key = Authoritarian_democracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Extreme_authoritarianism
+		}
+		localization_key = Extreme_authoritarianism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Social_nationalism
+		}
+		localization_key = Social_nationalism
+	}
+################################################################
+	text = {
+		trigger = {
+			has_country_leader_ideology = populism 
+		}
+		localization_key = populism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarchism_1
+		}
+		localization_key = anarchism_1
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology =Agrarian_socialism
+		}
+		localization_key = Agrarian_socialism 
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology =Agrarian_socialismc_1
+		}
+		localization_key = Agrarian_socialism_1
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = Communalism 
+		}
+		localization_key = Communalism 
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology =Anarcho_syndicalism 
+		}
+		localization_key = Anarcho_syndicalism 
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = Radical_progressiveism
+		}
+		localization_key = Radical_progressiveism 
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = socialism_1
+		}
+		localization_key = socialism_1 
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = ingsoc
+		}
+		localization_key = ingsoc 
+	}
+################################################################
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = State_capitalism
+		}
+		localization_key = State_capitalism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = Trade_liberalism
+		}
+		localization_key = Trade_liberalism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = Enterprise_company
+		}
+		localization_key = Enterprise_company
+	}
+}

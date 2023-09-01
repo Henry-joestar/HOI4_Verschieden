@@ -1,0 +1,3734 @@
+focus_tree = {
+	id = VnChina
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = CHI
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 20 y = 2200 }
+	shared_focus = CHI_invite_foreign_investors
+	focus = {
+		id = CHI_Internal_and_external_troubles#内忧外患
+		icon = GFX_CHI_Internal_and_external_troubles
+		cost = 2.00
+		ai_will_do = {factor = 100}
+		x = 16
+		y = 0
+		search_filters = {FOCUS_FILTER_POLITICAL}#政治
+		completion_reward = {
+		add_political_power = 50
+				}
+	}
+	focus = {
+		id = CHI_left#结束训政
+		icon = GFX_CHI_left
+		cost = 3.00
+		ai_will_do = {factor = 20}
+		prerequisite = {
+			focus = CHI_Internal_and_external_troubles#内忧外患
+		}
+		mutually_exclusive = {
+			focus = CHI_right#蒋介石理论
+		}
+		x = 10
+		y = 1
+		search_filters = {FOCUS_FILTER_POLITICAL}#政治
+		completion_reward = {
+		add_political_power = 50
+				}
+	}
+	focus = {
+		id = CHI_welfare#民生主义
+		icon = GFX_CHI_welfare
+		cost = 6.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_left#结束训政
+		}
+		available = {
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		x = 1
+		y = 2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+		add_political_power = 25
+		add_stability = 0.01
+		}
+	}
+	focus = {
+		id = CHI_refugee_relief_agency#难民管理所
+		icon = GFX_CHI_refugee_relief_agency
+		cost = 5.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_welfare#民生主义
+		}
+		available = {
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		x = 0
+		y = 3
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+		add_stability = 0.05
+			CHI_Popular_support_level_up = yes
+			CHI_hyper_inflation_level_up = yes
+		}
+	}
+	focus = {
+		id = CHI_Nationalization#产业国有化
+		icon = GFX_CHI_industrial_evacuations
+		cost = 8.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_welfare#民生主义
+		}
+		x = 1
+		y = 4
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
+		completion_reward = {
+			CHI_Popular_support_level_up = yes
+	613 = {
+		production_speed_buildings_factor = 0.1
+		}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+			CHI_hyper_inflation_level_down = yes 
+		}
+	}
+	focus = {
+		id = CHI_new_life_movement#新生活运动
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_refugee_relief_agency#难民管理所
+		}
+		x = 0
+		y = 5
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		search_filters = {FOCUS_FILTER_RESEARCH}#研究
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		add_political_power = 50
+		country_event = { days = 1 id = Vn_chi.2 }
+		}
+	}
+	focus = {
+		id = CHI_land_tax_reform#土地国有化
+		icon = GFX_CHI_National_atheism
+		cost = 8.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_welfare#民生主义
+		}
+		x = 2
+		y = 3
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
+		completion_reward = {
+			CHI_Popular_support_level_up = yes
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+			CHI_hyper_inflation_level_down = yes 
+			}
+	}
+	focus = {
+		id = CHI_unemployment_assistance#失业救济
+		icon = GFX_CHI_unemployment_assistance
+		cost = 5.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_land_tax_reform#土地国有化
+		}
+		x = 2
+		y = 5
+		available = {
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		add_stability = 0.1
+		CHI_hyper_inflation_level_up = yes
+		}
+	}
+	focus = {
+		id = CHI_free_hospitals
+		icon = GFX_focus_generic_concessions
+		cost = 5.00
+		ai_will_do = {factor = 10}
+		prerequisite = {
+			focus = CHI_new_life_movement#新生活运动
+			focus = CHI_unemployment_assistance#失业救济
+		}
+		available = {
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		x = 1
+		y = 6
+		completion_reward = {
+			hidden_effect = {
+		country_event = { days = 400 id = Vn_chi.3 }
+			remove_ideas = CHI_freeHP
+		add_timed_idea = { idea = CHI_freeHP days = 1278 }
+				}
+		custom_effect_tooltip = CHI_free_hospitals_ideas_tt
+		CHI_Popular_support_level_up = yes
+		CHI_hyper_inflation_level_up = yes
+		}
+	}
+	focus = {
+		id = CHI_democracy#民权主义
+		icon = GFX_CHI_democracy_new
+		cost = 5.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_left#结束训政
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		x = 6
+		y = 2
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = CHI_constitutional_reform
+		icon = GFX_CHI_constitutional_reform
+		cost = 6.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_democracy#民权主义
+		}
+		x = 4
+		y = 3
+		search_filters = {FOCUS_FILTER_POLITICAL}#政治
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CHI_republicanism#共和主义
+		icon = GFX_CHI_left
+		cost = 5.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_constitutional_reform
+		}
+		x = 3
+		y = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		add_ideas = CHI_republicanism
+			every_country = {
+				limit = {
+					is_major = yes
+					has_government = democratic
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_republicanism
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_inter_party_coordination_council#政协
+		icon = GFX_CHI_refugee_relief_agency
+		cost = 7.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_constitutional_reform
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_stability = 0.05
+		add_ideas = CHI_inter_party_coordination_council
+		}
+	}
+	focus = {
+		id = CHI_judicial_yuan#司法院
+		icon = GFX_CHI_judicial_yuan
+		cost = 6.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_republicanism#共和主义
+		}
+		prerequisite = {
+			focus = CHI_inter_party_coordination_council#政协
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = CHI_executive_yuan#行政院
+		icon = GFX_CHI_executive_yuan
+		cost = 6.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_democracy#民权主义
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_executive_yuan_CH
+		}
+	}
+	focus = {
+		id = CHI_legislative_yuan#立法院
+		icon = GFX_focus_chi_legislative_yuan
+		cost = 6.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_executive_yuan#行政院
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_legislative_yuan
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = CHI_kwong_jiang_political_advisor
+		}
+	}
+	focus = {
+		id = CHI_control_yuan#检察院
+		icon = GFX_CHI_control_yuan
+		cost = 4.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_judicial_yuan#司法院
+		}
+		prerequisite = {
+			focus = CHI_legislative_yuan#立法院
+		}
+		available = {
+		NOT = {has_idea =  CHI_Power_struggle }
+			}
+		x = 4
+		y = 6
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_control_yuan_characters
+		custom_effect_tooltip = CHI_governmentfubai_ideas_tt
+		hidden_effect = {
+		remove_ideas = CHI_corruptgovernment_3
+	add_timed_idea = { idea = CHI_corruptgovernment_3 days = 70 }
+			}
+		}
+	}
+	focus = {
+		id = CHI_examination_yuan#考试院
+		icon = GFX_focus_chi_examination_yuan
+		cost = 6.00
+		ai_will_do = {factor = 30}
+		prerequisite = {
+			focus = CHI_legislative_yuan#立法院
+		}
+		prerequisite = {
+			focus = CHI_judicial_yuan#司法院
+		}
+		available = {
+		NOT = {has_idea =  CHI_Power_struggle }
+			}
+		x = 6
+		y = 6
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		custom_effect_tooltip = CHI_examination_yuan_ideas_tt
+		hidden_effect = {
+		remove_ideas = CHI_ineffective_bureaucracy
+	add_timed_idea = { idea = CHI_ineffective_bureaucracy days = 450 }
+			}
+		}
+	}
+	focus = {
+		id = CHI_election#第一届公开选举
+		icon = GFX_CHI_Npc
+		cost = 4.00
+		ai_will_do = {factor = 1}
+		prerequisite = {
+			focus = CHI_examination_yuan#考试院
+		}
+		prerequisite = {
+			focus = CHI_control_yuan#检察院
+		}
+		prerequisite = {
+			focus = CHI_Npc#人大
+		}
+		x = 6
+		y = 7
+		search_filters = {FOCUS_FILTER_POLITICAL}#政治
+		search_filters = {FOCUS_FILTER_STABILITY}#稳定度
+		completion_reward = {
+		add_stability = 0.05
+		country_event = { days = 1 id = Vn_chi.5 }
+		CHI_Porous_level_up_7 = yes
+		}
+	}
+	focus = {
+		id = CHI_democratic_centralism#民主集权制
+		icon = GFX_CHI_democratic_centralism
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_election#第一届公开选举
+		}
+		x = 7
+		y = 8
+		completion_reward = {
+		add_ideas = CHI_democratic_centralism
+			}
+	}
+	focus = {
+		id = CHI_freely#开放自由权
+		icon = GFX_CHI_freely
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_election#第一届公开选举
+		}
+		x = 5
+		y = 8
+		completion_reward = {
+		add_stability = 0.05
+		add_offsite_building = { type = industrial_complex level = 3 }
+		}
+	}
+	focus = {
+		id = CHI_National_atheism#国家无神论
+		icon = GFX_CHI_National_atheism
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_democratic_centralism#民主集权制
+			focus = CHI_freely#开放自由权
+		}
+		x = 8
+		y = 9
+		completion_reward = {
+		add_ideas = CHI_National_atheism
+			}
+	}
+	focus = {
+		id = CHI_MYGK
+		available = {
+			is_subject = no
+		}
+		icon = GFX_focus_POL_develop_polish_shipbuilding 
+		cost = 10.00
+		prerequisite = {
+		focus = CHI_National_atheism
+		focus = CHI_cooperative
+		focus = CHI_Nationalization_2_CHI
+		}
+		x = 6
+		y = 10
+		completion_reward = {
+				transfer_state = 326
+				transfer_state = 729
+				transfer_state = 728
+		}
+	}
+	focus = {
+		id = CHI_Npc#人大
+		icon = GFX_CHI_Npc
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_democracy#民权主义
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+		add_stability = 0.1
+		CHI_Porous_level_up = yes
+		}
+	}
+	focus = {
+		id = CHI_right#蒋介石理论
+		icon = GFX_CHI_right
+		cost = 3.00
+		ai_will_do = {factor = 15}
+		prerequisite = {
+			focus = CHI_Internal_and_external_troubles#内忧外患
+		}
+		mutually_exclusive = {
+			focus = CHI_left#结束训政
+		}
+		x = 21
+		y = 1
+		completion_reward = {
+		add_political_power = 25
+			}
+	}
+	focus = {
+		id = CHI_nationalism#民族主义
+		icon = GFX_CHI_nationalism
+		cost = 5.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_left#结束训政
+			focus = CHI_right#蒋介石理论
+		}
+		x = 13
+		y = 2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			}
+	}
+	focus = {
+		id = CHI_National_industry#民族工业
+		icon = GFX_CHI_National_industry
+		cost = 8.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_nationalism#民族主义
+		}
+		x = 12
+		y = 3
+		completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+			add_war_support = 0.05
+			}
+	}
+	focus = {
+		id = CHI_Tackle_corruption
+		icon = GFX_CHI_democracy
+		cost = 7.00
+		ai_will_do = {factor = 35}
+		prerequisite = {
+			focus = CHI_National_industry#民族工业
+		}
+		x = 11
+		y = 4
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			}
+	}
+	focus = {
+		id = CHI_Opium_market#专业鸦片市场
+		icon = GFX_PRC_ok_the_opium_trade
+		cost = 6.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_Tackle_corruption
+		}
+		mutually_exclusive = {
+			focus = CHI_Limit_opium#限制鸦片
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = CHI_Opium_trade_ideas
+		add_idea = CHI_Opium_trade_ideas_zhuanye
+			}
+		}
+	}
+	focus = {
+		id = CHI_Japan_threat#日本威胁
+		icon = GFX_CHI_Japan_threat
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_nationalism#民族主义
+		}
+		ai_will_do = {factor = 25}
+		x = 14
+		y = 3
+		completion_reward = {
+			add_war_support = 0.1
+			}
+	}
+	focus = {
+		id = CHI_united_front#统一战线
+		icon = GFX_CHI_united_front
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Japan_threat#日本威胁
+		}
+		mutually_exclusive = {
+			focus = CHI_prioritize_the_interior#安内
+		}
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+
+		bypass = {
+			is_in_faction_with = PRC
+		}
+		x = 13
+		y = 4
+		completion_reward = {
+			CHI = {
+				set_rule = { can_create_factions = yes }
+				create_faction = chinese_united_front
+			}
+			PRC = {
+				country_event = generic.5
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_Anti_Japanese_mobilization#抗日动员
+		icon = GFX_goal_generic_propaganda
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_united_front#统一战线
+		}
+		x = 13
+		y = 5
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = war_economy
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+					}
+				}
+			}
+	}
+	focus = {
+		id = CHI_prioritize_the_interior#安内
+		icon = GFX_CHI_nationalism
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_Japan_threat#日本威胁
+		}
+		mutually_exclusive = {
+			focus = CHI_united_front#统一战线
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				AND = {
+					MAN = {	exists = no }
+					PRC = { exists = no }
+				}
+				factor = 0
+			}
+		}
+		x = 15
+		y = 4
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			CHI_Popular_support_level_lower = yes
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = CHI_pick_a_fight_with_japan#先发逐日
+		icon = GFX_focus_focus_fra_fascist_threat
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_Anti_Japanese_mobilization#抗日动员
+			focus = CHI_prioritize_the_interior#安内
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = {
+					has_government = democratic
+				}
+				factor = 0
+			}
+		}
+		available = {
+			NOT = { is_in_faction_with = JAP }
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = JAP
+				has_war_with = MAN
+			}
+		}
+		x = 14
+		y = 6
+
+		completion_reward = {
+			if = {
+				limit = {
+					MAN = {
+						OR = {
+							is_in_faction_with = JAP
+							is_puppet_of = JAP
+						}
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MAN
+					expire = 0
+				}
+				else = {
+					create_wargoal = {
+						type = annex_everything
+						target = JAP
+						expire = 0
+					}	
+				}
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.35 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_war_of_resistance#全面抗战
+		icon = GFX_CHI_war_of_resistance
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_pick_a_fight_with_japan#先发逐日
+		}
+		available = {		
+		}
+
+		bypass = {
+			has_offensive_war_with = JAP
+		}
+		ai_will_do = {factor = 25}
+		x = 15
+		y = 7
+		completion_reward = {
+	add_timed_idea = { idea = CHI_war_of_resistance days = 650 }
+		}
+	}
+	focus = {
+		id = CHI_scorched_earth_tactics#焦土政策
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_war_of_resistance#全面抗战
+		}
+		available = {
+			has_war = yes
+		}
+		ai_will_do = {factor = 4}
+		x = 13
+		y = 8
+		completion_reward = {
+			unlock_decision_tooltip = CHI_scorched_earth_tactics
+		}
+	}
+	focus = {
+		id = CHI_forced_conscription#强制征兵
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_scorched_earth_tactics#焦土政策
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				has_manpower > 1000000
+				factor = 0
+			}
+		}
+		x = 14
+		y = 9
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = CHI_forced_conscription
+		}
+	}
+	focus = {
+		id = CHI_industrial_evacuations#疏散工业
+		icon = GFX_focus_SOV_merge_plants
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_war_of_resistance#全面抗战
+		}
+
+		available = {
+			has_war = yes
+		}
+		ai_will_do = {factor = 25}
+		x = 15
+		y = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			unlock_decision_category_tooltip = CHI_industrial_evacuations			
+			set_variable = { var = CHI_industrial_evacuations_amount_factor value = 0.75 } #Ratio for how many building are moved. Change CHI_industrial_evacuations_add_AF and CHI_industrial_evacuations_add_IC if you change the value
+		}
+	}
+	focus = {
+		id = CHI_anti_communism#反共
+		icon = GFX_CHI_anti_communism
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_prioritize_the_interior#安内
+		}
+		ai_will_do = {factor = 5}
+		bypass = {
+			OR = {
+				is_in_faction_with = PRC
+				NOT = { 
+					any_country = {
+						OR = {
+							tag = YUN
+							tag = SIK
+							tag = GXC
+							tag = SHX
+							tag = XSM
+							tag = TIB
+							tag = PRC
+
+tag = SCS
+
+tag = HBJ
+
+tag = XKS
+						}
+						has_government = communism
+					}
+				}
+			}
+		}
+		available = {
+			NOT = { has_government = communism }
+			any_country = {
+				OR = {
+					tag = YUN
+					tag = SIK
+					tag = GXC
+					tag = SHX
+					tag = XSM
+					tag = TIB
+					tag = HBS
+					tag = XKS
+					tag = HBJ
+					tag = PRC
+				}
+				has_government = communism
+			}
+		}
+		x = 16
+		y = 5
+		completion_reward = {
+		CHI_Popular_support_level_lower = yes
+			if = {		
+				limit = {
+					SIK = {
+						has_government = communism
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SIK
+					expire = 0
+				}
+			}
+			if = {		
+				limit = {
+					TIB = {
+						has_government = communism
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TIB
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					PRC = {
+						has_government = communism
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PRC
+						expire = 0
+					}
+				}
+			}
+			if = {
+				limit = {
+					YUN = {
+						has_government = communism
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = YUN
+						expire = 0
+					}
+				}
+			}
+			if = {
+				limit = {
+					SHX = {
+						has_government = communism
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = SHX
+						expire = 0
+					}
+				}
+			}
+			if = {
+				limit = {
+					GXC = {
+						has_government = communism
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = GXC
+						expire = 0
+					}
+				}
+			}
+			if = {
+				limit = {
+					XSM = {
+						has_government = communism
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = XSM
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_subjugate_the_warlords#踏平军阀
+		icon = GFX_CHI_subjugate_the_warlords
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_anti_communism#反共
+		}
+		ai_will_do = {factor = 25}
+		bypass = {
+			GXC = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+			YUN = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+			SHX = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+			XSM = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+			SIK = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		x = 16
+		y = 6
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GXC
+						tag = YUN
+						tag = SHX
+						tag = XSM
+						tag = SIK
+
+						tag = XYM
+						tag = XKS
+						tag = SCS
+						tag = HBJ
+					}
+				}
+				country_event = { id = wtt_china.1 }
+			}
+
+		}
+	}
+	focus = {
+		id = CHI_war_of_national_liberation#民族解放战争
+		icon = GFX_focus_focus_fra_revolution_utmost
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_war_of_resistance#全面抗战
+		}
+		available = {
+			has_defensive_war = yes
+		}
+		x = 17
+		y = 8
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = CHI_war_of_resistance
+				}
+				swap_ideas = {
+					remove_idea = CHI_war_of_resistance
+					add_idea = CHI_war_of_resistance_2
+				}
+				else = {
+					add_ideas = CHI_war_of_national_liberation
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_war_of_anti_imperialism#反帝战争
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 7.00
+		ai_will_do = {factor = 10}
+		prerequisite = {
+			focus = CHI_war_of_national_liberation#民族解放战争
+		}
+		available = {
+			OR = {
+				has_war_with = JAP
+				has_war_with = MAN
+			}
+			has_country_flag = CHI_lessons_of_war_completed
+		}
+		x = 16
+		y = 9
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CHI_war_of_anti_imperialism
+		}
+	}
+	focus = {
+		id = CHI_unified_industrial_planning#统一工业规划
+		icon = GFX_CHI_worker
+		cost = 5.00
+		ai_will_do = {factor = 20}
+		prerequisite = {
+			focus = CHI_right#蒋介石理论
+			focus = CHI_left#结束训政
+		}
+		x = 19
+		y = 2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_unified_industrial_planning
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = CHI_rural_reconstruction_movement#乡村建设运动
+		icon = GFX_CHI_collectivization
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_unified_industrial_planning#统一工业规划
+		}
+		available = {
+			has_full_control_of_state = 607
+			has_full_control_of_state = 602
+			has_full_control_of_state = 605
+		}
+		x = 17
+		y = 3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			607 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			602 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			605 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = CHI_mining_commission#资源委员会
+		icon = GFX_JAP_Industrial_Committee
+		cost = 10.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_unified_industrial_planning#统一工业规划
+		}
+		available = {
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		x = 19
+		y = 3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			CHI_hyper_inflation_level_up = yes
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = CHI_mining_commission			
+		}
+	}
+	focus = {
+		id = CHI_develop_the_hanyan_arsenal#汉阳兵工厂
+		icon = GFX_CHI_industrial_evacuations
+		cost = 10.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_mining_commission#资源委员会
+		}
+
+		available = {
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		x = 17
+		y = 4
+		complete_tooltip = {
+			CHI_hyper_inflation_level_up = yes
+			random_state = {
+				limit = {
+					has_state_flag = CHI_develop_the_hanyan_arsenal_AF
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			CHI_hyper_inflation_level_up = yes
+			random_owned_controlled_state = {
+				prioritize = { 620 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = CHI_develop_the_hanyan_arsenal_AF
+			}
+		}
+	}
+	focus = {
+		id = CHI_military_affairs_commission#军事委员会
+		icon =GFX_focus_secret_rearmament
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Japan_threat#日本威胁
+		}
+		x = 18
+		y = 5
+		completion_reward = {
+			add_ideas = CHI_military_affairs_commission
+		}
+	}
+	focus = {
+		id = CHI_60_divisions_plan#六十师整训
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_military_affairs_commission#军事委员会
+		}
+		x = 17
+		y = 7
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			unlock_decision_tooltip = CHI_60_divisions_plan
+		}
+	}
+	focus = {
+		id = CHI_Five_modernizations#五个现代化
+		icon = GFX_CHI_Five_modernizations
+		cost = 2.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_National_industry#民族工业
+		}
+		x = 12
+		y = 10
+		completion_reward = {
+		add_tech_bonus = {
+		name = industry_bonus 
+		bonus = 1
+		uses = 2
+		category = industry #研究类型
+				}
+		add_tech_bonus = {
+		name = electronics_bonus 
+		bonus = 1
+		uses = 1
+		category = electronics #研究类型
+				}
+			}
+	}
+	focus = {
+		id = CHI_technology_modernization#科技现代化
+		icon = GFX_CHI_technology_modernization
+		cost = 5.00
+		available = {
+		has_war = no
+			}
+		ai_will_do = {factor = 1}
+		prerequisite = {
+			focus = CHI_Five_modernizations#五个现代化
+		}
+		x = 17
+		y = 11
+		completion_reward = {
+		add_dynamic_modifier = {
+			modifier = Modernization_scientific_research
+		}
+			add_to_variable = { CHIMODSC_research_speed_factor  = 0.03 }
+			}
+	}
+	focus = {
+		id = CHI_agriculture_modernization#农业现代化
+		icon = GFX_CHI_agriculture_modernization
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_Five_modernizations#五个现代化
+		}
+		available = {
+		has_war = no
+			}
+		ai_will_do = {factor = 1}
+		x = 7
+		y = 11
+		completion_reward = {
+		add_political_power = 150
+			}
+	}
+	focus = {
+		id = CHI_technology_modernization_1#识字率普及
+		icon = GFX_CHI_technology_modernization_1
+		cost = 12.0
+		prerequisite = {
+			focus = CHI_technology_modernization#科技现代化
+		}
+		available = {
+			}
+		ai_will_do = {factor = 15}
+		x = 15
+		y = 12
+		completion_reward = {
+			add_stability = 0.05
+			add_research_slot = 1
+		custom_effect_tooltip = CHIMODSC_research_speed_factor_tt
+			add_to_variable = { CHIMODSC_research_speed_factor  = 0.03 }
+			}
+	}
+	focus = {
+		id = CHI_expand_the_academica_sinica#扩大科研院
+		icon = GFX_CHI_technology_modernization_2
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_technology_modernization#科技现代化
+		}
+		available = {
+		has_war = no
+			has_stability > 0.7
+			}
+		ai_will_do = {factor = 10}
+		x = 17
+		y = 12
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+			add_to_variable = { CHIMODSC_research_speed_factor  = 0.03 }
+		custom_effect_tooltip = CHIMODSC_research_speed_factor_tt
+			}
+	}
+	focus = {
+		id = CHI_chemical_research_institute#化学研究所
+		icon = GFX_CHI_technology_modernization_3
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_expand_the_academica_sinica#扩大科研院
+		}
+		available = {
+		has_war = no
+			num_of_factories > 100
+			amount_research_slots < 5
+			}
+		x = 17
+		y = 13
+		ai_will_do = {factor = 10}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {			
+			add_research_slot = 1
+			add_to_variable = { CHIMODSC_research_speed_factor  = 0.03 }
+		custom_effect_tooltip = CHIMODSC_research_speed_factor_tt
+		}
+	}
+	focus = {
+		id = CHI_fortify_shanghai#筑防上海
+		icon = GFX_goal_generic_fortify_city
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_military_affairs_commission#军事委员会
+		}
+		ai_will_do = {factor = 5}
+		available = {
+			NOT = {
+				any_enemy_country = {
+					has_full_control_of_state = 613
+				}
+			}
+		}
+		x = 18
+		y = 6
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 613 }
+				613 = { # Shanghai
+					set_building_level = {
+						type = bunker
+						province = {
+							id = 11913 #Nanjing
+							id = 11982 #Nothing
+							id = 10076 #Airbase
+							id = 12052
+							id = 7014 #Shanghai
+						}
+						level = 2
+						instant_build = yes
+					}
+
+					if = {
+						limit = {
+							any_province_building_level = {
+								province = {
+									id = 7014 #Shanghai
+								}
+								level < 3
+								building = bunker
+							}
+						}
+						set_building_level = {
+							type = bunker
+							province = {
+								id = 7014 #Shanghai
+							}
+							level = 3
+							instant_build = yes
+						}
+					}
+
+					if = {
+						limit = {
+							any_province_building_level = {
+								province = {
+									id = 7014 #Shanghai
+								}
+								level < 2
+								building = coastal_bunker
+							}
+						}
+						set_building_level = {
+							type = coastal_bunker
+							province = {
+								id = 7014 #Shanghai
+							}
+							level = 2
+							instant_build = yes
+						}
+					}					
+				}
+
+				#If not full control, only add forts in provinces bordering the enemy
+				#Only time to throw up some emergency stuff
+				else = {
+					613 = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border = yes
+							}
+							level = 1
+							instant_build = yes
+						}
+					}
+
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_taiyuan_arsenal#太原兵工厂
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_mining_commission#资源委员会
+		}
+		available = {
+			controls_state = 615
+			NOT = {
+				has_idea = CHI_hyper_inflation_5
+			}
+		}
+		x = 19
+		y = 4
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			CHI_hyper_inflation_level_up = yes
+			615 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}			
+			}
+		}
+	}
+	focus = {
+		id = CHI_the_chinese_hindenburg_line#中国兴登堡防线
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = CHI_military_affairs_commission#军事委员会
+		}
+		ai_will_do = {factor = 5}
+		available = {
+			NOT = {
+				any_enemy_country = {
+					has_full_control_of_state = 613
+				}
+			}
+			NOT = {
+				any_enemy_country = {
+					has_full_control_of_state = 606
+				}
+			}
+		}
+		x = 19
+		y = 7
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 613 }
+				613 = { # Shanghai
+					set_building_level = {
+						type = bunker
+						province = {
+							id = 11913 #Nanjing
+							id = 11982 #Nothing
+							id = 10076 #Airbase
+							id = 12052
+							id = 7014 #Shanghai
+						}
+						level = 3
+						instant_build = yes
+					}
+
+					if = {
+						limit = {
+							any_province_building_level = {
+								province = {
+									id = 7014 #Shanghai
+								}
+								level < 4
+								building = bunker
+							}
+						}
+						set_building_level = {
+							type = bunker
+							province = {
+								id = 7014 #Shanghai
+							}
+							level = 4
+							instant_build = yes
+						}
+					}
+
+					if = {
+						limit = {
+							any_province_building_level = {
+								province = {
+									id = 7014 #Shanghai
+								}
+								level < 3
+								building = coastal_bunker
+							}
+						}
+						set_building_level = {
+							type = coastal_bunker
+							province = {
+								id = 7014 #Shanghai
+							}
+							level = 3
+							instant_build = yes
+						}
+					}					
+				}
+
+				#If not full control, only add forts in provinces bordering the enemy
+				#Only time to throw up some emergency stuff
+				else = {
+					613 = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border = yes
+							}
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 606 }
+				606 = { # Anhui
+					set_building_level = {
+						type = bunker
+						province = {
+							id = 1099
+							id = 1171
+							id = 11937
+							id = 10044
+						}
+						level = 2
+						instant_build = yes
+					}								
+				}
+
+				#If not full control, only add forts in provinces bordering the enemy
+				#Only time to throw up some emergency stuff
+				else = {
+					606 = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border = yes
+							}
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 600 }
+				600 = { # Jiangxi
+					set_building_level = {
+						type = bunker
+						province = {
+							id = 1153
+						}
+						level = 2
+						instant_build = yes
+					}								
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_political_modernization#管理体系现代化
+		icon = GFX_CHI_political_modernization
+		cost = 5.00
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+			focus = CHI_Five_modernizations#五个现代化
+		}
+		x = 19
+		y = 11
+		completion_reward = {
+		add_political_power = 150
+			}
+	}
+	focus = {
+		id = CHI_Decentralized#去中心化
+		icon = GFX_CHI_constitutional_reform
+		cost = 10.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+			focus = CHI_political_modernization#管理体系现代化
+		}
+		x = 19
+		y = 13
+		completion_reward = {
+		add_ideas = CHI_political_modernization
+			}
+	}
+	focus = {
+		id = CHI_Industrial_unions#生产管理改革
+		icon = GFX_JAP_Collectivization_of_agriculture
+		cost = 10.00
+		available = {
+		has_war = no
+		has_idea = CHI_political_modernization
+			}
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_political_modernization#管理体系现代化
+		}
+		x = 20
+		y = 12
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_political_modernization
+				add_idea = CHI_political_modernization_B
+			}
+		}
+	}
+	focus = {
+		id = CHI_financial_policy#金融政策
+		icon = GFX_focus_mex_privatisation
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_unified_industrial_planning#统一工业规划
+		}
+		x = 21
+		y = 3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = CHI_t_v_soong_political_advisor
+		}
+	}
+	focus = {
+		id = CHI_price_controls#调控物价
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_financial_policy#金融政策
+		}
+		ai_will_do = {factor = 25}
+		available = {
+			has_hyper_inflation = yes
+		}
+		x = 21
+		y = 4
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
+		completion_reward = {
+			CHI_hyper_inflation_level_down = yes
+		}
+	}
+	focus = {
+		id = CHI_reform_the_national_bank#改革国家银行
+		icon = GFX_CHI_constitutional_reform
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_price_controls#调控物价
+		}
+		available = {
+			has_hyper_inflation = yes
+		}
+
+		x = 21
+		y = 5
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
+		completion_reward = {
+			CHI_hyper_inflation_level_down = yes
+		}
+	}
+	focus = {
+		id = CHI_forced_loans#强制借贷
+		icon = GFX_CHI_control_yuan
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_reform_the_national_bank#改革国家银行
+		}
+		available = {
+			has_hyper_inflation = yes
+		}
+		x = 21
+		y = 6
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
+		completion_reward = {
+			unlock_decision_tooltip = CHI_forced_loans
+		}
+	}
+	focus = {
+		id = CHI_grain_tax#余粮征集制
+		icon = GFX_CHI_democracy
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_price_controls#调控物价
+		}
+		x = 23
+		y = 5
+		completion_reward = {
+		add_timed_idea = { idea =CHI_grain_tax days = 650 }
+		}
+	}
+	focus = {
+		id = CHI_absolute#绝对领导
+		icon = GFX_CHI_Abolition_elections
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_right#蒋介石理论
+		}
+		ai_will_do = {factor = 25}
+		x = 25
+		y = 2
+		completion_reward = {
+		add_political_power = 25
+		add_country_leader_trait = dictator
+		add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = CHI_makegod#造神
+		icon = GFX_CHI_executive_yuan_right
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_absolute#绝对领导
+		}
+		ai_will_do = {factor = 25}
+		x = 24
+		y = 3
+		completion_reward = {
+		add_political_power = 25
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CHI_cult_of_personality_new#个人崇拜
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_makegod#造神
+		}
+		ai_will_do = {factor = 25}
+		x = 24
+		y = 4
+		completion_reward = {
+		add_political_power = 25
+		add_stability = 0.05
+		}
+	}
+	focus = {
+		id = CHI_dare_to_die_corps#敢死队
+		icon = GFX_goal_generic_attack_allies
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_forced_conscription#强制征兵
+		}
+		x = 14
+		y = 10
+		completion_reward = {
+			custom_effect_tooltip = CHI_50_cheaper_force_attack
+		}
+	}
+	focus = {
+		id = CHI_Wartime_industrialization#战时工业化
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		available = {
+		has_war = yes
+			}
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_National_industry#民族工业
+		}
+		prerequisite = {
+			focus = CHI_pick_a_fight_with_japan#先发逐日
+		}
+		x = 11
+		y = 7
+		completion_reward = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_Limit_opium#限制鸦片
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 6.00
+		ai_will_do = {factor = 45}
+		prerequisite = {
+			focus = CHI_Tackle_corruption
+		}
+		mutually_exclusive = {
+			focus = CHI_Opium_market
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = CHI_Opium_trade_ideas
+			add_idea = CHI_Opium_trade_ideas_Limit
+			}
+		}
+	}
+	focus = {
+		id = CHI_fk_opium#查禁鸦片
+		icon = GFX_PRC_ban_the_opium_trade
+		cost = 7.00
+		ai_will_do = {factor = 45}
+		prerequisite = {
+			focus = CHI_Limit_opium#限制鸦片
+		}
+		available = {
+			num_of_factories > 65
+			strength_ratio = {
+				tag = ENG
+				ratio > 0.8
+			}
+		}
+		x = 11
+		y = 6
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		remove_ideas = CHI_Opium_trade_ideas_Limit
+		}
+
+	}
+	focus = {
+		id = CHI_Nationalization_2_CHI#大规模产业国有化
+		icon = GFX_CHI_seizure
+		cost = 10.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_freely
+			focus = CHI_democratic_centralism
+			}
+		x = 4
+		y = 9
+		completion_reward = {
+			CHI_hyper_inflation_level_down = yes 
+
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_seizure#夺取日本机床
+		icon = GFX_CHI_seizure
+		cost = 5.00
+		prerequisite = {
+		focus = CHI_Wartime_industrialization#战时工业化
+		}
+		x = 11
+		y = 8
+		ai_will_do = {factor = 25}
+		completion_reward = {
+		custom_effect_tooltip = CHI_seizure_tt
+			}
+	}
+	focus = {
+		id = CHI_rural_schooling
+		icon = GFX_CHI_technology_modernization_1
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_free_hospitals
+		}
+		ai_will_do = {factor = 15}
+		available = {
+	has_country_flag  = CHI_educate_Movement_Divison_WC
+		}
+		x = 1
+		y = 7
+		completion_reward = {
+		hidden_effect = {
+		country_event = { days = 200 id = Vn_chi.7 }
+			remove_ideas = CHI_Popular_research_1
+		add_timed_idea = { idea = CHI_Popular_research_1 days = 578 }
+				}
+		custom_effect_tooltip = CHI_rural_schooling_ideas_tt
+			}
+	}
+
+	focus = {
+		id = CHI_cooperative#扶持民营企业
+		icon = GFX_CHI_unemployment_assistance
+		cost = 7.00
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+			focus = CHI_democratic_centralism#民主集权制
+			focus = CHI_freely#开放自由权
+		}
+		ai_will_do = {factor = 15}
+		x = 6
+		y = 9
+		completion_reward = {
+		CHI_hyper_inflation_level_up = yes
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = CHI_Industrial_modernization#工业现代化
+		icon = GFX_CHI_Industrial_modernization
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+			focus = CHI_Five_modernizations#五个现代化
+		}
+		x = 5
+		y = 11
+		completion_reward = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 1
+			uses = 1
+			category = industry 
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_defense_modernization#国防现代化
+		icon = GFX_CHI_gun_modernization
+		cost = 5.00
+		ai_will_do = {factor = 45}
+		prerequisite = {
+			focus = CHI_Five_modernizations#五个现代化
+		}
+		x = 12
+		y = 11
+
+		search_filters = {FOCUS_FILTER_RESEARCH}#研究
+		search_filters = {FOCUS_FILTER_ARMY_XP}#陆军经验
+		search_filters = {FOCUS_FILTER_NAVY_XP}#海军经验
+		search_filters = {FOCUS_FILTER_AIR_XP}#空军经验
+		completion_reward = {
+		army_experience = 25
+		navy_experience = 25
+		air_experience = 25
+		add_tech_bonus = {
+		name = infantry_bonus #(取研究类型名开头即可)
+		bonus = 1
+		uses = 1
+		category = infantry_tech
+				}
+			}
+	}
+	focus = {
+		id = CHI_collectivization#宣告开始农业集体化
+		icon = GFX_CHI_collectivization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+		focus = CHI_agriculture_modernization#农业现代化
+		}
+		x = 7
+		y = 12
+		completion_reward = {
+		custom_effect_tooltip =CHI_collectivization_tt
+			}
+	}
+	focus = {
+		id = CHI_collectivization_2#拖拉机分发局
+		icon = GFX_CHI_collectivization_2
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+			focus = CHI_collectivization#宣告开始农业集体化
+		}
+		x = 7
+		y = 13
+		completion_reward = {
+		custom_effect_tooltip =CHI_collectivization_2_tt
+			}
+	}
+	focus = {
+		id =  CHI_collectivization_3#全面机械化
+		icon = GFX_CHI_collectivization_3
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+		focus = CHI_collectivization_2#拖拉机分发局
+		}
+		x = 7
+		y = 14
+		completion_reward = {
+		custom_effect_tooltip =CHI_collectivization_3_tt
+			}
+	}
+	focus = {
+		id = CHI_Industrial_modernization_2#南方工业化
+		icon = GFX_CHI_Industrial_modernization_2
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+		focus = CHI_Industrial_modernization#工业现代化
+		}
+		x = 5
+		y = 12
+		completion_reward = {
+	custom_effect_tooltip =CHI_Industrial_modernization_2_tt
+			}
+	}
+	focus = {
+		id = CHI_Industrial_modernization_3#北方工业化
+		icon = GFX_CHI_National_industry
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+		focus = CHI_Industrial_modernization_2#南方工业化
+		}
+		x = 5
+		y = 13
+		completion_reward = {
+	custom_effect_tooltip =CHI_Industrial_modernization_3_tt
+			}
+	}
+	focus = {
+		id = CHI_Industrial_modernization_4#西域工业化
+		icon = GFX_CHI_Industrial_modernization_4
+		cost = 5.00
+		ai_will_do = {factor = 5}
+		available = {
+		has_war = no
+			}
+		prerequisite = {
+		focus = CHI_Industrial_modernization_2#南方工业化
+		}
+		x = 3
+		y = 13
+		completion_reward = {
+	custom_effect_tooltip =CHI_Industrial_modernization_4_tt
+			}
+	}
+	focus = {
+		id = CHI_gun_modernization#步兵装备现代化
+		icon = GFX_CHI_gun_modernization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_defense_modernization#国防现代化
+		}
+		x = 13
+		y = 12
+		completion_reward = {
+		add_tech_bonus = {
+		name = infantry_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 4
+		category = infantry_tech
+				}
+		add_tech_bonus = {
+		name = infantry_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 4
+		category = infantry_weapons
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_fire_modernization#火炮现代化
+		icon = GFX_CHI_fire_modernization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_gun_modernization#步兵装备现代化
+		}
+		x = 13
+		y = 13
+		completion_reward = {
+		add_tech_bonus = {
+		name = artillery_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 4
+		category = artillery
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_motorization_modernization#摩托化现代化
+		icon = GFX_CHI_motorization_modernization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+		focus = CHI_equipment_modernization#支援装备现代化
+		}
+		x = 15
+		y = 14
+		completion_reward = {
+		add_tech_bonus = {
+		name = infantry_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = motorized_equipment
+				}
+		add_tech_bonus = {
+		name = infantry_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = cat_mechanized_equipment
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_air_modernization#战斗机现代化
+		icon = GFX_CHI_air_modernization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_tank_modernization#装甲现代化
+		}
+		x = 13
+		y = 15
+		completion_reward = {
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = light_fighter
+				}
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = cas_bomber
+				}
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = naval_bomber
+				}
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = medium_air
+				}
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = naval_air
+				}
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = tactical_bomber
+				}
+		add_tech_bonus = {
+		name = air_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = heavy_air
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_equipment_modernization#支援装备现代化
+		icon = GFX_CHI_equipment_modernization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_gun_modernization#步兵装备现代化
+		}
+		x = 15
+		y = 13
+		completion_reward = {
+		add_tech_bonus = {
+		name = support_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 6
+		category = support_tech
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_tank_modernization#装甲现代化
+		icon = GFX_CHI_tank_modernization
+		cost = 7.00
+		ai_will_do = {factor = 5}
+		prerequisite = {
+			focus = CHI_fire_modernization#火炮现代化
+		}
+		x = 13
+		y = 14
+		completion_reward = {
+		add_tech_bonus = {
+		name = armor_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = cat_light_armor
+				}
+		add_tech_bonus = {
+		name = armor_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = cat_medium_armor
+				}
+		add_tech_bonus = {
+		name = armor_bonus #(取研究类型名开头即可)
+		bonus = 1.5
+		uses = 2
+		category = cat_heavy_armor
+				}
+		add_tech_bonus = {
+		name = artillery_bonus #(取研究类型名开头即可)
+		bonus = 1
+		uses = 2
+		category = cat_anti_tank
+				}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_military_affairs_commission_mon#军事委员会
+		icon = GFX_CHI_Internal_and_external_troubles
+		cost = 5.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_defense_modernization#国防现代化
+		}
+		available = {
+		has_idea = CHI_military_affairs_commission
+			}
+		x = 11
+		y = 12
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_military_affairs_commission
+				add_idea = CHI_military_affairs_commission_2
+			}
+		}
+	}
+	focus = {
+		id = CHI_army_reform#军队改革
+		icon = GFX_focus_chi_army_reform
+		cost = 4.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+		focus = CHI_military_affairs_commission_mon#军事委员会
+		}
+		x = 11
+		y = 13
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = CHI_army_reform
+		}
+	}
+	focus = {
+		id = CHI_bureau_of_investigation_and_statistics#军统
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 4.00
+		ai_will_do = {factor = 10}
+		prerequisite = {
+		focus = CHI_military_affairs_commission_mon#军事委员会
+		}
+		x = 9
+		y = 13
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = available_political_advisor
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				show_ideas_tooltip = CHI_dai_li_political_advisor
+			}
+			else = {
+				show_ideas_tooltip = CHI_dai_li_wtt_political_advisor
+			}
+		}
+	}
+	focus = {
+		id = CHI_whampoa_military_academy#黄埔军校
+		icon =GFX_focus_chi_whampoa_military_academy
+		cost = 4.00
+		ai_will_do = {factor = 50}
+		prerequisite = {
+		focus = CHI_bureau_of_investigation_and_statistics#军统
+		}
+		x = 9
+		y = 14
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+			add_ideas = CHI_whampoa_military_academy
+		}
+	}
+	focus = {
+		id = CHI_Government_loyalty#确保忠诚
+		icon = GFX_CHI_Government_loyalty
+		cost = 7.00
+		ai_will_do = {factor = 50}
+		prerequisite = {
+			focus = CHI_absolute
+		}
+		x = 26
+		y = 4
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+				division_template = { name = "亲卫队" division_names_group = CHI_INF_01 is_locked = no regiments = { infantry = { x = 0 y = 0 } } }
+				613 = {
+					create_unit = { 
+						division = "name = \"亲卫队\" division_template = \"亲卫队\" start_experience_factor = 0" 
+						owner = CHI
+					}
+					create_unit = { 
+						division = "name = \"亲卫队\" division_template = \"亲卫队\" start_experience_factor = 0" 
+						owner = CHI
+					}
+					create_unit = { 
+						division = "name = \"亲卫队\" division_template = \"亲卫队\" start_experience_factor = 0" 
+						owner = CHI
+					}
+					create_unit = { 
+						division = "name = \"亲卫队\" division_template = \"亲卫队\" start_experience_factor = 0" 
+						owner = CHI
+					}
+				}
+			}
+	}
+	focus = {
+		id = CHI_antiCorruption#反腐败运动
+		icon = GFX_CHI_antiCorruption
+		cost = 5.00
+		ai_will_do = {factor = 50}
+		prerequisite = {
+			focus = CHI_cult_of_personality_new
+		}
+		prerequisite = {
+			focus = CHI_Government_loyalty#确保忠诚
+		}
+		x = 25
+		y = 5
+		completion_reward = {
+		country_event = { days = 1 id = Vn_chi.11 }
+			}
+	}
+	focus = {
+		id = CHI_Limit_Song#限制宋权
+		icon = GFX_CHI_Limit_Song
+		cost = 5.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_antiCorruption#反腐败运动
+		}
+		x = 23
+		y = 6
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+	if = {
+		limit = { has_idea = CHI_Power_struggle }
+		swap_ideas = {
+			remove_idea = CHI_Power_struggle
+			add_idea = CHI_Power_struggle_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CHI_Power_struggle_2 }
+			remove_ideas = CHI_Power_struggle_2
+			}
+		}
+	}
+	focus = {
+		id = CHI_army_loyalty#军队忠诚
+		icon = GFX_CHI_army_loyalty
+		cost = 5.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_antiCorruption#反腐败运动
+		}
+		x = 27
+		y = 6
+		completion_reward = {
+		custom_effect_tooltip = CHI_junduidaqingxi
+		country_event = { days = 1 id = Vn_chi.13 }
+			}
+	}
+	focus = {
+		id = CHI_Kong_Xiangxi#贪腐中心
+		icon = GFX_CHI_Kong_Xiangx
+		cost = 4.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_army_loyalty#军队忠诚
+		}
+		x = 25
+		y = 7
+		completion_reward = {
+		country_event = { days = 1 id = Vn_chi.14 }
+			}
+	}
+	focus = {
+		id = CHI_chenguofu#恐怖中心
+		icon = GFX_CHI_chenguofu
+		cost = 5.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_army_loyalty#军队忠诚
+		}
+		x = 29
+		y = 7
+		completion_reward = {
+		country_event = { days = 1 id = Vn_chi.15 }
+			}
+	}
+	focus = {
+		id = CHI_chenlifu#反党集团
+		icon = GFX_CHI_chenlifu
+		cost = 5.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_chenguofu#恐怖中心
+		}
+		x = 29
+		y = 8
+		completion_reward = {
+		country_event = { days = 1 id = Vn_chi.16 }
+			}
+	}
+	focus = {
+		id = CHI_court#法院是党的刀把子
+		icon = GFX_CHI_court
+		cost = 6.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_chenlifu#反党集团
+		}
+		prerequisite = {
+			focus = CHI_Kong_Xiangxi#贪腐中心
+		}
+		x = 27
+		y = 9
+		completion_reward = {
+		custom_effect_tooltip = CHI_PPdaqingxi
+		country_event = { days = 1 id = Vn_chi.17 }
+		}
+	}
+	focus = {
+		id = CHI_Abolition_elections#废除任期制
+		icon = GFX_CHI_executive_yuan_right
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_court#法院是党的刀把子
+		}
+		x = 24
+		y = 10
+		completion_reward = {
+		add_political_power = 25
+		add_country_leader_trait = CHI_Permanent_Chairman
+			}
+	}
+	focus = {
+		id = CHI_examination_yuan_right#考试院右翼
+		icon = GFX_focus_chi_examination_yuan
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Abolition_elections#废除任期制
+		}
+		x = 25
+		y = 11
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		custom_effect_tooltip = CHI_examination_yuan_ideas_tt
+		hidden_effect = {
+		remove_ideas = CHI_ineffective_bureaucracy
+	add_timed_idea = { idea = CHI_ineffective_bureaucracy days = 380 }
+				}
+			}
+	}
+	focus = {
+		id = CHI_Nationalization_right#产业国有化右翼
+		icon = GFX_CHI_Nationalization_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_court#法院是党的刀把子
+		}
+		x = 26
+		y = 12
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		custom_effect_tooltip = CHI_Nationalization_right_tt
+		hidden_effect = {
+		CHI_hyper_inflation_level_down = yes
+		CHI_hyper_inflation_level_down = yes
+		CHI_hyper_inflation_level_down = yes
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_Rural_construction_right#乡村建设运动
+		icon = GFX_CHI_Rural_construction_right
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_court#法院是党的刀把子
+		}
+		x = 28
+		y = 12
+		ai_will_do = {factor = 25}
+		completion_reward = {
+		add_timed_idea = { idea = CHI_Rural_construction_right days = 450 }
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = infrastructure#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = infrastructure#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_media#媒体姓党
+		icon = GFX_CHI_media
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_court#法院是党的刀把子
+		}
+		x = 30
+		y = 10
+		completion_reward = {
+		add_stability = 0.1
+			}
+	}
+	focus = {
+		id = CHI_Nippon_Daily_right#国民日报
+		icon = GFX_CHI_Nippon_Daily_right
+		cost = 7.00
+		prerequisite = {
+			focus = CHI_media#媒体姓党
+		}
+		x = 29
+		y = 11
+		ai_will_do = {factor = 25}
+		completion_reward = {
+		add_ideas = CHI_Nippon_Daily_right
+			}
+	}
+	focus = {
+		id = CHI_Educational_reform_right#教育改革
+		icon = GFX_CHI_legislative_yuan_right
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_media#媒体姓党
+		}
+		x = 31
+		y = 11
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = CHI_literate_right#普及识字率
+		icon = GFX_CHI_literate_right
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Educational_reform_right#教育改革
+		}
+		x = 31
+		y = 12
+		completion_reward = {
+		hidden_effect = {
+		country_event = { days = 200 id = Vn_chi.7 }
+			remove_ideas = CHI_Popular_research_1
+		add_timed_idea = { idea = CHI_Popular_research_1 days = 578 }
+				}
+		custom_effect_tooltip = CHI_rural_schooling_ideas_tt
+		}
+	}
+	focus = {
+		id = CHI_Patriotic_right
+		icon = GFX_CHI_Patriotic_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_literate_right#普及识字率
+		}
+		x = 31
+		y = 13
+		completion_reward = {
+		add_ideas = CHI_Patriotic_right
+			}
+	}
+	focus = {
+		id = CHI_gaozongwu_right#拉拢高宗武
+		icon = GFX_CHI_gaozongwu_right
+		cost = 4.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_court#法院是党的刀把子
+		}
+		x = 33
+		y = 10
+		completion_reward = {
+		add_war_support = 0.05
+		custom_effect_tooltip = CHI_jiesuoGZW
+			}
+	}
+	focus = {
+		id = CHI_economy_right#经济战
+		icon = GFX_CHI_Poverty_right
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_gaozongwu_right#拉拢高宗武
+		}
+		available = {
+		has_idea = CHI_gaozongwu
+			}
+		available_if_capitulated = no 
+		x = 33
+		y = 12
+		completion_reward = {
+		add_war_support = 0.05
+		custom_effect_tooltip = CHI_economy_right_division
+			}
+	}
+	focus = {
+		id = CHI_welfare_right#民生主义
+		icon = GFX_CHI_Poverty_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_antiCorruption#反腐败运动
+		}
+		x = 35
+		y = 6
+		completion_reward = {
+		add_stability = 0.05
+			}
+	}
+	focus = {
+		id = CHI_refugee_relief_agency_right#难民救济
+		icon = GFX_CHI_legislative_yuan_right
+		cost = 7.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_welfare_right#民生主义
+		}
+		x = 34
+		y = 7
+		completion_reward = {
+		add_stability = 0.05
+			CHI_Popular_support_level_up = yes
+			CHI_hyper_inflation_level_up = yes
+			}
+	}
+	focus = {
+		id = CHI_refugee_resettlement_right#难民安置
+		icon = GFX_CHI_democracy
+		cost = 8.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_refugee_relief_agency_right#难民救济
+		}
+		x = 34
+		y = 9
+		completion_reward = {
+		add_stability = 0.05
+		add_manpower = 450000
+			CHI_Popular_support_level_up = yes
+			}
+	}
+	focus = {
+		id = CHI_Limit_Song_2#控制宋家
+		icon = GFX_CHI_Limit_Song_2
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Limit_Song#限制宋权
+		}
+		x = 23
+		y = 9
+		completion_reward = {
+		CHI_hyper_inflation_level_down = yes
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 0#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =2#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_democratic_centralism_right#民主集权制右翼
+		icon = GFX_CHI_democratic_centralism_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Abolition_elections#废除任期制
+		}
+		x = 23
+		y = 11
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_democratic_centralism
+			}
+	}
+	focus = {
+		id = CHI_judicial_yuan_right#中央司法院
+		icon = GFX_CHI_judicial_yuan_right
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_court#法院是党的刀把子
+		}
+		x = 27
+		y = 10
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_political_power = 50
+		add_stability = 0.08
+			}
+	}
+	focus = {
+		id = CHI_legislative_yuan_right#立法院右翼
+		icon = GFX_CHI_legislative_yuan_right
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_executive_yuan_right#中央行政院右翼
+		}
+		x = 23
+		y = 13
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_political_power = 50
+		add_stability = 0.08
+		add_popularity = { ideology = fascism  popularity = 0.1 }
+			}
+	}
+	focus = {
+		id = CHI_executive_yuan_right#中央行政院右翼
+		icon = GFX_CHI_control_yuan_right
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_democratic_centralism_right#民主集权制右翼
+		}
+		x = 23
+		y = 12
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_executive_yuan_right
+			}
+	}
+	focus = {
+		id = CHI_control_yuan_right#监察院右翼
+		icon = GFX_CHI_control_yuan_right
+		cost = 6.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_examination_yuan_right#考试院右翼
+		}
+		x = 25
+		y = 13
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_control_yuan_right
+			}
+	}
+	focus = {
+		id = CHI_integration_right#党政一体化
+		icon = GFX_CHI_executive_yuan_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_judicial_yuan_right#中央司法院
+		}
+		x = 27
+		y = 13
+		completion_reward = {
+		CHI_Porous_level_up = yes
+		add_ideas = CHI_integration_right
+			}
+	}
+	focus = {
+		id = CHI_economies_right#建立经济特区
+		icon = GFX_CHI_economies_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Rural_construction_right#乡村建设运动
+		}
+		prerequisite = {
+			focus = CHI_Nationalization_right#产业国有化右翼
+		}
+		x = 26
+		y = 14
+		completion_reward = {
+	add_offsite_building = { type = industrial_complex level = 8 }
+	add_offsite_building = { type = arms_factory level = 3 }
+		CHI_hyper_inflation_level_down = yes
+			}
+	}
+	focus = {
+		id = CHI_Poverty_right#脱贫
+		icon = GFX_CHI_Poverty_right
+		cost = 5.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_Nationalization_right#产业国有化右翼
+		}
+		prerequisite = {
+			focus = CHI_Rural_construction_right#乡村建设运动
+		}
+		x = 28
+		y = 14
+		completion_reward = {
+		CHI_hyper_inflation_level_up = yes
+		add_timed_idea = { idea = CHI_Poverty_right days = 900 }
+			}
+	}
+	focus = {
+		id = CHI_Party_state_right#党国
+		icon = GFX_CHI_rightjichu
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		available = {
+		has_idea = CHI_integration_right
+			}
+		prerequisite = {
+			focus = CHI_economies_right#建立经济特区
+		}
+		prerequisite = {
+			focus = CHI_Poverty_right#脱贫
+		}
+		x = 27
+		y = 15
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = CHI_integration_right
+			add_idea = CHI_Party_state_right
+			}
+		}
+	}
+	focus = {
+		id = CHI_revolution_right#民族革命
+		icon = GFX_CHI_revolution_right
+		cost = 7.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_Party_state_right#党国
+		}
+		x = 27
+		y = 16
+		completion_reward = {
+		remove_ideas = CHI_freeHP
+		remove_ideas = CHI_nine_power_treaty
+			swap_ideas = {
+			remove_idea = neutrality_economy
+			add_idea = State_capitalism
+			}
+		set_cosmetic_tag = CHI_big
+				set_politics = {
+					ruling_party = fascism
+				}
+	add_popularity = { ideology = fascism  popularity = 0.25 }
+			add_country_leader_role = {
+				character = CHI_chiang_kaishek
+				country_leader = {
+				expire = "1965.1.1"
+			ideology = Strasserism
+			traits = {
+			dictator
+			generallissimo
+			CHI_Permanent_Chairman
+			}
+					}
+				promote_leader = yes
+				}
+		set_party_name = { ideology = fascism long_name = KMTfascism name = KMTfascism }
+		}
+	}
+	focus = {
+		id = CHI_new_life_movement_right#新生活运动
+		icon = GFX_CHI_Rural_construction_right
+		cost = 7.00
+		ai_will_do = {factor = 25}
+		prerequisite = {
+			focus = CHI_refugee_resettlement_right#难民安置
+		}
+		prerequisite = {
+			focus = CHI_unemployment_right_assistance#失业救济
+		}
+		x = 35
+		y = 10
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		add_political_power = 50
+		country_event = { days = 1 id = Vn_chi.2 }
+			}
+	}
+	focus = {
+		id = CHI_unemployment_right_assistance#失业救济
+		icon = GFX_CHI_unemployment_assistance
+		cost = 7.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_land_tax_reform_right#土地国有化
+		}
+		x = 36
+		y = 9
+		completion_reward = {
+		CHI_Popular_support_level_up = yes
+		add_stability = 0.1
+		CHI_hyper_inflation_level_up = yes
+			}
+	}
+	focus = {
+		id = CHI_land_tax_reform_right#土地国有化
+		icon = GFX_CHI_Abolition_elections
+		cost = 7.00
+		ai_will_do = {factor = 100}
+		prerequisite = {
+			focus = CHI_welfare_right#民生主义
+		}
+		x = 36
+		y = 7
+		completion_reward = {
+			CHI_Popular_support_level_up = yes
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+	random_owned_controlled_state = {
+		add_extra_state_shared_building_slots =1
+			}
+			CHI_hyper_inflation_level_down = yes 
+			}
+	}
+
+	focus = {
+		id = CHI_The_civil_war_urgent#内战告急
+		icon = GFX_CHI_nationalism
+		cost = 5.00
+		available = {
+			has_war_with = PRC
+			}
+		bypass = {
+			NOT = { country_exists = PRC }
+			}
+		x = 30
+		y = 0
+		completion_reward = {
+		add_war_support = 0.1
+		add_timed_idea = { idea = CHI_The_civil_war_urgent days = 150 }
+				}
+	}
+	focus = {
+		id = CHI_Unification_Republic_China#民国统一
+		icon = GFX_focus_generic_china1
+		cost = 10.00
+		prerequisite = {
+			focus = CHI_The_civil_war_urgent#内战告急
+		}
+		available = {
+			NOT = { country_exists = PRC }
+		is_subject = no
+
+			}
+		mutually_exclusive = {
+			focus = CHI_Defeat_Taiwan#败退台湾
+		}
+		x = -1
+		y = 1
+		ai_will_do = {
+		factor = 100
+			}
+	relative_position_id = CHI_The_civil_war_urgent
+		completion_reward = {
+		news_event = Vn_news.8
+		add_stability = 0.1
+		add_research_slot = 1
+		add_political_power = 150
+				}
+	}
+	focus = {
+		id = CHI_Defeat_Taiwan#败退台湾
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		cost = 5.00
+		prerequisite = {
+			focus = CHI_The_civil_war_urgent#内战告急
+		}
+		mutually_exclusive = {
+			focus = CHI_Unification_Republic_China#民国统一
+		}
+		available = {
+			has_war_with = PRC
+			surrender_progress < 0.4
+			has_full_control_of_state = 524
+			}
+		ai_will_do = {
+		factor = 100
+			}
+		x = 1
+		y = 1
+	relative_position_id = CHI_The_civil_war_urgent
+		completion_reward = {
+		every_owned_state = {
+			limit = {
+			NOT = { state = 524 }
+				}
+			damage_building = {
+				type = infrastructure#
+				damage = 0.8
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.8
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.8
+			}
+			transfer_state_to= PRC
+					}
+			white_peace = PRC
+		}
+	}
+	focus = {
+		id = CHI_Leveling_warlords#踏平军阀
+		icon = GFX_CHI_subjugate_the_warlords
+		cost = 10.00
+		prerequisite = {
+			focus = CHI_The_civil_war_urgent#内战告急
+		}
+		x = -1
+		y = 1
+		available = {
+		NOT = { has_completed_focus = CHI_Defeat_Taiwan }
+			or = {
+			country_exists = XSM
+			country_exists = XYM
+			country_exists = HBJ
+			country_exists = SCS
+			country_exists = SIK
+			country_exists = SHX
+			country_exists = GXC
+			country_exists = YUN
+			country_exists = XSK
+				}
+			}
+	relative_position_id = CHI_Unification_Republic_China
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GXC
+						tag = YUN
+						tag = SHX
+						tag = XSM
+						tag = XYM
+						tag = SIK
+						tag = SCS
+						tag = HBJ
+						tag = XKS
+					}
+				}
+				country_event = { id = wtt_china.1 }
+			}
+		}
+				}
+	}
+}

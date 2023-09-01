@@ -1,0 +1,1602 @@
+SOV_dynamic_modifiers_SP = {
+#计划经济
+	set_variable = { SPE_consumer_goods_factor = SOV.SPE_consumer_goods_factor }
+	set_variable = { SPE_stability_factor = SOV.SPE_stability_factor }
+	set_variable = { SPE_industrial_capacity_factory = SOV.SPE_industrial_capacity_factory }
+	set_variable = { SPE_production_factory_max_efficiency_factor = SOV.SPE_production_factory_max_efficiency_factor }
+	set_variable = { SPE_production_factory_efficiency_gain_factor  = SOV.SPE_production_factory_efficiency_gain_factor  }
+	set_variable = { SPE_line_change_production_efficiency_factor = SOV.SPE_line_change_production_efficiency_factor }
+	set_variable = { SPE_industrial_capacity_dockyard = SOV.SPE_industrial_capacity_dockyard }
+	set_variable = { SPE_nuclear_production_factor = SOV.SPE_nuclear_production_factor }
+	set_variable = { SPE_research_speed_factor = SOV.SPE_research_speed_factor }
+	set_variable = { SPE_local_resources_factor = SOV.SPE_local_resources_factor }
+	set_variable = { SPE_global_building_slots_factor = SOV.SPE_global_building_slots_factor }
+	set_variable = { SPE_war_support_factor = SOV.SPE_war_support_factor }
+	set_variable = { SPE_justify_war_goal_time = SOV.SPE_justify_war_goal_time }
+	set_variable = { SPE_mobilization_speed = SOV.SPE_mobilization_speed }
+	set_variable = { SPE_political_power_factor = SOV.SPE_political_power_factor }
+	set_variable = { SPE_compliance_gain = SOV.SPE_compliance_gain }
+	set_variable = { SPE_resistance_growth = SOV.SPE_resistance_growth }
+	set_variable = { SPE_drift_defence_factor = SOV.SPE_drift_defence_factor }
+	set_variable = { SPE_war_stability_factor = SOV.SPE_war_stability_factor }
+	set_variable = { SPE_army_attack_factor = SOV.SPE_army_attack_factor }
+	set_variable = { SPE_army_defence_factor = SOV.SPE_army_defence_factor }
+	set_variable = { SPE_army_org_factor = SOV.SPE_army_org_factor }
+	set_variable = { SPE_army_morale_factor = SOV.SPE_army_morale_factor }
+	set_variable = { SPE_no_supply_grace = SOV.SPE_no_supply_grace }
+	set_variable = { SPE_supply_consumption_factor = SOV.SPE_supply_consumption_factor }
+	set_variable = { SPE_invasion_preparation = SOV.SPE_invasion_preparation }
+	set_variable = { SPE_naval_strike = SOV.SPE_naval_strike }
+	set_variable = { SPE_naval_detection = SOV.SPE_naval_detection }
+	set_variable = { SPE_air_attack_factor = SOV.SPE_air_attack_factor }
+	set_variable = { SPE_air_maximum_speed_factor = SOV.SPE_air_maximum_speed_factor }
+	set_variable = { SPE_air_agility_factor = SOV.SPE_air_agility_factor }
+	set_variable = { SPE_air_attack_factor = SOV.SPE_air_attack_factor }
+	set_variable = { SPE_air_superiority_efficiency = SOV.SPE_air_superiority_efficiency }
+	set_variable = { SPE_naval_strike_targetting_factor= SOV.SPE_naval_strike_targetting_factor }
+	set_variable = { SPE_air_bombing_targetting = SOV.SPE_air_bombing_targetting }
+	set_variable = { SPE_army_bonus_air_superiority_factor = SOV.SPE_army_bonus_air_superiority_factor }
+	set_variable = { SPE_air_ace_generation_chance_factor = SOV.SPE_air_ace_generation_chance_factor }
+	set_variable = { SPE_experience_gain_factor = SOV.SPE_experience_gain_factor }
+	set_variable = { SPE_industry_air_damage_factor = SOV.SPE_industry_air_damage_factor }
+	set_variable = { SPE_production_speed_buildings_factor = SOV.SPE_production_speed_buildings_factor }
+	set_variable = { SPE_production_speed_rail_way_factor = SOV.SPE_production_speed_rail_way_factor }
+	set_variable = { SPE_production_speed_buildings_factor = SOV.SPE_production_speed_buildings_factor }
+	set_variable = { SPE_production_speed_industrial_complex_factor = SOV.SPE_production_speed_industrial_complex_factor }
+	set_variable = { SPE_production_speed_arms_factory_factor = SOV.SPE_production_speed_arms_factory_factor }
+	set_variable = { SPE_production_speed_infrastructure_factor = SOV.SPE_production_speed_infrastructure_factor }
+	set_variable = { SPE_conversion_cost_civ_to_mil_factor = SOV.SPE_conversion_cost_civ_to_mil_factor }
+	set_variable = { SPE_conversion_cost_mil_to_civ_factor = SOV.SPE_conversion_cost_mil_to_civ_factor }
+	set_variable = { SPE_industry_repair_factor = SOV.SPE_industry_repair_factor }
+	set_variable = { SPE_fuel_gain_factor = SOV.SPE_fuel_gain_factor }
+	set_variable = { SPE_max_fuel_factor = SOV.SPE_max_fuel_factor }
+	set_variable = { SPE_production_speed_rocket_site_factor = SOV.SPE_production_speed_rocket_site_factor }
+	set_variable = { SPE_production_speed_nuclear_reactor_factor = SOV.SPE_production_speed_nuclear_reactor_factor }
+	set_variable = { SPE_production_speed_naval_base_factor = SOV.SPE_production_speed_naval_base_factor }
+	set_variable = { SPE_production_speed_dockyard_factor = SOV.SPE_production_speed_dockyard_factor }
+	set_temp_variable = { E1_SOV = SPENV_consumer_goods_factor }
+	set_temp_variable = { E2_SOV = SPENV_stability_factor }
+	set_temp_variable = { E3_SOV = SPENV_industrial_capacity_factory }
+	set_temp_variable = { E4_SOV = SPENV_production_factory_max_efficiency_factor }
+	set_temp_variable = { E5_SOV  = SPENV_production_factory_efficiency_gain_factor  }
+	set_temp_variable = { E6_SOV = SPENV_line_change_production_efficiency_factor }
+	set_temp_variable = { E7_SOV = SPENV_industrial_capacity_dockyard }
+	set_temp_variable = { E8_SOV = SPENV_nuclear_production_factor }
+	set_temp_variable = { E9_SOV = SPENV_research_speed_factor }
+	set_temp_variable = { E10_SOV = SPENV_local_resources_factor }
+	set_temp_variable = { E11_SOV = SPENV_global_building_slots_factor }
+	set_temp_variable = { E12_SOV = SPENV_war_support_factor }
+	set_temp_variable = { E13_SOV = SPENV_justify_war_goal_time }
+	set_temp_variable = { E14_SOV = SPENV_mobilization_speed }
+	set_temp_variable = { E15_SOV = SPENV_political_power_factor }
+	set_temp_variable = { E16_SOV = SPENV_compliance_gain }
+	set_temp_variable = { E17_SOV = SPENV_resistance_growth }
+	set_temp_variable = { E18_SOV = SPENV_drift_defence_factor }
+	set_temp_variable = { E19_SOV = SPENV_war_stability_factor }
+	set_temp_variable = { E20_SOV = SPENV_army_attack_factor }
+	set_temp_variable = { E21_SOV = SPENV_army_defence_factor }
+	set_temp_variable = { E22_SOV = SPENV_army_org_factor }
+	set_temp_variable = { E23_SOV = SPENV_army_morale_factor }
+	set_temp_variable = { E24_SOV = SPENV_no_supply_grace }
+	set_temp_variable = { E25_SOV = SPENV_supply_consumption_factor }
+	set_temp_variable = { E26_SOV = SPENV_invasion_preparation }
+	set_temp_variable = { E27_SOV = SPENV_naval_strike }
+	set_temp_variable = { E28_SOV = SPENV_naval_detection }
+	set_temp_variable = { E29_SOV= SPENV_air_attack_factor }
+	set_temp_variable = { E30_SOV = SPENV_air_maximum_speed_factor }
+	set_temp_variable = { E31_SOV = SPENV_air_agility_factor }
+	set_temp_variable = { E32_SOV = SPENV_air_attack_factor }
+	set_temp_variable = { E33_SOV = SPENV_air_superiority_efficiency }
+	set_temp_variable = { E34_SOV= SPENV_naval_strike_targetting_factor }
+	set_temp_variable = { E35_SOV = SPENV_air_bombing_targetting }
+	set_temp_variable = { E36_SOV = SPENV_army_bonus_air_superiority_factor }
+	set_temp_variable = { E37_SOV = SPENV_air_ace_generation_chance_factor }
+	set_temp_variable = { E38_SOV = SPENV_experience_gain_factor }
+	set_temp_variable = { E39_SOV = SPENV_industry_air_damage_factor }
+	set_temp_variable = { E40_SOV = SPENV_production_speed_buildings_factor }
+	set_temp_variable = { E41_SOV = SPENV_production_speed_rail_way_factor }
+	set_temp_variable = { E42_SOV = SPENV_production_speed_buildings_factor }
+	set_temp_variable = { E43_SOV = SPENV_production_speed_industrial_complex_factor }
+	set_temp_variable = { E44_SOV = SPENV_production_speed_arms_factory_factor }
+	set_temp_variable = { E45_SOV = SPENV_production_speed_infrastructure_factor }
+	set_temp_variable = { E46_SOV = SPENV_conversion_cost_civ_to_mil_factor }
+	set_temp_variable = { E47_SOV = SPENV_conversion_cost_mil_to_civ_factor }
+	set_temp_variable = { E48_SOV = SPENV_industry_repair_factor }
+	set_temp_variable = { E49_SOV = SPENV_fuel_gain_factor }
+	set_temp_variable = { E50_SOV = SPENV_max_fuel_factor }
+	set_temp_variable = { E51_SOV = SPENV_production_speed_rocket_site_factor }
+	set_temp_variable = { E52_SOV = SPENV_production_speed_nuclear_reactor_factor }
+	set_temp_variable = { E53_SOV = SPENV_production_speed_naval_base_factor }
+	set_temp_variable = { E54_SOV = SPENV_production_speed_dockyard_factor }
+
+	set_temp_variable = { E55_SOV = Electrified_areas }
+	set_temp_variable = { E56_SOV = Electrification_industry }
+
+	set_temp_variable = { C1_SOV = ration_consumer_goods_factor }
+	set_temp_variable = { C2_SOV = politburo_consumer_goods_factor }
+	set_temp_variable = { C3_SOV = produce_consumer_goods_factor }
+	set_temp_variable = { C4_SOV = build_consumer_goods_factor }
+	set_temp_variable = { C5_SOV = army_consumer_goods_factor }
+	set_temp_variable = { C6_SOV = study_consumer_goods_factor }
+	set_temp_variable = { C7_SOV = dockyard_consumer_goods_factor }
+
+	set_temp_variable = { Z1_SOV = SOV_people_support }
+#去中心化
+	set_variable = { SDR_political_power_gain = SOV.SDR_political_power_gain }
+	set_variable = { SDR_stability_factor = SOV.SDR_stability_factor }
+	set_variable = { SDR_consumer_goods_factor = SOV.SDR_consumer_goods_factor }
+	set_variable = { SDR_political_advisor_cost_factor = SOV.SDR_political_advisor_cost_factor }
+	set_variable = { SDR_trade_laws_cost_factor = SOV.SDR_trade_laws_cost_factor }
+	set_variable = { SDR_mobilization_laws_cost_factor = SOV.SDR_mobilization_laws_cost_factor }
+	set_variable = { SDR_production_factory_efficiency_gain_factor = SOV.SDR_production_factory_efficiency_gain_factor }
+	set_variable = { SDR_line_change_production_efficiency_factor = SOV.SDR_line_change_production_efficiency_factor }
+	set_variable = { SDR_opinion_gain_monthly_same_ideology_factor = SOV.SDR_opinion_gain_monthly_same_ideology_factor }
+	set_variable = { SDR_production_speed_buildings_factor = SOV.SDR_production_speed_buildings_factor }
+	set_variable = { SDR_industrial_capacity_factory = SOV.SDR_industrial_capacity_factory }
+#农业集体化
+	set_variable = { SCOA_consumer_goods_factor = SOV.SCOA_consumer_goods_factor }
+#五年计划
+		set_variable = { SIP_consumer_goods_factor= SOV.SIP_consumer_goods_factor }
+		set_variable = { SIP_industrial_capacity_factory= SOV.SIP_industrial_capacity_factory }
+		set_variable = { SIP_production_factory_max_efficiency_factor= SOV.SIP_production_factory_max_efficiency_factor }
+		set_variable = { SIP_production_factory_efficiency_gain_factor= SOV.SIP_production_factory_efficiency_gain_factor }
+		set_variable = { SIP_production_factory_start_efficiency_factor= SOV.SIP_production_factory_start_efficiency_factor }
+		set_variable = { SIP_line_change_production_efficiency_factor= SOV.SIP_line_change_production_efficiency_factor  }
+		set_variable = { SIP_production_speed_buildings_factor= SOV.SIP_production_speed_buildings_factor }
+		set_variable = { SIP_production_speed_industrial_complex_factor= SOV.SIP_production_speed_industrial_complex_factor }
+		set_variable = { SIP_production_speed_arms_factory_factor= SOV.SIP_production_speed_arms_factory_factor }
+		set_variable = { SIP_production_speed_infrastructure_factor= SOV.SIP_production_speed_arms_factory_factor }	
+		set_variable = { SIP_industrial_capacity_dockyard= SOV.SIP_industrial_capacity_dockyard }
+		set_variable = { SIP_fuel_gain_factor_from_states= SOV.SIP_fuel_gain_factor_from_states }
+		set_variable = { SIP_production_oil_factor= SOV.SIP_production_oil_factor }
+}
+SOV_politburo_add = {
+	if = {
+		limit = { has_country_flag = SOV_politburo_lower_4 }
+	clr_country_flag = SOV_politburo_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_lower_3 }
+	clr_country_flag = SOV_politburo_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_lower_2 }
+	clr_country_flag = SOV_politburo_lower_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_lower_1 }
+	clr_country_flag = SOV_politburo_lower_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_politburo_lower_1 }  }
+	set_country_flag = SOV_politburo_add_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_add_3 }
+	set_country_flag = SOV_politburo_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_add_2 }
+	set_country_flag = SOV_politburo_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_add_1 }
+		set_country_flag = SOV_politburo_add_2
+	}
+}
+SOV_politburo_lower = {
+	if = {
+		limit = { has_country_flag = SOV_politburo_add_4 }
+	clr_country_flag = SOV_politburo_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_add_3 }
+	clr_country_flag = SOV_politburo_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_add_2 }
+	clr_country_flag = SOV_politburo_add_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_add_1 }
+	clr_country_flag = SOV_politburo_add_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_politburo_add_1 }  }
+	set_country_flag = SOV_politburo_lower_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_lower_3 }
+	set_country_flag = SOV_politburo_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_lower_2 }
+	set_country_flag = SOV_politburo_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_politburo_lower_1 }
+		set_country_flag = SOV_politburo_lower_2
+	}
+}
+SOV_mobilization_add = {
+	if = {
+		limit = { has_country_flag = SOV_mobilization_D }
+	set_country_flag = SOV_mobilization_E
+	custom_effect_tooltip = SOV_mobilization_add_D_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_C }
+	set_country_flag = SOV_mobilization_D
+	custom_effect_tooltip = SOV_mobilization_add_C_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_B }
+	set_country_flag = SOV_mobilization_C
+	custom_effect_tooltip = SOV_mobilization_add_B_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_A }
+	set_country_flag = SOV_mobilization_B
+	custom_effect_tooltip = SOV_mobilization_add_A_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_E }
+	custom_effect_tooltip = SOV_mobilization_add_E_tt
+	}
+}
+SOV_mobilization_lower = {
+	if = {
+		limit = { has_country_flag = SOV_mobilization_E }
+	clr_country_flag = SOV_mobilization_E
+	custom_effect_tooltip = SOV_mobilization_lower_D_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_D }
+	clr_country_flag = SOV_mobilization_D
+	custom_effect_tooltip =  SOV_mobilization_lower_C_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_C }
+	clr_country_flag = SOV_mobilization_C
+	custom_effect_tooltip = SOV_mobilization_lower_B_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_B }
+	clr_country_flag = SOV_mobilization_B
+	custom_effect_tooltip = SOV_mobilization_lower_A_tt
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_mobilization_A }
+	custom_effect_tooltip = SOV_mobilization_lower_E_tt
+	}
+}
+SOV_produce_add = {
+	if = {
+		limit = { has_country_flag = SOV_produce_lower_4 }
+	clr_country_flag = SOV_produce_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_lower_3 }
+	clr_country_flag = SOV_produce_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_lower_2 }
+	clr_country_flag = SOV_produce_lower_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_lower_1 }
+	clr_country_flag = SOV_produce_lower_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_produce_lower_1 }  }
+	set_country_flag = SOV_produce_add_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_add_3 }
+	set_country_flag = SOV_produce_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_add_2 }
+	set_country_flag = SOV_produce_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_add_1 }
+		set_country_flag = SOV_produce_add_2
+	}
+}
+SOV_produce_lower = {
+	if = {
+		limit = { has_country_flag = SOV_produce_add_4 }
+	clr_country_flag = SOV_produce_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_add_3 }
+	clr_country_flag = SOV_produce_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_add_2 }
+	clr_country_flag = SOV_produce_add_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_add_1 }
+	clr_country_flag = SOV_produce_add_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_produce_add_1 }  }
+	set_country_flag = SOV_produce_lower_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_lower_3 }
+	set_country_flag = SOV_produce_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_lower_2 }
+	set_country_flag = SOV_produce_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_produce_lower_1 }
+		set_country_flag = SOV_produce_lower_2
+	}
+}
+SOV_build_add = {
+		if = {
+		limit = { has_country_flag = SOV_build_lower_4 }
+	clr_country_flag = SOV_build_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_lower_3 }
+	clr_country_flag = SOV_build_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_lower_2 }
+	clr_country_flag = SOV_build_lower_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_lower_1 }
+	clr_country_flag = SOV_build_lower_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_build_lower_1 }  }
+	set_country_flag = SOV_build_add_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_add_3 }
+	set_country_flag = SOV_build_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_add_2 }
+	set_country_flag = SOV_build_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_add_1 }
+		set_country_flag = SOV_build_add_2
+	}
+}
+SOV_build_lower = {
+	if = {
+		limit = { has_country_flag = SOV_build_add_4 }
+	clr_country_flag = SOV_build_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_add_3 }
+	clr_country_flag = SOV_build_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_add_2 }
+	clr_country_flag = SOV_build_add_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_add_1 }
+	clr_country_flag = SOV_build_add_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_build_add_1 }  }
+	set_country_flag = SOV_build_lower_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_lower_3 }
+	set_country_flag = SOV_build_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_lower_2 }
+	set_country_flag = SOV_build_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_build_lower_1 }
+		set_country_flag = SOV_build_lower_2
+	}
+}
+SOV_army_add = {
+	if = {
+		limit = { has_country_flag = SOV_army_lower_4 }
+	clr_country_flag = SOV_army_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_lower_3 }
+	clr_country_flag = SOV_army_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_lower_2 }
+	clr_country_flag = SOV_army_lower_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_lower_1 }
+	clr_country_flag = SOV_army_lower_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_army_lower_1 }  }
+	set_country_flag = SOV_army_add_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_add_3 }
+	set_country_flag = SOV_army_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_add_2 }
+	set_country_flag = SOV_army_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_add_1 }
+		set_country_flag = SOV_army_add_2
+	}
+}
+SOV_army_lower = {
+	if = {
+		limit = { has_country_flag = SOV_army_add_4 }
+	clr_country_flag = SOV_army_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_add_3 }
+	clr_country_flag = SOV_army_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_add_2 }
+	clr_country_flag = SOV_army_add_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_add_1 }
+	clr_country_flag = SOV_army_add_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_army_add_1 }  }
+	set_country_flag = SOV_army_lower_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_lower_3 }
+	set_country_flag = SOV_army_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_lower_2 }
+	set_country_flag = SOV_army_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_army_lower_1 }
+		set_country_flag = SOV_army_lower_2
+	}
+}
+SOV_study_add = {
+	if = {
+		limit = { has_country_flag = SOV_study_lower_4 }
+	clr_country_flag = SOV_study_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_lower_3 }
+	clr_country_flag = SOV_study_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_lower_2 }
+	clr_country_flag = SOV_study_lower_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_lower_1 }
+	clr_country_flag = SOV_study_lower_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_study_lower_1 }  }
+	set_country_flag = SOV_study_add_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_add_3 }
+	set_country_flag = SOV_study_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_add_2 }
+	set_country_flag = SOV_study_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_add_1 }
+		set_country_flag = SOV_study_add_2
+	}
+}
+SOV_study_lower = {
+	if = {
+		limit = { has_country_flag = SOV_study_add_4 }
+	clr_country_flag = SOV_study_add_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_add_3 }
+	clr_country_flag = SOV_study_add_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_add_2 }
+	clr_country_flag = SOV_study_add_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_add_1 }
+	clr_country_flag = SOV_study_add_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_study_add_1 }  }
+	set_country_flag = SOV_study_lower_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_lower_3 }
+	set_country_flag = SOV_study_lower_4
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_lower_2 }
+	set_country_flag = SOV_study_lower_3
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_study_lower_1 }
+		set_country_flag = SOV_study_lower_2
+	}
+}
+SOV_dockyard_add = {
+	if = {
+		limit = { has_country_flag = SOV_dockyard_lower_2 }
+	clr_country_flag = SOV_dockyard_lower_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_dockyard_lower_1 }
+	clr_country_flag = SOV_dockyard_lower_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_dockyard_lower_1 }  }
+	set_country_flag = SOV_dockyard_add_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_dockyard_add_1 }
+		set_country_flag = SOV_dockyard_add_2
+	}
+}
+SOV_dockyard_lower = {
+	if = {
+		limit = { has_country_flag = SOV_dockyard_add_2 }
+	clr_country_flag = SOV_dockyard_add_2
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_dockyard_add_1 }
+	clr_country_flag = SOV_dockyard_add_1
+	}
+	else_if  = {
+		limit = { NOT = { has_country_flag = SOV_dockyard_add_1 }  }
+	set_country_flag = SOV_dockyard_lower_1
+	}
+	else_if = {
+		limit = { has_country_flag = SOV_dockyard_lower_1 }
+		set_country_flag = SOV_dockyard_lower_2
+	}
+}
+SOV_dynamic_modifiers_PP = {#政治
+	set_variable = { KI_research_speed_factor = SOV.KI_research_speed_factor }
+	set_variable = { drift_defence_factor = SLC_drift_defence_factor }
+	set_variable = { production_factory_efficiency_gain_factor = SLC_production_factory_efficiency_gain_factor }
+	set_variable = { compliance_growth_on_our_occupied_states = SLC_compliance_growth_on_our_occupied_states }
+	set_variable = { resistance_growth_on_our_occupied_states = SLC_resistance_growth_on_our_occupied_states }
+	set_variable = { SWD_conscription_factor =  SOV.SWD_conscription_factor }
+	set_variable = { SWD_political_power_gain =  SOV.SWD_political_power_gain }
+	set_variable = { SWD_army_core_defence_factor = SOV.SWD_army_core_defence_factor }
+	set_variable = { SWD_army_core_attack_factor = SOV.SWD_army_core_attack_factor }
+	set_variable = { SWD_stability_factor = SOV.SWD_stability_factor }
+	set_variable = { SWD_war_stability_factor = SOV.SWD_war_stability_factor }
+	set_variable = { SWD_consumer_goods_factor = SOV.SWD_consumer_goods_factor }
+	set_variable = { SWD_local_resources_factor = SOV.SWD_local_resources_factor }
+	set_variable = { SWD_research_speed_factor = SOV.SWD_research_speed_factor }
+	set_variable = { SWD_industrial_capacity_factory = SOV.SWD_industrial_capacity_factory }
+	set_variable = { SWD_production_factory_max_efficiency_factor = SOV.SWD_production_factory_max_efficiency_factor }
+	set_variable = { SWD_production_factory_efficiency_gain_factor = SOV.SWD_production_factory_efficiency_gain_factor }
+	set_variable = { SWD_line_change_production_efficiency_factor = SOV.SWD_line_change_production_efficiency_factor }
+	set_variable = { SWD_industrial_capacity_dockyard = SOV.SWD_industrial_capacity_dockyard }
+	set_variable = { SWD_production_speed_buildings_factor = SOV.SWD_production_speed_buildings_factor }
+	set_variable = { SWD_supply_consumption_factor = SOV.SWD_supply_consumption_factor }
+	set_variable = { SWD_attrition = SOV.SWD_attrition }
+	set_variable = { SWD_no_supply_grace = SOV.SWD_no_supply_grace }
+	set_variable = { SWD_max_planning = SOV.SWD_max_planning }
+	set_variable = { SWD_planning_speed = SOV.SWD_planning_speed }
+	set_variable = { SWD_production_speed_arms_factory_factor = SOV.SWD_production_speed_arms_factory_factor }
+	set_variable = { SWD_industry_repair_factor = SOV.SWD_industry_repair_factor }
+	set_variable = { SWD_fuel_gain_factor = SOV.SWD_fuel_gain_factor }
+	set_variable = { SWD_production_speed_industrial_complex_factor = SOV.SWD_production_speed_industrial_complex_factor }
+	set_variable = { SWD_army_morale_factor = SOV.SWD_army_morale_factor }
+	set_variable = { SWD_army_org_factor = SOV.SWD_army_org_factor }
+}
+########################妇女游击队##################
+SOV_random_Women_guerrillas_create_unit = {
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+}
+########################爆一个师##################
+SOV_random_owned_controlled_state_create_unit_1 = {
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+}
+
+###############爆两个师#################
+SOV_random_owned_controlled_state_create_unit_2 = {
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = FROM
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Trotskyist Revolutionary Militias\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+}
+SOV_sov_event_4_army_GER = {
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = GER
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+							}
+						}
+}
+SOV_sov_event_4_army_BRV = {
+				division_template = { name = "红军" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 }infantry = { x = 0 y = 1 }infantry = { x = 0 y = 2 }infantry = { x = 1 y = 0 }infantry = { x = 1 y = 1 }infantry = { x = 1 y = 2 }cavalry_GUN { x = 2 y = 0 }cavalry_GUN { x = 2 y = 1 }  } }
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = BRV
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = BRV
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = BRV
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = BRV
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = BRV
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = BRV
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+}
+SOV_sov_event_5_army_ITA = {	
+				division_template = { name = "红军" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 }infantry = { x = 0 y = 1 }infantry = { x = 0 y = 2 }infantry = { x = 1 y = 0 }infantry = { x = 1 y = 1 }infantry = { x = 1 y = 2 }cavalry_GUN { x = 2 y = 0 }cavalry_GUN { x = 2 y = 1 }  } }
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_capital = no
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ITA
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+}
+SOV_sov_event_7_army_ROOT = {
+				division_template = { name = "红军" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 }infantry = { x = 0 y = 1 }infantry = { x = 0 y = 2 }infantry = { x = 1 y = 0 }infantry = { x = 1 y = 1 }infantry = { x = 1 y = 2 }cavalry_GUN { x = 2 y = 0 }cavalry_GUN { x = 2 y = 1 }  } }
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ROOT
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+		random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ROOT
+					}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+				create_unit = {
+					division = "division_template = \"红军\" start_experience_factor = 0.1"
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+						}
+					}
+}

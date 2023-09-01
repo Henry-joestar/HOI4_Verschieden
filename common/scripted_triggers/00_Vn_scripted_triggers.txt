@@ -1,0 +1,48 @@
+has_ROOT_at_least_11_div_in_current_state_scope = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_Eleven_division_in_state
+		ROOT = { divisions_in_state = { state = PREV size > 10 } }
+	}
+}
+has_ROOT_at_least_3_div_in_current_state_scope = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_three_division_in_state
+		ROOT = { divisions_in_state = { state = PREV size > 2 } }
+	}
+}
+economy_Free_market_economy_yaoqiu = {
+ 			has_government = democratic
+		NOT = { has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+		NOT = { has_country_leader_ideology = anarchism }
+		NOT = { has_country_leader_ideology = Patriarchal_dictatorship }
+		NOT = { has_country_leader_ideology = A_free_India }
+		NOT = { has_country_leader_ideology = republicanism }
+		NOT = { has_country_leader_ideology = Deterritorialization }
+		NOT = { has_country_leader_ideology = State_capitalism }
+		NOT = { has_country_leader_ideology = Social_nationalism }
+		NOT = { has_country_leader_ideology = Extreme_authoritarianism }
+		NOT = { has_idea = war_economy }
+		NOT = { has_idea = tot_economic_mobilisation }
+		NOT = { has_idea = partial_economic_mobilisation }
+		NOT = { has_idea = service_by_requirement }
+		NOT = { has_idea = all_adults_serve }
+		NOT = { has_idea = scraping_the_barrel }
+		NOT = { has_idea = closed_economy }
+		NOT = { has_idea = limited_exports } 
+	}
+}
+ SOV_Decentralization_need_visible = {
+	custom_trigger_tooltip = {
+		tooltip =  SOV_Decentralization_need_tt
+		check_variable = { SOV_Decentralization_need > 29 }
+	}
+}
+has_democratic_government = {
+	custom_trigger_tooltip = {
+		tooltip =  has_democratic_government_tt
+		or = {
+		has_government = democratic
+		has_country_leader_ideology = left_social_democracy
+		}
+	}
+}
