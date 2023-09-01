@@ -1,0 +1,10 @@
+VN_DEBUG = {
+	icon = generic_independence
+	allowed = {
+		always = yes
+	}
+	priority = 200
+	visible = {
+		is_debug = yes
+	}
+}

@@ -1,0 +1,322 @@
+CHI_economy_right = {
+	CHI_economy_right_naval_326 = {
+		icon = generic_naval
+		available = {
+		593 = {	has_ROOT_at_least_3_div_in_current_state_scope = yes }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 326 } 
+			}
+		cost = 0
+		days_re_enable = 114514
+		days_remove = 15
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+
+				}
+		remove_effect = {
+		326 = 	{
+		add_ideas = CHI_economy_right_naval_326_one
+			}
+	set_country_flag = CHI_economy_right_naval_nowwancheng
+		}
+	}
+	CHI_economy_right_army_326 = {
+		icon = generic_operation
+		available = {
+	has_country_flag = CHI_economy_right_naval_nowwancheng
+		593 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+		cost = 0
+		days_re_enable = 114514
+		days_remove = 15
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+
+				}
+		remove_effect = {
+			326 = { set_demilitarized_zone = yes }
+	set_country_flag  = CHI_economy_right_army_nowwancheng
+		}
+	}
+	CHI_economy_right_war_326 = {
+		icon = generic_political_rally
+		available = {
+		has_idea = CHI_gaozongwu
+	has_country_flag  = CHI_economy_right_army_nowwancheng
+		593 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+		cost = 50
+		days_re_enable = 114514
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+				}
+		remove_effect = {
+	set_country_flag  = CHI_economy_right_war_nowwancheng
+			326 = {
+			swap_ideas = {
+				remove_idea =CHI_economy_right_naval_326_two
+				add_idea = CHI_economy_right_naval_326_three
+				}
+			}
+		}
+	}
+	CHI_economy_right_work_326 = {
+		icon = eng_propaganda_campaigns
+		available = {
+		has_decision = CHI_economy_right_war_326
+		593 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+		cost = 0
+		days_re_enable = 114514
+		days_remove = 24
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+		}
+		complete_effect = {
+
+				}
+		remove_effect = {
+	set_country_flag  = CHI_economy_bg_nowwancheng
+			326 = {
+			swap_ideas = {
+				remove_idea =CHI_economy_right_naval_326_one
+				add_idea = CHI_economy_right_naval_326_two
+				}
+			}
+		}
+	}
+	CHI_economy_right_fuck_326 = {
+		icon = oppression
+		available = {
+	has_country_flag  = CHI_economy_right_war_nowwancheng
+	has_country_flag  = CHI_economy_bg_nowwancheng
+		593 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+	visible = {
+	has_country_flag  = CHI_economy_right_war_nowwancheng
+	}
+		highlight_states = {
+			highlight_state_targets = { state = 326 } 
+			}
+		cost = 25
+		days_re_enable = 114514
+		days_remove = 7
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+		}
+		complete_effect = {
+				}
+		remove_effect = {
+			326 = {
+		remove_idea =CHI_economy_right_naval_326_three
+			}
+			326 = { set_demilitarized_zone = no }
+				transfer_state = 326
+		}
+	}
+########################################################################################################################
+	CHI_economy_right_naval_729 = {
+		icon = generic_naval
+		available = {
+		592 = {	has_ROOT_at_least_3_div_in_current_state_scope = yes }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 729 } 
+			}
+		cost = 0
+		days_re_enable = 114514
+		days_remove = 15
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+
+				}
+		remove_effect = {
+		729 = {
+		add_ideas = CHI_economy_right_naval_326_one
+			}
+	set_country_flag = CHI_economy_right_naval_729
+		}
+	}
+	CHI_economy_right_army_729 = {
+		icon = generic_operation
+		available = {
+	has_country_flag = CHI_economy_right_naval_729
+		592 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+		cost = 0
+		days_re_enable = 114514
+		days_remove = 15
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+
+				}
+		remove_effect = {
+			729 = { set_demilitarized_zone = yes }
+	set_country_flag  = CHI_economy_right_army_nowwancheng_729
+		}
+	}
+	CHI_economy_right_war_729 = {
+		icon = generic_political_rally
+		available = {
+		has_idea = CHI_gaozongwu
+	has_country_flag  = CHI_economy_right_army_nowwancheng_729
+		592 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+		cost = 50
+		days_re_enable = 114514
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+				}
+		remove_effect = {
+	set_country_flag  = CHI_economy_right_war_nowwancheng_729
+			729 = {
+			swap_ideas = {
+				remove_idea =CHI_economy_right_naval_326_two
+				add_idea = CHI_economy_right_naval_326_three
+				}
+			}
+		}
+	}
+	CHI_economy_right_work_729 = {
+		icon = eng_propaganda_campaigns
+		available = {
+		has_decision = CHI_economy_right_war_729
+		592 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+		cost = 0
+		days_re_enable = 114514
+		days_remove = 24
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+		}
+		complete_effect = {
+
+				}
+		remove_effect = {
+	set_country_flag  = CHI_economy_bg_nowwancheng_729
+			729 = {
+			swap_ideas = {
+				remove_idea =CHI_economy_right_naval_326_one
+				add_idea = CHI_economy_right_naval_326_two
+				}
+			}
+		}
+	}
+	CHI_economy_right_fuck_729 = {
+		icon = oppression
+		available = {
+	has_country_flag  = CHI_economy_right_war_nowwancheng_729
+	has_country_flag  = CHI_economy_bg_nowwancheng_729
+		592 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		}
+	visible = {
+	has_country_flag  = CHI_economy_right_war_nowwancheng_729
+	}
+		highlight_states = {
+			highlight_state_targets = { state = 729 } 
+			}
+		cost = 25
+		days_re_enable = 114514
+		days_remove = 7
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+		}
+		complete_effect = {
+				}
+		remove_effect = {
+			729 = {
+		remove_idea =CHI_economy_right_naval_326_three
+			}
+			729 = { set_demilitarized_zone = no }
+				transfer_state = 729
+		}
+	}
+########################################################################################################################
+	CHI_economy_right_fuck_728 = {
+		icon = oppression
+		available = {
+		has_equipment = { infantry_equipment > 599 }
+		OR = {
+		592 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+			}
+		594 = {	
+		has_ROOT_at_least_3_div_in_current_state_scope = yes
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 728 } 
+			}
+		cost = 25
+		days_re_enable = 114514
+		days_remove = 21
+		ai_will_do = {
+			factor = 200
+		}
+		modifier = {
+		}
+		complete_effect = {
+				}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = -600
+			producer = ROC
+		add_manpower = -1782
+				}
+				transfer_state = 728
+		}
+	}
+}

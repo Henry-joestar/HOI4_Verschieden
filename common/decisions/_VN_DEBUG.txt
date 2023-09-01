@@ -1,0 +1,26 @@
+VN_DEBUG = {
+	Vn_jap_30_t = {
+		icon = generic_nationalism
+		ai_will_do = {
+			}
+		available = {
+		}
+		modifier = {
+			}
+		remove_effect = {
+		country_event = Vn_jap.30
+			}
+		}
+	human_ai = {
+		icon = generic_nationalism
+		ai_will_do = {
+			}
+		available = {
+		}
+		modifier = {
+			}
+		remove_effect = {
+		human_ai = 0
+			}
+		}
+}

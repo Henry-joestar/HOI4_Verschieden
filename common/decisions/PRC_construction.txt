@@ -1,0 +1,124 @@
+PRC_SOVconstruction = {
+	PRC_SOVconstruction_1 = {
+		icon = PRC_SOVconstruction_1
+		available = {
+			not = {
+				has_decision = PRC_SOVconstruction_1_2
+				has_decision = PRC_SOVconstruction_1_3
+				has_decision = PRC_SOVconstruction_1_4
+			}
+		}
+		cost = 0
+		days_re_enable = 10
+		days_remove = 20
+		ai_will_do = {
+			factor = 25
+		modifier = {
+			set_global_flag = PRC_soviet_construction_now 
+			}
+		}
+		modifier = {
+			set_global_flag = PRC_soviet_construction_now 
+		}
+		days_remove = 20
+		remove_effect = {
+		clear_global_flag = PRC_soviet_construction_now
+		add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 500
+		producer = SOV
+			}
+		}
+	}
+	PRC_SOVconstruction_1_2 = {
+		icon = PRC_SOVconstruction_1_2
+		available = {
+			not = {
+				has_decision = PRC_SOVconstruction_1
+				has_decision = PRC_SOVconstruction_1_3
+				has_decision = PRC_SOVconstruction_1_4
+			}
+		}
+		cost = 0
+		days_re_enable = 10
+		days_remove = 20
+		ai_will_do = {
+			factor = 25
+		modifier = {
+			set_global_flag = PRC_soviet_construction_now 
+			}
+		}
+		modifier = {
+		set_global_flag = PRC_soviet_construction_now 
+		}
+		remove_effect = {
+		clear_global_flag = PRC_soviet_construction_now
+		add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 20
+		producer = SOV
+			}
+		}
+	}
+	PRC_SOVconstruction_3 = {
+		icon = PRC_SOVconstruction_1_3
+		available = {
+			not = {
+				has_decision = PRC_SOVconstruction_1_2
+				has_decision = PRC_SOVconstruction_1
+				has_decision = PRC_SOVconstruction_1_4
+			}
+		}
+		cost = 0
+		days_re_enable = 10
+		days_remove = 20
+		ai_will_do = {
+			factor = 25
+		modifier = {
+			set_global_flag = PRC_soviet_construction_now 
+			}
+		}
+		modifier = {
+		set_global_flag = PRC_soviet_construction_now 
+		}
+		remove_effect = {
+		clear_global_flag = PRC_soviet_construction_now 
+		add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 30
+		producer = SOV
+			}
+		}
+	}
+	PRC_SOVconstruction_4 = {
+		icon = PRC_SOVconstruction_1_4
+		available = {
+			not = {
+				has_decision = PRC_SOVconstruction_1_2
+				has_decision = PRC_SOVconstruction_1_3
+				has_decision = PRC_SOVconstruction_1
+			}
+		}
+		cost = 0
+		days_re_enable = 10
+		days_remove = 20
+		ai_will_do = {
+			factor = 25
+		modifier = {
+			set_global_flag = PRC_soviet_construction_now 
+			}
+		}
+		modifier = {
+		set_global_flag = PRC_soviet_construction_now 
+		}
+		remove_effect = {
+		clear_global_flag = PRC_soviet_construction_now 
+		add_equipment_to_stockpile = {
+		type = light_tank_equipment_1
+		amount = 15
+		producer = SOV
+			}
+		}
+	}
+
+}

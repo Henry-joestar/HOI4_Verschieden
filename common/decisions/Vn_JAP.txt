@@ -1,0 +1,41 @@
+JAP_Suppression_of_rebels = {
+	JAP_Suppression_of_rebels_d = {
+		icon = decision_generic_prepare_civil_war
+			visible = {
+			has_completed_focus = JAP_intervene_in_china
+			}
+		days_remove = 280
+		cost = 150
+		fire_only_once = yes
+		remove_effect = {
+		remove_ideas = JAP_Anti_fascist_front
+		}
+		ai_will_do = {
+			factor = 200
+		}
+			modifier = {
+				political_power_cost = 0.15
+			}
+	}
+	JAP_Suppression_of_rebels_d_2 = {
+		icon = decision_generic_prepare_civil_war
+			visible = {
+			has_completed_focus = JAP_intervene_in_china
+			has_stability < 0.8
+			}
+		days_remove = 120
+		days_re_enable = 70
+		cost = 25
+		remove_effect = {
+		add_stability = 0.1
+		}
+		ai_will_do = {
+			factor = 200
+		}
+			modifier = {
+				stability_weekly = 0.001
+				stability_weekly_factor = 0.25
+				political_power_cost = 0.1
+			}
+	}
+}

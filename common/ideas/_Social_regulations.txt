@@ -1,0 +1,205 @@
+ideas = {
+
+	religion = {
+		law = yes
+		use_list_view = yes
+
+		state_religion = {
+		picture = state_religion
+			available = {
+				NOT = {
+				has_government = communism
+					}
+			}
+			cost = 150
+
+			removal_cost = -1
+
+			modifier = {
+				master_ideology_drift = 0.05
+				Ssocialism_drift = -0.08
+				communism_drift = -0.08
+				democratic_drift = -0.05
+				political_power_gain = 0.1
+				drift_defence_factor = 0.25
+				research_speed_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				consumer_goods_factor = -0.03
+				compliance_gain = 0.01
+				global_building_slots_factor = 0.1
+			}
+
+		}
+		freedom_of_conscience = {
+		picture = freedom_of_conscience
+
+			available = {
+				NOT = {
+				has_government = communism
+					}
+			}
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				master_ideology_drift = 0.03
+				Ssocialism_drift = -0.04
+				communism_drift = -0.04
+				political_power_gain = 0.05
+				drift_defence_factor = 0.1
+				research_speed_factor = -0.02
+				production_factory_max_efficiency_factor = -0.05
+			}
+
+		default = yes
+		}
+		total_separation = {
+		picture = total_separation
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = -0.08
+				research_speed_factor = 0.04
+				consumer_goods_factor = -0.02
+			}
+
+		}
+		state_atheism = {
+		picture = state_atheism
+			available = {
+			}
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				master_ideology_drift = 0.03
+				democratic_drift = -0.12
+				neutrality_drift = -0.12
+				fascism_drift = -0.05
+				research_speed_factor = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+		FRA_Rational_teaching = {
+		picture = state_atheism
+			available = {
+				}
+			visible = {
+				has_idea = FRA_Rational_teaching
+				or = {
+			has_government = communism
+			has_government = Ssocialism
+				}
+			}
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				master_ideology_drift = 0.05
+				democratic_drift = -0.15
+				neutrality_drift = -0.15
+				fascism_drift = -0.15
+				research_speed_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+				global_building_slots_factor = 0.2
+			}
+		}
+	}
+	Remarks = {
+		law = yes
+		use_list_view = yes
+
+		outlawed_dissent = {
+		picture = outlawed_dissent
+			available = {
+				NOT = {
+				has_government = democratic
+					}
+			}
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.5
+				master_ideology_drift = 0.1
+				democratic_drift = -0.05
+				Ssocialism_drift = -0.05
+				political_power_gain = 0.1
+				party_popularity_stability_factor = 0.1
+				drift_defence_factor = 0.35
+				research_speed_factor = -0.05
+				intelligence_agency_defense = 1
+				operative_slot = 1
+				civilian_intel_to_others = -5
+				army_intel_to_others = -5
+				navy_intel_to_others = -5
+				airforce_intel_to_others = -5
+				encryption = 5
+				resistance_growth = -0.1
+				resistance_target = -0.1
+			}
+
+		}
+		censorship = {
+		picture = censorship
+			available = {
+			}
+			cost = 150
+
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.1
+				master_ideology_drift = 0.05
+				political_power_gain = 0.05
+				party_popularity_stability_factor = 0.05
+				drift_defence_factor = 0.1
+				civilian_intel_to_others = -2
+				army_intel_to_others = -2
+				navy_intel_to_others = -2
+				airforce_intel_to_others = -2
+				resistance_growth = -0.05
+				resistance_target = -0.05
+			}
+
+		default = yes
+		}
+		right_of_assembly = {
+		picture = right_of_assembly
+			available = {
+			}
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				foreign_subversive_activites = -0.05
+				master_ideology_drift = 0.02
+				drift_defence_factor = -0.15
+				research_speed_factor = 0.02
+			}
+
+		}
+		protected_speech = {
+		picture = protected_speech
+			available = {
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				foreign_subversive_activites = 0.1
+				drift_defence_factor = -0.35
+				research_speed_factor = 0.07
+			}
+
+		}
+	}
+}

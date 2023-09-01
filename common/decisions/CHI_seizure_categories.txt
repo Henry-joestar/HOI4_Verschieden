@@ -1,0 +1,593 @@
+CHI_seizure_categories = {
+	CHI_jidong_division = {
+		icon = generic_factory
+		available = {
+NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 609
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 609 } 
+			}
+		visible = {
+			has_full_control_of_state = 609
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			50 = {
+			609 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			25 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			25 = {}
+				}
+			}
+		}
+	CHI_chahaer_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 612
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 612 } 
+			}
+		visible = {
+			has_full_control_of_state = 612
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			15 = {
+			612 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			10 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			75 = {}
+				}
+			}
+		}
+	CHI_rehe_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 610
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 610 } 
+			}
+		visible = {
+			has_full_control_of_state = 610
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			35 = {
+			610 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			10 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			55 = {}
+				}
+			}
+		}
+	CHI_liaoning_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 715
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 715 } 
+			}
+		visible = {
+			has_full_control_of_state = 715
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			45 = {
+			715 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			20 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			35 = {}
+				}
+			}
+		}
+	CHI_liaodong_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 716
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 716 } 
+			}
+		visible = {
+			has_full_control_of_state = 716
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			45 = {
+			716 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			30 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			25 = {}
+				}
+			}
+		}
+
+	CHI_dalian_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 745
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 745 } 
+			}
+		visible = {
+			has_full_control_of_state = 745
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			55 = {
+			745 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			30 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			15 = {}
+				}
+			}
+		}
+	CHI_jilin_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 328
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 328 } 
+			}
+		visible = {
+			has_full_control_of_state = 328
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			50 = {
+			328 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			25 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			25 = {}
+				}
+			}
+		}
+	CHI_songjiang_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 717
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 717 } 
+			}
+		visible = {
+			has_full_control_of_state = 717
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			25 = {
+			717 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			25 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			50 = {}
+				}
+			}
+		}
+	CHI_hlj_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 714
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 714 } 
+			}
+		visible = {
+			has_full_control_of_state = 714
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			15 = {
+			714 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			10 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			75 = {}
+				}
+			}
+		}
+	CHI_hlbe_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 761
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 761 } 
+			}
+		visible = {
+			has_full_control_of_state = 761
+		}
+		cost = 25
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			15 = {
+			761 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			10 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			}
+			75 = {}
+				}
+			}
+		}
+	CHI_xyd_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 527
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 527 } 
+			}
+		visible = {
+			has_full_control_of_state = 527
+		}
+		cost = 50
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			80 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+				}
+			527 = {
+			add_extra_state_shared_building_slots =3
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 3#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			20 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 1.5
+			uses = 1
+			category = industry
+				}
+			612 = {
+			add_extra_state_shared_building_slots =1
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+					}
+				}
+			}
+				}
+			}
+		}
+	CHI_ncx_division = {
+		icon = generic_factory
+		available = {
+		NOT = { has_country_flag  = CHI_carryfactory_now }
+			has_full_control_of_state = 525
+		}
+		visible = {
+			has_full_control_of_state = 525
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 525 } 
+			}
+		cost = 50
+		days_re_enable = no
+		days_remove = 70
+		ai_will_do = {
+			factor = 190
+		}
+		modifier = {
+		}
+		complete_effect = {
+	set_country_flag  = CHI_carryfactory_now
+				}
+		remove_effect = {
+	clr_country_flag  = CHI_carryfactory_now
+			random_list = {
+			80 = {
+			525 = {
+			add_extra_state_shared_building_slots =2
+			add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 2#建造数量
+			instant_build = yes
+						}
+					}
+				}
+			15 = {
+			add_tech_bonus = {
+			name = industry_bonus
+			bonus = 2
+			uses = 1
+			category = industry
+				}
+			}
+			5 = {}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+ROC_lang_march = {
+#ROC_lang_march_endnow
+ 		ROC_lang_march_start = {
+		icon = generic_ignite_civil_war
+		activation = {
+		has_war = no
+		NOT = { has_country_flag = ROC_lang_march_start }
+		}
+		available = {
+		always = no
+		}
+		is_good = no
+		days_mission_timeout = 2
+		timeout_effect = {
+		hidden_effect = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = -121500
+			producer = ROC
+				}
+			}
+		set_country_flag = ROC_lang_march_start
+		custom_effect_tooltip = ROC_lang_march_start_tt
+		CHI = {
+			declare_war_on = {
+			target = ROC
+			type = civil_war
+					}
+				}
+			}
+		}
+ 		ROC_lang_march_now = {
+		icon = generic_ignite_civil_war
+		activation = {
+		has_country_flag = ROC_lang_march_start
+		NOT = { has_country_flag = ROC_lang_march_now_SCF }
+		}
+		available = {
+		744 = {
+		has_ROOT_at_least_11_div_in_current_state_scope = yes
+				}
+		has_full_control_of_state = 744
+			}
+		is_good = no
+		days_mission_timeout = 300
+		timeout_effect = {
+			remove_ideas = ROC_the_long_march
+		country_lock_all_division_template = no
+		CHI = {
+		annex_country = { target = ROC }
+				}
+			}
+		complete_effect = {
+		white_peace = CHI
+		add_stability = 0.1
+		add_war_support = 0.08
+		country_lock_all_division_template = no
+		custom_effect_tooltip = ROC_lang_march_now_tt
+		set_country_flag = ROC_lang_march_now_SCF
+			remove_ideas = ROC_the_long_march
+			PRC = {
+			puppet = ROC
+				}
+		hidden_effect = {
+				set_politics = {
+				ruling_party =Ssocialism
+					}
+	add_popularity = { ideology =  communism  popularity = 0.15 }
+	add_popularity = { ideology =  democratic  popularity = 0.15 }
+	add_popularity = { ideology =  Ssocialism  popularity = 0.75 }
+	add_popularity = { ideology = neutrality  popularity = 0.04 }
+	set_popularity = { ideology = communism  popularity = 0.12 }
+	set_popularity = { ideology = Ssocialism  popularity = 0.71 }
+	set_popularity = { ideology = democratic  popularity = 0.13 }
+	set_popularity = { ideology = neutrality  popularity = 0.04 }
+	set_popularity = { ideology = fascism  popularity = 0 }
+			CHI = {
+			transfer_state = 835
+			transfer_state = 836
+			transfer_state = 837
+					}
+				}
+			}
+	
+		}
+	ROC_lang_march_after = {
+		icon = generic_ignite_civil_war
+		ai_will_do = {
+		factor = 200
+			}
+		available = {
+		has_country_flag = ROC_lang_march_now_SCF
+		has_equipment = { infantry_equipment > 999 }
+		}
+		days_re_enable = no
+		days_remove = 30
+		modifier = {
+			}
+		remove_effect = {
+		set_country_flag = ROC_lang_march_endnow
+		add_manpower = -8482
+		transfer_state = 607
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = -1000
+			producer = ROC
+				}
+			}
+
+		}
+	}

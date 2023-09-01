@@ -1,0 +1,44 @@
+ideas = {
+	country = {
+		WTD_WTD_WTD = {
+			
+
+			allowed = {
+				tag = WTD
+			}
+
+			removal_cost = -1
+
+			picture = PRC_famine
+			
+			modifier = {
+		research_speed_factor = -5
+		rules = {
+			can_puppet = NO
+		}
+			compliance_gain = 2
+			local_manpower = -1.0
+			local_resources = -1.0
+			local_resources_factor = -1.0
+			local_factories = -1.0
+			local_supplies = -1.0
+			resistance_target = -0.9
+			resistance_growth = -0.9
+			political_power_factor = -2
+			stability_factor = -2
+			stability_factor = -2
+			disabled_ideas = 1
+			war_support_factor = -1
+			conscription_factor = -125
+			consumer_goods_factor = 1
+			local_resources = -1
+			industrial_capacity_factory = -2
+			industrial_capacity_dockyard = -2
+			nuclear_production_factor = -2
+			global_building_slots_factor = -2
+			training_time_factor = 2
+			local_factories = -2
+			}
+		}
+	}
+}

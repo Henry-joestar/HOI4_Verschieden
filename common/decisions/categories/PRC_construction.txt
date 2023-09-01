@@ -1,0 +1,17 @@
+
+PRC_SOVconstruction = {
+	priority = 100
+
+	picture = GFX_decision_PRC_SOVconstruction_2
+
+	icon = PRC_SOVconstruction
+
+	allowed = {
+		original_tag = PRC
+	}
+
+	visible = {
+			has_global_flag = PRC_soviet_construction_to_PRC_yes
+			NOT = { has_cosmetic_tag = PRC_proclaimed }
+	}
+}

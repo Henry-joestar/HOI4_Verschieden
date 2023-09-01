@@ -1,0 +1,173 @@
+ideas = {
+	State_party = {
+		law = yes
+		use_list_view = yes
+	One_party_state = {
+			available = {
+		OR = {
+		NOT = { has_government = democratic }
+
+		TAG = MEX
+		}
+		NOT = {has_country_leader_ideology = Enterprise_company}
+		NOT = {has_country_leader_ideology = Theocratic_absolutism_fascism}
+		NOT = {has_country_leader_ideology = Theocratic_absolutism}
+		NOT = {has_country_leader_ideology = absolutism}
+		NOT = {has_country_leader_ideology = Patriarchal_dictatorship}
+		NOT = {has_country_leader_ideology = anarchist_communism}
+		NOT = {has_country_leader_ideology = Revolutionary_syndicalism}
+		NOT = {has_country_leader_ideology = anarchism_1}
+		NOT = {has_country_leader_ideology = Communalism}
+		NOT = {has_country_leader_ideology = Anarcho_syndicalism}
+		NOT = {has_country_leader_ideology = anarchism }
+
+				}
+		picture = Vn
+			modifier = {
+		political_power_factor =0.15
+		party_popularity_stability_factor = 0.15
+			}
+		default = yes
+		on_remove  = {
+			country_event = Vn_mod.3
+			add_ideas = Revolutionary_dictatorship
+				}
+		on_add  = {
+			remove_ideas = Revolutionary_dictatorship
+				}
+		}
+	Multi_party_democracy = { #多党民主
+		picture = Vn
+			available = {
+		or = {
+		has_government = democratic
+has_country_leader_ideology = left_social_democracy
+		}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+
+				}
+			modifier = {
+		political_power_factor =-0.1
+		democratic_drift = 0.02
+		party_popularity_stability_factor = -0.1
+			}
+			default = yes
+		on_remove  = {
+			add_ideas = Revolutionary_dictatorship
+				}
+		on_add  = {
+			remove_ideas = Revolutionary_dictatorship
+				}
+		}
+	Multi_party_cooperation = {#多党合作
+		picture = Vn
+			available = {
+		NOT = { has_government = fascism }
+		has_idea = Multi_party_cooperation
+				}
+			modifier = {
+		political_power_factor =-0.05
+		political_advisor_cost_factor = -0.15
+			}
+		on_remove  = {
+			country_event = Vn_mod.3
+			add_ideas = Revolutionary_dictatorship
+				}
+		on_add  = {
+			remove_ideas = Revolutionary_dictatorship
+				}
+		}
+	people_democracy = {#人民民主
+		picture = Vn
+			available = {
+		has_country_leader_ideology = maoism
+				}
+			modifier = {
+		political_power_factor = 0.05
+		political_advisor_cost_factor = -0.05
+		party_popularity_stability_factor = 0.1
+			}
+			default = yes
+		on_remove  = {
+			country_event = Vn_mod.3
+			add_ideas = Revolutionary_dictatorship
+				}
+		on_add  = {
+			remove_ideas = Revolutionary_dictatorship
+				}
+		}
+	Dictatorship_STS = {#独裁制
+		picture = Vn
+			available = {
+			OR = {
+		has_country_leader_ideology = Enterprise_company
+		has_country_leader_ideology = Theocratic_absolutism_fascism
+		has_country_leader_ideology = Theocratic_absolutism
+		has_country_leader_ideology = absolutism
+		has_country_leader_ideology = Patriarchal_dictatorship
+		has_idea = absolute_monarchy
+			}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = Revolutionary_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Communalism }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+		NOT = { has_country_leader_ideology = anarchism }
+				}
+			modifier = {
+		political_power_factor = 0.10
+			}
+			default = yes
+		on_remove  = {
+			country_event = Vn_mod.3
+			add_ideas = Revolutionary_dictatorship
+				}
+		on_add  = {
+			remove_ideas = Revolutionary_dictatorship
+				}
+		}
+	Commune_Committee = {#公社委员会
+		picture = Vn
+			available = {
+		or = {
+		has_country_leader_ideology = anarchist_communism
+		has_country_leader_ideology = Revolutionary_syndicalism
+		has_country_leader_ideology = anarchism_1
+		has_country_leader_ideology = Communalism
+		has_country_leader_ideology = Anarcho_syndicalism
+		has_country_leader_ideology = anarchism
+			}
+				}
+			modifier = {
+		political_power_factor =-0.1
+		political_advisor_cost_factor = -0.35
+		party_popularity_stability_factor = 0.25
+			}
+			default = yes
+		on_remove  = {
+			country_event = Vn_mod.3
+			add_ideas = Revolutionary_dictatorship
+				}
+		on_add  = {
+			remove_ideas = Revolutionary_dictatorship
+				}
+		}
+	Revolutionary_dictatorship = {#革命独裁制
+			visible = {
+		has_idea = Revolutionary_dictatorship
+
+				}
+		picture = Vn
+			modifier = {
+		political_power_factor =0.1
+		party_popularity_stability_factor = -0.15
+		war_support_factor = -0.1
+			}
+		}
+	}
+}

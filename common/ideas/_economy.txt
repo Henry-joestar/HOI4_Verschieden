@@ -1,0 +1,546 @@
+ideas = {
+	economy_polity_country = {
+		law = yes
+		use_list_view = yes
+
+	economy_junta_communism_economy = {
+		picture = Vn
+			available = {
+		has_country_leader_ideology = junta_communism
+		}
+			removal_cost = -1
+			modifier = {
+		consumer_goods_factor = -0.05
+		production_speed_arms_factory_factor = 0.05
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.1
+		local_resources_factor = 0.15
+		lobal_building_slots_factor = 0.15
+		political_power_cost = 0.05
+		master_ideology_drift = 0.15#宗主国意识形态影响+0.15
+			}
+			on_add = {
+		set_country_flag = economy_planned_economy_flag
+			add_dynamic_modifier = {
+				modifier = General_planned_economy_system
+				}
+			set_country_flag = General_planned_economy_system_flag
+            		set_variable = { GPES_Full_cap = 110 }
+            		set_variable = { GPES_Full_cap_ture = 10 }
+           		set_variable = { GPES_Agricultural_cap = 0 }
+           		set_variable = { GPES_industry_cap = 0 }
+			}
+			on_remove  = {
+		clr_country_flag = economy_planned_economy_flag
+			remove_dynamic_modifier = {
+				modifier = General_planned_economy_system
+				}
+			clr_country_flag = General_planned_economy_system_flag
+            		set_variable = { GPES_Full_cap = 0 }
+            		set_variable = { GPES_Full_cap_ture = 0 }
+           		set_variable = { GPES_Agricultural_cap = 0 }
+           		set_variable = { GPES_industry_cap = 0 }
+clr_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+			}
+		}
+	economy_Half_cent_planned_economy = {
+		picture = Vn
+			available = {
+		NOT = { has_country_leader_ideology = stalinism }
+		NOT = { has_country_leader_ideology = Nazbol }
+		NOT = { has_country_leader_ideology = totalitarianism }
+		NOT = { has_country_leader_ideology = ingsoc }
+			OR = {
+			has_government = communism
+			has_government = Ssocialism
+			}
+		}
+			removal_cost = -1
+			modifier = {
+		production_speed_buildings_factor = 0.05
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_max_efficiency_factor = 0.05
+		industrial_capacity_dockyard = 0.05
+		local_resources_factor = 0.15
+		global_building_slots_factor = 0.4
+		political_power_cost = -0.1
+		min_export = -0.05
+		embargo_cost_factor = 0.15
+		master_ideology_drift = 0.15#宗主国意识形态影响+0.15
+		research_sharing_per_country_bonus_factor = 0.15
+			}
+		research_bonus = {
+		industry_research = 0.15
+			}
+			on_add = {
+		set_country_flag = economy_planned_economy_flag
+			add_dynamic_modifier = {
+				modifier = General_planned_economy_system
+				}
+			set_country_flag = General_planned_economy_system_flag
+            		set_variable = { GPES_Full_cap = 110 }
+            		set_variable = { GPES_Full_cap_ture = 10 }
+           		set_variable = { GPES_Agricultural_cap = 0 }
+           		set_variable = { GPES_industry_cap = 0 }
+			}
+			on_remove  = {
+			clr_country_flag = General_planned_economy_system_flag
+            		set_variable = { GPES_Full_cap = 0 }
+            		set_variable = { GPES_Full_cap_ture = 0 }
+           		set_variable = { GPES_Agricultural_cap = 0 }
+           		set_variable = { GPES_industry_cap = 0 }
+		clr_country_flag = economy_planned_economy_flag
+			remove_dynamic_modifier = {
+				modifier = General_planned_economy_system
+				}
+clr_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+			}
+		}
+	economy_Anarchy_economy = {
+		picture = Vn
+			available = {
+		}
+				visible = {
+		has_idea = economy_Anarchy_economy
+				}
+			removal_cost = -1
+			modifier = {
+		war_stability_factor = -0.2
+		consumer_goods_factor = 0.1
+		production_speed_buildings_factor = -0.5
+		industrial_capacity_factory = -0.5
+		#global_building_slots_factor = -0.5
+			}
+		cancel_if_invalid = no
+		}
+	economy_planned_economy = {
+		picture = Vn
+			available = {
+			OR = {
+			has_government = communism
+			has_government = Ssocialism
+			has_government = left_social_democracy
+		has_country_leader_ideology = stalinism
+				}
+		NOT = { has_country_leader_ideology = anarchist_communism }
+		NOT = { has_country_leader_ideology = anarchism_1 }
+		NOT = { has_country_leader_ideology = Anarcho_syndicalism }
+			}
+			removal_cost = -1
+			modifier = {
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = -0.1
+		production_factory_max_efficiency_factor = 0.1
+		industrial_capacity_dockyard = 0.15
+		local_resources_factor = 0.05
+		global_building_slots_factor = 0.4
+		min_export = -0.15
+		trade_opinion_factor = -0.15
+		embargo_cost_factor = 0.15
+		master_ideology_drift = 0.15#宗主国意识形态影响+0.15
+		research_sharing_per_country_bonus_factor = 0.15
+			}
+		research_bonus = {
+		industry_research = 0.1
+			}
+			default = yes
+			on_add = {
+			set_country_flag = General_planned_economy_system_flag
+            		set_variable = { GPES_Full_cap = 110 }
+            		set_variable = { GPES_Full_cap_ture = 10 }
+           		set_variable = { GPES_Agricultural_cap = 0 }
+           		set_variable = { GPES_industry_cap = 0 }
+		set_country_flag = economy_planned_economy_flag
+			add_dynamic_modifier = {
+				modifier = General_planned_economy_system
+				}
+			}
+			on_remove  = {
+			set_country_flag = General_planned_economy_system_flag
+            		set_variable = { GPES_Full_cap = 0 }
+            		set_variable = { GPES_Full_cap_ture = 0 }
+           		set_variable = { GPES_Agricultural_cap = 0 }
+           		set_variable = { GPES_industry_cap = 0 }
+			remove_dynamic_modifier = {
+		clr_country_flag = economy_planned_economy_flag
+				modifier = General_planned_economy_system
+				}
+clr_country_flag = planned_economy_Construction_speed_numeric_value_add_five
+			}
+		}
+	economy_Roosevelt_NewDeal = {
+		picture = Vn
+			available = {
+			has_government = democratic
+			tag = USA
+		has_country_leader = { ruling_only = yes 
+		character = USA_franklin_delano_roosevelt }
+				}
+			removal_cost = -1
+ 
+			modifier = {
+		consumer_goods_factor = -0.1
+		production_speed_buildings_factor = -0.35
+		production_speed_infrastructure_factor = 0.15
+		fuel_gain_factor = 0.10
+		industry_repair_factor = 0.15
+		industry_free_repair_factor = 0.15
+		trade_opinion_factor = 0.1
+		embargo_cost_factor = -0.1
+
+			}
+			default = yes
+		on_add = {
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+			on_remove  = {
+			remove_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+		}
+	economy_Dominate_economy = {
+		picture = Vn
+			available = {
+		has_idea = economy_Dominate_economy
+		}
+			removal_cost = -1
+ 
+			modifier = {
+			consumer_goods_factor = -0.05
+			drift_defence_factor = -0.05
+			production_speed_buildings_factor = -0.2
+		trade_opinion_factor = 0.1
+		embargo_cost_factor = -0.1
+			cic_to_overlord_factor = 0.10#贡献给宗主国的民工+10%
+			mic_to_overlord_factor = 0.10#贡献给宗主国的军工+10%
+			extra_trade_to_overlord_factor = 0.15#宗主国贸易资源加成+15%
+			license_subject_master_purchase_cost = 0.25#傀儡国购买宗主国生产许可成本+25%
+			master_build_autonomy_factor = 0.15#宗主国在傀儡国修建建筑自治度丧失+15%
+			master_ideology_drift = 0.01#宗主国意识形态影响+0.01
+			overlord_trade_cost_factor = -0.15#宗主国贸易成本花费-15%
+		research_sharing_per_country_bonus_factor = 0.15
+			custom_modifier_tooltip = Prohibition_Act
+			custom_modifier_tooltip = Prohibition_Act_A
+			}
+		on_add = {
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+			on_remove  = {
+			remove_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+		}
+	economy_Free_market_economy = {
+		picture = Vn
+			available = {
+		has_government = democratic
+	NOT = { has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt } }
+			}
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = -0.05
+			global_building_slots_factor = -0.25
+			drift_defence_factor = -0.15
+			production_speed_buildings_factor = -0.45
+			production_factory_max_efficiency_factor = -0.05
+
+			trade_opinion_factor = 0.3#贸易关系修正+30%
+			embargo_cost_factor = -0.3#禁运花费-30%
+			cic_to_overlord_factor = 0.35#贡献给宗主国的民工+35%
+			mic_to_overlord_factor = 0.35#贡献给宗主国的军工+35%
+			extra_trade_to_overlord_factor = 0.35#宗主国贸易资源加成+35%
+			license_subject_master_purchase_cost = 0.35#傀儡国购买宗主国生产许可成本+35%
+			master_build_autonomy_factor = 0.25#宗主国在傀儡国修建建筑自治度丧失+25%
+			master_ideology_drift = 0.03#宗主国意识形态影响+0.03
+			overlord_trade_cost_factor = -0.35#宗主国贸易成本花费-35%
+			custom_modifier_tooltip = Prohibition_Act
+			custom_modifier_tooltip = Prohibition_Act_A
+			}
+			default = yes
+			on_add = {
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+			on_remove  = {
+			remove_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+		}
+	economy_Syndicalism_economy = {
+		picture = Vn
+			available = {
+			OR = {
+			has_government = fascism
+			AND = {
+			TAG = FRA
+			has_country_flag = FRA_Corporatism_flag
+				}
+			}
+				}
+			removal_cost = -1
+ 			default = yes
+			modifier = {
+			political_power_factor = 0.05
+			consumer_goods_factor = -0.03
+			production_speed_buildings_factor = -0.1
+			industrial_capacity_factory = 0.1
+			economy_cost_factor = -0.15
+
+			trade_opinion_factor = 0.1#贸易关系修正+10%
+			embargo_cost_factor = 0.10#禁运花费+10%
+			cic_to_overlord_factor = 0.15#贡献给宗主国的民工+15%
+			mic_to_overlord_factor = 0.15#贡献给宗主国的军工+15%
+			extra_trade_to_overlord_factor = 0.25#宗主国贸易资源加成+25%
+			license_subject_master_purchase_cost = 0.55#傀儡国购买宗主国生产许可成本+55%
+			master_build_autonomy_factor = 0.45#宗主国在傀儡国修建建筑自治度丧失+45%
+			master_ideology_drift = 0.1#宗主国意识形态影响+0.10
+			overlord_trade_cost_factor = -0.55#宗主国贸易成本花费-50%
+
+			custom_modifier_tooltip = Prohibition_Act_B
+			}
+			on_add = {
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+			on_remove  = {
+			remove_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+ 
+		}
+	economy_oligarchic_economy = {
+		picture = Vn
+			available = {
+			has_country_leader_ideology = oligarchism
+				}
+			removal_cost = -1
+ 
+			modifier = {
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.15
+			production_speed_buildings_factor = -0.5
+			economy_cost_factor = 0.15
+			global_building_slots_factor = -0.4
+
+
+			trade_opinion_factor = 0.4#贸易关系修正+40%
+			embargo_cost_factor = -0.35#禁运花费-35%
+			cic_to_overlord_factor = 0.5#贡献给宗主国的民工+50%
+			mic_to_overlord_factor = 0.5#贡献给宗主国的军工+50%
+			extra_trade_to_overlord_factor = 0.75#宗主国贸易资源加成+75%
+			license_subject_master_purchase_cost = 0.2#傀儡国购买宗主国生产许可成本+20%
+			master_build_autonomy_factor = 0.5#宗主国在傀儡国修建建筑自治度丧失+50%
+			master_ideology_drift = 0.05#宗主国意识形态影响+0.05
+			overlord_trade_cost_factor = -0.25#宗主国贸易成本花费-25%
+			}
+			default = yes
+		on_add = {
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = -14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			days = -14
+				}
+			}
+			on_remove  = {
+			add_days_mission_timeout = {
+			mission = Private_construction_units_1
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_2
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_3
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_4
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_5
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_6
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_7
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_8
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_9
+			days = 14
+			}
+			add_days_mission_timeout = {
+			mission = Private_construction_units_10
+			days = 14
+				}
+			remove_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+		}
+	economy_Feudal_capital_economy = {
+		picture = Vn
+			available = {
+			tag = CHI
+		has_idea = economy_Feudal_capital_economy
+				}
+				visible = {
+		has_idea = economy_Feudal_capital_economy
+			tag = CHI
+				}
+			removal_cost = -1
+			modifier = {
+			political_power_factor = -0.05
+			conscription = -0.005
+			industrial_capacity_dockyard = -0.15
+			industrial_capacity_factory = -0.15
+		production_speed_buildings_factor = -0.55
+			research_speed_factor = -0.1
+
+			trade_opinion_factor = 0.5#贸易关系修正+50%
+			embargo_cost_factor = -0.15#禁运花费-15%
+			cic_to_overlord_factor = 0.6#贡献给宗主国的民工+60%
+			mic_to_overlord_factor = 0.6#贡献给宗主国的军工+60%
+			extra_trade_to_overlord_factor = 0.75#宗主国贸易资源加成+75%
+			license_subject_master_purchase_cost = 0.35#傀儡国购买宗主国生产许可成本+35%
+			master_build_autonomy_factor = 0.5#宗主国在傀儡国修建建筑自治度丧失+50%
+			master_ideology_drift = 0.02#宗主国意识形态影响+0.02
+			overlord_trade_cost_factor = -0.45#宗主国贸易成本花费-45%
+			}
+		on_add = {
+			add_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+			on_remove  = {
+			remove_dynamic_modifier = {
+				modifier = General_market_economy_system
+				}
+			}
+		}
+	economy_cooperative_ownership = {
+		picture = Vn
+			available = {
+		NOT = { has_country_leader_ideology = stalinism }
+		NOT = { has_country_leader_ideology = Nazbol }
+		NOT = { has_country_leader_ideology = totalitarianism }
+		NOT = { has_country_leader_ideology = ingsoc }
+			OR = {
+			has_government = communism
+			has_government = Ssocialism
+			}
+		}
+			removal_cost = -1
+			modifier = {
+		consumer_goods_factor = -0.05
+		industrial_capacity_dockyard = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		local_resources_factor = 0.1
+		global_building_slots_factor = 0.2
+
+			embargo_cost_factor = 0.1#禁运花费+10%
+		master_ideology_drift = 0.15#宗主国意识形态影响+0.15
+			}
+		research_bonus = {
+		industry_research = 0.1
+			}
+			on_add = {
+			add_dynamic_modifier = {
+				modifier = cooperative_ownership_Economy_system
+				}
+			}
+			on_remove  = {
+			remove_dynamic_modifier = {
+				modifier = cooperative_ownership_Economy_system
+				}
+			}
+		}
+##################特殊#####################
+##################特殊#####################
+##################特殊#####################
+	Reign_of_Terror_economy = {
+		picture = Vn
+			available = {
+		}
+				visible = {
+		has_idea = Reign_of_Terror_economy
+				}
+			removal_cost = -1
+			modifier = {
+		consumer_goods_factor = -0.05
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.1
+		production_factory_efficiency_gain_factor = 0.05
+		#global_building_slots_factor = 0.075
+		research_speed_factor = 0.07
+			}
+		}
+	}
+}

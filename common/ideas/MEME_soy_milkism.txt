@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		MEME_soy_milkism_idea= {
+
+			allowed = {
+			tag = DYE
+			}
+
+			removal_cost = -1
+
+			picture = MEME_lenin_stalin_soy_milk
+			
+			modifier = {
+			industrial_capacity_factory = 1
+			production_speed_buildings_factor = 1
+			local_resources_factor = 1
+			conscription = 1
+			industrial_capacity_dockyard = 1
+			research_speed_factor = 5
+			consumer_goods_factor = -1
+		minimum_training_level = -1
+			}
+		}
+	}
+}

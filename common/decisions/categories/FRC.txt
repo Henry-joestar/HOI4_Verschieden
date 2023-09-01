@@ -1,0 +1,11 @@
+FRC_Revolutionary_Civil_War= {
+	icon = sov_great_patriotic_war
+		allowed = {
+		tag = frc
+		}
+
+	priority = 100
+	visible = {
+		NOT = { has_global_flag = FRA_Revolutionary_civil_war }
+	}
+}

@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		ROC_the_long_march = {
+
+			allowed = {
+				tag = ROC
+			}
+
+			removal_cost = -1
+
+			picture = prc_the_long_march
+			
+			modifier = {
+			political_power_cost = 0.5
+			breakthrough_factor = 0.5
+			army_core_attack_factor = 0.5
+			army_core_defence_factor = 0.5
+			army_speed_factor = 2
+			supply_consumption_factor = -0.25
+			org_loss_when_moving = -0.25
+			attrition = 0.2
+			}
+		}
+	}
+}

@@ -1,0 +1,129 @@
+ideas = {
+
+	State_bureaucracy = {
+		law = yes
+		use_list_view = yes
+
+	Noble_bureaucrats = {#世袭官僚制
+			available = {
+		NOT = {tag = HUN}
+		NOT = {tag = BUL}
+		NOT = {tag = RAJ}
+		NOT = {tag = ALB}
+		NOT = {tag = GRE}
+		NOT = {tag = JAP}
+		or = {
+		has_country_leader_ideology = Theocratic_absolutism_fascism
+		has_country_leader_ideology = Theocratic_absolutism
+		has_country_leader_ideology = absolutism
+			}
+				}
+			modifier = {
+		political_advisor_cost_factor = 0.2
+		neutrality_drift = 0.02
+		global_building_slots_factor = -0.2
+		local_factories = -0.1
+			}
+			default = yes
+		on_remove  = {
+			country_event = Vn_mod.4
+			add_ideas = revolution_bureaucracy
+				}
+		on_add  = {
+			remove_ideas = revolution_bureaucracy
+				}
+		}
+	Appointment_bureaucracy = {#任命官僚制
+			available = {
+		NOT = { has_government = democratic }
+		or = {
+		AND = {
+			OR = { 
+			tag = HUN
+			tag = BUL
+			tag = IRQ
+			tag = RAJ
+			TAG = ALB
+			TAG = GRE
+			TAG = JAP
+				}
+			}
+		AND = {
+		NOT = {has_country_leader_ideology = Theocratic_absolutism_fascism}
+		NOT = {has_country_leader_ideology = Theocratic_absolutism}
+		NOT = {has_country_leader_ideology = absolutism}
+					}
+				}
+			}
+			modifier = {
+		political_power_factor = 0.05
+		political_advisor_cost_factor = 0.15
+		party_popularity_stability_factor = 0.05
+		master_ideology_drift = 0.02
+		global_building_slots_factor = 0.1
+		local_factories = 0.05
+			}
+			default = yes
+		on_remove  = {
+			country_event = Vn_mod.4
+			add_ideas = revolution_bureaucracy
+				}
+		on_add  = {
+			remove_ideas = revolution_bureaucracy
+				}
+		}
+	universal_suffrage = {#选举官僚制
+			available = {
+		OR = {
+			or = {
+			and = {
+				or = {
+		has_government = Ssocialism
+		has_government = democratic
+						}
+			has_idea = universal_suffrage
+					}
+				}
+			or = {
+		has_government = democratic
+		has_country_leader_ideology = anarchist_communism
+		has_country_leader_ideology = Revolutionary_syndicalism
+		has_country_leader_ideology = anarchism_1
+		has_country_leader_ideology = Communalism
+		has_country_leader_ideology = Anarcho_syndicalism
+		has_country_leader_ideology = anarchism
+		has_country_leader_ideology = left_social_democracy
+						}
+					}
+				}
+			modifier = {
+		political_power_factor =-0.1
+		political_advisor_cost_factor = -0.1
+		democratic_drift = 0.01
+		master_ideology_drift = 0.02
+		global_building_slots_factor = 0.05
+		local_factories = 0.1
+			}
+			default = yes
+		on_remove  = {
+			country_event = Vn_mod.4
+			add_ideas = revolution_bureaucracy
+				}
+		on_add  = {
+			remove_ideas = revolution_bureaucracy
+				}
+		}
+	revolution_bureaucracy = {#革命内阁制
+				visible = {
+		has_idea = revolution_bureaucracy 
+			}
+			modifier = {
+		political_power_factor = 0.1
+		political_advisor_cost_factor = 0.15
+		party_popularity_stability_factor = -0.15
+		master_ideology_drift = -0.75
+		war_support_factor = -0.1
+			}
+		}
+	}
+}

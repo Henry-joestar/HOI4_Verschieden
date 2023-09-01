@@ -1,0 +1,134 @@
+ideas = {
+	country_polity_Relations_country = {
+		law = yes
+		use_list_view = yes
+	Committee_Republic = {#委员会共和制
+		picture = NEW_Committee_Republic
+			available = {
+			OR = {
+		has_government = communism
+		has_government = Ssocialism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+		political_advisor_cost_factor = -0.15#政治顾问花费
+		mobilization_speed = 0.15#动员速度
+		conscription_factor = 0.05#适役人口修正
+		communism_drift = 0.05#共产主义支持率每日新增
+		Ssocialism_drift = 0.05#社会主义支持率每日新增
+		production_factory_max_efficiency_factor = 0.1#生产效率上限
+		production_factory_efficiency_gain_factor = 0.1+#生产效率增长
+		research_speed_factor = 0.02#科研速度
+		global_building_slots_factor = 0.1
+			}
+			default = yes
+		}
+	Democracies_polity = {#立宪民主制
+		picture = NEW_Democracies_polity
+			available = {
+			or = {
+		has_government = democratic
+has_country_leader_ideology = left_social_democracy
+					}
+				}
+			removal_cost = -1
+			modifier = {
+		political_power_factor =-0.05
+		drift_defence_factor = -0.2
+		political_advisor_cost_factor = -0.35#政治顾问花费
+		democratic_drift = 0.05#民主主义支持率每日新增
+		research_speed_factor = 0.1#科研速度
+			}
+			default = yes
+		}
+	Presidential_Republic = {#总统共和制
+		picture = NEW_Presidential_Republic
+			available = {
+		has_government = neutrality
+		NOT =  { has_country_leader_ideology = Theocratic_absolutism }
+		NOT =  { has_country_leader_ideology = absolutism }
+				}
+			removal_cost = -1
+			modifier = {
+		neutrality_drift = 0.05#威权主义支持率每日新增
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.05
+			}
+			default = yes
+		}
+	absolute_monarchy = {#绝对君主制
+		picture = NEW_absolute_monarchy
+			available = {
+			OR = {
+		has_country_leader_ideology = absolutism
+			AND = {
+			TAG = JAP
+			OR = {
+		has_government = neutrality
+		has_government = fascism
+							}
+						}
+					}
+				}
+			removal_cost = -1
+			modifier = {
+		political_power_factor =0.05
+		drift_defence_factor = 0.1
+		political_advisor_cost_factor = 0.15#政治顾问花费
+		conscription_factor = -0.15#适役人口修正
+		neutrality_drift = 0.05#威权主义支持率每日新增
+		production_speed_buildings_factor = 0.05
+		research_speed_factor = -0.07#科研速度
+		global_building_slots_factor = -0.1
+		consumer_goods_factor = 0.02
+			}
+			default = yes
+		}
+	Fascist_dictatorship = {#法西斯独裁制
+		picture = NEW_Fascist_dictatorship
+			available = {
+		has_government = fascism
+		NOT = { has_country_leader_ideology = Theocratic_absolutism_fascism }
+				}
+			removal_cost = -1
+			modifier = {
+		political_power_factor =0.05
+		drift_defence_factor = 0.15
+		fascism_drift = 0.05#法西斯主义支持率每日新增
+		mobilization_speed = 0.15#动员速度
+		conscription_factor = 0.1#适役人口修正
+		production_speed_arms_factory_factor = 0.1
+		production_speed_industrial_complex_factor = -0.1
+			}
+			default = yes
+		}
+	Theocracy_dictatorship = {#神权制
+		picture = NEW_Theocracy_dictatorship
+			available = {
+		OR = {
+		has_country_leader_ideology = Theocratic_absolutism_fascism
+		has_country_leader_ideology = Theocratic_absolutism
+					}
+				}
+			removal_cost = -1
+			modifier = {
+		political_power_factor =0.05
+		political_advisor_cost_factor = 0.35
+		drift_defence_factor = 0.35
+		master_ideology_drift = 0.10
+		mobilization_speed = 0.25#动员速度
+		conscription_factor = 0.15#适役人口修正
+		army_morale_factor = 0.1
+		org_loss_when_moving = -0.1
+		minimum_training_level = -0.1
+		monthly_population = -0.15
+		consumer_goods_factor = 0.03
+		global_building_slots_factor = -0.15
+		conscription = 0.02
+		research_speed_factor = -0.15#科研速度
+			}
+			default = yes
+		}
+	}
+}

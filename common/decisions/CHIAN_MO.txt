@@ -1,0 +1,276 @@
+CHI_modernization = {
+	CHI_Collectivization_of_agriculture_gaige = {
+		icon =POL_looming_peasants_strike
+		available = {
+	has_completed_focus = CHI_collectivization
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+			}
+		}
+		visible = {
+	has_completed_focus = CHI_collectivization
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+		NOT = { has_state_flag = CHI_Collectivization_of_agriculture_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+		FROM = {
+		add_dynamic_modifier = {
+			modifier = Collectivization_of_agriculture_N
+				}
+		add_extra_state_shared_building_slots =3
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = CHI_Collectivization_of_agriculture_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	CHI_collectivization_2_gaige = {
+		icon =generic_trucks
+		available = {
+	num_of_civilian_factories_available_for_projects > 3
+	has_completed_focus = CHI_collectivization_2
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+			}
+		}
+		visible = {
+	has_completed_focus = CHI_collectivization_2
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+		NOT = { has_state_flag = CHI_collectivization_2 }
+		has_state_flag = CHI_Collectivization_of_agriculture_flag
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 150
+		days_re_enable = 1919810
+		cost = 50
+		modifier = {
+			civilian_factory_use = 4
+		}
+		fire_only_once = yes
+		remove_effect = {
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+				}
+		set_state_flag = CHI_collectivization_2_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	CHI_collectivization_3_gaige = {
+		icon =generic_trucks
+		available = {
+	num_of_civilian_factories_available_for_projects > 4
+	has_completed_focus = CHI_collectivization_3
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+			}
+		}
+		visible = {
+	has_completed_focus = CHI_collectivization_3
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+		NOT = { has_state_flag = CHI_collectivization_3 }
+		has_state_flag = CHI_Collectivization_of_agriculture_flag
+		has_state_flag = CHI_collectivization_2_flag
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 50
+		days_re_enable = 1919810
+		cost = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+				}
+		add_dynamic_modifier = {
+			modifier = Agricultural_mechanization
+				}
+		set_state_flag = CHI_collectivization_3_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	CHI_Industrial_modernization_2_gaige = {
+		icon =generic_merge_plant_materiel
+		available = {
+	num_of_civilian_factories_available_for_projects > 4
+	has_completed_focus = CHI_Industrial_modernization_2
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+			}
+		}
+		visible = {
+	has_completed_focus = CHI_Industrial_modernization_2
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+				NOT = { is_core_of  = XSM }
+				NOT = { is_core_of  = XYM }
+				NOT = { is_core_of  = HBJ }
+				NOT = { is_core_of  = TIB }
+				NOT = { is_core_of  = SIK }
+				NOT = { is_core_of  = MEN }
+				NOT = { is_core_of  = MAN }
+				NOT = { is_core_of  = SHX}
+		NOT = { has_state_flag = CHI_Industrial_modernization_2_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 50
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		remove_effect = {
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = CHI_Industrial_modernization_2_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	CHI_Industrial_modernization_3_gaige = {
+		icon =generic_merge_plant_materiel
+		available = {
+	num_of_civilian_factories_available_for_projects > 4
+	has_completed_focus = CHI_Industrial_modernization_3
+			FROM = {
+				is_owned_by = CHI
+				is_core_of  = CHI
+			}
+		}
+		visible = {
+	has_completed_focus = CHI_Industrial_modernization_3
+			FROM = {
+				is_owned_by = CHI
+			OR = {
+				is_core_of  = HBJ
+				is_core_of  = MEN 
+				is_core_of  = MAN 
+				is_core_of  = SHX
+				}
+		NOT = { has_state_flag = CHI_Industrial_modernization_3_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 50
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		remove_effect = {
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = CHI_Industrial_modernization_3_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	CHI_Industrial_modernization_4_gaige = {
+		icon =generic_merge_plant_materiel
+		available = {
+	num_of_civilian_factories_available_for_projects > 4
+	has_completed_focus = CHI_Industrial_modernization_4
+			FROM = {
+				is_owned_by = CHI
+			}
+		}
+		visible = {
+	has_completed_focus = CHI_Industrial_modernization_4
+			FROM = {
+				is_owned_by = CHI
+			OR = {
+				is_core_of  = SIK
+				is_core_of  = XYM
+				is_core_of  = XSM
+				is_core_of  = TIB
+			}
+		NOT = { has_state_flag = CHI_Industrial_modernization_4_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 50
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		remove_effect = {
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = CHI_Industrial_modernization_4_flag
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

@@ -1,0 +1,9 @@
+PRC_china_revolution_decisions = {
+	icon = category_generic_communism
+	
+	priority = 100
+
+	allowed = {
+		tag = PRC
+	}
+}

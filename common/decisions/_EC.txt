@@ -1,0 +1,1775 @@
+Market_Economy_Group = {
+	EC_ST_Industrial_investment = {
+		icon = generic_factory
+		available = {
+		industrial_complex > 0
+		}
+		visible = {
+			OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+			modifier = {
+		civilian_factory_use = 1
+			}
+		days_remove = 120
+		cost = 25
+	days_re_enable = 25
+		fire_only_once = no
+		remove_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+Private_construction_units_1 = {
+	activation = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 320
+	cancel_trigger = {
+	}
+	days_re_enable = 15
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+
+Private_construction_units_2 = {
+	activation = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+		}
+	visible = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	days_re_enable = 25
+	is_good = yes
+	days_mission_timeout = 315
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_3 = {
+	activation = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+		}
+	visible = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	days_re_enable = 45
+	is_good = yes
+	days_mission_timeout = 270
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_4 = {
+	activation = {
+	num_of_civilian_factories > 49
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+	num_of_civilian_factories < 50
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 310
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_5 = {
+	activation = {
+	num_of_civilian_factories > 69
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+	num_of_civilian_factories < 70
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+					}
+				}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 305
+	cancel_trigger = {
+	}
+	days_re_enable = 31
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_6 = {
+	activation = {
+	num_of_civilian_factories > 99
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+	num_of_civilian_factories < 100
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_re_enable = 24
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_7 = {
+	activation = {
+	num_of_civilian_factories > 139
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+	num_of_civilian_factories < 140
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout =295
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	days_re_enable = 30
+	complete_effect = {
+		}
+	}
+Private_construction_units_8 = {
+	activation = {
+	num_of_civilian_factories > 179
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+	OR = {
+	num_of_civilian_factories < 180
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	days_re_enable = 20
+	complete_effect = {
+		}
+	}
+Private_construction_units_9 = {
+	activation = {
+	is_major = yes
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+		is_major = no
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 285
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+			}
+		}
+	days_re_enable = 18
+	complete_effect = {
+		}
+	}
+Private_construction_units_10 = {
+	activation = {
+	is_major = yes
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+		is_major = no
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Syndicalism_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 280
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_11 = {
+	activation = {
+	num_of_civilian_factories > 69
+	has_government = democratic
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			OR = {
+			num_of_civilian_factories < 70
+			NOT = { has_government = democratic }
+				AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+					}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_re_enable = 30
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_12 = {
+	activation = {
+	num_of_civilian_factories > 69
+	has_idea = free_trade
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+			num_of_civilian_factories < 70
+			NOT = { has_idea = free_trade }
+			AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 320
+	cancel_trigger = {
+	}
+	days_re_enable = 30
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_13 = {
+	activation = {
+	num_of_civilian_factories > 69
+	has_idea = free_trade
+	has_government = democratic
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+			modifier = {
+		civilian_factory_use = 1
+			}
+	available = {
+		OR = {
+	num_of_civilian_factories < 70
+	NOT = { has_idea = free_trade }
+	NOT = { has_government = democratic }
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_oligarchic_economy }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+		}
+	}
+	is_good = yes
+	days_mission_timeout = 320
+	cancel_trigger = {
+	}
+	days_re_enable = 30
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+
+Private_construction_units_14 = {
+	activation = {
+	has_country_flag = Private_construction_units_14_flag
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			NOT = { has_country_flag = Private_construction_units_14_flag }
+
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy
+			NOT = { has_idea = economy_oligarchic_economy } }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+		}
+	visible = {
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 320
+	cancel_trigger = {
+	}
+	days_re_enable = 30
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_15 = {
+	activation = {
+	has_country_flag = Private_construction_units_15_flag
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+			NOT = { has_country_flag = Private_construction_units_15_flag }
+		AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy
+			NOT = { has_idea = economy_oligarchic_economy } }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+			modifier = {
+		civilian_factory_use = 1
+			}
+	is_good = yes
+	days_mission_timeout = 325
+	cancel_trigger = {
+	}
+	days_re_enable = 30
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_16 = {
+	activation = {
+	has_country_flag = Private_construction_units_16_flag
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+			modifier = {
+		civilian_factory_use = 1
+			}
+		icon = gre_paying_ifc_debt
+	available = {
+		OR = {
+			NOT = { has_country_flag = Private_construction_units_16_flag }
+			AND = {
+			NOT = { has_government = democratic }
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy
+			NOT = { has_idea = economy_oligarchic_economy } }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+	days_re_enable = 30
+	is_good = yes
+	days_mission_timeout = 335
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 2#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+Private_construction_units_17 = {
+	activation = {
+	has_country_flag = Private_construction_units_17_flag
+		OR = {
+					has_idea = economy_Dominate_economy
+					has_idea = economy_Free_market_economy
+					has_idea = economy_Roosevelt_NewDeal
+					has_idea = economy_Syndicalism_economy
+					has_idea = economy_oligarchic_economy
+					has_idea = economy_Feudal_capital_economy
+			}
+		}
+			modifier = {
+		civilian_factory_use = 1
+			}
+		icon = gre_paying_ifc_debt
+	available = {
+			OR = {
+			NOT = { has_country_flag = Private_construction_units_17_flag }
+			AND = {
+			NOT = { has_idea = economy_Dominate_economy }
+			NOT = { has_idea = economy_Free_market_economy }
+			NOT = { has_idea = economy_Roosevelt_NewDeal }
+			NOT = { has_idea = economy_Syndicalism_economy
+			NOT = { has_idea = economy_oligarchic_economy } }
+			NOT = { has_idea = economy_Feudal_capital_economy }
+				}
+			}
+		}
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+	is_good = yes
+	days_mission_timeout = 325
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+}
+planed_Economy_Group = {
+ 
+ Planned_economy_propaganda_bulidingdecisions = {
+		icon = eng_propaganda_campaigns
+		cost = 75
+	visible = {
+		OR = {
+			has_idea = economy_Half_cent_planned_economy
+			has_idea = economy_planned_economy
+			has_idea = economy_junta_communism_economy
+		}
+		NOT = { has_idea = Planned_economy_propaganda_bulidingidea }
+	}
+	complete_effect = {
+		add_ideas = Planned_economy_propaganda_bulidingidea
+			hidden_effect = {
+			remove_ideas = Planned_economy_propaganda_outputidea
+			remove_ideas = Planned_economy_propaganda_mobilizationidea
+				}
+		}
+	}
+ Planned_economy_propaganda_outputdecisions = {
+		icon = eng_propaganda_campaigns
+		cost = 75
+	visible = {
+		OR = {
+			has_idea = economy_Half_cent_planned_economy
+			has_idea = economy_planned_economy
+			has_idea = economy_junta_communism_economy
+		}
+		NOT = { has_idea = Planned_economy_propaganda_outputidea }
+	}
+	complete_effect = {
+		add_ideas = Planned_economy_propaganda_outputidea
+			hidden_effect = {
+			remove_ideas = Planned_economy_propaganda_bulidingidea
+			remove_ideas = Planned_economy_propaganda_mobilizationidea
+				}
+		}
+	}
+ Planned_economy_propaganda_mobilizationdecisions = {
+		icon = eng_propaganda_campaigns
+		cost = 75
+	visible = {
+		OR = {
+			has_idea = economy_Half_cent_planned_economy
+			has_idea = economy_planned_economy
+			has_idea = economy_junta_communism_economy
+		}
+		NOT = { has_idea = Planned_economy_propaganda_mobilizationidea }
+	}
+	complete_effect = {
+		add_ideas = Planned_economy_propaganda_mobilizationidea
+			hidden_effect = {
+			remove_ideas = Planned_economy_propaganda_bulidingidea
+			remove_ideas = Planned_economy_propaganda_outputidea
+				}
+		}
+	}
+}
+cooperative_ownership_decison = {
+		cooperative_ownership_decison_1 = {
+		activation = {
+			check_variable = { ooperative_ownership_Economy_start = 1 }
+					has_idea = economy_cooperative_ownership
+				}
+		icon = gre_paying_ifc_debt
+		available = {
+			OR = {
+			check_variable = { ooperative_ownership_Economy_start > 1 }
+			check_variable = { ooperative_ownership_Economy_start < 1 }
+			NOT = { has_idea = economy_cooperative_ownership }
+				}
+
+			}
+	is_good = yes
+	days_mission_timeout = 70
+	cancel_trigger = {
+	}
+	timeout_effect = {
+		set_variable = { ooperative_ownership_Economy_start = 0 }
+		every_owned_state = {
+			limit = {
+			OR = {
+				private_industrial_complex > 0
+				}
+			}
+		remove_building = {
+		type = private_industrial_complex
+		level = 1
+				}
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = 0.08 }
+	add_to_variable = { PICM_monthly_population = 0.001 }
+			}
+
+		every_owned_state = {
+			limit = {
+			OR = {
+				private_army_complex > 0
+				}
+			}
+		remove_building = {
+		type = private_army_complex
+		level = 1
+				}
+		
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = 0.08 }
+	add_to_variable = { PACM_monthly_population = 0.001 }
+			}
+		}
+	}
+	ownership_construction_units_1 = {
+	activation = {
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 280
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_2 = {
+	activation = {
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building =  arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type =  arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_3 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 3 }
+	num_of_civilian_factories > 29
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 4 }
+		OR = {
+	num_of_civilian_factories < 30
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_4 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 4 }
+	num_of_civilian_factories > 49
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 5 }
+	num_of_civilian_factories < 50
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building =  arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type =  arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_5 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 5 }
+	num_of_civilian_factories > 79
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 6 }
+		OR = {
+	num_of_civilian_factories < 80
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_6 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 6 }
+	num_of_civilian_factories > 129
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 7 }
+	num_of_civilian_factories < 130
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building =  arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type =  arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_7 = {
+	activation = {
+	num_of_civilian_factories > 199
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 8 }
+		OR = {
+	num_of_civilian_factories < 200
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_8 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 8 }
+	num_of_civilian_factories > 249
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 9 }
+	num_of_civilian_factories < 250
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = arms_factory#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+	ownership_construction_units_9 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 9 }
+	num_of_civilian_factories > 324
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 10 }
+		OR = {
+	num_of_civilian_factories < 325
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+			}
+		}
+	complete_effect = {
+		}
+	}
+
+
+
+
+	Private_ownership_construction_units_4 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 10 }
+	num_of_civilian_factories > 49
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 9 }
+	num_of_civilian_factories < 50
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+	Private_ownership_construction_units_5 = {
+
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 9 }
+	num_of_civilian_factories > 79
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 8 }
+		OR = {
+	num_of_civilian_factories < 80
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+	Private_ownership_construction_units_6 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 8 }
+	num_of_civilian_factories > 129
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 9 }
+	num_of_civilian_factories < 130
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+	Private_ownership_construction_units_7 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 7 }
+	num_of_civilian_factories > 199
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 6 }
+		OR = {
+	num_of_civilian_factories < 200
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+	Private_ownership_construction_units_8 = {
+	activation = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 6 }
+	num_of_civilian_factories > 249
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 5 }
+	num_of_civilian_factories < 250
+			NOT = { has_idea = economy_cooperative_ownership }
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 300
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = industrial_complex#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_industrial_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PICM_state_production_speed_buildings_factor = -0.08 }
+	add_to_variable = { PICM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+	Private_ownership_construction_units_9 = {
+	activation = {
+	num_of_civilian_factories > 324
+		check_variable = { cooperative_ownership_Centralized_balance_bar < 5 }
+					has_idea = economy_cooperative_ownership
+		}
+		icon = gre_paying_ifc_debt
+	available = {
+		check_variable = { cooperative_ownership_Centralized_balance_bar > 4 }
+		OR = {
+	num_of_civilian_factories < 325
+			NOT = { has_idea = economy_cooperative_ownership }
+			}
+		}
+	is_good = yes
+	days_re_enable = 15
+	days_mission_timeout = 290
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = {
+			building = arms_factory#建造类型
+				size > 1#数量
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots =1#创造建筑插槽数量
+		add_building_construction = {
+			type = private_army_complex#建造类型
+			level = 1#建造数量
+			instant_build = yes
+				}
+	add_to_variable = { PACM_state_production_speed_arms_factory_factor = -0.08 }
+	add_to_variable = { PACM_monthly_population = -0.001 }
+			}
+		}
+	complete_effect = {
+		}
+	}
+
+}

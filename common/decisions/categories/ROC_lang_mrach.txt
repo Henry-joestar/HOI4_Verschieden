@@ -1,0 +1,10 @@
+ROC_lang_march = {
+	icon = border_war
+		allowed = {
+		original_tag = ROC
+		}
+	visible = {
+	NOT = { has_country_flag = ROC_lang_march_endnow }
+	}
+	priority = 100
+}

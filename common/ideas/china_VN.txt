@@ -1,0 +1,908 @@
+ideas = {
+
+	country = {
+###########################民众对政府的支持度########################
+		CHI_Popular_support_high= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_PS
+			
+			modifier = {
+			defensive_war_stability_factor = 0.2
+			stability_factor = 0.2
+			war_support_factor  = 0.2
+			industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = 0.05
+			consumer_goods_factor =-0.06
+			}
+		}
+		CHI_Popular_support_nobad= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_PS
+			
+			modifier = {
+			defensive_war_stability_factor = 0.15
+			stability_factor = 0.15
+			war_support_factor  = 0.15
+			industrial_capacity_factory = 0.05
+			consumer_goods_factor =-0.03
+			}
+		}
+		CHI_Popular_support_medium= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_PS
+			
+			modifier = {
+			defensive_war_stability_factor = 0.1
+			stability_factor = 0.05
+			war_support_factor  = 0.05
+			}
+		}
+		CHI_Popular_support_Slightly= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_PS
+			
+			modifier = {
+			stability_factor = -0.05
+			war_support_factor  = -0.05
+			drift_defence_factor = -0.1
+			}
+			targeted_modifier = {
+			tag = PRC
+			attack_bonus_against = -0.05
+			defense_bonus_against = -0.05
+			breakthrough_bonus_against = -0.05
+			}
+		}
+		CHI_Popular_support_low= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_PS
+			
+			modifier = {
+			stability_factor = -0.15
+			war_support_factor  = -0.15
+			drift_defence_factor = -0.2
+			conscription = -0.01
+			communism_drift = 0.025
+			mobilization_speed = -0.25
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+			}
+			targeted_modifier = {
+			tag = PRC
+			attack_bonus_against = -0.2
+			defense_bonus_against = -0.2
+			breakthrough_bonus_against = -0.2
+			}
+		}
+		CHI_Popular_support_Vlow= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_PS
+			
+			modifier = {
+			stability_factor = -0.25
+			war_support_factor  = -0.25
+			drift_defence_factor = -0.4
+			conscription = -0.025
+			communism_drift = 0.08
+			mobilization_speed = -0.5
+			industrial_capacity_factory = -0.2
+			production_speed_buildings_factor = -0.1
+			}
+			targeted_modifier = {
+			tag = PRC
+			attack_bonus_against = -0.4
+			defense_bonus_against = -0.4
+			breakthrough_bonus_against = -0.4
+			}
+		}
+#########################民众教育##################################
+		CHI_Popular_research_1= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = PRC_Civilization_is_everywhere
+			
+			modifier = {
+			research_speed_factor = -0.15
+			industrial_capacity_factory = -0.08
+			}
+		}
+		CHI_Popular_research_2= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = PRC_Civilization_is_everywhere
+			
+			modifier = {
+			research_speed_factor = -0.08
+			}
+		}
+#########################政治腐败##################################
+		CHI_Power_struggle= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_advisor_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+		CHI_Power_struggle_2= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				political_advisor_cost_factor = 0.08
+				trade_laws_cost_factor = 0.12
+			mobilization_laws_cost_factor = 0.12
+				economy_cost_factor = 0.12
+			}
+		}
+		CHI_corruptgovernment= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = anti_soviet_pact
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_factor = -0.15
+				stability_factor = -0.1
+				conscription_factor = -0.25
+				experience_gain_factor = -0.15
+			}
+		}
+		CHI_corruptgovernment_2= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = anti_soviet_pact
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.15
+				stability_factor = -0.05
+				conscription_factor = -0.25
+				experience_gain_factor = -0.1
+			}
+		}
+		CHI_corruptgovernment_3= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = anti_soviet_pact
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.08
+				stability_factor = -0.02
+				conscription_factor = -0.1
+				experience_gain_factor = -0.05
+			}
+		}
+
+############################行政机构漏洞百出#######################
+		CHI_Porous= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.16
+				mobilization_speed = -0.24
+				occupation_cost  = 0.24
+				compliance_gain = -0.32
+				required_garrison_factor = 0.24
+				civilian_intel_to_others = 16
+				agency_upgrade_time = 0.24
+				drift_defence_factor = -0.16
+				industrial_capacity_factory = -0.08
+				production_speed_buildings_factor = -0.08
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_1= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.14#-2
+				mobilization_speed = -0.21#-3
+				occupation_cost  = 0.21#-3
+				compliance_gain = -0.28#-4
+				required_garrison_factor = 0.21#-3
+				civilian_intel_to_others = 14#-2
+				agency_upgrade_time = 0.21#-3
+				drift_defence_factor = -0.14#-2
+				industrial_capacity_factory = -0.07#-1
+			production_speed_buildings_factor = -0.07#-1
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_2= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.12#-2
+				mobilization_speed = -0.18#-3
+				occupation_cost  = 0.18#-3
+				compliance_gain = -0.24#-4
+				required_garrison_factor = 0.18#-3
+				civilian_intel_to_others = 12#-2
+				agency_upgrade_time = 0.18#-3
+				drift_defence_factor = -0.12#-2
+				industrial_capacity_factory = -0.06#-1
+			production_speed_buildings_factor = -0.06#-1
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_3= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.10#-2
+				mobilization_speed = -0.15#-3
+				occupation_cost  = 0.15#-3
+				compliance_gain = -0.20#-4
+				required_garrison_factor = 0.15#-3
+				civilian_intel_to_others = 10#-2
+				agency_upgrade_time = 0.15#-3
+				drift_defence_factor = -0.10#-2
+				industrial_capacity_factory = -0.05#-1
+			production_speed_buildings_factor = -0.05#-1
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_4= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.08#-2
+				mobilization_speed = -0.12#-3
+				occupation_cost  = 0.12#-3
+				compliance_gain = -0.16#-4
+				required_garrison_factor = 0.12#-3
+				civilian_intel_to_others = 8#-2
+				agency_upgrade_time = 0.12#-3
+				drift_defence_factor = -0.08#-2
+				industrial_capacity_factory = -0.04#-1
+			production_speed_buildings_factor = -0.04#-1
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_5= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.06#-2
+				mobilization_speed = -0.09#-3
+				occupation_cost  = 0.09#-3
+				compliance_gain = -0.12#-4
+				required_garrison_factor = 0.09#-3
+				civilian_intel_to_others = 6#-2
+				agency_upgrade_time = 0.09#-3
+				drift_defence_factor = -0.06#-2
+				industrial_capacity_factory = -0.03#-1
+			production_speed_buildings_factor = -0.03#-1
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_6= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.04#-2
+				mobilization_speed = -0.06#-3
+				occupation_cost  = 0.06#-3
+				compliance_gain = -0.08#-4
+				required_garrison_factor = 0.06#-3
+				civilian_intel_to_others = 4#-2
+				agency_upgrade_time = 0.06#-3
+				drift_defence_factor = -0.04#-2
+				industrial_capacity_factory = -0.02#-1
+			production_speed_buildings_factor = -0.02#-1
+				can_create_factions = no
+			}
+		}
+		CHI_Porous_7= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Porous
+			
+			modifier = {
+				political_power_factor = -0.02#-2
+				mobilization_speed = -0.03#-3
+				occupation_cost  = 0.03#-3
+				compliance_gain = -0.04#-4
+				required_garrison_factor = 0.03#-3
+				civilian_intel_to_others = 2#-2
+				agency_upgrade_time = 0.03#-3
+				drift_defence_factor = -0.02#-2
+				industrial_capacity_factory = -0.01#-1
+			production_speed_buildings_factor = -0.01#-1
+				can_create_factions = no
+			}
+		}
+#############################################################
+		CHI_freeHP= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_freeHP
+			
+			modifier = {
+				conscription_factor = -0.25
+			}
+		}
+		CHI_freeHP_2= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_freeHP
+			
+			modifier = {
+				conscription_factor = -0.15
+			}
+		}
+		CHI_freeHP_3= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_freeHP
+			
+			modifier = {
+				conscription_factor = -0.05
+			}
+		}
+		CHI_new_life_movement= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_new_life_movement
+			
+			modifier = {
+				conscription_factor = 0.15
+				stability_factor = 0.1
+				consumer_goods_factor = -0.02
+				industrial_capacity_factory = 0.07
+				industrial_capacity_dockyard = 0.07
+				production_speed_buildings_factor = 0.07
+			}
+		}
+		CHI_National_atheism= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = ffjz
+			
+			modifier = {
+			war_support_factor = 0.1
+			stability_factor = =-0.1
+			consumer_goods_factor = -0.02
+			industrial_capacity_factory = 0.1
+			drift_defence_factor = 0.2
+			neutrality_acceptance = -10
+			}
+		}
+		CHI_democratic_centralism= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_democratic_centralism_ideas
+			
+			modifier = {
+			stability_factor = 0.05	
+			political_power_gain = 0.25
+			drift_defence_factor = 0.05
+			mobilization_speed = 0.1
+			}
+		}
+		CHI_Opium_trade_ideas = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Opium_trade_ideas
+			
+			modifier = {
+			stability_factor = -0.15
+			war_support_factor = -0.1
+			consumer_goods_factor = -0.1
+			conscription_factor = -0.15
+			army_morale_factor = -0.15
+			min_export = 0.1
+			mobilization_speed = -0.2
+			}
+		}
+		CHI_Opium_trade_ideas_zhuanye = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Opium_trade_ideas_zhuanye
+			
+			modifier = {
+			stability_factor = -0.2
+			war_support_factor = -0.05
+			consumer_goods_factor = -0.15
+			conscription_factor = -0.12
+			army_morale_factor = -0.08
+			min_export = 0.1
+			mobilization_speed = -0.1
+			}
+		}
+		CHI_Opium_trade_ideas_Limit = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Opium_trade_ideas_Limit
+			
+			modifier = {
+			stability_factor = -0.08	
+			consumer_goods_factor = -0.05
+			army_morale_factor = -0.05
+			conscription_factor = -0.1
+			min_export = 0.05
+			}
+		}
+		CHI_military_affairs_commission_2 = {
+
+			picture = generic_army_war_college		
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 15
+				experience_gain_army = 0.1
+				supply_consumption_factor= -0.1
+				training_time_factor= -0.1
+				minimum_training_level= -0.1
+				special_forces_cap= 0.1
+				invasion_preparation= -0.5
+			}
+		}
+		CHI_antiCorruption = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = ffjz
+			
+			modifier = {	
+			political_power_cost = 0.15
+			stability_weekly = -0.01
+			}
+		}
+		CHI_Rural_construction_right = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = PRC_Collectivization_agriculture_now
+			
+			modifier = {	
+			production_speed_infrastructure_factor = 0.25
+			production_speed_rail_way_factor = 0.25
+			}
+		}
+		CHI_Nippon_Daily_right = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = GJB
+			
+			modifier = {
+		war_stability_factor = 0.05
+		fascism_drift = 0.10
+		neutrality_drift = 0.05
+		drift_defence_factor = 0.1
+			}
+		}
+		CHI_Patriotic_right = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_new_life_movement
+			
+			modifier = {
+		war_support_factor = 0.1
+		conscription = 0.01
+		war_stability_factor = 0.15
+		fascism_drift = 0.10
+		drift_defence_factor = 0.1
+			}
+		}
+		CHI_fkjp = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = ffjz
+			
+			targeted_modifier = {
+			tag = JAP
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+			breakthrough_bonus_against = 0.15
+
+			}
+		}
+		CHI_integration_right = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = ffjz
+			
+			modifier = {
+			political_power_factor = 0.1
+			mobilization_speed = 0.1
+			drift_defence_factor = 0.1
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			fascism_drift = 0.1
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.1
+			local_resources_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			}
+		}
+		CHI_Party_state_right = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = ffjz
+			
+			modifier = {
+			political_power_factor = 0.15
+			mobilization_speed = 0.2
+			drift_defence_factor = 0.2
+			stability_factor = 0.2
+			war_support_factor = 0.2
+			fascism_drift = 0.2
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.2
+			local_resources_factor = 0.2
+			production_speed_buildings_factor = 0.2
+			}
+		}
+		CHI_Poverty_right = {
+
+			name= CHI_Poverty_right_name
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = ffjz
+			
+			modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = 0.05
+			production_speed_buildings_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			}
+		}
+		CHI_economy_right_naval_326_one = {
+
+			name = CHI_economy_right
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_economy_right_ideas
+			
+			modifier = {
+			min_export = -1
+			local_supplies = -0.35
+			consumer_goods_factor = 0.05
+			}
+		}
+		CHI_economy_right_naval_326_two = {
+
+			name = CHI_economy_right
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_economy_right_ideas
+			
+			modifier = {
+			min_export = -1
+			local_supplies = -0.5
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.8
+			industrial_capacity_dockyard = -0.8
+			production_speed_buildings_factor = -0.8
+			}
+		}
+		CHI_economy_right_naval_326_three = {
+
+			name = CHI_economy_right
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = CHI_economy_right_ideas
+			
+			modifier = {
+			min_export = -1
+			local_supplies = -0.8
+			consumer_goods_factor = 0.8
+			industrial_capacity_factory = -0.8
+			industrial_capacity_dockyard = -0.8
+			production_speed_buildings_factor = -0.8
+			}
+		}
+		CHI_republicanism = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Lords
+			
+			modifier = {
+			stability_factor = 0.1
+			political_power_cost = -0.15
+			democratic_drift = 0.05
+			}
+		}
+		CHI_political_modernization = {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+			stability_factor = 0.05
+			political_power_cost = -0.05
+			}
+		}
+		CHI_political_modernization_B = {
+		
+			name = CHI_political_modernization
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+			stability_factor = 0.05
+			political_power_cost = -0.05
+			industrial_capacity_factory = 0.1
+			line_change_production_efficiency_factor = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		CHI_The_civil_war_urgent= {
+
+			allowed = {
+				tag =CHI
+			}
+
+			removal_cost = -1
+
+			picture = chi_warlord_integration3
+			
+			modifier = {
+			army_core_attack_factor = 0.15	
+			army_core_defence_factor = 0.15
+			training_time_factor = -0.15
+			minimum_training_level = -0.15
+			conscription = 0.01
+			mobilization_speed = 0.15
+			}
+		}
+	}
+}

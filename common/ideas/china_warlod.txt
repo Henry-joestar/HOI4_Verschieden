@@ -1,0 +1,159 @@
+ideas = {
+
+	country = {
+		CHI_ECE = {
+
+			picture = jhjj
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.05
+			conversion_cost_civ_to_mil_factor = -0.15
+			industrial_capacity_factory = 0.1
+			consumer_goods_factor = -0.02
+			}
+		}
+		CHI_democracy_communism_CT = {
+
+			picture = PRC_democratic_centralism
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			communism_drift = 0.05
+			drift_defence_factor = 0.15
+			political_power_gain = 0.25
+			}
+		}
+		CHI_14P = {
+
+			picture = PRC_Collectivization_agriculture_now
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.1
+			production_speed_arms_factory_factor = 0.15
+			industrial_capacity_factory = 0.1
+			conversion_cost_civ_to_mil_factor = -0.25
+			local_resources_factor = 0.25
+			}
+		}
+		CHI_24P = {
+
+			picture = PRC_Collectivization_agriculture_now
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			}
+		}
+		CHI_democracy_army = {
+
+			picture = generic_democratic_drift_bonus
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			democratic_drift = 0.05
+			drift_defence_factor = 0.15
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			}
+		}
+		CHI_red_army = {
+
+			picture = generic_democratic_drift_bonus
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			communism_drift = 0.05
+			drift_defence_factor = 0.15
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			army_org_factor = 0.15
+			army_morale_factor = 0.15
+			}
+		}
+		CHI_Northern_expedition = {
+
+			picture = GCDFDP
+
+			allowed = { always = no }
+
+			removal_cost = -1
+			targeted_modifier = {
+			tag = CHI
+			attack_bonus_against = 0.25
+			defense_bonus_against = 0.25
+			breakthrough_bonus_against = 0.25
+			}
+			modifier = {
+			ai_focus_aggressive_factor = 100
+			army_core_attack_factor = 0.25
+			army_core_defence_factor = 0.25
+			}
+		}
+		CHI_Military = {
+
+			picture = idea_SOV_third_five_year_plan_military
+
+			allowed = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+			industrial_capacity_factory = 0.15
+			production_speed_arms_factory_factor = 0.25
+			conscriptio = 0.01
+			fascism_drift = 0.05
+			}
+		}
+	}
+	industrial_concern = {
+				
+		CHI_INcommission = {
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_democratic_drift_bonus
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+	visible = {
+			has_completed_focus = SCZLGYH
+	}
+			traits = { industrial_concern }
+			
+			modifier = {
+			production_speed_buildings_factor = 0.05
+			production_speed_arms_factory_factor = 0.08
+			industrial_capacity_factory = 0.1
+			consumer_goods_factor = -0.02
+			local_resources = 0.15
+			}
+
+		}
+	}
+}

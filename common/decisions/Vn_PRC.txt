@@ -1,0 +1,465 @@
+PRC_china_revolution_decisions = {
+	PRC_Liberate_Qinghai = {
+
+		icon = border_war
+		available = {
+			XSM = {
+				#is_owned_by = PRC
+				any_owned_state = {
+					is_controlled_by = XSM
+					any_neighbor_state = {
+						is_fully_controlled_by = PRC
+						set_temp_variable = { var:attacker_state_temp = id }
+						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					}
+					NOT = { has_state_flag = border_incident_active }
+					set_temp_variable = { var:defender_state_temp = id }
+				}
+			}
+			NOT = { has_non_aggression_pact_with = FROM }
+		}
+		state_target = yes
+		#on_map_mode = map_only
+		cost = 0
+		fire_only_once = no
+		visible = {
+		XSM  = {
+		controls_state = FROM
+			}
+				has_completed_focus = PRC_Qinghai_VN
+			FROM = {
+				is_owned_by = XSM
+					any_neighbor_state = {
+						is_fully_controlled_by = PRC
+					}
+				}
+		}
+		cancel_if_not_visible = yes
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+		if = {
+		limit = {
+		FROM = {
+		state = 752
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 747
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 752
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 747
+   			 defender = 752
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		if = {
+		limit = {
+		FROM = {
+		state = 604
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 755
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 604
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 755
+   			 defender = 604
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		if = {
+		limit = {
+		FROM = {
+		state = 754
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 755
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 754
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 755
+   			 defender = 754
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		if = {
+		limit = {
+		FROM = {
+		state = 283
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 622
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 283
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 622
+   			 defender = 283
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		if = {
+		limit = {
+		FROM = {
+		state = 753
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 751
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 753
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 751
+   			 defender = 753
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		}
+	}
+	PRC_Liberate_SHX = {
+
+		icon = border_war
+		available = {
+			SHX = {
+				#is_owned_by = PRC
+				any_owned_state = {
+					is_controlled_by = SHX
+					any_neighbor_state = {
+						is_fully_controlled_by = PRC
+						set_temp_variable = { var:attacker_state_temp = id }
+						hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+					}
+					NOT = { has_state_flag = border_incident_active }
+					set_temp_variable = { var:defender_state_temp = id }
+				}
+			}
+			NOT = { has_non_aggression_pact_with = FROM }
+		}
+		state_target = yes
+		#on_map_mode = map_only
+		cost = 0
+		fire_only_once = no
+		visible = {	
+		SHX  = {
+		controls_state = FROM
+			}
+				has_completed_focus = PRC_shanxi_VN
+			FROM = {
+				is_owned_by = SHX
+					any_neighbor_state = {
+						is_fully_controlled_by = PRC
+					}
+				}
+		}
+		cancel_if_not_visible = yes
+
+
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+		if = {
+		limit = {
+		FROM = {
+		state = 746
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 621
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 746
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 621
+   			 defender = 746
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		if = {
+		limit = {
+		FROM = {
+		state = 615
+			}
+		}
+			start_border_war = {
+    			change_state_after_war = no
+   			 attacker = {
+    			    state = 621
+     			   num_provinces = 4
+  					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+					on_cancel = wtt_border_conflict_canceled_attacker.1
+       			 modifier = 0.1
+       			 dig_in_factor = 0
+       			 terrain_factor = 0
+   			 }	
+   			 defender = {
+      			  state = 615
+      			  num_provinces = 4
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+					on_cancel = wtt_border_conflict_canceled_defender.1
+    				}
+			}
+			set_border_war_data = {
+   			 attacker = 621
+   			 defender = 615
+    			defender_modifier = 0.15
+    			combat_width = 100
+				}
+			}
+		}
+	}
+	PRC_Training_the_Red_Army = {
+
+		icon = generic_military
+
+		available = {
+		}
+
+		#on_map_mode = map_only
+		cost = 0
+		days_remove = 70
+		fire_only_once = no
+		visible = {
+		}
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			}
+		}
+
+		ai_will_do = {
+		base = 200
+			modifier = {
+				add = -200
+				has_equipment = { infantry_equipment < 500 }
+			}
+		}
+	}
+	PRC_Training_the_Central_Red_Army = {
+
+		icon = generic_military
+
+		available = {
+		}
+
+		#on_map_mode = map_only
+		cost = 0
+		days_remove = 70
+		fire_only_once = no
+		visible = {
+		}
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"中央红军\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			}
+		}
+
+		ai_will_do = {
+		base = 200
+			modifier = {
+				add = -200
+				has_equipment = { infantry_equipment < 500 }
+			}
+		}
+	}
+	PRC_Training_the_cavalry_Red_Army = {
+
+		icon = generic_military
+
+		available = {
+		}
+
+		#on_map_mode = map_only
+		cost = 0
+		days_remove = 95
+		fire_only_once = no
+		visible = {
+		}
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军-骑兵师\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军-骑兵师\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			}
+		}
+
+		ai_will_do = {
+		base = 200
+			modifier = {
+				add = -200
+				has_equipment = { infantry_equipment < 500 }
+			}
+		}
+	}
+	PRC_Training_the_Mountain_Red_Army = {
+
+		icon = generic_military
+
+		available = {
+		}
+
+		#on_map_mode = map_only
+		cost = 0
+		days_remove = 180
+		fire_only_once = no
+		visible = {
+		}
+		cancel_if_not_visible = yes
+
+		remove_effect = {
+	random_owned_controlled_state = {
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军-山地步兵\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			create_unit = { 
+			division = "name = \"中国工农红军\" division_template = \"红军-山地步兵\" start_experience_factor = 0.08" 
+			owner = PRC
+					}
+			}
+		}
+
+		ai_will_do = {
+		base = 200
+			modifier = {
+				add = -200
+				has_equipment = { infantry_equipment < 500 }
+			}
+		}
+	}
+}

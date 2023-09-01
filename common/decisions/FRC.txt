@@ -1,0 +1,105 @@
+FRC_Revolutionary_Civil_War = {
+	FRC_balinstrike = {
+		icon = generic_nationalism
+		ai_will_do = {
+		factor = 200
+			}
+		available = {
+		}
+		highlight_states = {
+ highlight_state_targets = { state = 16 } 
+}
+		days_re_enable = 25
+		days_remove = 7
+		modifier = {
+			}
+		remove_effect = {
+				16 = {
+					create_unit = { 
+						division = "name = \"工农红军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"工农红军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"工农红军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"工农红军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+				}
+
+			}
+
+		}
+	FRC_Southernstrike = {
+		icon = generic_nationalism
+		ai_will_do = {
+		factor = 200
+			}
+		available = {
+		}
+		days_re_enable = 1919810
+		days_remove = 15
+		modifier = {
+			}
+		remove_effect = {
+		transfer_state = 25
+		transfer_state = 31
+		transfer_state = 22
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1000
+			producer = FRC
+				}
+				22 = {
+					create_unit = { 
+						division = "name = \"1.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"2.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"3.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+				}
+				31 = {
+					create_unit = { 
+						division = "name = \"4.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"5.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"6.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+				}
+				25 = {
+					create_unit = { 
+						division = "name = \"7.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"8.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+					create_unit = { 
+						division = "name = \"9.起义军\" division_template = \"公社国民自卫军\" start_experience_factor = 0" 
+						owner = FRC
+					}
+				}
+			}
+
+		}
+
+	}

@@ -1,0 +1,52 @@
+
+CHI_seizure_categories = {
+	priority = 80
+
+	icon = SOV_merge_designers
+
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+	has_completed_focus = CHI_seizure
+	}
+}
+CHI_Sino_Japanese_War = {
+	priority = 160
+
+	icon = jap_southern_expansion
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+	}
+}
+CHI_economy_right = {
+	priority = 80
+
+	icon = saf_anti_colonialist_crusade
+
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+	has_completed_focus = CHI_economy_right
+	}
+}
+CHI_modernization = {
+	priority = 80
+
+	icon = saf_anti_colonialist_crusade
+
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+	has_completed_focus = CHI_Five_modernizations
+	}
+}

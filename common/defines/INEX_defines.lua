@@ -1,0 +1,1 @@
+NDefines.NBuildings.MAX_SHARED_SLOTS = 56  				-- 省份最大建筑数.

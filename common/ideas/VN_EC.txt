@@ -1,0 +1,160 @@
+ideas = {
+	hidden_ideas = {
+		Planned_economy_propaganda_bulidingidea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+			}
+			removal_cost = -1
+			modifier = {
+			production_speed_buildings_factor = 0.1
+
+			}
+		}
+		Planned_economy_propaganda_outputidea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+			}
+			removal_cost = -1
+			modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+
+			}
+		}
+		Planned_economy_propaganda_mobilizationidea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				or = {
+                		has_idea = economy_planned_economy
+                		has_idea = economy_Half_cent_planned_economy
+				has_idea = economy_junta_communism_economy
+				}
+			}
+			removal_cost = -1
+			modifier = {
+			political_power_factor = 0.08
+			mobilization_speed = 0.25
+			}
+		}
+	}
+	country = {
+		Aftermath_of_civilian_nationalization = {
+		
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ECON_IDEA
+			
+			modifier = {
+			consumer_goods_factor = 0.03
+			}
+				on_remove  = {
+					all_owned_state = {
+			clr_state_flag = maket_event_country_2_flag
+				}
+			}
+		}
+		Aftermath_of_civilian_privatization = {
+		
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ECON_IDEA
+			
+			modifier = {
+			consumer_goods_factor = -0.03
+			production_speed_buildings_factor = -0.08
+			}
+				on_remove  = {
+					all_owned_state = {
+			clr_state_flag = maket_event_country_2_flag
+				}
+			}
+		}
+		Aftermath_of_military_nationalization = {
+		
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ECON_IDEA
+			
+			modifier = {
+			consumer_goods_factor = 0.03
+			}
+				on_remove  = {
+					all_owned_state = {
+			clr_state_flag = maket_event_country_3_flag
+				}
+			}
+		}
+		Aftermath_of_military_privatization = {
+		
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ECON_IDEA
+			
+			modifier = {
+			consumer_goods_factor = -0.03
+			industrial_capacity_factory = -0.08
+			production_factory_efficiency_gain_factor = -0.08
+			}
+				on_remove  = {
+					all_owned_state = {
+			clr_state_flag = maket_event_country_4_flag
+				}
+			}
+		}
+		General_Economic_Adjustment = {
+		
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ECON_IDEA
+			
+			modifier = {
+			consumer_goods_factor = 0.03
+			political_power_cost = 0.2
+			}
+		}
+	}
+}

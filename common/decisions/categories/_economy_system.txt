@@ -1,0 +1,41 @@
+Market_Economy_Group = {
+	priority = 100
+
+	icon = gre_paying_ifc_debt
+	scripted_gui = maket_Economy_Group_system_ui
+
+
+	visible = {
+		OR = {
+			has_idea = economy_Dominate_economy
+			has_idea = economy_Free_market_economy
+		}
+	}
+}
+planed_Economy_Group = {
+	priority = 100
+	allowed = {
+	}
+
+	icon = gre_paying_ifc_debt
+	scripted_gui = planed_Economy_Group_system_ui
+
+	visible = {
+		OR = {
+			has_idea = economy_Half_cent_planned_economy
+			has_idea = economy_planned_economy
+			has_idea = economy_junta_communism_economy
+		}
+	}
+}
+cooperative_ownership_decison = {
+	priority = 100
+
+	icon = gre_paying_ifc_debt
+	scripted_gui = cooperative_ownership_Economy_Group_system_ui
+
+
+	visible = {
+			has_idea = economy_cooperative_ownership
+	}
+}

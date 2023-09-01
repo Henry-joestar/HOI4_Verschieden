@@ -1,0 +1,42 @@
+parliament_sample_category = {
+	icon = generic_political_actions
+	
+	priority = 100
+
+	allowed = {
+		always = yes 
+	}
+	scripted_gui = parliament_sample_scripted_gui
+	visible = {
+		is_debug = yes
+		always = no
+	}
+}
+Soviet_parliament_sample_category = {
+	icon = generic_political_actions
+	
+	priority = 100
+
+	allowed = {
+		always = yes 
+	}
+	scripted_gui = Soviet_parliament_scripted_gui
+	visible = {
+		is_debug = yes
+		always = no
+	}
+}
+SOV_parliament_sample_category = {
+	icon = soviet_parliament_big
+	
+	priority = 120
+
+	allowed = {
+		always = yes 
+	}
+	scripted_gui = SOV_parliament_scripted_gui
+	visible = {
+		tag = SOV
+		always = no
+	}
+}

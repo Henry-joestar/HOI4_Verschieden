@@ -1,0 +1,239 @@
+FRA_power_balance_people_font = {
+	FRA_communist_support = {
+		icon = eng_trade_unions_support
+		available = {
+		is_debug = yes
+		}
+		visible = {
+		is_debug = yes
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = FRA_power_balance_people_font
+				value = -1
+			}
+		}
+	}
+	FRA_democratic_power_balance_support = {
+		icon = eng_trade_unions_support
+		available = {
+		is_debug = yes
+		}
+		visible = {
+		is_debug = yes
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = FRA_power_balance_people_font
+				value = 1
+			}
+		}
+	}
+}
+FRA_operation= {
+	FRA_Nationalization_of_land = {
+		icon = eng_trade_unions_support
+		available = {
+		has_country_flag = FRA_focus_Nationalization_of_land_flag
+			FROM = {
+				is_owned_by = FRA
+		NOT = { has_state_flag = Nationalization_of_land_flag }
+			}
+		}
+		visible = {
+		has_country_flag = FRA_focus_Nationalization_of_land_flag
+			FROM = {
+				is_owned_by = FRA
+				is_core_of  = FRA
+		NOT = { has_state_flag = Nationalization_of_land_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 35
+		days_re_enable = 1919810
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+		FROM = {
+		set_state_flag = Nationalization_of_land_flag
+		add_extra_state_shared_building_slots =2
+		add_dynamic_modifier = {
+			modifier = Nationalization_of_land
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	FRA_Collectivization_of_agriculture_gaige = {
+		icon = generic_nationalism
+		available = {
+		has_country_flag = FRA_focus_agricultural_collectivization_flag
+			FROM = {
+				is_owned_by = FRA
+		NOT = { has_state_flag = Collectivization_of_agriculture_flag }
+		has_state_flag = Nationalization_of_land_flag
+			}
+		}
+		visible = {
+		has_country_flag = FRA_focus_agricultural_collectivization_flag
+			FROM = {
+				is_owned_by = FRA
+				is_core_of  = FRA
+		NOT = { has_state_flag = Collectivization_of_agriculture_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 75
+		fire_only_once = yes
+		remove_effect = {
+		FRA_Collectivization_of_agriculture_scripted_effects = yes
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = Collectivization_of_agriculture_flag
+		add_dynamic_modifier = {
+			modifier = Collectivization_of_agriculture
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	FRA_Industrial_collectivization_decion = {
+		icon = generic_factory
+		available = {
+		has_country_flag = FRA_focus_ndustrial_collectivization_flag
+			FROM = {
+				is_owned_by = FRA
+		NOT = { has_state_flag = Industrial_collectivization_flag }
+			}
+		}
+		visible = {
+		has_country_flag = FRA_focus_ndustrial_collectivization_flag
+			FROM = {
+				is_owned_by = FRA
+				is_core_of  = FRA
+		NOT = { has_state_flag = Industrial_collectivization_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 75
+		fire_only_once = yes
+		remove_effect = {
+		FRA_Industrial_collectivization_scripted_effects = yes
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = Industrial_collectivization_flag
+		add_dynamic_modifier = {
+			modifier = Industrial_collectivization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	FRA_zhenyapanluan = {
+		icon = generic_arrest
+		available = {
+			FROM = {
+				is_owned_by = FRA
+		has_ROOT_at_least_1_div_in_current_state_scope = yes
+			}
+		}
+		visible = {
+		has_country_flag = FRA_revolution_panluan
+			FROM = {
+				is_owned_by = FRA
+		NOT = { is_core_of  = FRA }
+		OR = {
+		state = 806
+		state = 19
+		state = 32
+		state = 20
+		state = 26
+		state = 735
+		state = 14
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 170
+		days_re_enable = 1919810
+		cost = 100
+		fire_only_once = yes
+		remove_effect = {
+			FROM = {
+			add_resistance = -100
+				}
+		add_state_core = FROM
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+FRA_VN_political_actions = {
+	FRA_Industrial_collectivization_decion = {
+		icon = generic_factory
+		available = {
+		has_country_flag = FRA_focus_ndustrial_collectivization_flag
+			FROM = {
+				is_owned_by = FRA
+		NOT = { has_state_flag = Industrial_collectivization_flag }
+			}
+		}
+		visible = {
+		has_country_flag = FRA_focus_ndustrial_collectivization_flag
+			FROM = {
+				is_owned_by = FRA
+				is_core_of  = FRA
+		NOT = { has_state_flag = Industrial_collectivization_flag }
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		days_remove = 70
+		days_re_enable = 1919810
+		cost = 75
+		fire_only_once = yes
+		remove_effect = {
+		FRA_Industrial_collectivization_scripted_effects = yes
+		FROM = {
+		add_extra_state_shared_building_slots =1
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+				}
+		set_state_flag = Industrial_collectivization_flag
+		add_dynamic_modifier = {
+			modifier = Industrial_collectivization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

@@ -1,0 +1,564 @@
+ideas = {
+	country = {
+		JAP_amry_fasicsm_movement = {#军队法西斯主义运动
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_amry_fasicsm_movement
+			
+			modifier = {
+			political_power_factor = 0.05
+			war_support_weekly = 0.002
+			fascism_drift = 0.05
+			}
+		}
+		JAP_Anti_fascist_front = {#禁止通过
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Anti_fascist_front
+			
+			modifier = {
+			consumer_goods_factor = 0.02
+			local_resources_factor = -0.1
+			political_power_cost = 0.1
+			conscription_factor = -0.1
+			war_support_weekly = -0.002
+			stability_weekly = -0.002
+			fascism_drift = -0.05
+			communism_drift = 0.01
+			Ssocialism_drift = 0.01
+			democratic_drift = 0.01
+			}
+		}
+		JAP_Bushido_spirit = {#武士道精神
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Bushido_spirit
+			
+			modifier = {
+			war_support_factor = 0.1
+			army_attack_factor = 0.1
+			army_org_factor = 0.1
+			army_morale_factor = -0.15
+			attrition = 0.1
+			experience_loss_factor = 0.15
+			acclimatization_hot_climate_gain_factor = 0.05
+			acclimatization_cold_climate_gain_factor = 0.05
+			training_time_factor = 0.15
+			minimum_training_level = 0.15
+			org_loss_when_moving = -0.1
+			}
+		}
+		JAP_Japanese_industry = {#日本工业
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Japanese_industry
+			
+			modifier = {
+			local_resources_factor = 0.1
+			industrial_capacity_factory = 0.05
+			consumer_goods_factor = -0.02
+			industrial_capacity_dockyard = 0.05
+			production_speed_buildings_factor = 0.05
+			industrial_concern_cost_factor = -0.1
+			}
+		}
+		JAP_Japanese_industry_2 = {#日本工业
+
+			name = JAP_Japanese_industry
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Japanese_industry
+			
+			modifier = {
+			local_resources_factor = 0.15
+			industrial_capacity_factory = 0.02
+			consumer_goods_factor = -0.01
+			industrial_capacity_dockyard = 0.05
+			production_speed_buildings_factor = 0.02
+			industrial_concern_cost_factor = -0.1
+			}
+		}
+		JAP_Power_struggle = {#政治危机
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Power_struggle
+			
+			modifier = {
+			political_power_factor = -0.15
+			political_advisor_cost_factor = 0.25
+			stability_weekly = -0.005
+			conscription_factor = -0.1
+			drift_defence_factor = -0.5
+			invasion_preparation = 0.1
+			}
+		}
+		JAP_Power_struggle_2 = {#政治危机
+		
+			name = JAP_Power_struggle
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Power_struggle
+			
+			modifier = {
+			political_power_factor = -0.05
+			political_advisor_cost_factor = 0.1
+			}
+		}
+		JAP_Rebel_soldiers = {#反叛的士兵
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Rebel_soldiers
+			
+			modifier = {
+			political_power_cost = 0.1
+			consumer_goods_factor = 0.02
+			stability_factor = -0.1
+			conscription_factor = -0.1
+			drift_defence_factor = -0.15
+			fascism_drift = -0.01
+			}
+		}
+		JAP_Tillage_struggle = {#耕佃斗争
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Tillage_struggle
+			
+			modifier = {
+			political_power_cost = 0.05
+			consumer_goods_factor = 0.05
+			stability_weekly = -0.001
+			conscription_factor = -0.1
+			monthly_population = -0.45
+			global_building_slots_factor = -0.3
+			}
+		}
+		JAP_zaibatsus_2 = {
+	
+			name = JAP_zaibatsus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+			
+			modifier = {
+				political_power_cost = 0.5
+				trade_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.05
+				consumer_goods_factor = 0.08
+			}
+		}
+		JAP_zaibatsus_3 = {
+	
+			name = JAP_zaibatsus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+			
+			modifier = {
+				political_power_cost = 0.4
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		JAP_sign_tripartite_pact_3 = {
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = ogf_idea_generic_fascism_drift_2
+			
+			modifier = {
+			research_speed_factor = 0.08
+			}
+		}
+		JAP_Repression_opposition = {
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = ogf_idea_defat
+			
+			modifier = {
+			stability_factor = 0.1
+			stability_weekly = 0.01
+			resistance_damage_to_garrison = 0.15
+			required_garrison_factor = 0.15
+			conscription_factor = -0.05
+			drift_defence_factor = 0.15
+			communism_drift = -0.05
+			Ssocialism_drift = -0.05
+			democratic_drift = -0.05
+			}
+		}
+		JAP_Edajima_spirit = {#江田岛精神
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_Bushido_spirit
+			
+			modifier = {
+			war_support_factor = 0.15
+			army_attack_factor = 0.15
+			army_org_factor = 0.15
+			army_morale_factor = -0.25
+			attrition = 0.2
+			experience_loss_factor = 0.25
+			acclimatization_hot_climate_gain_factor = 0.1
+			acclimatization_cold_climate_gain_factor = 0.1
+			training_time_factor = 0.25
+			minimum_training_level = 0.2
+			org_loss_when_moving = -0.15
+			}
+		}
+		JAP_students_mobilization = {#学生动员
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_students_mobilization
+			
+			modifier = {
+			conscription = 0.005
+			conscription_factor = 0.1
+			recruitable_population_factor = 0.005
+			research_speed_factor = -0.05
+			fascism_drift = 0.02
+			}
+		}
+		JAP_spiritual_mobilization_2 = {#十四小时
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = JAP_spiritual_mobilization_2
+			
+			modifier = {
+			conscription_factor = -0.1
+			industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = 0.05
+			}
+		}
+		JAP_war_bond = {
+		
+
+			allowed = {
+				tag = jap
+			}
+
+			removal_cost = -1
+
+			picture = FRA_Cash_for_work
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			economy_cost_factor = -0.1
+			stability_weekly = -0.001
+			}
+		}
+		JAP_prepare_for_an_invasion = {
+
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
+		JAP_the_volunteer_corps = {
+
+			name = JAP_form_the_volunteer_corps
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = prc_low_popular_support3
+			
+			modifier = {
+				industry_free_repair_factor = 0.1
+				industry_repair_factor = 0.05
+			}
+		}
+
+		JAP_Three_year_plan_for_construction = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = JAP_Anti_fascist_front
+			
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_speed_rail_way_factor = -0.1
+				resistance_target = -0.1
+				communism_drift = -0.1
+				local_factory_sabotage = 0.2
+				resistance_growth = -0.15
+				stability_weekly = 0.001
+				resistance_damage_to_garrison = 0.1
+				required_garrison_factor = 0.1
+			}
+		}
+		JAP_Cordon = {
+
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ogf_idea_fas_mon_xeno
+			
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				communism_drift = -0.1
+				monthly_population = -0.15
+				resistance_growth = -0.25
+				resistance_damage_to_garrison = -0.15
+				required_garrison_factor = 0.15
+			}
+		}
+		JAP_Get_carried_away_by_victory = {
+
+
+			allowed = {
+				tag = jap
+			}
+
+			allowed_civil_war = {
+				#always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ogf_idea_generic_women_in_the_army
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_morale_factor = -0.2
+				army_org_factor = -0.2
+				army_speed_factor = 0.15
+				planning_speed = 0.15
+				max_planning = -0.15
+				army_defence_factor = -0.4
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				supply_consumption_factor = 0.25
+				attrition = 0.25
+				no_supply_grace = -48
+			}
+		}
+		JAP_Get_carried_away_by_victory_1 = {
+
+			name = JAP_Get_carried_away_by_victory
+
+			allowed = {
+				tag = jap
+			}
+
+			allowed_civil_war = {
+				#always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ogf_idea_generic_women_in_the_army
+			
+			modifier = {
+				war_support_factor = 0.25
+				army_morale_factor = -0.35
+				army_org_factor = -0.35
+				army_speed_factor = 0.35
+				planning_speed = 0.3
+				max_planning = -0.3
+				army_defence_factor = -0.6
+				army_attack_factor = 0.2
+				breakthrough_factor = 0.2
+				supply_consumption_factor = 0.5
+				attrition = 0.5
+				no_supply_grace = -72
+			}
+		}
+		JAP_planned_amphibious_assault = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				naval_invasion_planning_bonus_speed = 0.5
+				amphibious_invasion = 0.25
+				amphibious_invasion_defence = 0.1
+			}
+		}
+		JAP_attack_san_indochina = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ogf_idea_giant_awoken
+			
+			targeted_modifier = {
+				tag = IDC
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+			breakthrough_bonus_against = 0.1
+				}
+		}
+	}
+	industrial_concern = {
+		toshiba = {
+						
+			allowed = {
+				original_tag = JAP
+			}
+			picture = JAP_toshiba
+			available = {
+				has_completed_focus = JAP_form_the_toshiba
+			}
+			traits = { electronics_concern }			
+			research_bonus = {
+				electronics = 0.2
+			}
+		}
+	}		
+}

@@ -1,0 +1,344 @@
+CHI_Sino_Japanese_War = {
+CHI_Sino_Japanese_War_YES = {
+	activation = {
+		has_war_with = JAP
+		NOT = { has_global_flag = CHI_Sino_Japanese_War_YES }
+		OR = {
+		PRC = { exists = yes }
+		CHI = { exists = yes }
+		}
+		OR = {
+		tag = CHI
+		tag = PRC
+			}
+		525 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		527 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		612 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		610 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		609 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		745 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		717 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		714 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		715 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		716 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		328 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		761 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		563 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		561 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		560 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		409 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		408 = {
+			controller = { 
+				NOT = {
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		}
+		icon = hol_war_on_pacifism
+	available = {
+	OR = {
+		AND = {
+		NOT = 	{ has_war_with = JAP }
+			}
+		AND = {
+			PRC = { exists = no }
+			CHI = { exists = no }
+		}
+		525 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		527 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		612 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		610 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		609 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		745 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		717 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		714 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		715 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		716 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		328 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+
+			}
+		761 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		563 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		561 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+
+			}
+		560 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		409 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+			}
+		408 = {
+			controller = { 
+					is_in_faction_with = JAP 
+					is_puppet_of = JAP
+					tag = JAP
+					}
+				}
+			}
+		}
+	is_good = yes
+	days_mission_timeout = 70
+	cancel_trigger = {
+	}
+	timeout_effect = {
+	set_global_flag = CHI_Sino_Japanese_War_YES
+		every_state = {
+			limit = {
+			or = {
+			state = 612
+			state = 610
+			state = 716
+			state = 609
+			state = 745
+			state = 717
+			state = 715
+			state = 328
+			state = 761
+			state = 563
+			state = 561
+			state = 560
+			state = 409
+			state = 524
+			state = 408
+					}
+				}
+			transfer_state_to= CHI
+			}
+			white_peace = JAP
+		every_state = {
+			limit = {
+			or = {
+			state = 525
+			state = 527
+					}
+				}
+			transfer_state_to= KOR
+			}
+		}
+	complete_effect = {
+		}
+	}
+
+}

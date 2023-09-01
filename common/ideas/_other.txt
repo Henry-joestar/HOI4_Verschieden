@@ -1,0 +1,41 @@
+ideas = {
+	hidden_ideas = {
+		Verschieden_mod = {
+			name = Verschieden
+			default = yes
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+			special_forces_cap = 2
+			party_popularity_stability_factor = 0.1
+
+			}
+		}
+		CFYPC_ideas_6 = {
+			name = Common_five_year_plan_country_mission
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			research_bonus = {
+			industry_research = 0.1
+			}
+			modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			industrial_capacity_factory = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			local_resources_factor = 0.1
+			}
+		}
+	}
+}

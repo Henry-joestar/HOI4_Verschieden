@@ -1,0 +1,27 @@
+FRA_power_balance_people_font= {
+	icon =spr_the_seeds_of_revolution
+
+	priority = 100
+	visible = {
+	TAG = FRA
+	}
+}
+FRA_VN_political_actions = {
+	icon =spr_the_seeds_of_revolution
+
+	priority = 100
+	visible = {
+	TAG = FRA
+	}
+}
+FRA_operation= {
+	icon =spr_the_seeds_of_revolution
+		allowed = {
+		tag = fra
+		}
+
+	priority = 100
+	visible = {
+		has_country_flag = FRA_strengthen_the_unions_scf 
+	}
+}
