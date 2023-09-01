@@ -1,0 +1,204 @@
+FRA_power_balance_people_font = {
+	initial_value = -0.2
+	left_side = FRA_communist_side	
+	right_side = FRA_democratic_power_balance_side
+	decision_category = FRA_power_balance_people_font
+
+	### Neutral status
+	range = {
+		id = FRA_people_font_balance_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+			political_advisor_cost_factor = -0.15
+			political_power_factor = 0.1
+			stability_factor = 0.1
+		}
+		on_activate = {
+
+		}
+		on_deactivate = {
+			
+		}
+	}
+	side = {
+		id = FRA_communist_side	
+		icon = GFX_FRA_communist_font_dark
+
+		range = {
+			id = FRA_communist_side_low
+			min = -0.3
+			max = -0.1
+			modifier = {
+			political_advisor_cost_factor = -0.1
+			political_power_factor = 0.05
+			stability_factor = 0.05
+			Ssocialism_drift = 0.02
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_communist_side_medium
+			min = -0.6
+			max = -0.3
+			modifier = {
+			political_advisor_cost_factor = -0.05
+			political_power_factor = 0.00
+			stability_factor = 0.00
+			Ssocialism_drift = 0.08
+			consumer_goods_factor = -0.01
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_communist_side_high
+			min = -0.9
+			max = -0.6
+			modifier = {
+			political_advisor_cost_factor = -0.05
+			political_power_factor = 0.00
+			stability_factor = -0.05
+			war_support_factor = 0.05
+			Ssocialism_drift = 0.05
+			communism_drift = 0.05
+			consumer_goods_factor = -0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_communist_side_total
+			min = -1
+			max = -0.9
+			modifier = {
+			political_advisor_cost_factor = 0.1
+			political_power_factor = 0.1
+			stability_factor = -0.1
+			party_popularity_stability_factor = 0.05
+			war_support_factor = 0.05
+			Ssocialism_drift = 0.02
+			communism_drift = 0.1
+			consumer_goods_factor = -0.03
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = FRA_power_balance_people_font
+					side = FRA_communist_side
+					gfx = GFX_FRA_communist_font_light
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = FRA_power_balance_people_font
+					side = FRA_communist_side
+					gfx = GFX_FRA_communist_font_dark
+				}
+			}
+		}
+	}
+	side = {
+		id = FRA_democratic_power_balance_side
+		icon = GFX_FRA_democratic_font_dark
+
+		range = {
+			id = FRA_democratic_power_balance_side_low
+			min = 0.1
+			max = 0.3
+			modifier = {
+			political_advisor_cost_factor = -0.15
+			political_power_factor = 0.05
+			stability_factor = 0.1
+			war_support_factor = -0.05
+			democratic_drift = 0.02
+			industrial_capacity_factory = -0.02
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_democratic_power_balance_side_medium
+			min = 0.3
+			max = 0.6
+			modifier = {
+			political_advisor_cost_factor = -0.2
+			political_power_factor = 0.05
+			stability_factor = 0.15
+			war_support_factor = -0.1
+			democratic_drift = 0.05
+			industrial_capacity_factory = -0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_democratic_power_balance_side_high
+			min = 0.6
+			max = 0.9
+			modifier = {
+			political_advisor_cost_factor = -0.2
+			political_power_factor = 0.1
+			stability_factor = 0.2
+			war_support_factor = -0.15
+			democratic_drift = 0.08
+			industrial_capacity_factory = -0.04
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_democratic_power_balance_side_total
+			min = 0.9
+			max = 1
+			modifier = {
+			political_advisor_cost_factor = -0.25
+			political_power_factor = 0.1
+			stability_factor = 0.25
+			war_support_factor = -0.2
+			democratic_drift = 0.1
+			industrial_capacity_factory = -0.06
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = FRA_power_balance_people_font
+					side = FRA_democratic_power_balance_side
+					gfx = GFX_FRA_democratic_font_light
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = FRA_power_balance_people_font
+					side = FRA_democratic_power_balance_side
+					gfx = GFX_FRA_democratic_font_dark
+				}
+			}
+		}
+	}
+}

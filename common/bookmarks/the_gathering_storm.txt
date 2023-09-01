@@ -1,0 +1,109 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			available = { NOT = { has_dlc = "La Resistance" } }
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_soviet
+				FRA_Jacobin_Jdictatorship
+				FRA_Corporatism
+			}
+		}
+
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			available = { has_dlc = "La Resistance" } 
+			ideas = {
+				FRA_soviet
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+			}
+			focuses = {
+				FRA_soviet
+				FRA_Jacobin_Jdictatorship
+				FRA_Corporatism
+			}
+		}
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				sour_loser
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_German_reunification
+				GER_danzig_or_war
+				GER_revive_the_kaiserreich
+			}
+		}	
+		"JAP"={
+			history = "JAP_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				JAP_Anti_fascist_front
+				JAP_Japanese_industry
+				JAP_Power_struggle
+			}	
+			focuses = {
+				JAP_purge_the_kodoha_factionVN
+				JAP_One_party_state
+				JAP_the_Japan_republic
+			}			
+		}	
+		"CHI"={
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_army_corruption_1
+				CHI_hyper_inflation_1
+				CHI_nine_power_treaty
+			}
+			focuses = {
+				CHI_left
+				CHI_revolution_right
+				CHI_Five_modernizations
+			}
+		}
+		"PRC"={
+			history = "PRC_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				PRC_the_long_march_1
+				PRC_low_popular_support_3
+				PRC_power_struggles
+			}
+			focuses = {
+				PRC_newfocus_41
+				PRC_newfocus_40
+				PRC_newfocus_32
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

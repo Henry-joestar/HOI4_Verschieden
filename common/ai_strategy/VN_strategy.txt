@@ -1,0 +1,18 @@
+midway_battle = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = USA
+		}
+	}
+	enable = {
+		has_global_flag = JAP_midway_battle_flag
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = midway_sea
+		value = 10000
+	}
+}
